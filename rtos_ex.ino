@@ -2,6 +2,7 @@
 #include "pinStrapping.h"
 #include "sequenceAll.h"
 #include "network.h"
+#include "config.h"
 TaskHandle_t Task1;
 TaskHandle_t Task2;
 wlan WLAN;
@@ -12,10 +13,11 @@ void setup() {
   WLAN.begin();
   Serial.println("Testing Lamps:");
   setPads();
-  setLampPins();
   setKeyboardMatrix();
-  circleRoll(5);
-  //Serial.println(play);
+  if (hasLamps()) {
+    setLampPins();
+    circleRoll(5);
+  }
 
 
   //create a task that will be executed in the Task1code() function, with priority 1 and executed on core 0
@@ -60,7 +62,7 @@ void Task2code( void * pvParameters ){
     if (isPlayed()) {
       //Serial.println("iamhere");
       sequenceAll();
-      lightBringer();
+      if (hasLamps()) { lightBringer();}
       loopWorker();
     }
     momento();

@@ -4,6 +4,7 @@
 #include <Keypad.h>
 #include <ctype.h>
 #include "pinStrapping.h"
+#include "config.h"
 
 
 
@@ -20,7 +21,7 @@ void swOnState(char key);
 
 //Outer Ring Pads
 void setPads();
-char getPads(uint8_t i);
+uint8_t getPads(uint8_t i);
 void stateMachine();
 
 //pot

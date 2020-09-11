@@ -2,37 +2,27 @@
 //Steps
 uint8_t currentStep = 0;
 uint8_t sequenceMode = 0;
-bool voices[16][6]; //saves pad states over 16 steps.
+bool voices[16][VCS]; //saves pad states over 16 steps.
 bool play = 0;
 //potentiometer
 uint8_t potPin = 39;
 unsigned int potentiometer;
 
 //Pads
-byte padPins[6] = {15, 21, 3, 17, 4, 19};
-char padChars[6] = {'0','1','2','3','4','5'};
-bool padState[2][6] = {
-  {0,0,0,0,0,0}, // Momentary mode
-  {0,0,0,0,0,0}  // sequencer mode
-}; //lampstate
+extern byte padPins[VCS];
+bool padState[2][VCS]; //lampstate
 
 //matrix
-const byte ROWSm1 = 2;
-const byte COLSm1 = 2;
+//Keyboard Matrix configuration
+//Add number of columns and rows
 
-byte rowPins_m1[ROWSm1] = {25, 14}; //connect to the row pinouts of the keypad
-byte colPins_m1[COLSm1] = {27, 12}; //connect to the column pinouts of the keypad
+extern byte rowPins_m1[ROWS]; //connect to the row pinouts of the keypad
+extern byte colPins_m1[COLS]; //connect to the column pinouts of the keypad
+
+extern char matrix1_1 [ROWS][COLS];
 
 
-char matrix1_1 [ROWSm1][COLSm1] = { //a = b = b3 c = b2 # = b4
-  {'a','#'},
-  {'c','b'}
-};
-char matrix1_2 [ROWSm1][COLSm1] = {
-  {'A','#'},
-  {'c','B'}
-};
-
+extern char matrix1_2 [ROWS][COLS];
 char key;
 char returnKey = NULL;
 
@@ -132,31 +122,31 @@ void swOnState(char key) {
 }
 
 void setPads() {
-  for (uint8_t i = 0; i < 6; i++) {
+  for (uint8_t i = 0; i < VCS; i++) {
     pinMode(padPins[i], INPUT_PULLUP);
   }
 
 }
 
-char getPads(uint8_t i) {
+uint8_t getPads(uint8_t i) {
   uint8_t pad = digitalRead(padPins[i]);
   if (pad == 0) {
-    return padChars[i];
+    return i;
   }
   else {
-    return NULL;
+    return -1;
   }
 }
 
 void stateMachine() {
-  for (int i = 0; i <6; i++) {
-    if (getPads(i) != NULL && !padState[0][i]) {
+  for (int i = 0; i <VCS; i++) {
+    if (getPads(i) == i && !padState[0][i]) {
       padState[0][i] = true;
       if (!shift)
       padState[1][i] = !padState[1][i];
       voices[currentStep][i] = padState[1][i];
     }
-    else if (getPads(i) == NULL) {
+    else if (getPads(i) != i) {
       padState[0][i] = false;
     }
     if (!shift) {
@@ -175,7 +165,7 @@ void potRead() {
       for (uint8_t i = 0; i < 100; i++) {
         avg += analogRead(potPin);
       }
-    potentiometer = map (avg/100, 0, 4095, 30, 300);
+    potentiometer = map (avg/100, 0, 4095, BPM0, BPM100);
   }
 
 bool isPlayed() {

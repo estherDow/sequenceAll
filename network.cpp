@@ -1,19 +1,18 @@
 #include "network.h"
 
 
-//  char ssid[] = "HANGAR_convidats";
-//  char pass[] = "convidatsHANGAR";
 
-char ssid[] = "marcia.net_enlaluna";
-char pass[] = "Log_tePiacesse7No.Pasaran";
-
+extern char ssid[];
+extern char pass[];
 WiFiUDP Udp;                                // A UDP instance to let us send and receive packets over UDP
+extern uint8_t ip[4];
+const IPAddress outIp(ip[0],ip[1],ip[2],ip[3]);        // remote IP of your computer
 
-const IPAddress outIp(192,168,0,10);        // remote IP of your computer
+//const IPAddress outIp();        // remote IP of your computer
 //const IPAddress outIp(172,24,3,134);        // remote IP of your computer
+extern unsigned int outPort;          // remote port to receive OSC
+extern unsigned int localPort;        // local port to listen for OSC packets (actually not used for sending)
 
-const unsigned int outPort = 57120;          // remote port to receive OSC
-const unsigned int localPort = 8888;        // local port to listen for OSC packets (actually not used for sending)
 
 void wlan::begin() {
 
@@ -45,7 +44,7 @@ void wlan::sendOsc(uint8_t on, const char* Voice, uint8_t param) {
   msg.add(param);
   Udp.beginPacket(outIp, outPort);
   msg.send(Udp);
-  Serial.println("OKsent");
+  //Serial.println("OKsent"); //Debug relic
   Udp.endPacket();
   msg.empty();
   Udp.stop();

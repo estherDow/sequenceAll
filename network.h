@@ -6,6 +6,7 @@
 //UDP OSC
 #include <WiFiUdp.h>
 #include <OSCMessage.h>
+#include "config.h"
 
 
 class wlan {
