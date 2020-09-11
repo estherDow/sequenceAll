@@ -1,16 +1,16 @@
 #include "network.h"
 
 
-  char ssid[] = "HANGAR_convidats";
-  char pass[] = "convidatsHANGAR";
+//  char ssid[] = "HANGAR_convidats";
+//  char pass[] = "convidatsHANGAR";
 
-//char ssid[] = "marcia.net_enlaluna";
-//char pass[] = "Log_tePiacesse7No.Pasaran";
+char ssid[] = "marcia.net_enlaluna";
+char pass[] = "Log_tePiacesse7No.Pasaran";
 
 WiFiUDP Udp;                                // A UDP instance to let us send and receive packets over UDP
 
-//const IPAddress outIp(192,168,0,10);        // remote IP of your computer
-const IPAddress outIp(172,24,3,134);        // remote IP of your computer
+const IPAddress outIp(192,168,0,10);        // remote IP of your computer
+//const IPAddress outIp(172,24,3,134);        // remote IP of your computer
 
 const unsigned int outPort = 57120;          // remote port to receive OSC
 const unsigned int localPort = 8888;        // local port to listen for OSC packets (actually not used for sending)

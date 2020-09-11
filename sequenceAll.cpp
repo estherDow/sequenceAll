@@ -3,11 +3,13 @@
 uint64_t pTime = 0;
 unsigned int pInt;
 uint8_t step= 0;
+uint8_t lastStep = 0;
+
 bool msgOn[2][6] = {
   {0,0,0,0,0,0},
   {0,0,0,0,0,0}
 }; //[momentary and sequenced]
-bool offTrigger;
+
 
 extern unsigned int potentiometer;
 extern bool voices[16][6]; //saves pad states over 16 steps.
@@ -27,8 +29,8 @@ void sequenceAll() {
     if(cTime - pTime > pInt) {
       pTime = cTime;
       step++;
-      Serial.println(step);
       if (step> 15) step= 0;
+      Serial.println(step);
     }
 }
 
@@ -52,18 +54,17 @@ void loopWorker() {
   //send on message once and off message once
   //check padstate[0][e]
   //check voices[i][e]
+  if (lastStep != step) {
+    for (uint8_t e = 0; e < 6; e++) { //sequenced on
+        if (voices[step][e]) {
+          WLAN.sendOsc(1,"/sequenced",e);
+        }
 
-  for (uint8_t e = 0; e < 6; e++) { //sequenced on
-      if (voices[step][e] && !msgOn[1][e]) {
-        WLAN.sendOsc(1,"/sequenced",e);
-        msgOn[1][e] = true;
-      }
-
-
-      if (offTrigger && msgOn[1][e]){
-        WLAN.sendOsc(0,"/sequenced",e);
-        msgOn[1][e]  = false;
-      }
+        else if (!voices[step][e]){
+          WLAN.sendOsc(0,"/sequenced",e);
+        }
+    }
+    lastStep = step;
   }
 
 }
