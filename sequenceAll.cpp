@@ -4,7 +4,8 @@ uint64_t pTime = 0;
 unsigned int pInt;
 uint8_t step= 0;
 uint8_t lastStep = 0;
-
+uint8_t seqNotes[6] = {24,25,26,27,32,35};
+uint8_t momNotes[6] = {24,25,26,27,32,35};
 bool msgOn[2][6] = {
   {0,0,0,0,0,0},
   {0,0,0,0,0,0}
@@ -57,11 +58,11 @@ void loopWorker() {
   if (lastStep != step) {
     for (uint8_t e = 0; e < 6; e++) { //sequenced on
         if (voices[step][e]) {
-          WLAN.sendOsc(1,"/sequenced",e);
+          WLAN.sendOsc(1,"/sequenced",seqNotes[e]);
         }
 
         else if (!voices[step][e]){
-          WLAN.sendOsc(0,"/sequenced",e);
+          WLAN.sendOsc(0,"/sequenced",seqNotes[e]);
         }
     }
     lastStep = step;
@@ -74,12 +75,12 @@ void momento() {
     for (uint8_t e = 0; e < 6; e++) { //sequenced on
 
       if (padState[0][e] && !msgOn[0][e]) { //message on
-        WLAN.sendOsc(1,"/momentary",e);
+        WLAN.sendOsc(1,"/momentary",momNotes[e]);
         msgOn[0][e] = true;
       }
 
       if (!padState[0][e] && msgOn[0][e] ) {
-        WLAN.sendOsc(0,"/momentary",e);
+        WLAN.sendOsc(0,"/momentary",momNotes[e]);
         msgOn[0][e] = false;
       }
    }
