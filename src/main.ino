@@ -20,7 +20,7 @@ void dummyObserver::update(char sender, int _msg){
 }
 
 Clock clocck;
-
+Voice *trigger = new Voice('t', 16);
 //Correction found here:
 //https://stackoverflow.com/questions/2988273/c-pointer-to-objects
 dummyObserver *dummy = new dummyObserver();
@@ -28,7 +28,7 @@ dummyObserver *dummy = new dummyObserver();
 void setup() {
 Serial.begin(115200);
 clocck.setBeatsPerMinute(60);
-clocck.attach(dummy);
+clocck.attach(trigger);
 }
 
 uint8_t i = 0;
