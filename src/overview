@@ -1,0 +1,9 @@
+Keyboard -> Pattern      Wifi
+and steps   Storage      Object
+              A           A
+              |           |
+clock ->  Sequencer ->  SendOsc ->  remote Slave
+ISubject  IObserver     IObserver
+          ISubject
+      ->            ->  Midi    ->  remote Slave
+      ->            ->  CV      ->  remote Slave
