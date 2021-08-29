@@ -19,11 +19,13 @@ public:
 
   void setStep(uint16_t value, uint8_t position);
   void deleteStep(uint8_t position);
+  
   void resize(uint8_t newLength);
   void setQuarterNoteDivisions(uint8_t subDivisions);
-  int getCurrentStep();
 
+  int getCurrentStep();
   void incrementStep(uint8_t sequenceLength);
+
   void setMotion(char direction); //forward, backward, tbd: random
   uint8_t getMotion(uint8_t sequenceLength);
 

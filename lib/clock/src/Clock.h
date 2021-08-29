@@ -27,11 +27,9 @@ private:
 
   //deltaT in Microseconds = 6e7/(time * steps) uint16_t was too small to hold large value
   int _deltaTime;
-  //Subdivisions of each beat defaults to 4 -> Clock multiplier functionality
-  uint8_t _steps = 4;
+
   //Timer Variable in microseconds
   unsigned long _pastState;
-  //Settings
-//  std::list<IObserver *> list_observer_;
+  
 };
 #endif

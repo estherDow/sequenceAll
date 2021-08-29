@@ -6,6 +6,7 @@ Voice::Voice(char type, uint8_t length){ //trigger t gate g clock c
 }
 
 void Voice::update(char subjectLine, int msg) {
+  
   createMsg(getCurrentStep());
   notify();
 }
