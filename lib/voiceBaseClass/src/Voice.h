@@ -14,25 +14,30 @@ public:
 
 
  //TBD
- void update(char subjectLine, int msg);
+  void update(char subjectLine, int msg);
 
+  char getType();
 
   void setStep(uint16_t value, uint8_t position);
   void deleteStep(uint8_t position);
-  
+
   void resize(uint8_t newLength);
   void setQuarterNoteDivisions(uint8_t subDivisions);
+  uint8_t getQuarterNoteDivisions();
 
-  int getCurrentStep();
-  void incrementStep(uint8_t sequenceLength);
+  uint8_t getCurrentStepNumber();
+  int getCurrentStepValue();
+  void incrementStep();
 
   void setMotion(char direction); //forward, backward, tbd: random
-  uint8_t getMotion(uint8_t sequenceLength);
+  uint8_t getMotion();
 
 private:
   std::vector <uint16_t> _steps;
+  uint8_t _sequenceLength;
   uint8_t _currentStep;
-  uint8_t _subDivisions;
+  uint8_t _clockPulsesPerStep = 12;
+  uint8_t _pulseCounter;
   int8_t _motion = 1;
 };
 

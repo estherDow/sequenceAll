@@ -2,13 +2,22 @@
 
 Voice::Voice(char type, uint8_t length){ //trigger t gate g clock c
   sender = type;
+  _sequenceLength = length;
   resize(length);
 }
 
 void Voice::update(char subjectLine, int msg) {
-  
-  createMsg(getCurrentStep());
-  notify();
+  _pulseCounter ++;
+  if (_pulseCounter == _clockPulsesPerStep) {
+    createMsg(getCurrentStepValue());
+    notify();
+    incrementStep();
+    _pulseCounter = 0;
+  }
+
+}
+char Voice::getType() {
+  return sender;
 }
 
 void Voice::setStep(uint16_t value, uint8_t position){
@@ -23,27 +32,35 @@ void Voice::resize(uint8_t newLength){
   _steps.resize(newLength);
 }
 
+//set & get human readable divisor but store ppqn/divisor for easier counting
 void Voice::setQuarterNoteDivisions(uint8_t subDivisions) {
   if (subDivisions > PULSES_PER_QUARTER_NOTE) {
     subDivisions = PULSES_PER_QUARTER_NOTE;
   }
-  _subDivisions = subDivisions;
+  //implicit type conversion
+  _clockPulsesPerStep = PULSES_PER_QUARTER_NOTE / subDivisions;
 }
 
-int Voice::getCurrentStep() {
+uint8_t Voice::getQuarterNoteDivisions() {
+  return PULSES_PER_QUARTER_NOTE / _clockPulsesPerStep;
+}
+
+uint8_t Voice::getCurrentStepNumber() {
+  return _currentStep;
+}
+int Voice::getCurrentStepValue() {
   int currentStepValue = _steps.at(_currentStep);
-  incrementStep(_steps.size());
   return currentStepValue;
 
 }
 
-void Voice::incrementStep(uint8_t sequenceLength) {
-  _currentStep +=getMotion(sequenceLength);
+void Voice::incrementStep() {
+  _currentStep +=getMotion();
   if (_currentStep < 0) {
-    _currentStep = sequenceLength - _currentStep;
+    _currentStep = _sequenceLength - _currentStep;
   }
-  else if (_currentStep > sequenceLength){
-      uint8_t remainder = _currentStep - sequenceLength;
+  else if (_currentStep > _sequenceLength){
+      uint8_t remainder = _currentStep - _sequenceLength;
       _currentStep = remainder;
   }
 }
@@ -59,12 +76,12 @@ void Voice::setMotion(char direction) {
   }
 }
 
-uint8_t Voice::getMotion(uint8_t sequenceLength) {
+uint8_t Voice::getMotion() {
   int8_t motion;
   if(_motion != 0) {
     motion = _motion;
   } else {
-    motion = rand() % sequenceLength +1;
+    motion = rand() % _sequenceLength +1;
   }
   return motion;
 }

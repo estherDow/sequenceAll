@@ -29,7 +29,7 @@ void setup() {
 Serial.begin(115200);
 clocck.setBeatsPerMinute(60);
 clocck.attach(trigger);
-trigger.attach(dummy);
+trigger->attach(dummy);
 }
 
 uint8_t i = 0;
