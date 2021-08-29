@@ -29,6 +29,7 @@ void Voice::deleteStep(uint8_t position){
 }
 
 void Voice::resize(uint8_t newLength){
+  _sequenceLength = newLength;
   _steps.resize(newLength);
 }
 
