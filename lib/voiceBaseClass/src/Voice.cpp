@@ -14,8 +14,8 @@ void Voice::update(char subjectLine, int msg) {
   Serial.printf("Voice Update was called %i times\n", _pulseCounter);
   if (_pulseCounter == _clockPulsesPerStep) {
     Serial.printf("Current Step is: %i\n",_currentStep );
-    Serial.printf("Check if current step is out of bound: %i", getCurrentStepValue());
-    createMsg(20);
+    Serial.printf("Check if current step is out of bound: %i \nValue of step: %i",getCurrentStepNumber(),getCurrentStepValue() );
+    createMsg(getCurrentStepValue());
     notify();
     incrementStep();
     _pulseCounter = 0;
@@ -38,7 +38,12 @@ void Voice::deleteStep(uint8_t position){
 
 
 uint8_t Voice::getCurrentStepNumber() {
-  return _currentStep;
+  if (_currentStep < _sequenceLength) {
+    return _currentStep;
+  }
+  else{
+    return -1;
+  }
 }
 
 
@@ -77,7 +82,7 @@ void Voice::incrementStep() {
   if (_currentStep < 0) {
     _currentStep = _sequenceLength - _currentStep;
   }
-  else if (_currentStep > _sequenceLength){
+  else if (_currentStep > _sequenceLength - 1){
       uint8_t remainder = _currentStep - _sequenceLength;
       _currentStep = remainder;
   }
