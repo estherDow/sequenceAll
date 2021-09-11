@@ -4,12 +4,18 @@ Voice::Voice(char type, uint8_t length){ //trigger t gate g clock c
   sender = type;
   _sequenceLength = length;
   resize(length);
+  for (int i = 0; i<length;i++){
+    setStep(0,i);
+  }
 }
 
 void Voice::update(char subjectLine, int msg) {
   _pulseCounter ++;
+  Serial.printf("Voice Update was called %i times\n", _pulseCounter);
   if (_pulseCounter == _clockPulsesPerStep) {
-    createMsg(getCurrentStepValue());
+    Serial.printf("Current Step is: %i\n",_currentStep );
+    Serial.printf("Check if current step is out of bound: %i", getCurrentStepValue());
+    createMsg(20);
     notify();
     incrementStep();
     _pulseCounter = 0;
@@ -20,18 +26,37 @@ char Voice::getType() {
   return sender;
 }
 
+
 void Voice::setStep(uint16_t value, uint8_t position){
   _steps.at(position) = value;
 }
+
 
 void Voice::deleteStep(uint8_t position){
   _steps.at(position) = 0;
 }
 
+
+uint8_t Voice::getCurrentStepNumber() {
+  return _currentStep;
+}
+
+
+int Voice::getCurrentStepValue() {
+  if (_currentStep < _sequenceLength) {
+    return _steps.at(_currentStep);
+  }
+  else{
+    return -1;
+  }
+}
+
+
 void Voice::resize(uint8_t newLength){
   _sequenceLength = newLength;
   _steps.resize(newLength);
 }
+
 
 //set & get human readable divisor but store ppqn/divisor for easier counting
 void Voice::setQuarterNoteDivisions(uint8_t subDivisions) {
@@ -46,14 +71,6 @@ uint8_t Voice::getQuarterNoteDivisions() {
   return PULSES_PER_QUARTER_NOTE / _clockPulsesPerStep;
 }
 
-uint8_t Voice::getCurrentStepNumber() {
-  return _currentStep;
-}
-int Voice::getCurrentStepValue() {
-  int currentStepValue = _steps.at(_currentStep);
-  return currentStepValue;
-
-}
 
 void Voice::incrementStep() {
   _currentStep +=getMotion();

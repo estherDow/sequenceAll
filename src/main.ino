@@ -19,7 +19,7 @@ void dummyObserver::update(char sender, int _msg){
 
 }
 
-Clock clocck;
+Clock sClock;
 Voice *trigger = new Voice('t', 16);
 //Correction found here:
 //https://stackoverflow.com/questions/2988273/c-pointer-to-objects
@@ -27,14 +27,20 @@ dummyObserver *dummy = new dummyObserver();
 
 void setup() {
 Serial.begin(115200);
-clocck.setBeatsPerMinute(60);
-clocck.attach(trigger);
+sClock.setBeatsPerMinute(25);
+sClock.attach(trigger);
 trigger->attach(dummy);
+Serial.printf("Subdivisions per quarternote: %i\n", trigger->getQuarterNoteDivisions());
+
+trigger->setStep(1,1);
+trigger->setStep(1,5);
+trigger->setStep(1,9);
+trigger->setStep(1,13);
+
 }
 
-uint8_t i = 0;
 
 void loop(/* arguments */) {
+sClock.timer();
 
-clocck.timer();
 }
