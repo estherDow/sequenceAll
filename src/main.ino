@@ -30,6 +30,7 @@ Serial.begin(115200);
 sClock.setBeatsPerMinute(25);
 sClock.attach(trigger);
 trigger->attach(dummy);
+trigger->setQuarterNoteDivisions(20);
 Serial.printf("Subdivisions per quarternote: %i\n", trigger->getQuarterNoteDivisions());
 
 trigger->setStep(1,1);

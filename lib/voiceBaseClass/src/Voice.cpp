@@ -13,8 +13,6 @@ void Voice::update(char subjectLine, int msg) {
   _pulseCounter ++;
   Serial.printf("Voice Update was called %i times\n", _pulseCounter);
   if (_pulseCounter == _clockPulsesPerStep) {
-    Serial.printf("Current Step is: %i\n",_currentStep );
-    Serial.printf("Check if current step is out of bound: %i \nValue of step: %i",getCurrentStepNumber(),getCurrentStepValue() );
     createMsg(getCurrentStepValue());
     notify();
     incrementStep();
@@ -64,7 +62,9 @@ void Voice::resize(uint8_t newLength){
 
 
 //set & get human readable divisor but store ppqn/divisor for easier counting
-void Voice::setQuarterNoteDivisions(uint8_t subDivisions) {
+//Whatever you type it will be rounded to the nearest integer divisor.
+//20 will be 24 10 will be 12 etc. this could be improved.
+void Voice::setQuarterNoteDivisions(uint8_t subDivisor) {
   if (subDivisions > PULSES_PER_QUARTER_NOTE) {
     subDivisions = PULSES_PER_QUARTER_NOTE;
   }
