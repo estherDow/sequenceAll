@@ -25,7 +25,7 @@ public:
   void incrementStep();
 
   void resize(uint8_t newLength);
-  void setQuarterNoteDivisions(uint8_t subDivisions);
+  void setQuarterNoteDivisions(uint8_t subDivisor);
   uint8_t getQuarterNoteDivisions();
 
 
