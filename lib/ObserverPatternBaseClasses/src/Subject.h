@@ -13,8 +13,9 @@ public:
   void notify();
   void createMsg(int msg);
   std::list<IObserver *> list_observer_;
+private:
   int _msg;
-  char sender;
+  char _sender;
 };
 
 #endif

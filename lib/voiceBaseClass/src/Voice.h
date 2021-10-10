@@ -2,13 +2,12 @@
 #define VOICE_H
 
 #include <IVoice.h>
-#include <Subject.h>
-#include <IObserver.h>
-#include <vector>
 #include <Arduino.h>
+
+#include <vector>
 #include <stdlib.h>     /* srand, rand */
 
-class Voice :  public IObserver, public IVoice, public Subject {
+class Voice :  public Module, public IVoice{
 public:
  Voice(char type, uint8_t length);
 

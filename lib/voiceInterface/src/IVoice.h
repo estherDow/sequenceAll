@@ -2,6 +2,8 @@
 #define IVOICE_H
 
 #include <list>
+#include <Module.h>
+
 #include <Arduino.h>
 #include <macros.h>
 class IVoice {

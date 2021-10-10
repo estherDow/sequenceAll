@@ -1,7 +1,6 @@
 #ifndef OBSERVER_H
 #define OBSERVER_H
-#include <list>
-#include <string>
+
 
 /* Every observer has the function Update, which gets called from Subject whenever a state change therein occurs.
  * what had me confused for at almost a year (lol) was the name "observer" nothing observes here, nothing is observed.

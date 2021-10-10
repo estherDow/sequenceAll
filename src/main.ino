@@ -11,11 +11,11 @@ public:
 
 
 
-void dummyObserver::update(char sender, int _msg){
+void dummyObserver::update(char _sender, int _msg){
   Serial.println("Received Update:");
   Serial.println(_msg);
   Serial.println("From:");
-  Serial.println(sender);
+  Serial.println(_sender);
 
 }
 

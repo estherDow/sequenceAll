@@ -1,9 +1,7 @@
 #ifndef Clock_H
 #define Clock_H
 
-#include <list>
-#include "IObserver.h"
-#include "Subject.h"
+#include <Module.h>
 #include <Arduino.h>
 #include <macros.h>
 
@@ -15,7 +13,7 @@ public:
   Clock() {
     //set message to 1 to be understood as clock pulse.
     _msg = 1;
-    sender = 'c';
+    _sender = 'c';
   };
   //Setter functions
   void setBeatsPerMinute(uint16_t beats);
@@ -30,6 +28,6 @@ private:
 
   //Timer Variable in microseconds
   unsigned long _pastState;
-  
+
 };
 #endif
