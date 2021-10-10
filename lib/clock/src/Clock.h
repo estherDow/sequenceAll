@@ -2,6 +2,7 @@
 #define Clock_H
 
 #include <Module.h>
+#include <VoiceTypes.h>
 #include <Arduino.h>
 #include <macros.h>
 
@@ -13,7 +14,7 @@ public:
   Clock() {
     //set message to 1 to be understood as clock pulse.
     _msg = 1;
-    sender = 'c';
+    sender = CLOCK;
   };
   //Setter functions
   void setBeatsPerMinute(uint16_t beats);

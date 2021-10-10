@@ -1,6 +1,6 @@
 #include "Voice.h"
 
-Voice::Voice(char type, uint8_t length){ //trigger t gate g clock c
+Voice::Voice(VoiceTypes type, uint8_t length){ //trigger t gate g clock c
   sender = type;
   _sequenceLength = length;
   resize(length);

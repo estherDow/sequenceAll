@@ -2,6 +2,7 @@
 #define VOICE_H
 
 #include <IVoice.h>
+#include <VoiceTypes.h>
 #include <Arduino.h>
 
 #include <vector>
@@ -9,7 +10,7 @@
 
 class Voice :  public Module, public IVoice{
 public:
- Voice(char type, uint8_t length);
+ Voice(VoiceTypes type, uint8_t length);
 
 
 
