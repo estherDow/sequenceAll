@@ -64,7 +64,7 @@ void Voice::resize(uint8_t newLength){
 //set & get human readable divisor but store ppqn/divisor for easier counting
 //Whatever you type it will be rounded to the nearest integer divisor.
 //20 will be 24 10 will be 12 etc. this could be improved.
-void Voice::setQuarterNoteDivisions(uint8_t subDivisor) {
+void Voice::setQuarterNoteDivisions(uint8_t subDivisions) {
   if (subDivisions > PULSES_PER_QUARTER_NOTE) {
     subDivisions = PULSES_PER_QUARTER_NOTE;
   }
