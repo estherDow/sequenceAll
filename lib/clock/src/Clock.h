@@ -13,7 +13,7 @@ public:
   Clock() {
     //set message to 1 to be understood as clock pulse.
     _msg = 1;
-    _sender = 'c';
+    sender = 'c';
   };
   //Setter functions
   void setBeatsPerMinute(uint16_t beats);
