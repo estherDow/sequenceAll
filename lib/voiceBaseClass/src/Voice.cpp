@@ -20,7 +20,7 @@ void Voice::update(char subjectLine, int msg) {
   }
 
 }
-char Voice::getType() {
+VoiceTypes Voice::getType() {
   return sender;
 }
 

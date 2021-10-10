@@ -16,7 +16,7 @@ public:
 
   void update(char subjectLine, int msg);
 
-  char getType();
+  VoiceTypes getType();
 
   void setStep(uint16_t value, uint8_t position);
   void deleteStep(uint8_t position);

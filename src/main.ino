@@ -2,6 +2,8 @@
 #include <Voice.h>
 #include <Arduino.h>
 
+#include <VoicePatternData.h>
+#include <VoiceDataTypes.h>
 class dummyObserver : public IObserver {
 public:
   dummyObserver() {};
@@ -20,6 +22,8 @@ void dummyObserver::update(char _sender, int _msg){
 }
 
 Clock sClock;
+VoiceDataTypes voiceDatatype = UNSIGNED_16;
+VoicePatternData<voiceDatatype> sequence;
 VoiceTypes trigger = TRIGGER;
 Voice *kick = new Voice(trigger, 16);
 //Correction found here:
