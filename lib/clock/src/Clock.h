@@ -2,7 +2,7 @@
 #define Clock_H
 
 #include <Module.h>
-#include <VoiceTypes.h>
+#include <SignalTypes.h>
 #include <Arduino.h>
 #include <macros.h>
 

@@ -1,19 +1,17 @@
 #include <Clock.h>
 #include <Voice.h>
+#include <SignalTypes.h>
 #include <Arduino.h>
-
-#include <VoicePatternData.h>
-#include <VoiceDataTypes.h>
 class dummyObserver : public IObserver {
 public:
   dummyObserver() {};
-  void update(char sender, int _msg);
+  void update(SignalTypes sender, int _msg);
 
 };
 
 
 
-void dummyObserver::update(char _sender, int _msg){
+void dummyObserver::update(SignalTypes _sender, int _msg){
   Serial.println("Received Update:");
   Serial.println(_msg);
   Serial.println("From:");
@@ -22,9 +20,8 @@ void dummyObserver::update(char _sender, int _msg){
 }
 
 Clock sClock;
-VoiceDataTypes voiceDatatype = UNSIGNED_16;
-VoicePatternData<voiceDatatype> sequence;
-VoiceTypes trigger = TRIGGER;
+
+SignalTypes trigger = TRIGGER;
 Voice *kick = new Voice(trigger, 16);
 //Correction found here:
 //https://stackoverflow.com/questions/2988273/c-pointer-to-objects

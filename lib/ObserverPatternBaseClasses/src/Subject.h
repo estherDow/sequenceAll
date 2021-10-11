@@ -4,7 +4,7 @@
 #include <list>
 #include "IObserver.h"
 #include "ISubject.h"
-#include <VoiceTypes.h>
+#include <SignalTypes.h>
 #include <Arduino.h>
 
 class Subject : public ISubject{
@@ -15,7 +15,7 @@ public:
   void createMsg(int msg);
   std::list<IObserver *> list_observer_;
   int _msg;
-  VoiceTypes sender;
+  SignalTypes sender;
 };
 
 #endif

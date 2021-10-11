@@ -2,21 +2,20 @@
 #define VOICE_H
 
 #include <IVoice.h>
-#include <VoiceTypes.h>
 #include <Arduino.h>
 
-#include <vector>
+#include <VoicePatternData.h>
 #include <stdlib.h>     /* srand, rand */
 
 class Voice :  public Module, public IVoice{
 public:
- Voice(VoiceTypes type, uint8_t length);
+ Voice(SignalTypes type, uint8_t length);
 
 
 
-  void update(char subjectLine, int msg);
+  void update(SignalTypes subjectLine, int msg);
 
-  VoiceTypes getType();
+  SignalTypes getType();
 
   void setStep(uint16_t value, uint8_t position);
   void deleteStep(uint8_t position);
@@ -36,7 +35,7 @@ public:
 
 private:
   //Always initialize values with some default or else you WILL run into undefined behavior.
-  std::vector <uint16_t> _steps;
+  VoicePatternData _steps;
   uint8_t _sequenceLength;
   uint8_t _currentStep = 1;
   uint8_t _clockPulsesPerStep = 12;

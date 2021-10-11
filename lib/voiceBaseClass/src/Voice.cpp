@@ -1,15 +1,14 @@
 #include "Voice.h"
 
-Voice::Voice(VoiceTypes type, uint8_t length){ //trigger t gate g clock c
+Voice::Voice(SignalTypes type, uint8_t length) { //trigger t gate g clock c
   sender = type;
   _sequenceLength = length;
-  resize(length);
   for (int i = 0; i<length;i++){
     setStep(0,i);
   }
 }
 
-void Voice::update(char subjectLine, int msg) {
+void Voice::update(SignalTypes subjectLine, int msg) {
   _pulseCounter ++;
   Serial.printf("Voice Update was called %i times\n", _pulseCounter);
   if (_pulseCounter == _clockPulsesPerStep) {
@@ -20,18 +19,18 @@ void Voice::update(char subjectLine, int msg) {
   }
 
 }
-VoiceTypes Voice::getType() {
+SignalTypes Voice::getType() {
   return sender;
 }
 
 
 void Voice::setStep(uint16_t value, uint8_t position){
-  _steps.at(position) = value;
+  _steps.at(value, position);
 }
 
 
 void Voice::deleteStep(uint8_t position){
-  _steps.at(position) = 0;
+  _steps.at(position, 0);
 }
 
 
