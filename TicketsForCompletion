@@ -1,0 +1,39 @@
+#Tickets for sequencer
+
+
+##implement fastled fuctionality (5)
+
+Given
+A vector of one frame is fully defined
+When
+A clock pulse is received
+Then
+the frame is written to fastled
+
+
+##implement osc functionality (3)
+
+Given
+
+When
+User sends messages through an app
+Then
+Parameters are passed to a frame building Algorithm
+
+##implement Wifi (2)
+
+Given
+A wifi network with known credentials
+When
+Device is in reach of the network
+Then
+Device connects to the network
+
+##implement example frame building Algorithm
+
+Given
+A message with parameters is received
+When
+A clockpulse is received
+Then
+A Frame is written to storage entity
