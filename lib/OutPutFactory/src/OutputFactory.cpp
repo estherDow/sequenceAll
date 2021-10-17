@@ -1,7 +1,8 @@
 #include "OutputFactory.h"
 //#include "midiOut.h"
 //#include "cvOut.h"
-#include "OscOut.h"
+#include <FastLEDOut.h>
+#include <OscOut.h>
 
 IOutPuts OutputFactory::make(OutPut OutPutType) {
   switch (OutPutType) {
@@ -9,6 +10,8 @@ IOutPuts OutputFactory::make(OutPut OutPutType) {
 //      return new MidiOut midiOut;
 //    case OutPutType == cv:
 //      return new CvOut cvOut;
-    case OutPutType == osc:
+    case OutPutType == OSC:
       return OscOut oscOut;
+    case OutPutType == LED;
+      return FastLEDOut fastLEDOut;
 }

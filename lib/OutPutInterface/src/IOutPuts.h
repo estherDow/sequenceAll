@@ -2,7 +2,12 @@
 #define IOUTPUTS_H
 
 
-enum OutPut {osc,midi,cv};
+enum OutPut {
+  OSC,
+  MIDI,
+  CV,
+  LED
+};
 
 
 class IOutPuts {
