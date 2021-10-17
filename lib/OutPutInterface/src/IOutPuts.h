@@ -1,7 +1,7 @@
 #ifndef IOUTPUTS_H
 #define IOUTPUTS_H
-
-
+#include <macros.h>
+#include <IObserver.h>
 enum OutPut {
   OSC,
   MIDI,
@@ -12,8 +12,7 @@ enum OutPut {
 
 class IOutPuts {
   //virtual IOutput();
-  virtual ~IOutPuts();
-  virtual void dispatchSignal(uint8_t value) = 0;
-
+public:
+  virtual ~IOutPuts(){};
 };
 #endif

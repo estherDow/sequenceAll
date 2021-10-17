@@ -5,7 +5,6 @@
 #include "IObserver.h"
 #include "ISubject.h"
 #include <SignalTypes.h>
-#include <Arduino.h>
 
 class Subject : public ISubject{
 public:
