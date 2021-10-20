@@ -1,6 +1,7 @@
 #include <Clock.h>
 #include <Voice.h>
 #include <SignalTypes.h>
+#include <InputService.h>
 #include <Arduino.h>
 class dummyObserver : public IObserver {
 public:
