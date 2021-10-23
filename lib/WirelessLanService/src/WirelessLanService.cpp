@@ -1,7 +1,7 @@
-#include "InputService.h"
+#include "WirelessLanService.h"
 
 
-InputService::InputService() {
+WirelessLanService::WirelessLanService() {
   serverPtr = ServerFactory::make();
 
   AutoConnect portal(*serverPtr);
@@ -10,6 +10,6 @@ InputService::InputService() {
   portalPtr->begin();
 }
 
-void InputService::handleInputClient() {
+void WirelessLanService::handleInputClient() {
   portalPtr->handleClient();
 }

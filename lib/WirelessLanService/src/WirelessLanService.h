@@ -1,14 +1,14 @@
-#ifndef INPUTSERVICE_H
-#define INPUTSERVICE_H
+#ifndef WIRELESSLAN_H
+#define WIRELESSLAN_H
 
 #include <WiFi.h>
 #include <ServerFactory.h>
 #include <AutoConnect.h>
 
 
-class InputService {
+class WirelessLanService {
 public:
-  InputService();
+  WirelessLanService();
   void handleInputClient();
 private:
   WebServer *serverPtr;
