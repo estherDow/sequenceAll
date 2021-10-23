@@ -1,8 +1,8 @@
-#ifndef IOUTPUTS_H
-#define IOUTPUTS_H
+#ifndef IOINTERFACE_H
+#define IOINTERFACE_H
 #include <macros.h>
 #include <IObserver.h>
-enum OutPut {
+enum InOutPut {
   OSC,
   MIDI,
   CV,
@@ -10,9 +10,9 @@ enum OutPut {
 };
 
 
-class IOutPuts {
+class IOInterface {
   //virtual IOutput();
 public:
-  virtual ~IOutPuts(){};
+  virtual ~IOInterface(){};
 };
 #endif
