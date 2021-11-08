@@ -1,15 +1,16 @@
 #include "WirelessLanService.h"
-
+#include "ServerFactory.h"
 
 WirelessLanService::WirelessLanService() {
   serverPtr = ServerFactory::make();
 
-  AutoConnect portal(*serverPtr);
-  portalPtr = &portal;
+  //AutoConnect portal(*serverPtr);
+  //portalPtr = &portal;
 
-  portalPtr->begin();
+  //portalPtr->begin();
 }
 
 void WirelessLanService::handleInputClient() {
-  portalPtr->handleClient();
+  //portalPtr->handleClient();
+  return;
 }

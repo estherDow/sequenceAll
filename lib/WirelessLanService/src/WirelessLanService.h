@@ -9,6 +9,7 @@
 class WirelessLanService {
 public:
   WirelessLanService();
+  void begin();
   void handleInputClient();
 private:
   WebServer *serverPtr;

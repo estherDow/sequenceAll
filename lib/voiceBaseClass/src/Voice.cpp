@@ -3,7 +3,8 @@
 Voice::Voice(SignalTypes type, uint8_t length) { //trigger t gate g clock c
   sender = type;
   _sequenceLength = length;
-  for (int i = 0; i<length;i++){
+  resize(length);
+  for (uint8_t i = 0; i<length;i++){
     setStep(0,i);
   }
 }
