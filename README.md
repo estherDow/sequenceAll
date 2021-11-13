@@ -9,7 +9,13 @@ a)current clock pulse and subDivisions line up
 b)a step is set to not 0 in the vector.
 
 
+Wifi implemented, advertizes services under sequenceall.local
 
+sta / ap modes may be set via post requests:
+
+curl -XPOST -H "Content-type: application/json" -d '{"ssid" : "mySSID" , "password" : "myPassword"}' 'sequenceall.local/set_sta'
+
+curl -XPOST -H "Content-type: application/json" -d '{"ssid" : "myApSSID" , "password" : "myApPassword"}' 'sequenceall.local/set_ap'
 
 
 ###needed:
