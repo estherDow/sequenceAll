@@ -11,7 +11,7 @@ Voice::Voice(SignalTypes type, uint8_t length) { //trigger t gate g clock c
 
 void Voice::update(SignalTypes subjectLine, int msg) {
   _pulseCounter ++;
-  Serial.printf("Voice Update was called %i times\n", _pulseCounter);
+  //Serial.printf("Voice Update was called %i times\n", _pulseCounter);
   if (_pulseCounter == _clockPulsesPerStep) {
     createMsg(getCurrentStepValue());
     notify();
