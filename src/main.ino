@@ -3,8 +3,9 @@
 #include <SignalTypes.h>
 #include <Arduino.h>
 
-#include <WebServer.h>
 #include <WiFi.h>
+#include <ESPmDNS.h>
+#include <WebServer.h>
 #include <ArduinoJson.h>
 //#include <FreeRTOS.h>
 
@@ -46,7 +47,8 @@ void setSTA() {
   Serial.println("setSTA was called");
   if (serverPtr->hasArg("plain") == false) {
   //handle error here
-}
+  }
+  serverPtr->send(200, "application/json", "{}");
   String body = serverPtr->arg("plain");
   deserializeJson(jsonDocument, body);
   if (WiFi.status() == WL_CONNECTED) {
@@ -54,11 +56,7 @@ void setSTA() {
     Serial.println("Wifi was disconnected");
   }
 
-  if (!_doSetSTA(jsonDocument["ssid"], jsonDocument["password"])) {
-    serverPtr->send(500, "application/json", "{}");
-    return;
-  }
-  serverPtr->send(200, "application/json", "{}");
+  _doSetSTA(jsonDocument["ssid"], jsonDocument["password"]);
 }
 
 int _doSetSTA(const char * ssid, const char *  password) {
@@ -82,18 +80,14 @@ IPAddress secondaryDNS(8, 8, 4, 4); // optional
 void setAP() {
   if (serverPtr->hasArg("plain") == false) {
   //handle error here
-}
+  }
+  serverPtr->send(200, "application/json", "{}");
   String body = serverPtr->arg("plain");
   deserializeJson(jsonDocument, body);
   if (WiFi.status() == WL_CONNECTED) {
     WiFi.disconnect();
   }
-  if (!_doSetAP(jsonDocument["ssid"], jsonDocument["password"])) {
-    serverPtr->send(500, "application/json", "{}");
-    return;
-  }
-  serverPtr->send(200, "application/json", "{}");
-  return;
+  _doSetAP(jsonDocument["ssid"], jsonDocument["password"]);
 }
 
 int _doSetAP(const char * ssid, const char *  password) {
@@ -103,6 +97,11 @@ int _doSetAP(const char * ssid, const char *  password) {
 
   WiFi.softAP(ssid, password);
   return 1;
+}
+
+void getTestResponse() {
+  serverPtr->send(200, "text/plain", "Hello World");
+
 }
 
 void setup() {
@@ -118,50 +117,25 @@ void setup() {
   kick->setStep(1,9);
   kick->setStep(1,13);
 
-  _doSetSTA("kenTest", "lolo2010");
+
+
+  _doSetSTA("iPhone de Paula", "pautsau1");
   Serial.println(WiFi.localIP());
+
+    if(!MDNS.begin("sequenceall")) {
+       Serial.println("Error starting mDNS");
+       return;
+  }
+  MDNS.addService("http", "tcp", 80);
   serverPtr->on("/set_sta", HTTP_POST, setSTA);
   serverPtr->on("/set_ap",HTTP_POST, setAP);
+  serverPtr->on("/hello",getTestResponse);
   serverPtr->begin();
 
-/*
-  xTaskCreatePinnedToCore(
-    networkCode,
-    "networkStack",
-    10000,
-    NULL,
-    0,
-    &network,
-    0
-  );
-
-  xTaskCreatePinnedToCore(
-    sequencerCode,
-    "sequencerStack",
-    10000,
-    NULL,
-    0,
-    &sequencer,
-    1
-  );
-  */
 }
 
-
-void sequencerCode(void * pvParameters) {
-
-  for(;;) {
-  }
-}
-
-void networkCode(void * pvParameters) {
-
-  for (;;) {
-  }
-}
 
 void loop() {
   sClock.timer();
   serverPtr->handleClient();
-
 }
