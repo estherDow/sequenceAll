@@ -33,8 +33,7 @@ public:
 
     static uint8_t readIntFromNVS(String key){
         NVS.begin();
-        int64_t value = 0;
-        NVS.getInt(key);
+        int64_t value = NVS.getInt(key);
         NVS.close();
         return value;
     }

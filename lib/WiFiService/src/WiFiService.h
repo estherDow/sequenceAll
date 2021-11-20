@@ -40,17 +40,15 @@ public:
             [](AsyncWebServerRequest *request,
                JsonVariant &json) {
                 const JsonObject &jsonObject = json.as<JsonObject>();
-                if (jsonObject.isNull()) {
-                    NVSService::writeIntToNVS(
-                            "IsNewPassword",
-                            0);
+                if (!jsonObject.isNull()) {
+                    NVSService::writeStringToNVS(
+                            "STAssid",
+                            jsonObject["ssid"]);
+                    NVSService::writeStringToNVS(
+                            "STApassword",
+                            jsonObject["password"]);
                 }
-                NVSService::writeStringToNVS(
-                        "STAssid",
-                        jsonObject["ssid"]);
-                NVSService::writeStringToNVS(
-                        "STApassword",
-                        jsonObject["password"]);
+
                 NVSService::writeIntToNVS(
                         "SetSTA",
                         1);
@@ -67,12 +65,15 @@ public:
               JsonVariant &json) {
                const JsonObject &jsonObject = json.as<JsonObject>();
 
-               NVSService::writeStringToNVS(
-                       "APssid",
-                       jsonObject["ssid"]);
-               NVSService::writeStringToNVS(
-                       "APpassword",
-                       jsonObject["password"]);
+               if (!jsonObject.isNull()) {
+                   NVSService::writeStringToNVS(
+                           "APssid",
+                           jsonObject["ssid"]);
+                   NVSService::writeStringToNVS(
+                           "APpassword",
+                           jsonObject["password"]);
+               }
+
                NVSService::writeIntToNVS(
                        "SetAP",
                        1);
@@ -116,18 +117,14 @@ public:
         return 0;
     }
 
+    int oldState = 0;
+    int interval = 2000;
     void handleWifiMode() {
-        if(NVSService::readIntFromNVS("SetAP")) {
-            initAP();
-            NVSService::writeIntToNVS(
-                    "SetAP",
-                    0);
-        }
-        if(NVSService::readIntFromNVS("SetSTA")) {
-            initSTA();
-            NVSService::writeIntToNVS(
-                    "SetSTA",
-                    0);
+        int currentstate = millis();
+        if (currentstate > oldState + interval) {
+            _doHandleWifiMode();
+            Serial.println("handleWifiMode was called");
+            oldState+=interval;
         }
     }
 
@@ -147,6 +144,27 @@ private:
     int _doSetAP(String ssid, String password) {
         WiFi.softAP((char *) ssid.c_str(), (char *) password.c_str());
         return 1;
+    }
+
+    void _doHandleWifiMode() {
+        Serial.println(NVSService::readIntFromNVS("SetAP"));
+        if(NVSService::readIntFromNVS("SetAP")) {
+            initAP();
+            Serial.println("new credentials were found");
+
+            NVSService::writeIntToNVS(
+                    "SetAP",
+                    0);
+        }
+        if(NVSService::readIntFromNVS("SetSTA")) {
+            if(!initSTA()){
+                initAP();
+            }
+
+            NVSService::writeIntToNVS(
+                    "SetSTA",
+                    0);
+        }
     }
 };
 
