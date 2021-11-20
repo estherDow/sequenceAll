@@ -105,8 +105,8 @@ public:
         if (ssid.length() == 0) {
             return 0;
         }
-        for (uint8_t i; i < numberNetworks; i++) {
-            if (WiFi.SSID(i) == (char *) newSSID.c_str()) {
+        for (uint8_t i = 0; i < numberNetworks; i++) {
+            if (WiFi.SSID(i) == (char *) ssid.c_str()) {
                 _doSetSTA(ssid, password);
                 return 1;
             }
