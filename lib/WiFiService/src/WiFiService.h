@@ -26,7 +26,10 @@ public:
         AsyncWebServer server(80);
         serverPtr = &server;
 
-        initAP();
+        if(!initSTA()) {
+            initAP();
+        }
+
         Serial.println(WiFi.localIP());
 
         if (!MDNS.begin("sequenceall")) {
@@ -84,9 +87,7 @@ public:
         serverPtr->addHandler(handleAPRequest);
     }
 
-
     void initAP() {
-        //TODO: use ternary expression
         String ssid = NVSService::readStringFromNVS("APssid");
         String password = NVSService::readStringFromNVS("APpassword");
         if (ssid.length() == 0) {
@@ -96,26 +97,34 @@ public:
         _doSetAP(ssid, password);
     }
 
+    bool initSTA() {
+        WiFi.mode(WIFI_STA);
+        uint8_t numberNetworks = WiFi.scanNetworks();
+        String ssid = NVSService::readStringFromNVS("STAssid");
+        String password = NVSService::readStringFromNVS("STApassword");
+        if (ssid.length() == 0) {
+            return 0;
+        }
+        for (uint8_t i; i < numberNetworks; i++) {
+            if (WiFi.SSID(i) == (char *) newSSID.c_str()) {
+                _doSetSTA(ssid, password);
+                return 1;
+            }
+        }
+        return 0;
+    }
+
 private:
 
     AsyncWebServer *serverPtr;
 
-    int _doSetSTA(String newSSID, String newPassword) {
-        WiFi.mode(WIFI_AP_STA);
-        uint8_t numberNetworks = WiFi.scanNetworks();
-        for (uint8_t i; i < numberNetworks; i++) {
-            if (WiFi.SSID(i) == (char *) newSSID.c_str()) {
-                WiFi.begin(((char *) newSSID.c_str(), (char *) newPassword.c_str()));
-                while (WiFi.status() != WL_CONNECTED) {
-                    Serial.print(".");
-                }
-                Serial.println("connected to wifi...");
-                Serial.println(WiFi.localIP());
-                return 1;
-            }
+    void _doSetSTA(String newSSID, String newPassword) {
+        WiFi.begin(((char *) newSSID.c_str(), (char *) newPassword.c_str()));
+        while (WiFi.status() != WL_CONNECTED) {
+            Serial.print(".");
         }
-        WiFi.reconnect();
-        return 0;
+        Serial.println("connected to wifi...");
+        Serial.println(WiFi.localIP());
     }
 
     int _doSetAP(String ssid, String password) {
