@@ -9,7 +9,9 @@ a)current clock pulse and subDivisions line up
 b)a step is set to not 0 in the vector.
 
 
-Wifi implemented, advertizes services under sequenceall.local
+Wifi implemented, advertizes services under sequenceall.local, currently not working under android.
+
+Who suppots mDNS?
 
 sta / ap modes may be set via post requests:
 
@@ -17,6 +19,7 @@ curl -XPOST -H "Content-type: application/json" -d '{"ssid" : "mySSID" , "passwo
 
 curl -XPOST -H "Content-type: application/json" -d '{"ssid" : "myApSSID" , "password" : "myApPassword"}' 'sequenceall.local/set_ap'
 
+Currently lamda methods store ssid and pwd as key value pairs in nvm
 
 ###needed:
 
@@ -26,7 +29,5 @@ and implementation of various inputs keypad, midi, osc
 outputfactory
 and implementation of various outputs keypad, midi, osc
 
-class to encapsulate the bitdepth of the vectors holding the step information, to be able to adapt more easily to the dac / storage constraints present in the device.
-see: https://en.cppreference.com/w/cpp/utility/variant
-
 save state of all voices to nvm, so that info is available after you shut down :)
+to be done by implementing setGlob()

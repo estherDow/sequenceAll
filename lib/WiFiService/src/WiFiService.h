@@ -40,13 +40,20 @@ public:
             [](AsyncWebServerRequest *request,
                JsonVariant &json) {
                 const JsonObject &jsonObject = json.as<JsonObject>();
-
+                if (jsonObject.isNull()) {
+                    NVSService::writeIntToNVS(
+                            "IsNewPassword",
+                            0);
+                }
                 NVSService::writeStringToNVS(
                         "STAssid",
                         jsonObject["ssid"]);
                 NVSService::writeStringToNVS(
                         "STApassword",
                         jsonObject["password"]);
+                NVSService::writeIntToNVS(
+                        "IsNewPassword",
+                        1);
                 request->send(
                         200,
                         "application/json",
