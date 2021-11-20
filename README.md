@@ -31,3 +31,7 @@ and implementation of various outputs keypad, midi, osc
 
 save state of all voices to nvm, so that info is available after you shut down :)
 to be done by implementing setGlob()
+
+
+successful use of async webserver could enable a super simple js gui, which sends ajax requests to keep itself updated.
+webapp needs to be served only once and could be ground for a lot of explorative testing.
