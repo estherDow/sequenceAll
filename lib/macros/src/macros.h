@@ -18,5 +18,9 @@
 
 
 
+#define DEFAULT_AP_SSID         "sequenceAll"
+#define DEFAULT_AP_PASSWORD     "transLiberationNow"
+
+
 
 #endif

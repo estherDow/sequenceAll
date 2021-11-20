@@ -9,82 +9,113 @@
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 #include <NVSService.h>
+#include <Arduino.h>
+#include <macros.h>
 
 
 class WiFiService {
 public:
 
-    static const char * apSSID;
-    static const char * apPassword;
+    String apSSID;
+    String apPassword;
 
-    static const char * staSSID;
-    static const char * staPassword;
+    String staSSID;
+    String staPassword;
 
-  void init() {
-    AsyncWebServer server(80);
-    serverPtr = &server;
+    void init() {
+        AsyncWebServer server(80);
+        serverPtr = &server;
 
-    initAP("sequenceAll", "pautsau1");
-    Serial.println(WiFi.localIP());
+        initAP();
+        Serial.println(WiFi.localIP());
 
-      if(!MDNS.begin("sequenceall")) {
-         Serial.println("Error starting mDNS");
-         return;
+        if (!MDNS.begin("sequenceall")) {
+            Serial.println("Error starting mDNS");
+            return;
+        }
+        MDNS.addService("http", "tcp", 80);
+
+        AsyncCallbackJsonWebHandler *handleSTARequest = new AsyncCallbackJsonWebHandler(
+            "/set_sta",
+            [](AsyncWebServerRequest *request,
+               JsonVariant &json) {
+                const JsonObject &jsonObject = json.as<JsonObject>();
+
+                NVSService::writeStringToNVS(
+                        "STAssid",
+                        jsonObject["ssid"]);
+                NVSService::writeStringToNVS(
+                        "STApassword",
+                        jsonObject["password"]);
+                request->send(
+                        200,
+                        "application/json",
+                        {}
+                );
+        });
+
+        AsyncCallbackJsonWebHandler *handleAPRequest = new AsyncCallbackJsonWebHandler(
+            "/set_ap",
+           [](AsyncWebServerRequest *request,
+              JsonVariant &json) {
+               const JsonObject &jsonObject = json.as<JsonObject>();
+
+               NVSService::writeStringToNVS(
+                       "APssid",
+                       jsonObject["ssid"]);
+               NVSService::writeStringToNVS(
+                       "APpassword",
+                       jsonObject["password"]);
+               request->send(
+                       200,
+                       "application/json",
+                       {}
+               );
+       });
+
+        serverPtr->addHandler(handleSTARequest);
+        serverPtr->addHandler(handleAPRequest);
     }
-    MDNS.addService("http", "tcp", 80);
-
-    AsyncCallbackJsonWebHandler* handleSTARequest = new AsyncCallbackJsonWebHandler("/set_sta", [](AsyncWebServerRequest *request, JsonVariant &json) {
-    const JsonObject& jsonObject = json.as<JsonObject>();
-        NVSService::writeStringToNVS(jsonObject["ssid"], jsonObject["password"]);
-        request->send(200, "application/json", {});
-    });
-
-    AsyncCallbackJsonWebHandler* handleAPRequest = new AsyncCallbackJsonWebHandler("/set_ap", [](AsyncWebServerRequest *request, JsonVariant &json) {
-    const JsonObject& jsonObject = json.as<JsonObject>();
-
-        NVSService::writeStringToNVS(jsonObject["ssid"], jsonObject["password"]);
-        request->send(200, "application/json", {});
-    });
-
-    serverPtr->addHandler(handleSTARequest);
-    serverPtr->addHandler(handleAPRequest);
-  }
 
 
-  void initAP(const char * ssid, const char * password) {
-    _doSetAP(ssid, password);
-  }
+    void initAP() {
+        //TODO: use ternary expression
+        String ssid = NVSService::readStringFromNVS("APssid");
+        String password = NVSService::readStringFromNVS("APpassword");
+        if (ssid.length() == 0) {
+           ssid = DEFAULT_AP_SSID;
+           password = DEFAULT_AP_PASSWORD;
+        }
+        _doSetAP(ssid, password);
+    }
 
 private:
 
-  AsyncWebServer *serverPtr;
+    AsyncWebServer *serverPtr;
 
-  int _doSetSTA(const char * newSSID, const char *  newPassword) {
-      WiFi.mode(WIFI_AP_STA);
-      uint8_t numberNetworks = WiFi.scanNetworks();
-      for(uint8_t i; i < numberNetworks; i++) {
-          if (WiFi.SSID(i) == newSSID) {
-            WiFi.begin(newSSID, newPassword);
-            while (WiFi.status() != WL_CONNECTED) {
-            Serial.print(".");
+    int _doSetSTA(String newSSID, String newPassword) {
+        WiFi.mode(WIFI_AP_STA);
+        uint8_t numberNetworks = WiFi.scanNetworks();
+        for (uint8_t i; i < numberNetworks; i++) {
+            if (WiFi.SSID(i) == (char *) newSSID.c_str()) {
+                WiFi.begin(((char *) newSSID.c_str(), (char *) newPassword.c_str()));
+                while (WiFi.status() != WL_CONNECTED) {
+                    Serial.print(".");
+                }
+                Serial.println("connected to wifi...");
+                Serial.println(WiFi.localIP());
+                return 1;
             }
-            Serial.println("connected to wifi...");
-            Serial.println(WiFi.localIP());
-            return 1;
-          }
-      }
-      WiFi.reconnect();
-      return 0;
-  }
+        }
+        WiFi.reconnect();
+        return 0;
+    }
 
-  int _doSetAP(const char * ssid, const char *  password) {
-
-
-    WiFi.softAP(ssid, password);
-    return 1;
-  }
+    int _doSetAP(String ssid, String password) {
+        WiFi.softAP((char *) ssid.c_str(), (char *) password.c_str());
+        return 1;
+    }
 };
-
 
 
 #endif
