@@ -123,7 +123,6 @@ public:
         int currentstate = millis();
         if (currentstate > oldState + interval) {
             _doHandleWifiMode();
-            Serial.println("handleWifiMode was called");
             oldState+=interval;
         }
     }
@@ -145,11 +144,8 @@ private:
     }
 
     void _doHandleWifiMode() {
-        Serial.println(NVSService::readIntFromNVS("SetAP"));
         if(NVSService::readIntFromNVS("SetAP")) {
             initAP();
-            Serial.println("new credentials were found");
-
             NVSService::writeIntToNVS(
                     "SetAP",
                     0);
