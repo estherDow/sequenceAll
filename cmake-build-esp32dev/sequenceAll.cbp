@@ -1,0 +1,1965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="sequenceAll"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET">
+				<Option output="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/include"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceInterface/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/WiFiService/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/ESPmDNS/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/IOInterface/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/clock/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/macros/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternInterfaces/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceTypes/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/FS/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/config"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_trace"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_update"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/asio"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bootloader_support"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bt"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/coap"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/console"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/driver"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/efuse"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-tls"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_adc_cal"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_event"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_client"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_server"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_ota"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_server"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_ringbuf"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_websocket_client"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/espcoredump"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ethernet"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/expat"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fatfs"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freemodbus"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freertos"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/heap"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/idf_test"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/jsmn"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/json"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/libsodium"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/log"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/lwip"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mbedtls"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mdns"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/micro-ecc"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mqtt"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/newlib"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nghttp"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nvs_flash"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/openssl"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protobuf-c"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protocomm"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/pthread"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/sdmmc"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/smartconfig_ack"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/soc"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spi_flash"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spiffs"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcp_transport"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcpip_adapter"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ulp"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/unity"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/vfs"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wear_levelling"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wifi_provisioning"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wpa_supplicant"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/xtensa-debug-module"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-face"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32-camera"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fb_gfx"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/cores/esp32"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/variants/esp32"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/AzureIoT/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/BluetoothSerial/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/DNSServer/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/EEPROM/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/ESP32/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/FFat/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdate/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdateServer/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/NetBIOS/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/Preferences/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/SD/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/SimpleBLE/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/Ticker/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/Update/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0"/>
+					<Add directory="/Users/kenneth/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0/xtensa-esp32-elf"/>
+					<Add directory="/Users/kenneth/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include"/>
+					<Add directory="/Users/kenneth/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed"/>
+					<Add directory="/Users/kenneth/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include"/>
+					<Add directory="/Users/kenneth/.platformio/packages/tool-unity"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET/fast">
+				<Option output="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/include"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceInterface/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/WiFiService/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/ESPmDNS/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/IOInterface/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/clock/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/macros/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternInterfaces/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceTypes/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/FS/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/config"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_trace"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_update"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/asio"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bootloader_support"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/bt"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/coap"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/console"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/driver"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/efuse"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-tls"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_adc_cal"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_event"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_client"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_http_server"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_ota"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_https_server"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_ringbuf"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp_websocket_client"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/espcoredump"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ethernet"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/expat"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fatfs"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freemodbus"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/freertos"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/heap"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/idf_test"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/jsmn"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/json"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/libsodium"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/log"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/lwip"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mbedtls"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mdns"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/micro-ecc"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/mqtt"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/newlib"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nghttp"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/nvs_flash"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/openssl"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protobuf-c"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/protocomm"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/pthread"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/sdmmc"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/smartconfig_ack"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/soc"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spi_flash"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/spiffs"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcp_transport"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/tcpip_adapter"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/ulp"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/unity"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/vfs"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wear_levelling"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wifi_provisioning"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/wpa_supplicant"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/xtensa-debug-module"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp-face"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/esp32-camera"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/fb_gfx"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/cores/esp32"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/variants/esp32"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/AzureIoT/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/BluetoothSerial/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/DNSServer/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/EEPROM/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/ESP32/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/FFat/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdate/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdateServer/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/NetBIOS/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/Preferences/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/SD/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/SimpleBLE/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/Ticker/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/Update/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0"/>
+					<Add directory="/Users/kenneth/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include/c++/5.2.0/xtensa-esp32-elf"/>
+					<Add directory="/Users/kenneth/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include"/>
+					<Add directory="/Users/kenneth/.platformio/packages/toolchain-xtensa32/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed"/>
+					<Add directory="/Users/kenneth/.platformio/packages/toolchain-xtensa32/xtensa-esp32-elf/include"/>
+					<Add directory="/Users/kenneth/.platformio/packages/tool-unity"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Debug">
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 Debug"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Production">
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 Production"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/.clang-format">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/.devcontainer/devcontainer.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/.gitattributes">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/.mbedignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/.prettierignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/ArduinoJson.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/CHANGELOG.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/CMakeLists.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/CONTRIBUTING.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/LICENSE.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/SUPPORT.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/appveyor.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/banner.svg">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/component.mk">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/examples/JsonConfigFile/JsonConfigFile.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/examples/JsonFilterExample/JsonFilterExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/examples/JsonGeneratorExample/JsonGeneratorExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/examples/JsonHttpClient/JsonHttpClient.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/examples/JsonParserExample/JsonParserExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/examples/JsonServer/JsonServer.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/examples/JsonUdpBeacon/JsonUdpBeacon.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/examples/MsgPackParser/MsgPackParser.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/examples/ProgmemExample/ProgmemExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/examples/StringExample/StringExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Array/ArrayFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Array/ArrayImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Array/ArrayIterator.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Array/ArrayRef.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Array/ArrayShortcuts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Array/ElementProxy.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Array/Utilities.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Collection/CollectionData.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Collection/CollectionImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Configuration.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/DeserializationError.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/Filter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/NestingLimit.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/Reader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStreamReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStringReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/Readers/FlashReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/Readers/IteratorReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/Readers/RamReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/Readers/StdStreamReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/Readers/VariantReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Deserialization/deserialize.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Document/BasicJsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Document/DynamicJsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Document/JsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Document/StaticJsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Json/EscapeSequence.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Json/JsonDeserializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Json/JsonSerializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Json/Latch.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Json/PrettyJsonSerializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Json/TextFormatter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Json/Utf16.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Json/Utf8.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Memory/Alignment.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Memory/MemoryPool.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Misc/SerializedValue.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Misc/Visitable.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackDeserializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackSerializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/MsgPack/endianess.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/MsgPack/ieee754.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Namespace.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Numbers/Float.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Numbers/FloatParts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Numbers/FloatTraits.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Numbers/Integer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Numbers/arithmeticCompare.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Numbers/convertNumber.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Numbers/parseNumber.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Object/MemberProxy.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Object/ObjectFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Object/ObjectImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Object/ObjectIterator.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Object/ObjectRef.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Object/ObjectShortcuts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Object/Pair.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/alias_cast.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/assert.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/attributes.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/ctype.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/integer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/limits.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/math.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/mpl/max.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace_generic.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/preprocessor.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/safe_strcmp.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/static_array.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/conditional.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/declval.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/enable_if.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/integral_constant.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_array.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_base_of.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_class.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_const.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_convertible.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_enum.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_floating_point.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_integral.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_pointer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_same.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_signed.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_unsigned.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_unsigned.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_void.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_const.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_cv.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_reference.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/type_identity.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Polyfills/utility.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Serialization/CountingDecorator.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Serialization/Writer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Serialization/Writers/ArduinoStringWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Serialization/Writers/DummyWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Serialization/Writers/PrintWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Serialization/Writers/StaticStringWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStreamWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStringWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Serialization/measure.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Serialization/serialize.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/StringStorage/StringCopier.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/StringStorage/StringMover.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/StringStorage/StringStorage.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/Adapters/ArduinoStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/Adapters/ConstRamStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/Adapters/FlashStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/Adapters/JsonStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/Adapters/RamStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/Adapters/SizedFlashStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/Adapters/SizedRamStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/Adapters/StdStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/Adapters/StringViewAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/IsWriteableString.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/StoragePolicy.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/String.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/StringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Strings/StringAdapters.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/Converter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/ConverterImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/SlotFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/VariantCompare.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/VariantContent.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/VariantData.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/VariantFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/VariantImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/VariantOperators.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/VariantRef.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/VariantShortcuts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/VariantSlot.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/VariantTag.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/VariantTo.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Variant/Visitor.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/compatibility.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/version.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoJson/src/CMakeLists.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/.gitattributes">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/LICENSE.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/examples/simpleFlashNVS.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/examples/uart-controlled.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/src/ArduinoNvs.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ArduinoNvs/src/ArduinoNvs.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/.github/scripts/install-arduino-core-esp32.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/.github/scripts/install-arduino-ide.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/.github/scripts/install-platformio.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/.github/scripts/on-push.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/.github/stale.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/.github/workflows/push.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/.travis.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/CMakeLists.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/Kconfig.projbuild">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/component.mk">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/src/AsyncTCP.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/AsyncTCP/src/AsyncTCP.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/.github/scripts/install-arduino-core-esp32.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/.github/scripts/install-arduino-core-esp8266.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/.github/scripts/install-arduino-ide.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/.github/scripts/install-platformio.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/.github/scripts/on-push.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/.github/stale.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/.github/workflows/push.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/.travis.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/CMakeLists.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/_config.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/component.mk">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/examples/CaptivePortal/CaptivePortal.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/examples/ESP_AsyncFSBrowser/ESP_AsyncFSBrowser.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/examples/ESP_AsyncFSBrowser/data/.exclude.files">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/examples/ESP_AsyncFSBrowser/data/favicon.ico">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/examples/ESP_AsyncFSBrowser/data/index.htm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/examples/regex_patterns/regex_patterns.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/examples/simple_server/simple_server.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/AsyncEventSource.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/AsyncEventSource.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/AsyncJson.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/AsyncWebSocket.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/AsyncWebSocket.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/AsyncWebSynchronization.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/ESPAsyncWebServer.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/SPIFFSEditor.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/SPIFFSEditor.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/StringArray.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/WebAuthentication.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/WebAuthentication.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/WebHandlerImpl.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/WebHandlers.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/WebRequest.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/WebResponseImpl.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/WebResponses.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/WebServer.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESP Async WebServer/src/edit.htm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/.github/scripts/install-arduino-core-esp8266.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/.github/scripts/install-arduino-ide.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/.github/scripts/install-platformio.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/.github/scripts/on-push.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/.github/stale.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/.github/workflows/push.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/.travis.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/LICENSE.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/examples/ClientServer/Client/Client.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/examples/ClientServer/Client/config.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/examples/ClientServer/Server/Server.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/examples/ClientServer/Server/config.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/examples/SyncClient/.esp31b.skip">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/examples/SyncClient/SyncClient.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/AsyncPrinter.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/AsyncPrinter.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/DebugPrintMacros.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/ESPAsyncTCP.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/ESPAsyncTCP.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/ESPAsyncTCPbuffer.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/SyncClient.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/SyncClient.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/async_config.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/tcp_axtls.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/src/tcp_axtls.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/ssl/gen_server_cert.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/ssl/server.cer">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/ESPAsyncTCP/ssl/server.key">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/PORTING.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/component.mk">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/AnalogOutput/AnalogOutput.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Blink/Blink.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/ColorPalette/ColorPalette.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/ColorTemperature/ColorTemperature.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Cylon/Cylon.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/DemoReel100/DemoReel100.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Fire2012/Fire2012.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Fire2012WithPalette/Fire2012WithPalette.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/FirstLight/FirstLight.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Multiple/ArrayOfLedArrays/ArrayOfLedArrays.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Multiple/MirroringSample/MirroringSample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Multiple/MultiArrays/MultiArrays.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Multiple/MultipleStripsInOneArray/MultipleStripsInOneArray.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Multiple/OctoWS2811Demo/OctoWS2811Demo.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Multiple/ParallelOutputDemo/ParallelOutputDemo.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Noise/Noise.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/NoisePlayground/NoisePlayground.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/NoisePlusPalette/NoisePlusPalette.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Pacifica/Pacifica.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Pintest/Pintest.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Ports/PJRCSpectrumAnalyzer/PJRCSpectrumAnalyzer.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/Pride2015/Pride2015.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/RGBCalibrate/RGBCalibrate.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/RGBSetDemo/RGBSetDemo.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/SmartMatrix/SmartMatrix.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/TwinkleFox/TwinkleFox.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/examples/XYMatrix/XYMatrix.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/release_notes.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/FastLED.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/FastLED.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/bitswap.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/bitswap.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/chipsets.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/color.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/colorpalettes.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/colorpalettes.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/colorutils.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/colorutils.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/controller.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/cpp_compat.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/dmx.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/fastled_config.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/fastled_delay.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/fastled_progmem.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/fastpin.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/fastspi.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/fastspi_bitbang.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/fastspi_dma.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/fastspi_nop.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/fastspi_ref.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/fastspi_types.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/hsv2rgb.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/hsv2rgb.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/led_sysdefs.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/lib8tion.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/lib8tion.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/lib8tion/math8.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/lib8tion/random8.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/lib8tion/scale8.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/lib8tion/trig8.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/noise.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/noise.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/pixelset.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/pixeltypes.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/apollo3/clockless_apollo3.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/apollo3/fastled_apollo3.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/apollo3/fastpin_apollo3.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/apollo3/fastspi_apollo3.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/apollo3/led_sysdefs_apollo3.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/common/m0clockless.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/d21/clockless_arm_d21.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/d21/fastled_arm_d21.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/d21/fastpin_arm_d21.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/d21/led_sysdefs_arm_d21.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/d51/README.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/d51/clockless_arm_d51.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/d51/fastled_arm_d51.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/d51/fastpin_arm_d51.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/d51/led_sysdefs_arm_d51.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k20/clockless_arm_k20.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k20/clockless_block_arm_k20.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k20/fastled_arm_k20.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k20/fastpin_arm_k20.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k20/fastspi_arm_k20.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k20/led_sysdefs_arm_k20.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k20/octows2811_controller.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k20/smartmatrix_t3.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k20/ws2812serial_controller.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k66/clockless_arm_k66.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k66/clockless_block_arm_k66.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k66/fastled_arm_k66.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k66/fastpin_arm_k66.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k66/fastspi_arm_k66.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/k66/led_sysdefs_arm_k66.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/kl26/clockless_arm_kl26.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/kl26/fastled_arm_kl26.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/kl26/fastpin_arm_kl26.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/kl26/fastspi_arm_kl26.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/kl26/led_sysdefs_arm_kl26.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/mxrt1062/block_clockless_arm_mxrt1062.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/mxrt1062/clockless_arm_mxrt1062.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/mxrt1062/fastled_arm_mxrt1062.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/mxrt1062/fastpin_arm_mxrt1062.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/mxrt1062/fastspi_arm_mxrt1062.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/mxrt1062/led_sysdefs_arm_mxrt1062.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf51/clockless_arm_nrf51.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf51/fastled_arm_nrf51.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf51/fastpin_arm_nrf51.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf51/fastspi_arm_nrf51.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf51/led_sysdefs_arm_nrf51.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf52/arbiter_nrf52.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf52/clockless_arm_nrf52.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf52/fastled_arm_nrf52.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf52/fastpin_arm_nrf52.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf52/fastpin_arm_nrf52_variants.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf52/fastspi_arm_nrf52.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/nrf52/led_sysdefs_arm_nrf52.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/sam/clockless_arm_sam.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/sam/clockless_block_arm_sam.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/sam/fastled_arm_sam.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/sam/fastpin_arm_sam.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/sam/fastspi_arm_sam.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/sam/led_sysdefs_arm_sam.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/stm32/clockless_arm_stm32.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/stm32/cm3_regs.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/stm32/fastled_arm_stm32.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/stm32/fastpin_arm_stm32.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/arm/stm32/led_sysdefs_arm_stm32.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/avr/clockless_trinket.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/avr/fastled_avr.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/avr/fastpin_avr.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/avr/fastspi_avr.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/avr/led_sysdefs_avr.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/32/clockless_block_esp32.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/32/clockless_i2s_esp32.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/32/clockless_rmt_esp32.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/32/clockless_rmt_esp32.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/32/fastled_esp32.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/32/fastpin_esp32.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/32/led_sysdefs_esp32.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/8266/clockless_block_esp8266.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/8266/clockless_esp8266.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/8266/fastled_esp8266.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/8266/fastpin_esp8266.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/platforms/esp/8266/led_sysdefs_esp8266.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/power_mgt.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/power_mgt.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/FastLED/src/wiring.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/API.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/OSCEsplora.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/SerialCallResponse.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/SerialEcho.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/SerialOscuino.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/SerialReceive.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/SerialReceivewithServo.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/SerialSend.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/UDPCallResponse.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/UDPEcho.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/UDPOscuino.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/UDPReceive.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/MaxMSP/examples/UDPSend.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/PD/SerialOscuino.pd">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/PD/o.io.slipserial.pd">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/Processing/SLIPSerialToUDP/SLIPSerialToUDP.pde">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/Processing/UDPReceiveBundle/UDPReceiveBundle.pde">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/Processing/UDPReceiveMessage/UDPReceiveMessage.pde">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/Processing/serialSend/code/javaosc.jar">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/Processing/serialSend/serialSend.pde">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/Applications/Processing/serialSend/sketch.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCBoards.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCBoards.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCBundle.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCBundle.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCData.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCData.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCMatch.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCMatch.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCMessage.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCMessage.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCTiming.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/OSCTiming.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/SLIPEncodedSerial.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/SLIPEncodedSerial.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/SLIPEncodedUSBSerial.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/SLIPEncodedUSBSerial.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/ESP8266ReceiveBundle/ESP8266ReceiveBundle.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/ESP8266ReceiveMessage/ESP8266ReceiveMessage.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/ESP8266sendMessage/ESP8266sendMessage.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/OSCEsplora/OSCEsplora.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/PatternMatching/PatternMatching.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialCallResponse/SerialCallResponse.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialEcho/SerialEcho.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialOscuinoAdaFruitPlayGroundExpresswithBundles/SerialOscuinoAdaFruitPlayGroundExpresswithBundles.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialOscuinoForFubarino/SerialOscuinoForFubarino.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialOscuinoGemmaM0/SerialOscuinoGemmaM0.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialOscuinowithBundles/SerialOscuinowithBundles.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialOscuinowithMessages/SerialOscuinowithMessages.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialReceive/SerialReceive.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialReceiveInfiniteLoop/SerialReceiveInfiniteLoop.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialReceivewithServo/SerialReceivewithServo.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialSendBundle/SerialSendBundle.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialSendBundleWithTimeTag/SerialSendBundleWithTimeTag.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialSendMessage/SerialSendMessage.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/SerialSendMessageInfiniteLoop/SerialSendMessageInfiniteLoop.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/UDPCallResponse/UDPCallResponse.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/UDPEcho/UDPEcho.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/UDPOscuino/UDPOscuino.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/UDPReceive/UDPReceive.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/UDPSendBundle/UDPSendBundle.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/UDPSendBundlewithTimeTag/UDPSendBundlewithTimeTag.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/examples/UDPSendMessage/UDPSendMessage.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/test/OSCBundle_test/OSCBundle_test.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/test/OSCBundle_test/TestPrint.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/test/OSCData_test/OSCData_test.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/test/OSCMessage_encode_decode_test/OSCMessage_encode_decode_test.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/test/OSCMessage_encode_decode_test/TestPrint.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/test/OSCMessage_match_test/OSCMessage_match_test.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/esp32dev/OSC/test/OSCMessage_test/OSCMessage_test.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/WiFiFactory/src/IWiFi.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/readme.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/IOInterface/src/IOInterface.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/Module.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/Module.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src/Subject.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src/Subject.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternInterfaces/src/IObserver.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternInterfaces/src/ISubject.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src/OscService.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src/OscService.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src/OutputFactory.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src/OutputFactory.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src/VoicePatternData.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src/VoicePatternData.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceTypes/src/SignalTypes.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/WiFiService/src/NVSService.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/WiFiService/src/WiFiService.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/clock/src/Clock.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/clock/src/Clock.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/macros/src/macros.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src/Voice.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src/Voice.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceInterface/src/IVoice.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/src/main.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/src/main.ino.old">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

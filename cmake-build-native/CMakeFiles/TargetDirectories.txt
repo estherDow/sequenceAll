@@ -1,0 +1,5 @@
+/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/rebuild_cache.dir
+/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/edit_cache.dir
+/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir
+/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Debug.dir
+/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Production.dir

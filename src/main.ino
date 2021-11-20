@@ -1,10 +1,11 @@
+#include <Arduino.h>
+
 #include <Clock.h>
 #include <Voice.h>
 #include <SignalTypes.h>
 
 #include <WiFiService.h>
-#include <Arduino.h>
-
+#include <OscService.h>
 
 
 class dummyObserver : public IObserver {

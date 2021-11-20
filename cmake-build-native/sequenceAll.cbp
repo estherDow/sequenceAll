@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="sequenceAll"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET">
+				<Option output="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/include"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternInterfaces/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceTypes/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/IOInterface/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/WiFiService/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/clock/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/macros/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceInterface/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/tool-unity"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET/fast">
+				<Option output="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/include"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternInterfaces/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceTypes/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/IOInterface/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/WiFiService/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/clock/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/macros/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceInterface/src"/>
+					<Add directory="/Users/kenneth/.platformio/packages/tool-unity"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Debug">
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 Debug"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Production">
+				<Option working_dir="/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 Production"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/.clang-format">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/.devcontainer/devcontainer.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/.gitattributes">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/.mbedignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/.prettierignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/ArduinoJson.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/CHANGELOG.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/CMakeLists.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/CONTRIBUTING.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/LICENSE.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/SUPPORT.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/appveyor.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/banner.svg">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/component.mk">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/examples/JsonConfigFile/JsonConfigFile.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/examples/JsonFilterExample/JsonFilterExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/examples/JsonGeneratorExample/JsonGeneratorExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/examples/JsonHttpClient/JsonHttpClient.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/examples/JsonParserExample/JsonParserExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/examples/JsonServer/JsonServer.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/examples/JsonUdpBeacon/JsonUdpBeacon.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/examples/MsgPackParser/MsgPackParser.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/examples/ProgmemExample/ProgmemExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/examples/StringExample/StringExample.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Array/ArrayFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Array/ArrayImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Array/ArrayIterator.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Array/ArrayRef.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Array/ArrayShortcuts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Array/ElementProxy.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Array/Utilities.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Collection/CollectionData.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Collection/CollectionImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Configuration.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/DeserializationError.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/Filter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/NestingLimit.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/Reader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStreamReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStringReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/Readers/FlashReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/Readers/IteratorReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/Readers/RamReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/Readers/StdStreamReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/Readers/VariantReader.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Deserialization/deserialize.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Document/BasicJsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Document/DynamicJsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Document/JsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Document/StaticJsonDocument.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Json/EscapeSequence.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Json/JsonDeserializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Json/JsonSerializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Json/Latch.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Json/PrettyJsonSerializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Json/TextFormatter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Json/Utf16.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Json/Utf8.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Memory/Alignment.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Memory/MemoryPool.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Misc/SerializedValue.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Misc/Visitable.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackDeserializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackSerializer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/MsgPack/endianess.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/MsgPack/ieee754.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Namespace.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Numbers/Float.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Numbers/FloatParts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Numbers/FloatTraits.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Numbers/Integer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Numbers/arithmeticCompare.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Numbers/convertNumber.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Numbers/parseNumber.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Object/MemberProxy.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Object/ObjectFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Object/ObjectImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Object/ObjectIterator.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Object/ObjectRef.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Object/ObjectShortcuts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Object/Pair.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/alias_cast.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/assert.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/attributes.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/ctype.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/integer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/limits.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/math.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/mpl/max.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace_generic.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/preprocessor.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/safe_strcmp.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/static_array.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/conditional.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/declval.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/enable_if.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/integral_constant.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_array.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_base_of.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_class.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_const.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_convertible.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_enum.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_floating_point.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_integral.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_pointer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_same.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_signed.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_unsigned.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_unsigned.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_void.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_const.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_cv.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_reference.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/type_identity.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Polyfills/utility.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Serialization/CountingDecorator.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Serialization/Writer.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Serialization/Writers/ArduinoStringWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Serialization/Writers/DummyWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Serialization/Writers/PrintWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Serialization/Writers/StaticStringWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStreamWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStringWriter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Serialization/measure.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Serialization/serialize.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/StringStorage/StringCopier.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/StringStorage/StringMover.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/StringStorage/StringStorage.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/Adapters/ArduinoStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/Adapters/ConstRamStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/Adapters/FlashStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/Adapters/JsonStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/Adapters/RamStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/Adapters/SizedFlashStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/Adapters/SizedRamStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/Adapters/StdStringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/Adapters/StringViewAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/IsWriteableString.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/StoragePolicy.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/String.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/StringAdapter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Strings/StringAdapters.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/Converter.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/ConverterImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/SlotFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/VariantCompare.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/VariantContent.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/VariantData.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/VariantFunctions.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/VariantImpl.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/VariantOperators.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/VariantRef.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/VariantShortcuts.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/VariantSlot.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/VariantTag.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/VariantTo.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/Variant/Visitor.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/compatibility.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/ArduinoJson/version.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src/CMakeLists.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/.gitattributes">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/LICENSE.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/examples/simpleFlashNVS.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/examples/uart-controlled.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/.github/scripts/install-arduino-core-esp32.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/.github/scripts/install-arduino-ide.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/.github/scripts/install-platformio.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/.github/scripts/on-push.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/.github/stale.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/.github/workflows/push.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/.travis.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/CMakeLists.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/Kconfig.projbuild">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/component.mk">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/.github/scripts/install-arduino-core-esp32.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/.github/scripts/install-arduino-core-esp8266.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/.github/scripts/install-arduino-ide.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/.github/scripts/install-platformio.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/.github/scripts/on-push.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/.github/stale.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/.github/workflows/push.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/.travis.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/CMakeLists.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/_config.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/component.mk">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/examples/CaptivePortal/CaptivePortal.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/examples/ESP_AsyncFSBrowser/ESP_AsyncFSBrowser.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/examples/ESP_AsyncFSBrowser/data/.exclude.files">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/examples/ESP_AsyncFSBrowser/data/favicon.ico">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/examples/ESP_AsyncFSBrowser/data/index.htm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/examples/regex_patterns/regex_patterns.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/examples/simple_server/simple_server.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/AsyncEventSource.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/AsyncEventSource.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/AsyncJson.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/AsyncWebSocket.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/AsyncWebSocket.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/AsyncWebSynchronization.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/ESPAsyncWebServer.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/SPIFFSEditor.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/SPIFFSEditor.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/StringArray.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebAuthentication.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebAuthentication.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebHandlerImpl.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebHandlers.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebRequest.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebResponseImpl.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebResponses.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebServer.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/edit.htm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/.github/scripts/install-arduino-core-esp8266.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/.github/scripts/install-arduino-ide.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/.github/scripts/install-platformio.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/.github/scripts/on-push.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/.github/stale.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/.github/workflows/push.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/.travis.yml">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/LICENSE.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/examples/ClientServer/Client/Client.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/examples/ClientServer/Client/config.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/examples/ClientServer/Server/Server.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/examples/ClientServer/Server/config.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/examples/SyncClient/.esp31b.skip">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/examples/SyncClient/SyncClient.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/AsyncPrinter.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/AsyncPrinter.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/DebugPrintMacros.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/async_config.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/ssl/gen_server_cert.sh">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/ssl/server.cer">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/ssl/server.key">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/WiFiFactory/src/IWiFi.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/readme.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/IOInterface/src/IOInterface.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/Module.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/Module.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src/Subject.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src/Subject.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternInterfaces/src/IObserver.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternInterfaces/src/ISubject.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src/OscService.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src/OscService.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src/OutputFactory.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src/OutputFactory.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src/VoicePatternData.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src/VoicePatternData.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceTypes/src/SignalTypes.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/WiFiService/src/NVSService.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/WiFiService/src/WiFiService.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/clock/src/Clock.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/clock/src/Clock.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/macros/src/macros.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src/Voice.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src/Voice.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceInterface/src/IVoice.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/src/main.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/src/main.ino.old">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

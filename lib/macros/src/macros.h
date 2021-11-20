@@ -21,8 +21,9 @@
 #define DEFAULT_AP_SSID         "sequenceAll"
 #define DEFAULT_AP_PASSWORD     "transLiberationNow"
 
-#define LOCAL_UDP_PORT          8000
-#define DEFAULT_REMOTE_HOSTNAME        "remoteHost"
+#define LOCAL_UDP_PORT                   8000
+#define DEFAULT_REMOTE_UDP_PORT          9000
+#define DEFAULT_REMOTE_HOSTNAME          "remoteHost"
 
 
 
