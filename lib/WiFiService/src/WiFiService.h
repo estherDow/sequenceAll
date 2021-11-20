@@ -40,7 +40,7 @@ public:
             [](AsyncWebServerRequest *request,
                JsonVariant &json) {
                 const JsonObject &jsonObject = json.as<JsonObject>();
-                if (!jsonObject.isNull()) {
+                if (!jsonObject.isNull() && jsonObject["ssid"]) {
                     NVSService::writeStringToNVS(
                             "STAssid",
                             jsonObject["ssid"]);
@@ -65,7 +65,7 @@ public:
               JsonVariant &json) {
                const JsonObject &jsonObject = json.as<JsonObject>();
 
-               if (!jsonObject.isNull()) {
+               if (!jsonObject.isNull() && jsonObject["ssid"]) {
                    NVSService::writeStringToNVS(
                            "APssid",
                            jsonObject["ssid"]);
@@ -133,10 +133,8 @@ private:
     AsyncWebServer * server;
 
     void _doSetSTA(String newSSID, String newPassword) {
-        WiFi.begin(((char *) newSSID.c_str(), (char *) newPassword.c_str()));
-        while (WiFi.status() != WL_CONNECTED) {
-            Serial.print(".");
-        }
+        WiFi.begin((char *) newSSID.c_str(), (char *) newPassword.c_str());
+        while (WiFi.status() != WL_CONNECTED) {}
         Serial.println("connected to wifi...");
         Serial.println(WiFi.localIP());
     }
