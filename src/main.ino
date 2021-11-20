@@ -54,4 +54,5 @@ void setup() {
 
 void loop() {
   sClock.timer();
+  wifiService.handleWifiMode();
 }

@@ -23,15 +23,12 @@ public:
     String staPassword;
 
     void init() {
-        AsyncWebServer server(80);
-        serverPtr = &server;
+
 
         if(!initSTA()) {
             initAP();
         }
-
-        Serial.println(WiFi.localIP());
-
+        server = new AsyncWebServer(80);
         if (!MDNS.begin("sequenceall")) {
             Serial.println("Error starting mDNS");
             return;
@@ -55,7 +52,7 @@ public:
                         "STApassword",
                         jsonObject["password"]);
                 NVSService::writeIntToNVS(
-                        "IsNewPassword",
+                        "SetSTA",
                         1);
                 request->send(
                         200,
@@ -76,6 +73,9 @@ public:
                NVSService::writeStringToNVS(
                        "APpassword",
                        jsonObject["password"]);
+               NVSService::writeIntToNVS(
+                       "SetAP",
+                       1);
                request->send(
                        200,
                        "application/json",
@@ -83,8 +83,10 @@ public:
                );
        });
 
-        serverPtr->addHandler(handleSTARequest);
-        serverPtr->addHandler(handleAPRequest);
+        server->addHandler(handleSTARequest);
+        server->addHandler(handleAPRequest);
+        server->begin();
+
     }
 
     void initAP() {
@@ -114,9 +116,24 @@ public:
         return 0;
     }
 
+    void handleWifiMode() {
+        if(NVSService::readIntFromNVS("SetAP")) {
+            initAP();
+            NVSService::writeIntToNVS(
+                    "SetAP",
+                    0);
+        }
+        if(NVSService::readIntFromNVS("SetSTA")) {
+            initSTA();
+            NVSService::writeIntToNVS(
+                    "SetSTA",
+                    0);
+        }
+    }
+
 private:
 
-    AsyncWebServer *serverPtr;
+    AsyncWebServer * server;
 
     void _doSetSTA(String newSSID, String newPassword) {
         WiFi.begin(((char *) newSSID.c_str(), (char *) newPassword.c_str()));
