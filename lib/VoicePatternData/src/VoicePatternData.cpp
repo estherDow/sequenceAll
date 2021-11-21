@@ -2,11 +2,11 @@
 
 
 
-void VoicePatternData::at(uint32_t value, uint8_t position) {
+void VoicePatternData::at(uint8_t value, uint8_t position) {
   _voicePattern.at(position) = value;
 }
 
-uint32_t VoicePatternData::at(uint8_t position) {
+uint8_t VoicePatternData::at(uint8_t position) {
   return _voicePattern.at(position);
 }
 
