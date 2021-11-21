@@ -35,3 +35,7 @@ to be done by implementing setGlob()
 
 successful use of async webserver could enable a super simple js gui, which sends ajax requests to keep itself updated.
 webapp needs to be served only once and could be ground for a lot of explorative testing.
+
+I need to rewrite the message distribution system in order to send messages only to the modules required.
+If I have multiple voice classes, how may I call set step only on one voice. etc.
+
