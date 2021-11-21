@@ -8,10 +8,10 @@
 
 class Subject : public ISubject{
 public:
-  void attach(IObserver *observer);
-  void detach(IObserver *observer);
-  void notify();
-  void createMsg(int msg);
+  void attach(IObserver *observer) override;
+  void detach(IObserver *observer)override;
+  void notify() override;
+  void createMsg(int msg) override;
   std::list<IObserver *> list_observer_;
   int _msg;
   SignalTypes sender;

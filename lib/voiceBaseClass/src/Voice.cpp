@@ -25,7 +25,7 @@ SignalTypes Voice::getType() {
 }
 
 
-void Voice::setStep(uint16_t value, uint8_t position){
+void Voice::setStep(uint8_t value, uint8_t position){
   _steps.at(value, position);
 }
 

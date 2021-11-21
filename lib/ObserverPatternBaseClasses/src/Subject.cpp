@@ -17,7 +17,7 @@ void Subject::createMsg(int msg) {
 
 //Send Clock Signal
 void Subject::notify() {
-  std::list<IObserver *>::iterator iterator = list_observer_.begin();
+  auto iterator = list_observer_.begin();
   while (iterator != list_observer_.end()) {
     (*iterator)->update(sender, _msg);
     ++iterator;
