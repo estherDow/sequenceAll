@@ -16,11 +16,6 @@
 class WiFiService {
 public:
 
-    String apSSID;
-    String apPassword;
-
-    String staSSID;
-    String staPassword;
 
     void init() {
 
@@ -35,7 +30,7 @@ public:
         }
         MDNS.addService("http", "tcp", 80);
 
-        AsyncCallbackJsonWebHandler *handleSTARequest = new AsyncCallbackJsonWebHandler(
+        auto *handleSTARequest = new AsyncCallbackJsonWebHandler(
             "/set_sta",
             [](AsyncWebServerRequest *request,
                JsonVariant &json) {
@@ -59,7 +54,7 @@ public:
                 );
         });
 
-        AsyncCallbackJsonWebHandler *handleAPRequest = new AsyncCallbackJsonWebHandler(
+        auto *handleAPRequest = new AsyncCallbackJsonWebHandler(
             "/set_ap",
            [](AsyncWebServerRequest *request,
               JsonVariant &json) {

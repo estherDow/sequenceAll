@@ -1,12 +1,12 @@
 #include "OscService.h"
 
-OscService::OscService(){
-    Udp = new WiFiUDP();
-    Udp->begin(LOCAL_UDP_PORT);
+void OscService::begin(WiFiUDP* udp){
+    Udp = udp;
     remoteIP = _getIpAddressFromHostname();
-
 }
 
+OscService::OscService() {
+}
 void OscService::send(String uri, uint8_t argument) {
     //TODO: Find method prototype
     OSCMessage msg((char *) uri.c_str());
@@ -26,17 +26,23 @@ void OscService::receive() {
             msg.fill(Udp->read());
         }
         if (!msg.hasError()) {
-            Serial.println(msg.getInt(0));
+            int message = msg.getInt(0);
+            Serial.println(message);
         }
     }
+}
+
+void OscService::update(SignalTypes sender, int msg) {
+    return;
 }
 
 
 IPAddress OscService::_getIpAddressFromHostname() {
     String hostname = NVSService::readStringFromNVS("remoteHostname");
     if (hostname.length() == 0 ) {
-        hostname == DEFAULT_REMOTE_HOSTNAME;
+        hostname = DEFAULT_REMOTE_HOSTNAME;
     }
         return MDNS.queryHost((char *) hostname.c_str(), 2000);
 
 }
+

@@ -15,13 +15,17 @@ class OscService : public IOInterface, public Module {
 public:
     OscService();
 
+    void begin(WiFiUDP *udp);
+
     void send(String uri, uint8_t argument);
     void receive();
-
+    void update(SignalTypes sender, int msg);
 private:
     WiFiUDP* Udp;
     IPAddress remoteIP;
     IPAddress _getIpAddressFromHostname();
+
+
 };
 
 #endif

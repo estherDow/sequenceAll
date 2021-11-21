@@ -1,17 +1,18 @@
 #include <Arduino.h>
+#include <WiFiUdp.h>
 
 #include <Clock.h>
 #include <Voice.h>
 #include <SignalTypes.h>
-
+#include <macros.h>
 #include <WiFiService.h>
 #include <OscService.h>
 
 
 class dummyObserver : public IObserver {
 public:
-  dummyObserver() {};
-  void update(SignalTypes sender, int _msg);
+  dummyObserver() = default;
+  void update(SignalTypes sender, int _msg) override;
 
 };
 
@@ -25,8 +26,9 @@ void dummyObserver::update(SignalTypes _sender, int _msg){
 
 Clock sClock;
 WiFiService wifiService;
+OscService oscService;
 
-
+WiFiUDP Udp;
 
 
 SignalTypes trigger = TRIGGER;
@@ -50,10 +52,13 @@ void setup() {
   kick->setStep(1,13);
 
   wifiService.init();
+  Udp.begin(LOCAL_UDP_PORT);
+  oscService.begin(&Udp);
 }
 
 
 void loop() {
   sClock.timer();
   wifiService.handleWifiMode();
+  oscService.receive();
 }
