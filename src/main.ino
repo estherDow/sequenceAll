@@ -19,10 +19,10 @@ public:
 };
 
 void dummyObserver::update(SignalTypes _sender, int _msg) {
-    //Serial.println("Received Update:");
-    //Serial.println(_msg);
-    //Serial.println("From:");
-    //Serial.println(_sender);
+    Serial.println("Received Update:");
+    Serial.println(_msg);
+    Serial.println("From:");
+    Serial.println(_sender);
 }
 
 
@@ -34,18 +34,20 @@ WiFiUDP Udp;
 
 
 SignalTypes trigger = TRIGGER;
-Voice *kick = new Voice(trigger, 16);
+//Voice *kick = new Voice(trigger, 16);
 dummyObserver *dummy = new dummyObserver();
 
 
 void setup() {
+    VoiceContainer voiceContainer;
+    voiceContainer.add(8);
+    Voice * kick = voiceContainer.get(8);
+    kick->attach(dummy);
+
     Serial.begin(115200);
     sClock.setBeatsPerMinute(25);
     sClock.attach(kick);
-    VoiceContainer voiceContainer;
-    voiceContainer.add(8);
 
-    kick->attach(dummy);
     kick->setQuarterNoteDivisions(20);
     Serial.printf("Subdivisions per quarternote: %i\n", kick->getQuarterNoteDivisions());
     kick->setStep(1, 1);
