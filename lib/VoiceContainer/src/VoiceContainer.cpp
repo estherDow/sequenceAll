@@ -10,13 +10,15 @@ VoiceContainer::VoiceContainer() {
 }
 
 void VoiceContainer::add(int Handle) {
-    voiceMap.insert(Handle, )
+    SignalTypes trigger = TRIGGER;
+    Voice voice(trigger, 16);
+    //voiceMap.insert(Handle, voice);
 }
 
 void VoiceContainer::remove(int Handle) {
 
 }
 
-Voice VoiceContainer::get(int Handle) {
-
+Voice * VoiceContainer::get(int Handle) {
+    return;
 }

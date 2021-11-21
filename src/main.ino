@@ -7,20 +7,22 @@
 #include <macros.h>
 #include <WiFiService.h>
 #include <OscService.h>
+#include "VoiceContainer.h"
 
 
 class dummyObserver : public IObserver {
 public:
-  dummyObserver() = default;
-  void update(SignalTypes sender, int _msg) override;
+    dummyObserver() = default;
+
+    void update(SignalTypes sender, int _msg) override;
 
 };
 
-void dummyObserver::update(SignalTypes _sender, int _msg){
-  //Serial.println("Received Update:");
-  //Serial.println(_msg);
-  //Serial.println("From:");
-  //Serial.println(_sender);
+void dummyObserver::update(SignalTypes _sender, int _msg) {
+    //Serial.println("Received Update:");
+    //Serial.println(_msg);
+    //Serial.println("From:");
+    //Serial.println(_sender);
 }
 
 
@@ -36,29 +38,29 @@ Voice *kick = new Voice(trigger, 16);
 dummyObserver *dummy = new dummyObserver();
 
 
-
-
 void setup() {
-  Serial.begin(115200);
-  sClock.setBeatsPerMinute(25);
-  sClock.attach(kick);
+    Serial.begin(115200);
+    sClock.setBeatsPerMinute(25);
+    sClock.attach(kick);
+    VoiceContainer voiceContainer;
+    voiceContainer.add(8);
 
-  kick->attach(dummy);
-  kick->setQuarterNoteDivisions(20);
-  Serial.printf("Subdivisions per quarternote: %i\n", kick->getQuarterNoteDivisions());
-  kick->setStep(1,1);
-  kick->setStep(1,5);
-  kick->setStep(1,9);
-  kick->setStep(1,13);
+    kick->attach(dummy);
+    kick->setQuarterNoteDivisions(20);
+    Serial.printf("Subdivisions per quarternote: %i\n", kick->getQuarterNoteDivisions());
+    kick->setStep(1, 1);
+    kick->setStep(1, 5);
+    kick->setStep(1, 9);
+    kick->setStep(1, 13);
 
-  wifiService.init();
-  Udp.begin(LOCAL_UDP_PORT);
-  oscService.begin(&Udp);
+    wifiService.init();
+    Udp.begin(LOCAL_UDP_PORT);
+    oscService.begin(&Udp);
 }
 
 
 void loop() {
-  sClock.timer();
-  wifiService.handleWifiMode();
-  oscService.receive();
+    sClock.timer();
+    wifiService.handleWifiMode();
+    oscService.receive();
 }

@@ -8,17 +8,18 @@
 #include <Arduino.h>
 
 #include <Voice.h>
+#include <SignalTypes.h>
 
-typedef std::unordered_map<String, IVoice> VoiceMap;
+typedef std::unordered_map<int,Voice> VoiceMap;
 
 class VoiceContainer {
     //TODO: A class, which creates new voices and appends them to a list of some sort.
     // this:https://www.cplusplus.com/reference/map/map/
 public:
     VoiceContainer();
-    void add(String Handle);
-    void remove(String Handle);
-    Voice * get(String Handle);
+    void add(int Handle);
+    void remove(int Handle);
+    Voice * get(int Handle);
 
 private:
     VoiceMap * voiceMap;

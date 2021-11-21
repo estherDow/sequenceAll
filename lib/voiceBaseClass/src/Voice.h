@@ -36,9 +36,9 @@ public:
     uint8_t getMotion();
 
     //TODO: Implement save to nvs
-    void save();
+ //   void save();
     //TODO: Implement destructor
-    ~Voice();
+//    ~Voice();
 private:
     //Always initialize values with some default or else you WILL run into undefined behavior.
     VoicePatternData _steps;
