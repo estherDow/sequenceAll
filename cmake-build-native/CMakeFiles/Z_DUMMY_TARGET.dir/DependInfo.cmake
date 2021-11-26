@@ -51,12 +51,13 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebServer.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebServer.cpp.obj"
   "/Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.obj"
   "/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/Module.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.obj"
-  "/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src/Subject.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.obj"
+  "/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPattern/src/Subject.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPattern/src/Subject.cpp.obj"
   "/Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src/OscService.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.obj"
   "/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src/OutputFactory.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.obj"
-  "/Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src/VoicePatternData.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.obj"
+  "/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/Voice.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.obj"
+  "/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoiceContainer.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj"
+  "/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoicePatternData.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj"
   "/Users/kenneth/gitPrivate/sequenceAll/lib/clock/src/Clock.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.obj"
-  "/Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src/Voice.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

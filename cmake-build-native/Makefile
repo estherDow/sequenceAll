@@ -563,29 +563,29 @@ lib/Module/src/Module.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.s
 .PHONY : lib/Module/src/Module.cpp.s
 
-lib/ObserverPatternBaseClasses/src/Subject.obj: lib/ObserverPatternBaseClasses/src/Subject.cpp.obj
-.PHONY : lib/ObserverPatternBaseClasses/src/Subject.obj
+lib/ObserverPattern/src/Subject.obj: lib/ObserverPattern/src/Subject.cpp.obj
+.PHONY : lib/ObserverPattern/src/Subject.obj
 
 # target to build an object file
-lib/ObserverPatternBaseClasses/src/Subject.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.obj
-.PHONY : lib/ObserverPatternBaseClasses/src/Subject.cpp.obj
+lib/ObserverPattern/src/Subject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPattern/src/Subject.cpp.obj
+.PHONY : lib/ObserverPattern/src/Subject.cpp.obj
 
-lib/ObserverPatternBaseClasses/src/Subject.i: lib/ObserverPatternBaseClasses/src/Subject.cpp.i
-.PHONY : lib/ObserverPatternBaseClasses/src/Subject.i
+lib/ObserverPattern/src/Subject.i: lib/ObserverPattern/src/Subject.cpp.i
+.PHONY : lib/ObserverPattern/src/Subject.i
 
 # target to preprocess a source file
-lib/ObserverPatternBaseClasses/src/Subject.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.i
-.PHONY : lib/ObserverPatternBaseClasses/src/Subject.cpp.i
+lib/ObserverPattern/src/Subject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPattern/src/Subject.cpp.i
+.PHONY : lib/ObserverPattern/src/Subject.cpp.i
 
-lib/ObserverPatternBaseClasses/src/Subject.s: lib/ObserverPatternBaseClasses/src/Subject.cpp.s
-.PHONY : lib/ObserverPatternBaseClasses/src/Subject.s
+lib/ObserverPattern/src/Subject.s: lib/ObserverPattern/src/Subject.cpp.s
+.PHONY : lib/ObserverPattern/src/Subject.s
 
 # target to generate assembly for a file
-lib/ObserverPatternBaseClasses/src/Subject.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.s
-.PHONY : lib/ObserverPatternBaseClasses/src/Subject.cpp.s
+lib/ObserverPattern/src/Subject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPattern/src/Subject.cpp.s
+.PHONY : lib/ObserverPattern/src/Subject.cpp.s
 
 lib/OscService/src/OscService.obj: lib/OscService/src/OscService.cpp.obj
 .PHONY : lib/OscService/src/OscService.obj
@@ -635,29 +635,77 @@ lib/OutPutFactory/src/OutputFactory.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.s
 .PHONY : lib/OutPutFactory/src/OutputFactory.cpp.s
 
-lib/VoicePatternData/src/VoicePatternData.obj: lib/VoicePatternData/src/VoicePatternData.cpp.obj
-.PHONY : lib/VoicePatternData/src/VoicePatternData.obj
+lib/VoiceContainer/src/Voice.obj: lib/VoiceContainer/src/Voice.cpp.obj
+.PHONY : lib/VoiceContainer/src/Voice.obj
 
 # target to build an object file
-lib/VoicePatternData/src/VoicePatternData.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.obj
-.PHONY : lib/VoicePatternData/src/VoicePatternData.cpp.obj
+lib/VoiceContainer/src/Voice.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.obj
+.PHONY : lib/VoiceContainer/src/Voice.cpp.obj
 
-lib/VoicePatternData/src/VoicePatternData.i: lib/VoicePatternData/src/VoicePatternData.cpp.i
-.PHONY : lib/VoicePatternData/src/VoicePatternData.i
+lib/VoiceContainer/src/Voice.i: lib/VoiceContainer/src/Voice.cpp.i
+.PHONY : lib/VoiceContainer/src/Voice.i
 
 # target to preprocess a source file
-lib/VoicePatternData/src/VoicePatternData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.i
-.PHONY : lib/VoicePatternData/src/VoicePatternData.cpp.i
+lib/VoiceContainer/src/Voice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.i
+.PHONY : lib/VoiceContainer/src/Voice.cpp.i
 
-lib/VoicePatternData/src/VoicePatternData.s: lib/VoicePatternData/src/VoicePatternData.cpp.s
-.PHONY : lib/VoicePatternData/src/VoicePatternData.s
+lib/VoiceContainer/src/Voice.s: lib/VoiceContainer/src/Voice.cpp.s
+.PHONY : lib/VoiceContainer/src/Voice.s
 
 # target to generate assembly for a file
-lib/VoicePatternData/src/VoicePatternData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.s
-.PHONY : lib/VoicePatternData/src/VoicePatternData.cpp.s
+lib/VoiceContainer/src/Voice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.s
+.PHONY : lib/VoiceContainer/src/Voice.cpp.s
+
+lib/VoiceContainer/src/VoiceContainer.obj: lib/VoiceContainer/src/VoiceContainer.cpp.obj
+.PHONY : lib/VoiceContainer/src/VoiceContainer.obj
+
+# target to build an object file
+lib/VoiceContainer/src/VoiceContainer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj
+.PHONY : lib/VoiceContainer/src/VoiceContainer.cpp.obj
+
+lib/VoiceContainer/src/VoiceContainer.i: lib/VoiceContainer/src/VoiceContainer.cpp.i
+.PHONY : lib/VoiceContainer/src/VoiceContainer.i
+
+# target to preprocess a source file
+lib/VoiceContainer/src/VoiceContainer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.i
+.PHONY : lib/VoiceContainer/src/VoiceContainer.cpp.i
+
+lib/VoiceContainer/src/VoiceContainer.s: lib/VoiceContainer/src/VoiceContainer.cpp.s
+.PHONY : lib/VoiceContainer/src/VoiceContainer.s
+
+# target to generate assembly for a file
+lib/VoiceContainer/src/VoiceContainer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.s
+.PHONY : lib/VoiceContainer/src/VoiceContainer.cpp.s
+
+lib/VoiceContainer/src/VoicePatternData.obj: lib/VoiceContainer/src/VoicePatternData.cpp.obj
+.PHONY : lib/VoiceContainer/src/VoicePatternData.obj
+
+# target to build an object file
+lib/VoiceContainer/src/VoicePatternData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj
+.PHONY : lib/VoiceContainer/src/VoicePatternData.cpp.obj
+
+lib/VoiceContainer/src/VoicePatternData.i: lib/VoiceContainer/src/VoicePatternData.cpp.i
+.PHONY : lib/VoiceContainer/src/VoicePatternData.i
+
+# target to preprocess a source file
+lib/VoiceContainer/src/VoicePatternData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.i
+.PHONY : lib/VoiceContainer/src/VoicePatternData.cpp.i
+
+lib/VoiceContainer/src/VoicePatternData.s: lib/VoiceContainer/src/VoicePatternData.cpp.s
+.PHONY : lib/VoiceContainer/src/VoicePatternData.s
+
+# target to generate assembly for a file
+lib/VoiceContainer/src/VoicePatternData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.s
+.PHONY : lib/VoiceContainer/src/VoicePatternData.cpp.s
 
 lib/clock/src/Clock.obj: lib/clock/src/Clock.cpp.obj
 .PHONY : lib/clock/src/Clock.obj
@@ -682,30 +730,6 @@ lib/clock/src/Clock.s: lib/clock/src/Clock.cpp.s
 lib/clock/src/Clock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.s
 .PHONY : lib/clock/src/Clock.cpp.s
-
-lib/voiceBaseClass/src/Voice.obj: lib/voiceBaseClass/src/Voice.cpp.obj
-.PHONY : lib/voiceBaseClass/src/Voice.obj
-
-# target to build an object file
-lib/voiceBaseClass/src/Voice.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.obj
-.PHONY : lib/voiceBaseClass/src/Voice.cpp.obj
-
-lib/voiceBaseClass/src/Voice.i: lib/voiceBaseClass/src/Voice.cpp.i
-.PHONY : lib/voiceBaseClass/src/Voice.i
-
-# target to preprocess a source file
-lib/voiceBaseClass/src/Voice.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.i
-.PHONY : lib/voiceBaseClass/src/Voice.cpp.i
-
-lib/voiceBaseClass/src/Voice.s: lib/voiceBaseClass/src/Voice.cpp.s
-.PHONY : lib/voiceBaseClass/src/Voice.s
-
-# target to generate assembly for a file
-lib/voiceBaseClass/src/Voice.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.s
-.PHONY : lib/voiceBaseClass/src/Voice.cpp.s
 
 # Help Target
 help:
@@ -769,24 +793,27 @@ help:
 	@echo "... lib/Module/src/Module.obj"
 	@echo "... lib/Module/src/Module.i"
 	@echo "... lib/Module/src/Module.s"
-	@echo "... lib/ObserverPatternBaseClasses/src/Subject.obj"
-	@echo "... lib/ObserverPatternBaseClasses/src/Subject.i"
-	@echo "... lib/ObserverPatternBaseClasses/src/Subject.s"
+	@echo "... lib/ObserverPattern/src/Subject.obj"
+	@echo "... lib/ObserverPattern/src/Subject.i"
+	@echo "... lib/ObserverPattern/src/Subject.s"
 	@echo "... lib/OscService/src/OscService.obj"
 	@echo "... lib/OscService/src/OscService.i"
 	@echo "... lib/OscService/src/OscService.s"
 	@echo "... lib/OutPutFactory/src/OutputFactory.obj"
 	@echo "... lib/OutPutFactory/src/OutputFactory.i"
 	@echo "... lib/OutPutFactory/src/OutputFactory.s"
-	@echo "... lib/VoicePatternData/src/VoicePatternData.obj"
-	@echo "... lib/VoicePatternData/src/VoicePatternData.i"
-	@echo "... lib/VoicePatternData/src/VoicePatternData.s"
+	@echo "... lib/VoiceContainer/src/Voice.obj"
+	@echo "... lib/VoiceContainer/src/Voice.i"
+	@echo "... lib/VoiceContainer/src/Voice.s"
+	@echo "... lib/VoiceContainer/src/VoiceContainer.obj"
+	@echo "... lib/VoiceContainer/src/VoiceContainer.i"
+	@echo "... lib/VoiceContainer/src/VoiceContainer.s"
+	@echo "... lib/VoiceContainer/src/VoicePatternData.obj"
+	@echo "... lib/VoiceContainer/src/VoicePatternData.i"
+	@echo "... lib/VoiceContainer/src/VoicePatternData.s"
 	@echo "... lib/clock/src/Clock.obj"
 	@echo "... lib/clock/src/Clock.i"
 	@echo "... lib/clock/src/Clock.s"
-	@echo "... lib/voiceBaseClass/src/Voice.obj"
-	@echo "... lib/voiceBaseClass/src/Voice.i"
-	@echo "... lib/voiceBaseClass/src/Voice.s"
 .PHONY : help
 
 

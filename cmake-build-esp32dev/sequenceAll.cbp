@@ -1892,16 +1892,19 @@
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/Module.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src/Subject.cpp">
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPattern/src/IObserver.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src/Subject.h">
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPattern/src/ISubject.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternInterfaces/src/IObserver.h">
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPattern/src/SignalTypes.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternInterfaces/src/ISubject.h">
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPattern/src/Subject.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPattern/src/Subject.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src/OscService.cpp">
@@ -1916,13 +1919,25 @@
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src/OutputFactory.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src/VoicePatternData.cpp">
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/IVoice.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src/VoicePatternData.h">
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/Voice.cpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceTypes/src/SignalTypes.h">
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/Voice.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoiceContainer.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoiceContainer.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoicePatternData.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoicePatternData.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/WiFiService/src/NVSService.h">
@@ -1938,15 +1953,6 @@
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/macros/src/macros.h">
-			<Option target="Z_DUMMY_TARGET"/>
-		</Unit>
-		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src/Voice.cpp">
-			<Option target="Z_DUMMY_TARGET"/>
-		</Unit>
-		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src/Voice.h">
-			<Option target="Z_DUMMY_TARGET"/>
-		</Unit>
-		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/voiceInterface/src/IVoice.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/src/main.ino">

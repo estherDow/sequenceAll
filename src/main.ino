@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <SequenceAll.h>
 #include <WiFiUdp.h>
 
 #include <Clock.h>
