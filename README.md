@@ -39,3 +39,5 @@ webapp needs to be served only once and could be ground for a lot of explorative
 I need to rewrite the message distribution system in order to send messages only to the modules required.
 If I have multiple voice classes, how may I call set step only on one voice. etc.
 
+I can store all voice objects in an unordered map, which I can now use to distribute messages to the individual voices and operate upon them. 
+

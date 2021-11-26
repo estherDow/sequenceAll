@@ -12,8 +12,9 @@ public:
 private:
   virtual void setStep(uint8_t value, uint8_t position) = 0;
   virtual void deleteStep(uint8_t position) = 0;
+  virtual void muteStep(uint8_t position) = 0;
   virtual void setQuarterNoteDivisions(uint8_t subDivisions) = 0;
-  virtual void resize(uint8_t newLength) = 0;
+  virtual void setSize(uint8_t newLength) = 0;
 
 };
 

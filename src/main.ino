@@ -41,7 +41,7 @@ dummyObserver *dummy = new dummyObserver();
 void setup() {
     VoiceContainer voiceContainer;
     voiceContainer.add(8);
-    Voice * kick = voiceContainer.get(8);
+    Voice * kick = voiceContainer.select(8);
     kick->attach(dummy);
 
     Serial.begin(115200);
@@ -55,7 +55,6 @@ void setup() {
     kick->setStep(1, 9);
     kick->setStep(1, 13);
 
-    wifiService.init();
     Udp.begin(LOCAL_UDP_PORT);
     oscService.begin(&Udp);
 }

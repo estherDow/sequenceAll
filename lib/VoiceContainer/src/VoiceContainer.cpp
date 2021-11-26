@@ -19,6 +19,6 @@ void VoiceContainer::remove(int Handle) {
 
 }
 
-Voice * VoiceContainer::get(int Handle) {
+Voice * VoiceContainer::select(int Handle) {
     return &voiceMap->at(8);
 }

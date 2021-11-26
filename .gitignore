@@ -1,2 +1,4 @@
 .pio/
 .idea/
+/cmake-build-esp32dev/
+/cmake-build-native/

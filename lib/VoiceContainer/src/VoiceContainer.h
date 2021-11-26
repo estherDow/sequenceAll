@@ -19,7 +19,7 @@ public:
     VoiceContainer();
     void add(int Handle);
     void remove(int Handle);
-    Voice * get(int Handle);
+    Voice * select(int Handle);
 
 private:
     VoiceMap * voiceMap;

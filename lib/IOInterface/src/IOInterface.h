@@ -2,6 +2,7 @@
 #define IOINTERFACE_H
 #include <macros.h>
 #include <IObserver.h>
+
 enum InOutPut {
   OSC,
   MIDI,
@@ -13,6 +14,6 @@ enum InOutPut {
 class IOInterface {
   //virtual IOutput();
 public:
-  virtual ~IOInterface(){};
+  virtual ~IOInterface()= default;;
 };
 #endif

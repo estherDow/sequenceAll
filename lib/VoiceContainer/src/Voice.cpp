@@ -3,7 +3,7 @@
 Voice::Voice(SignalTypes type, uint8_t length) { //trigger t gate g clock c
   sender = type;
   _sequenceLength = length;
-  resize(length);
+  setSize(length);
   for (uint8_t i = 0; i<length;i++){
     setStep(0,i);
   }
@@ -24,18 +24,25 @@ SignalTypes Voice::getType() {
   return sender;
 }
 
+void Voice::setSize(uint8_t newLength) {
+    _sequenceLength = newLength;
+    _steps.setSize(newLength);
+}
 
 void Voice::setStep(uint8_t value, uint8_t position){
-  _steps.at(value, position);
+  _steps.setAt(value, position);
 }
 
+void Voice::muteStep(uint8_t position){
+    _steps.muteAt(position);
+}
 
 void Voice::deleteStep(uint8_t position){
-  _steps.at(position, 0);
+  _steps.setAt(position, 0);
+  _steps.muteAt(position);
 }
 
-
-uint8_t Voice::getCurrentStepNumber() {
+uint8_t Voice::getCurrentStepNumber() const {
   if (_currentStep < _sequenceLength) {
     return _currentStep;
   }
@@ -47,18 +54,13 @@ uint8_t Voice::getCurrentStepNumber() {
 
 int Voice::getCurrentStepValue() {
   if (_currentStep < _sequenceLength) {
-    return _steps.at(_currentStep);
+    return _steps.returnAt(_currentStep);
   }
   else{
     return -1;
   }
 }
 
-
-void Voice::resize(uint8_t newLength){
-  _sequenceLength = newLength;
-  _steps.resize(newLength);
-}
 
 
 //set & get human readable divisor but store ppqn/divisor for easier counting

@@ -17,7 +17,7 @@ class WiFiService {
 public:
 
 
-    void init() {
+    WiFiService() {
 
 
         if(!initSTA()) {
