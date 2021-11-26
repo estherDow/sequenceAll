@@ -4,25 +4,33 @@
 
 #ifndef SEQUENCEALL_VOICECONTAINER_H
 #define SEQUENCEALL_VOICECONTAINER_H
+
 #include <unordered_map>
 #include <Arduino.h>
-
-#include <Voice.h>
+#include <Module.h>
+#include "Voice.h"
 #include <SignalTypes.h>
 
-typedef std::unordered_map<int,Voice> VoiceMap;
+typedef std::unordered_map<int, Voice> VoiceMap;
 
-class VoiceContainer {
-    //TODO: A class, which creates new voices and appends them to a list of some sort.
-    // this:https://www.cplusplus.com/reference/map/map/
+class VoiceContainer : public Module {
+
 public:
     VoiceContainer();
+
     void add(int Handle);
+
     void remove(int Handle);
-    Voice * select(int Handle);
+
+    Voice *select(int Handle);
+
+    void update(SignalTypes sender, int msg) override;
+
+    ~VoiceContainer() {};
 
 private:
-    VoiceMap * voiceMap;
+    VoiceMap *voiceMap;
 
 };
+
 #endif //SEQUENCEALL_VOICECONTAINER_H

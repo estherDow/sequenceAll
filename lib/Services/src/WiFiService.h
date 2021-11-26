@@ -19,10 +19,10 @@ public:
 
     WiFiService() {
 
-
-        if(!initSTA()) {
+//TODO:PROPER ERROR HANDLING MY G
+        //if(!initSTA()) {
             initAP();
-        }
+        //}
         server = new AsyncWebServer(80);
         if (!MDNS.begin("sequenceall")) {
             Serial.println("Error starting mDNS");
@@ -124,7 +124,7 @@ public:
 
 private:
 
-    AsyncWebServer * server;
+    AsyncWebServer * server{};
 
     void _doSetSTA(String newSSID, String newPassword) {
         WiFi.begin((char *) newSSID.c_str(), (char *) newPassword.c_str());

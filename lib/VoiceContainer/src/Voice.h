@@ -36,7 +36,7 @@ public:
 
     void setMotion(char direction); //forward, backward, tbd: random
 
-    uint8_t getMotion();
+    uint8_t getMotion() const;
 
 
     //TODO: Implement save to nvs

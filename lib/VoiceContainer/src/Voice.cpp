@@ -78,7 +78,6 @@ uint8_t Voice::getQuarterNoteDivisions() {
   return PULSES_PER_QUARTER_NOTE / _clockPulsesPerStep;
 }
 
-
 void Voice::incrementStep() {
   _currentStep +=getMotion();
   if (_currentStep < 0) {
@@ -101,7 +100,7 @@ void Voice::setMotion(char direction) {
   }
 }
 
-uint8_t Voice::getMotion() {
+uint8_t Voice::getMotion() const {
   int8_t motion;
   if(_motion != 0) {
     motion = _motion;

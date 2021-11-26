@@ -10,7 +10,7 @@
 
 class IObserver{
  public:
-  virtual ~IObserver(){};
+  virtual ~IObserver()= default;
   virtual void update(SignalTypes sender, int msg) = 0;
 };
 #endif

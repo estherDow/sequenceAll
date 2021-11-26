@@ -11,7 +11,7 @@ VoiceContainer::VoiceContainer() {
 
 void VoiceContainer::add(int Handle) {
     SignalTypes trigger = TRIGGER;
-    Voice voice(trigger, 16);
+    Voice voice(trigger, DEFAULT_SEQUENCE_LENGTH);
     voiceMap->insert ({Handle, voice});
 }
 
@@ -22,3 +22,11 @@ void VoiceContainer::remove(int Handle) {
 Voice * VoiceContainer::select(int Handle) {
     return &voiceMap->at(8);
 }
+
+void VoiceContainer::update(SignalTypes sender, int msg) {
+    for(uint8_t i = 0; i < TOTAL_NUMBER_OF_VOICES; i++){
+        auto voice = select(i);
+        voice->update(sender, msg);
+    }
+}
+

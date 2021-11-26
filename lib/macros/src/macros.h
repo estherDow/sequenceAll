@@ -1,13 +1,24 @@
 #ifndef MACROS_H
 #define MACROS_H
 
-#define PULSES_PER_QUARTER_NOTE 48
+//
+//CLOCK
+//
 
-//#################################################################
+#define DEFAULT_BEATS_PER_MINUTE 160
+#define DEFAULT_SEQUENCE_LENGTH 16
+
+//
+//VOICE
+//
+
+#define PULSES_PER_QUARTER_NOTE 48
+#define TOTAL_NUMBER_OF_VOICES  4
+
+
 //
 // OutPuts/FastLED
 //
-//#################################################################
 
 #define DATA_PIN    3
 
@@ -16,8 +27,9 @@
 #define NUM_LEDS    60
 #define BRIGHTNESS  255
 
-
-
+//
+//WIRELESS SERVICES
+//
 #define DEFAULT_AP_SSID         "sequenceAll"
 #define DEFAULT_AP_PASSWORD     "transLiberationNow"
 
