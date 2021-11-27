@@ -3,15 +3,18 @@
 //
 
 #include "SequenceAll.h"
+
 void SequenceAll::begin() {
     Serial.begin(115200);
     NVS.begin();
+
     _voiceContainer = new VoiceContainer();
     _setVoices();
 
     _clock = new Clock();
-    _clock->setBeatsPerMinute(DEFAULT_BEATS_PER_MINUTE);
+    _clock->setBeatsPerMinute();
     _clock->attach(_voiceContainer);
+
     _wifiService = new WiFiService();
     _udp = new WiFiUDP();
     _udp->begin(LOCAL_UDP_PORT);

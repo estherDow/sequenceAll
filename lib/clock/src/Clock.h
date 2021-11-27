@@ -1,9 +1,11 @@
 #ifndef Clock_H
 #define Clock_H
 
+#include <Arduino.h>
+#include "ArduinoNvs.h"
+
 #include <Module.h>
 #include <SignalTypes.h>
-#include <Arduino.h>
 #include <macros.h>
 
 
@@ -17,7 +19,7 @@ public:
     sender = CLOCK;
   };
   //Setter functions
-  void setBeatsPerMinute(uint16_t beats);
+  void setBeatsPerMinute();
 
   void timer();
 private:

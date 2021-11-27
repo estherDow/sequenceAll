@@ -20,7 +20,7 @@ void VoiceContainer::remove(int Handle) {
 }
 
 Voice * VoiceContainer::select(int Handle) {
-    return &voiceMap->at(8);
+    return &voiceMap->at(Handle);
 }
 
 void VoiceContainer::update(SignalTypes sender, int msg) {
