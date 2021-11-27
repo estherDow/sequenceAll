@@ -23,6 +23,8 @@ public:
 
     void save();
 
+    void reset();
+
 private:
     void _setVoices();
 

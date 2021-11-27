@@ -1,5 +1,0 @@
-/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/CMakeFiles/rebuild_cache.dir
-/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/CMakeFiles/edit_cache.dir
-/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/CMakeFiles/Z_DUMMY_TARGET.dir
-/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/CMakeFiles/Debug.dir
-/Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev/CMakeFiles/Production.dir

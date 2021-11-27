@@ -1,4 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=esp32dev -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/kenneth/gitPrivate/sequenceAll
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/kenneth/gitPrivate/sequenceAll/cmake-build-esp32dev
