@@ -24,7 +24,7 @@ public:
 
     Voice *select(int Handle);
 
-    void update(SignalTypes sender, int msg) override;
+    void update(OSCMessage & message) override;
 
     ~VoiceContainer() {};
 

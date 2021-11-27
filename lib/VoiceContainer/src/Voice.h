@@ -1,26 +1,26 @@
 #ifndef VOICE_H
 #define VOICE_H
 
-#include "IVoice.h"
 #include <Arduino.h>
 #include "SignalTypes.h"
 #include "VoicePatternData.h"
+#include "../../../.pio/libdeps/esp32dev/OSC/OSCMessage.h"
 #include <cstdlib>     /* srand, rand */
+#include <Module.h>
+#include "macros.h"
 
-class Voice : public Module, public IVoice {
+class Voice : public Module {
 public:
-    Voice(SignalTypes type, uint8_t length);
+    explicit Voice(uint8_t length);
 
 
-    void update(SignalTypes subjectLine, int msg) override;
+    void update(OSCMessage & message) override;
 
-    SignalTypes getType();
+    void setStep(uint8_t value, uint8_t position);
 
-    void setStep(uint8_t value, uint8_t position) override;
+    void muteStep(uint8_t position);
 
-    void muteStep(uint8_t position) override;
-
-    void deleteStep(uint8_t position) override;
+    void deleteStep(uint8_t position);
 
     uint8_t getCurrentStepNumber() const;
 
@@ -28,15 +28,15 @@ public:
 
     void incrementStep();
 
-    void setSize(uint8_t newLength) override;
+    void setSize(uint8_t newLength);
 
-    void setQuarterNoteDivisions(uint8_t subDivisions) override;
+    void setQuarterNoteDivisions(uint8_t subDivisions);
 
-    uint8_t getQuarterNoteDivisions();
+    uint8_t getQuarterNoteDivisions() const;
 
-    void setMotion(char direction); //forward, backward, tbd: random
+    //void setMotion(char direction); //forward, backward, tbd: random
 
-    uint8_t getMotion() const;
+    //uint8_t getMotion() const;
 
 
     //TODO: Implement save to nvs

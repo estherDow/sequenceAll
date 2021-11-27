@@ -6,15 +6,15 @@
 #define SEQUENCEALL_SEQUENCEALL_H
 
 #include <WiFiUdp.h>
-#include <ArduinoNvs.h>
+#include <../../Services/src/ArduinoNvs.h>
 
 #include <Clock.h>
-#include <Voice.h>
+#include <../../VoiceContainer/src/Voice.h>
 #include <SignalTypes.h>
 #include <macros.h>
-#include <WiFiService.h>
-#include <OscService.h>
-#include <VoiceContainer.h>
+#include "../../Services/src/WiFiService.h"
+#include "../../Services/src/OscService.h"
+#include "../../VoiceContainer/src/VoiceContainer.h"
 
 class SequenceAll {
 public:

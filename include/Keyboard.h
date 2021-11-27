@@ -3,8 +3,7 @@
 
 #include <Arduino.h>
 #include <list>
-#include "IObserver.h"
-#include "Subject.h"
+#include <Module.h>
 
 namespace sequenceAll
 

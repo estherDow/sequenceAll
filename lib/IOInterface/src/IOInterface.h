@@ -1,7 +1,6 @@
 #ifndef IOINTERFACE_H
 #define IOINTERFACE_H
 #include <macros.h>
-#include <IObserver.h>
 
 enum InOutPut {
   OSC,

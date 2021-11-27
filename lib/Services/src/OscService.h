@@ -8,6 +8,7 @@
 #include <ArduinoNvs.h>
 
 #include "IOInterface.h"
+#include "../../../.pio/libdeps/esp32dev/OSC/OSCMessage.h"
 #include <Module.h>
 #include <macros.h>
 
@@ -17,10 +18,11 @@ public:
 
     void begin(WiFiUDP *udp);
 
-    void send(String uri, uint8_t argument);
-    void receive();
+    void send(const String& uri, uint8_t argument);
+    OSCMessage receive();
     void update(SignalTypes sender, int msg);
 private:
+
     WiFiUDP* Udp;
     IPAddress remoteIP;
     IPAddress _getIpAddressFromHostname();
