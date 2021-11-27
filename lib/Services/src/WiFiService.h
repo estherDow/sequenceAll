@@ -1,6 +1,7 @@
 #ifndef WIFISERVICE_H
 #define WIFISERVICE_H
-
+#include <Arduino.h>
+#include <ArduinoNvs.h>
 #include <WiFi.h>
 #include <ESPmDNS.h>
 #include <WebServer.h>
@@ -8,8 +9,7 @@
 #include "ArduinoJson.h"
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
-#include <NVSService.h>
-#include <Arduino.h>
+
 #include <macros.h>
 
 
@@ -17,7 +17,7 @@ class WiFiService {
 public:
 
 
-    WiFiService() {
+    explicit WiFiService() {
 
 //TODO:PROPER ERROR HANDLING MY G
         //if(!initSTA()) {
@@ -36,15 +36,15 @@ public:
                JsonVariant &json) {
                 const JsonObject &jsonObject = json.as<JsonObject>();
                 if (!jsonObject.isNull() && jsonObject["ssid"]) {
-                    NVSService::writeStringToNVS(
+                    NVS.setString(
                             "STAssid",
                             jsonObject["ssid"]);
-                    NVSService::writeStringToNVS(
+                    NVS.setString(
                             "STApassword",
                             jsonObject["password"]);
                 }
 
-                NVSService::writeIntToNVS(
+                NVS.setInt(
                         "SetSTA",
                         1);
                 request->send(
@@ -61,15 +61,15 @@ public:
                const JsonObject &jsonObject = json.as<JsonObject>();
 
                if (!jsonObject.isNull() && jsonObject["ssid"]) {
-                   NVSService::writeStringToNVS(
+                   NVS.setString(
                            "APssid",
                            jsonObject["ssid"]);
-                   NVSService::writeStringToNVS(
+                   NVS.setString(
                            "APpassword",
                            jsonObject["password"]);
                }
 
-               NVSService::writeIntToNVS(
+               NVS.setInt(
                        "SetAP",
                        1);
                request->send(
@@ -86,8 +86,9 @@ public:
     }
 
     void initAP() {
-        String ssid = NVSService::readStringFromNVS("APssid");
-        String password = NVSService::readStringFromNVS("APpassword");
+        WiFi.mode(WIFI_AP);
+        String ssid = NVS.getString("APssid");
+        String password = NVS.getString("APpassword");
         if (ssid.length() == 0) {
            ssid = DEFAULT_AP_SSID;
            password = DEFAULT_AP_PASSWORD;
@@ -98,18 +99,18 @@ public:
     bool initSTA() {
         WiFi.mode(WIFI_STA);
         uint8_t numberNetworks = WiFi.scanNetworks();
-        String ssid = NVSService::readStringFromNVS("STAssid");
-        String password = NVSService::readStringFromNVS("STApassword");
+        String ssid = NVS.getString("STAssid");
+        String password = NVS.getString("STApassword");
         if (ssid.length() == 0) {
-            return 0;
+            return false;
         }
         for (uint8_t i = 0; i < numberNetworks; i++) {
             if (WiFi.SSID(i) == (char *) ssid.c_str()) {
                 _doSetSTA(ssid, password);
-                return 1;
+                return true;
             }
         }
-        return 0;
+        return false;
     }
 
     int oldState = 0;
@@ -139,18 +140,19 @@ private:
     }
 
     void _doHandleWifiMode() {
-        if(NVSService::readIntFromNVS("SetAP")) {
+
+        if(NVS.getInt("SetAP")) {
             initAP();
-            NVSService::writeIntToNVS(
+            NVS.setInt(
                     "SetAP",
                     0);
         }
-        if(NVSService::readIntFromNVS("SetSTA")) {
+        if(NVS.getInt("SetSTA")) {
             if(!initSTA()){
                 initAP();
             }
 
-            NVSService::writeIntToNVS(
+            NVS.setInt(
                     "SetSTA",
                     0);
         }

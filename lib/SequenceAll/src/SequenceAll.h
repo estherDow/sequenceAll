@@ -6,6 +6,7 @@
 #define SEQUENCEALL_SEQUENCEALL_H
 
 #include <WiFiUdp.h>
+#include <ArduinoNvs.h>
 
 #include <Clock.h>
 #include <Voice.h>
@@ -17,7 +18,9 @@
 
 class SequenceAll {
 public:
-    SequenceAll();
+    //SequenceAll();
+
+    void begin();
 
     void run();
 
@@ -35,5 +38,5 @@ private:
     VoiceContainer *_voiceContainer;
 };
 
-
+extern SequenceAll sequenceAll;
 #endif //SEQUENCEALL_SEQUENCEALL_H

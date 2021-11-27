@@ -5,10 +5,10 @@
 #include <WiFiUdp.h>
 #include <OSCMessage.h>
 #include <ESPmDNS.h>
+#include <ArduinoNvs.h>
 
 #include "IOInterface.h"
 #include <Module.h>
-#include <NVSService.h>
 #include <macros.h>
 
 class OscService : public IOInterface, public Module {

@@ -33,12 +33,11 @@ void OscService::receive() {
 }
 
 void OscService::update(SignalTypes sender, int msg) {
-    return;
-}
+    }
 
 
 IPAddress OscService::_getIpAddressFromHostname() {
-    String hostname = NVSService::readStringFromNVS("remoteHostname");
+    String hostname = NVS.getString("remoteHostname");
     if (hostname.length() == 0 ) {
         hostname = DEFAULT_REMOTE_HOSTNAME;
     }

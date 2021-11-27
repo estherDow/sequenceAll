@@ -1,4 +1,6 @@
 #include <Arduino.h>
+#include <ArduinoNvs.h>
+
 #include <SequenceAll.h>
 
 
@@ -25,12 +27,14 @@
 //Voice *kick = new Voice(trigger, 16);
 //dummyObserver *dummy = new dummyObserver();
 
-SequenceAll sequenceAll;
+//SequenceAll sequenceAll;
 
 void setup() {
+    sequenceAll.begin();
+
 }
 
 
 void loop() {
-    //sequenceAll.run();
+    sequenceAll.run();
 }
