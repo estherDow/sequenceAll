@@ -47,7 +47,7 @@ void Voice::setStep(void * context, OscMsgChild &message, uint8_t offset) {
 void Voice::muteStep(void * context, OscMsgChild &message, uint8_t offset) {
     uint8_t position = 0;
     message.getAddressAsUint8_t(position, offset);
-    bool status = message.getBoolean(0);
+    bool status = message.getInt(0);
 
     if (position > 0) { position--;}
 
