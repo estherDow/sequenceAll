@@ -20,14 +20,14 @@ public:
     bool dispatch(
             void *context,
             const char *pattern,
-            void (*callback)(OSCMessage &, void *context),
+            void (*callback)(void *context,OSCMessage &),
             int addr_offset
             );
 
     bool route(
             void * context,
             const char *pattern,
-            void (*callback)(OSCMessage &, int, void *context),
+            void (*callback)(void *context, OSCMessage &, uint8_t),
             int initial_offset
             );
 private:

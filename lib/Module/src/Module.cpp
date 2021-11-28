@@ -22,19 +22,19 @@ void Module::notify(OSCMessage & message) {
 
 //Send one to one
 
-bool Module::dispatch(void *context, const char * pattern, void (*callback)(OSCMessage &, void *context), int addr_offset){
+bool Module::dispatch(void *context, const char * pattern, void (*callback)( void *context, OSCMessage &), int addr_offset){
     if (fullMatch(pattern, addr_offset)){
-        callback(*this, context);
+        callback(context,*this);
         return true;
     } else {
         return false;
     }
 }
 
-bool Module::route(void *context, const char * pattern, void (*callback)(OSCMessage &, int, void *context), int initial_offset){
+bool Module::route(void *context, const char * pattern, void (*callback)( void *context, OSCMessage &, uint8_t), int initial_offset){
     int match_offset = match(pattern, initial_offset);
     if (match_offset>0){
-        callback(*this, match_offset + initial_offset, context);
+        callback(context, *this, match_offset + initial_offset);
         return true;
     } else {
         return false;

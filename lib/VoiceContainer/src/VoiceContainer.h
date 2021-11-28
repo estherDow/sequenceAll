@@ -10,6 +10,7 @@
 #include <Module.h>
 #include "Voice.h"
 #include <SignalTypes.h>
+#include "macros.h"
 
 typedef std::unordered_map<int, Voice> VoiceMap;
 
@@ -22,14 +23,16 @@ public:
 
     void remove(int Handle);
 
-    Voice *select(int Handle);
+    static void receive(void *context, OSCMessage &message);
 
-    void update(OSCMessage & message) override;
+    void update(OSCMessage &message) override;
 
-    ~VoiceContainer() {};
+    ~VoiceContainer() = default;;
 
 private:
     VoiceMap *voiceMap;
+
+    Voice *_select(int Handle);
 
 };
 

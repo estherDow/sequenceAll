@@ -3,34 +3,52 @@
 Voice::Voice(uint8_t length) { //trigger t gate g clock c
     _sequenceLength = length;
     setSize(length);
-    for (uint8_t i = 0; i < length; i++) {
-        setStep(0, i);
-    }
+    initSequence(length);
 }
 
 void Voice::update(OSCMessage &message) {
     _pulseCounter++;
     //Serial.printf("Voice Update was called %i times\n", _pulseCounter);
+    if (message.fullMatch(reinterpret_cast<const char *>(CLOCK_SIGNAL_HANDLE), 0)) {
+        if (_pulseCounter == _clockPulsesPerStep) {
+            //notify();
+            incrementStep();
+            _pulseCounter = 0;
+        }
+    }
+}
 
-    if (_pulseCounter == _clockPulsesPerStep) {
-        //notify();
-        incrementStep();
-        _pulseCounter = 0;
+void Voice::initSequence(uint8_t length) {
+    for (uint8_t i = 0; i < length; i++) {
+        _steps.setAt(0, i);
+        _steps.muteAt(i, true);
     }
 
 }
 
-void Voice::setStep(uint8_t value, uint8_t position) {
-    _steps.setAt(value, position);
+void Voice::setStep(void * context, OSCMessage &message, uint8_t offset) {
+    char * address;
+    message.getAddress(address);
+    int position = atoi(address);
+    int value = message.getInt(0);
+    reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
+    reinterpret_cast<Voice *>(context)->_steps.muteAt(position, false);
 }
 
-void Voice::muteStep(uint8_t position) {
-    _steps.muteAt(position);
+void Voice::muteStep(void * context, OSCMessage &message, uint8_t offset) {
+    char * address;
+    message.getAddress(address);
+    int position = atoi(address);
+    bool status = message.getBoolean(0);
+    reinterpret_cast<Voice *>(context)->_steps.muteAt(position, status);
 }
 
-void Voice::deleteStep(uint8_t position) {
-    _steps.setAt(position, 0);
-    _steps.muteAt(position);
+void Voice::deleteStep(void * context, OSCMessage &message, uint8_t offset) {
+    char * address;
+    message.getAddress(address);
+    int position = atoi(address);
+    reinterpret_cast<Voice *>(context)->_steps.setAt(position, 0);
+    reinterpret_cast<Voice *>(context)->_steps.muteAt(position, true);
 }
 
 uint8_t Voice::getCurrentStepNumber() const {
@@ -67,7 +85,7 @@ uint8_t Voice::getQuarterNoteDivisions() const {
 }
 
 void Voice::incrementStep() {
-    _currentStep += getMotion();
+    _currentStep ++;
     if (_currentStep < 0) {
         _currentStep = _sequenceLength - _currentStep;
     } else if (_currentStep > _sequenceLength - 1) {

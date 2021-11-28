@@ -22,7 +22,7 @@ uint8_t VoicePatternData::getSize() {
     return _voicePattern.size();
 }
 
-void VoicePatternData::muteAt(uint8_t position) {
+void VoicePatternData::muteAt(uint8_t position, bool status) {
     _triggerPattern.at(position) = false;
 }
 

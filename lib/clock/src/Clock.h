@@ -10,27 +10,26 @@
 
 
 //class Clock : public ISubject{
-class Clock : public Subject{
+class Clock : public Module {
 
 public:
-  Clock() {
-    //set message to 1 to be understood as clock pulse.
-    _msg = 1;
-    sender = CLOCK;
-  };
-  //Setter functions
-  void setBeatsPerMinute();
+    Clock() {};
 
-  void timer();
+    //Setter functions
+    void setBeatsPerMinute();
+    static void setBeatsPerMinute(void * context, OSCMessage & message);
+    void timer();
+    void update(OSCMessage & message) override{};
 private:
-  //Clock setting in BPM
-  uint16_t _beats = 120;
+    //Clock setting in BPM
+    uint16_t _beats = 120;
 
-  //deltaT in Microseconds = 6e7/(time * steps) uint16_t was too small to hold large value
-  int _deltaTime;
+    //deltaT in Microseconds = 6e7/(time * steps) uint16_t was too small to hold large value
+    int _deltaTime;
 
-  //Timer Variable in microseconds
-  unsigned long _pastState;
+    //Timer Variable in microseconds
+    unsigned long _pastState;
 
 };
+
 #endif

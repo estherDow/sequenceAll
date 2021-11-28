@@ -2,32 +2,29 @@
 #define OSCSERVICE_H
 
 #include <Arduino.h>
+#include "WiFi.h"
 #include <WiFiUdp.h>
-#include <OSCMessage.h>
 #include <ESPmDNS.h>
 #include <ArduinoNvs.h>
 
-#include "IOInterface.h"
-#include "../../../.pio/libdeps/esp32dev/OSC/OSCMessage.h"
 #include <Module.h>
 #include <macros.h>
 
-class OscService : public IOInterface, public Module {
+class OscService : public Module {
 public:
     OscService();
 
     void begin(WiFiUDP *udp);
 
-    void send(const String& uri, uint8_t argument);
+    static void send(void * context, const char * uri, uint8_t argument);
     OSCMessage receive();
-    void update(SignalTypes sender, int msg);
+    void update(OSCMessage & message) override{};
 private:
 
     WiFiUDP* Udp;
-    IPAddress remoteIP;
+    static IPAddress * remoteIP;
+    IPAddress testIP;
     IPAddress _getIpAddressFromHostname();
-
-
 };
 
 #endif

@@ -8,7 +8,7 @@ public:
 
     void setAt(uint8_t value, uint8_t position);
 
-    void muteAt(uint8_t position);
+    void muteAt(uint8_t position, bool status);
 
     uint8_t returnAt(uint8_t position);
 

@@ -10,8 +10,7 @@ VoiceContainer::VoiceContainer() {
 }
 
 void VoiceContainer::add(int Handle) {
-    SignalTypes trigger = TRIGGER;
-    Voice voice(trigger, DEFAULT_SEQUENCE_LENGTH);
+    Voice voice(DEFAULT_SEQUENCE_LENGTH);
     voiceMap->insert ({Handle, voice});
 }
 
@@ -19,13 +18,23 @@ void VoiceContainer::remove(int Handle) {
 
 }
 
-Voice * VoiceContainer::select(int Handle) {
+void VoiceContainer::receive(void * context, OSCMessage & message) {
+    char addr[32];
+    message.getAddress(addr, 1);
+    uint8_t Handle = atoi(addr);
+    uint8_t offset = 1;
+    if (Handle > 9) { offset = 2;}
+    Voice * target = &reinterpret_cast<VoiceContainer *>(context)->voiceMap->at(Handle);
+    reinterpret_cast<VoiceContainer *>(context)->route(target, "/set", Voice::setStep,offset);
+}
+
+Voice * VoiceContainer::_select(int Handle) {
     return &voiceMap->at(Handle);
 }
 
 void VoiceContainer::update(OSCMessage & message) {
     for(uint8_t i = 0; i < TOTAL_NUMBER_OF_VOICES; i++){
-        auto voice = select(i);
+        auto voice = _select(i);
         voice->update(message);
     }
 }

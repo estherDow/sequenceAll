@@ -13,14 +13,15 @@ class Voice : public Module {
 public:
     explicit Voice(uint8_t length);
 
+    void update(OSCMessage &message) override;
 
-    void update(OSCMessage & message) override;
+    void initSequence(uint8_t length);
 
-    void setStep(uint8_t value, uint8_t position);
+    static void setStep(void *context, OSCMessage &message, uint8_t offset = 0);
 
-    void muteStep(uint8_t position);
+    static void muteStep(void *context, OSCMessage &message,uint8_t offset = 0);
 
-    void deleteStep(uint8_t position);
+    static void deleteStep(void *context, OSCMessage &message,uint8_t offset = 0);
 
     uint8_t getCurrentStepNumber() const;
 

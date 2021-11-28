@@ -26,7 +26,7 @@ public:
 
     void save();
 
-    void reset();
+    static void reset();
 
 private:
     void _setVoices();
