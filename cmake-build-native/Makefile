@@ -155,30 +155,6 @@ Production/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Production.dir/build.make CMakeFiles/Production.dir/build
 .PHONY : Production/fast
 
-.pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.obj: .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.obj
-.PHONY : .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.obj
-
-# target to build an object file
-.pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.obj
-.PHONY : .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.obj
-
-.pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.i: .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.i
-.PHONY : .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.i
-
-# target to preprocess a source file
-.pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.i
-.PHONY : .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.i
-
-.pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.s: .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.s
-.PHONY : .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.s
-
-# target to generate assembly for a file
-.pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.s
-.PHONY : .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.cpp.s
-
 .pio/libdeps/native/AsyncTCP/src/AsyncTCP.obj: .pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp.obj
 .PHONY : .pio/libdeps/native/AsyncTCP/src/AsyncTCP.obj
 
@@ -515,30 +491,6 @@ Production/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebServer.cpp.s
 .PHONY : .pio/libdeps/native/ESP_Async_WebServer/src/WebServer.cpp.s
 
-lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.obj: lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.obj
-.PHONY : lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.obj
-
-# target to build an object file
-lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.obj
-.PHONY : lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.obj
-
-lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.i: lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.i
-.PHONY : lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.i
-
-# target to preprocess a source file
-lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.i
-.PHONY : lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.i
-
-lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.s: lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.s
-.PHONY : lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.s
-
-# target to generate assembly for a file
-lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.s
-.PHONY : lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.s
-
 lib/Module/src/Module.obj: lib/Module/src/Module.cpp.obj
 .PHONY : lib/Module/src/Module.obj
 
@@ -563,53 +515,29 @@ lib/Module/src/Module.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.s
 .PHONY : lib/Module/src/Module.cpp.s
 
-lib/ObserverPattern/src/Subject.obj: lib/ObserverPattern/src/Subject.cpp.obj
-.PHONY : lib/ObserverPattern/src/Subject.obj
+lib/Module/src/OscMsgChild.obj: lib/Module/src/OscMsgChild.cpp.obj
+.PHONY : lib/Module/src/OscMsgChild.obj
 
 # target to build an object file
-lib/ObserverPattern/src/Subject.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPattern/src/Subject.cpp.obj
-.PHONY : lib/ObserverPattern/src/Subject.cpp.obj
+lib/Module/src/OscMsgChild.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj
+.PHONY : lib/Module/src/OscMsgChild.cpp.obj
 
-lib/ObserverPattern/src/Subject.i: lib/ObserverPattern/src/Subject.cpp.i
-.PHONY : lib/ObserverPattern/src/Subject.i
-
-# target to preprocess a source file
-lib/ObserverPattern/src/Subject.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPattern/src/Subject.cpp.i
-.PHONY : lib/ObserverPattern/src/Subject.cpp.i
-
-lib/ObserverPattern/src/Subject.s: lib/ObserverPattern/src/Subject.cpp.s
-.PHONY : lib/ObserverPattern/src/Subject.s
-
-# target to generate assembly for a file
-lib/ObserverPattern/src/Subject.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPattern/src/Subject.cpp.s
-.PHONY : lib/ObserverPattern/src/Subject.cpp.s
-
-lib/OscService/src/OscService.obj: lib/OscService/src/OscService.cpp.obj
-.PHONY : lib/OscService/src/OscService.obj
-
-# target to build an object file
-lib/OscService/src/OscService.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.obj
-.PHONY : lib/OscService/src/OscService.cpp.obj
-
-lib/OscService/src/OscService.i: lib/OscService/src/OscService.cpp.i
-.PHONY : lib/OscService/src/OscService.i
+lib/Module/src/OscMsgChild.i: lib/Module/src/OscMsgChild.cpp.i
+.PHONY : lib/Module/src/OscMsgChild.i
 
 # target to preprocess a source file
-lib/OscService/src/OscService.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.i
-.PHONY : lib/OscService/src/OscService.cpp.i
+lib/Module/src/OscMsgChild.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.i
+.PHONY : lib/Module/src/OscMsgChild.cpp.i
 
-lib/OscService/src/OscService.s: lib/OscService/src/OscService.cpp.s
-.PHONY : lib/OscService/src/OscService.s
+lib/Module/src/OscMsgChild.s: lib/Module/src/OscMsgChild.cpp.s
+.PHONY : lib/Module/src/OscMsgChild.s
 
 # target to generate assembly for a file
-lib/OscService/src/OscService.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.s
-.PHONY : lib/OscService/src/OscService.cpp.s
+lib/Module/src/OscMsgChild.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.s
+.PHONY : lib/Module/src/OscMsgChild.cpp.s
 
 lib/OutPutFactory/src/OutputFactory.obj: lib/OutPutFactory/src/OutputFactory.cpp.obj
 .PHONY : lib/OutPutFactory/src/OutputFactory.obj
@@ -634,6 +562,78 @@ lib/OutPutFactory/src/OutputFactory.s: lib/OutPutFactory/src/OutputFactory.cpp.s
 lib/OutPutFactory/src/OutputFactory.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.s
 .PHONY : lib/OutPutFactory/src/OutputFactory.cpp.s
+
+lib/SequenceAll/src/SequenceAll.obj: lib/SequenceAll/src/SequenceAll.cpp.obj
+.PHONY : lib/SequenceAll/src/SequenceAll.obj
+
+# target to build an object file
+lib/SequenceAll/src/SequenceAll.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.obj
+.PHONY : lib/SequenceAll/src/SequenceAll.cpp.obj
+
+lib/SequenceAll/src/SequenceAll.i: lib/SequenceAll/src/SequenceAll.cpp.i
+.PHONY : lib/SequenceAll/src/SequenceAll.i
+
+# target to preprocess a source file
+lib/SequenceAll/src/SequenceAll.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.i
+.PHONY : lib/SequenceAll/src/SequenceAll.cpp.i
+
+lib/SequenceAll/src/SequenceAll.s: lib/SequenceAll/src/SequenceAll.cpp.s
+.PHONY : lib/SequenceAll/src/SequenceAll.s
+
+# target to generate assembly for a file
+lib/SequenceAll/src/SequenceAll.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.s
+.PHONY : lib/SequenceAll/src/SequenceAll.cpp.s
+
+lib/Services/src/ArduinoNvs.obj: lib/Services/src/ArduinoNvs.cpp.obj
+.PHONY : lib/Services/src/ArduinoNvs.obj
+
+# target to build an object file
+lib/Services/src/ArduinoNvs.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.obj
+.PHONY : lib/Services/src/ArduinoNvs.cpp.obj
+
+lib/Services/src/ArduinoNvs.i: lib/Services/src/ArduinoNvs.cpp.i
+.PHONY : lib/Services/src/ArduinoNvs.i
+
+# target to preprocess a source file
+lib/Services/src/ArduinoNvs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.i
+.PHONY : lib/Services/src/ArduinoNvs.cpp.i
+
+lib/Services/src/ArduinoNvs.s: lib/Services/src/ArduinoNvs.cpp.s
+.PHONY : lib/Services/src/ArduinoNvs.s
+
+# target to generate assembly for a file
+lib/Services/src/ArduinoNvs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.s
+.PHONY : lib/Services/src/ArduinoNvs.cpp.s
+
+lib/Services/src/OscService.obj: lib/Services/src/OscService.cpp.obj
+.PHONY : lib/Services/src/OscService.obj
+
+# target to build an object file
+lib/Services/src/OscService.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.obj
+.PHONY : lib/Services/src/OscService.cpp.obj
+
+lib/Services/src/OscService.i: lib/Services/src/OscService.cpp.i
+.PHONY : lib/Services/src/OscService.i
+
+# target to preprocess a source file
+lib/Services/src/OscService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.i
+.PHONY : lib/Services/src/OscService.cpp.i
+
+lib/Services/src/OscService.s: lib/Services/src/OscService.cpp.s
+.PHONY : lib/Services/src/OscService.s
+
+# target to generate assembly for a file
+lib/Services/src/OscService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.s
+.PHONY : lib/Services/src/OscService.cpp.s
 
 lib/VoiceContainer/src/Voice.obj: lib/VoiceContainer/src/Voice.cpp.obj
 .PHONY : lib/VoiceContainer/src/Voice.obj
@@ -742,9 +742,6 @@ help:
 	@echo "... Debug"
 	@echo "... Production"
 	@echo "... Z_DUMMY_TARGET"
-	@echo "... .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.obj"
-	@echo "... .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.i"
-	@echo "... .pio/libdeps/native/ArduinoNvs/src/ArduinoNvs.s"
 	@echo "... .pio/libdeps/native/AsyncTCP/src/AsyncTCP.obj"
 	@echo "... .pio/libdeps/native/AsyncTCP/src/AsyncTCP.i"
 	@echo "... .pio/libdeps/native/AsyncTCP/src/AsyncTCP.s"
@@ -787,21 +784,24 @@ help:
 	@echo "... .pio/libdeps/native/ESP_Async_WebServer/src/WebServer.obj"
 	@echo "... .pio/libdeps/native/ESP_Async_WebServer/src/WebServer.i"
 	@echo "... .pio/libdeps/native/ESP_Async_WebServer/src/WebServer.s"
-	@echo "... lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.obj"
-	@echo "... lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.i"
-	@echo "... lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.s"
 	@echo "... lib/Module/src/Module.obj"
 	@echo "... lib/Module/src/Module.i"
 	@echo "... lib/Module/src/Module.s"
-	@echo "... lib/ObserverPattern/src/Subject.obj"
-	@echo "... lib/ObserverPattern/src/Subject.i"
-	@echo "... lib/ObserverPattern/src/Subject.s"
-	@echo "... lib/OscService/src/OscService.obj"
-	@echo "... lib/OscService/src/OscService.i"
-	@echo "... lib/OscService/src/OscService.s"
+	@echo "... lib/Module/src/OscMsgChild.obj"
+	@echo "... lib/Module/src/OscMsgChild.i"
+	@echo "... lib/Module/src/OscMsgChild.s"
 	@echo "... lib/OutPutFactory/src/OutputFactory.obj"
 	@echo "... lib/OutPutFactory/src/OutputFactory.i"
 	@echo "... lib/OutPutFactory/src/OutputFactory.s"
+	@echo "... lib/SequenceAll/src/SequenceAll.obj"
+	@echo "... lib/SequenceAll/src/SequenceAll.i"
+	@echo "... lib/SequenceAll/src/SequenceAll.s"
+	@echo "... lib/Services/src/ArduinoNvs.obj"
+	@echo "... lib/Services/src/ArduinoNvs.i"
+	@echo "... lib/Services/src/ArduinoNvs.s"
+	@echo "... lib/Services/src/OscService.obj"
+	@echo "... lib/Services/src/OscService.i"
+	@echo "... lib/Services/src/OscService.s"
 	@echo "... lib/VoiceContainer/src/Voice.obj"
 	@echo "... lib/VoiceContainer/src/Voice.i"
 	@echo "... lib/VoiceContainer/src/Voice.s"

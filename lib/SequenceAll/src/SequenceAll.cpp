@@ -16,16 +16,21 @@ void SequenceAll::begin() {
     _clock->attach(_voiceContainer);
 
     _wifiService = new WiFiService();
-    _udp = new WiFiUDP();
-    _udp->begin(LOCAL_UDP_PORT);
-    //_oscService = new OscService();
-    //_oscService->begin(_udp);
+
+    _oscService = new OscService(&_wifiService->UDP);
+    //_oscService->begin();
 }
 
 void SequenceAll::run() {
     _clock->timer();
     _wifiService->handleWifiMode();
-    _oscService->receive();
+    OscMsgChild msg = _oscService->receive();
+    if(msg.isString(0)) {
+        int length = msg.getDataLength(0);
+        char str[length];
+        msg.getString(0, str, length);
+        Serial.println(str);
+    }
 }
 
 void SequenceAll::save() {

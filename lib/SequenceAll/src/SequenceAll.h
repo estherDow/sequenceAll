@@ -5,7 +5,6 @@
 #ifndef SEQUENCEALL_SEQUENCEALL_H
 #define SEQUENCEALL_SEQUENCEALL_H
 
-#include <WiFiUdp.h>
 #include <../../Services/src/ArduinoNvs.h>
 
 #include <Clock.h>
@@ -34,7 +33,6 @@ private:
     Clock *_clock;
     WiFiService *_wifiService;
     OscService *_oscService;
-    WiFiUDP *_udp;
     VoiceContainer *_voiceContainer;
 };
 

@@ -1,6 +1,4 @@
 #include <Arduino.h>
-#include <ArduinoNvs.h>
-
 #include <SequenceAll.h>
 
 
