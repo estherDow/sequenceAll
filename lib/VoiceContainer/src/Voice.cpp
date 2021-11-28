@@ -29,28 +29,49 @@ void Voice::initSequence(uint8_t length) {
 
 void Voice::setStep(void * context, OscMsgChild &message, uint8_t offset) {
     uint8_t position = 0;
-    uint8_t NewOffset = message.getAddressAsUint8_t(position, offset);
+    message.getAddressAsUint8_t(position, offset);
     uint8_t value = message.getInt(0);
-    Serial.printf("Set Step at %i with value %i", position, value);
-    //reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
-    //reinterpret_cast<Voice *>(context)->_steps.muteAt(position, false);
+
+    if (position > 0) { position--;}
+
+    if (
+    reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position) &&
+    reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(value)
+    ) {
+        Serial.printf("Set Step at %i with value %i \n", position, value);
+        reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
+        reinterpret_cast<Voice *>(context)->_steps.muteAt(position, false);
+    }
 }
 
 void Voice::muteStep(void * context, OscMsgChild &message, uint8_t offset) {
-    char * address;
-    message.getAddress(address);
-    int position = atoi(address);
+    uint8_t position = 0;
+    message.getAddressAsUint8_t(position, offset);
     bool status = message.getBoolean(0);
-    reinterpret_cast<Voice *>(context)->_steps.muteAt(position, status);
+
+    if (position > 0) { position--;}
+
+    if (
+    reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)
+    ) {
+        Serial.printf("Toggle Mute Step at %i to status %i \n", position, status);
+        reinterpret_cast<Voice *>(context)->_steps.muteAt(position, status);
+    }
 }
 
 void Voice::deleteStep(void * context, OscMsgChild &message, uint8_t offset) {
-    char * address;
-    message.getAddress(address);
-    int position = atoi(address);
-    reinterpret_cast<Voice *>(context)->_steps.setAt(position, 0);
-    reinterpret_cast<Voice *>(context)->_steps.muteAt(position, true);
+    uint8_t position = 0;
+    message.getAddressAsUint8_t(position, offset);
+    if (position > 0) { position--;}
+    if (
+    reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)
+    ) {
+        Serial.printf("Delete Step at %i \n", position);
+        reinterpret_cast<Voice *>(context)->_steps.setAt(position, 0);
+        reinterpret_cast<Voice *>(context)->_steps.muteAt(position, true);
+    }
 }
+
 
 uint8_t Voice::getCurrentStepNumber() const {
     if (_currentStep < _sequenceLength) {
@@ -98,6 +119,13 @@ void Voice::incrementStep() {
 void Voice::setSize(uint8_t newLength) {
     _sequenceLength = newLength;
     _steps.setSize(newLength);
+}
+
+bool Voice::_isMessageWithinBounds(uint8_t position) const {
+    if (0 <= position && position < _sequenceLength) {
+        return true;
+    }
+    return false;
 }
 
 

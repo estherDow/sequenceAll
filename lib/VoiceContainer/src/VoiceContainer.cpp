@@ -21,8 +21,13 @@ void VoiceContainer::remove(int Handle) {
 void VoiceContainer::receive(void * context, OscMsgChild & message, uint8_t initialOffset) {
     uint8_t Handle=0;
     uint8_t NewOffset = message.getAddressAsUint8_t(Handle, initialOffset);
-    Voice * target = &reinterpret_cast<VoiceContainer *>(context)->voiceMap->at(Handle);
-    message.route(target, "/set", Voice::setStep,NewOffset);
+    if (Handle > 0) { Handle--; }
+    if (Handle < TOTAL_NUMBER_OF_VOICES) {
+        Voice *target = &reinterpret_cast<VoiceContainer *>(context)->voiceMap->at(Handle);
+        message.route(target, "/set", Voice::setStep, NewOffset);
+        message.route(target, "/delete", Voice::deleteStep, NewOffset);
+        message.route(target, "/mute", Voice::muteStep, NewOffset);
+    }
 }
 
 Voice * VoiceContainer::_select(int Handle) {
