@@ -1,43 +1,51 @@
-#sequence all.
+## sequence all.
 
-current state:
+A Software Project for the esp32 microcontroller, that aims to provide a low code entrypoint to build a sequencer out of anything imaginable.
+Internal Communication and signal routing is done making heavy use of the [CNMAT/OSC](https://github.com/CNMAT/OSC) library.
+Particularly, their OSCMessage class, from which I inherit to make it more suitable to operate in an OOP environment.
 
-clock sends out pulses at 48 PULSES_PER_QUARTER_NOTE, defined in macros, if you'd like to change that.
+Future implementations will create OscMsgChild objects to pass them around the system.
+This way, a translation layer between `cv/midi/osc` can be run concurrently to sequencing messages to either of the protocols.
 
-voice handles clock division and trigger conditioning if:
-a)current clock pulse and subDivisions line up
-b)a step is set to not 0 in the vector.
+This application currently runs on only one core, so the second core is entirely unused and may be leveraged for other duties with few changes to the software.
 
 
-Wifi implemented, advertizes services under sequenceall.local, currently not working under android.
+# current state:
 
-Who suppots mDNS?
+All important values, such as Pulses per quarterNote, Number of voices and sequence length are stored in `macros.h`.
 
-sta / ap modes may be set via post requests:
+Change your values there if you want to.
 
+The sequencer advertises its services under sequenceall.local.
+
+Use `port 80` for the rest(?) api. following requests may be used to change credentials, as well as the status of accesspoint.
+The credentials are stored in non volatile storage.
+```
 curl -XPOST -H "Content-type: application/json" -d '{"ssid" : "mySSID" , "password" : "myPassword"}' 'sequenceall.local/set_sta'
+```
 
+```
 curl -XPOST -H "Content-type: application/json" -d '{"ssid" : "myApSSID" , "password" : "myApPassword"}' 'sequenceall.local/set_ap'
+```
+If you send either request with an empty payload, the sequencer simply changes to the desired mode.
+If it cannot join a wifi network, it will return to AP mode automatically.
 
-Currently lamda methods store ssid and pwd as key value pairs in nvm
+Once the connection is established, the sequencer listens on `port 8000` for incoming OSC message of the syntax:
 
-###needed:
+```
+/{Element In Signal Chain}/{Optional: Number Of Element}/Action/{Optional: Position}
+```
+Currently following messages are implemented:
+```
+/voice/{1-voiceCount}/set/{1-sequenceLength}  uint8_t payload
+/voice/{1-voiceCount}/mute/{1-sequenceLength}  uint8_t status //Bool seems not to be well supported by CNMAT/OSC code uses implicit cast
+/voice/{1-voiceCount}/delete/{1-sequenceLength}  -
+```
 
-inputFactory
-and implementation of various inputs keypad, midi, osc
-
-outputfactory
-and implementation of various outputs keypad, midi, osc
-
-save state of all voices to nvm, so that info is available after you shut down :)
-to be done by implementing setGlob()
+### needed:
 
 
-successful use of async webserver could enable a super simple js gui, which sends ajax requests to keep itself updated.
-webapp needs to be served only once and could be ground for a lot of explorative testing.
+- and implementation of various I/Os, such as keypad, midi, etc.
 
-I need to rewrite the message distribution system in order to send messages only to the modules required.
-If I have multiple voice classes, how may I call set step only on one voice. etc.
-
-I can store all voice objects in an unordered map, which I can now use to distribute messages to the individual voices and operate upon them. 
+- save state of all voices to nvm, so that info is available after you shut down :) to be done by implementing setGlob(), i guess.
 
