@@ -6,10 +6,11 @@ Voice::Voice(uint8_t length) { //trigger t gate g clock c
     initSequence(length);
 }
 
-void Voice::update(OSCMessage &message) {
+void Voice::update(OscMsgChild &message) {
     _pulseCounter++;
     //Serial.printf("Voice Update was called %i times\n", _pulseCounter);
-    if (message.fullMatch(reinterpret_cast<const char *>(CLOCK_SIGNAL_HANDLE), 0)) {
+    //TODO: This does not work accoring to stack trace:reinterpret_cast<const char *>(CLOCK_SIGNAL_HANDLE)
+    if (message.fullMatch("/tick", 0)) {
         if (_pulseCounter == _clockPulsesPerStep) {
             //notify();
             incrementStep();
@@ -26,7 +27,7 @@ void Voice::initSequence(uint8_t length) {
 
 }
 
-void Voice::setStep(void * context, OSCMessage &message, uint8_t offset) {
+void Voice::setStep(void * context, OscMsgChild &message, uint8_t offset) {
     char * address;
     message.getAddress(address);
     int position = atoi(address);
@@ -35,7 +36,7 @@ void Voice::setStep(void * context, OSCMessage &message, uint8_t offset) {
     reinterpret_cast<Voice *>(context)->_steps.muteAt(position, false);
 }
 
-void Voice::muteStep(void * context, OSCMessage &message, uint8_t offset) {
+void Voice::muteStep(void * context, OscMsgChild &message, uint8_t offset) {
     char * address;
     message.getAddress(address);
     int position = atoi(address);
@@ -43,7 +44,7 @@ void Voice::muteStep(void * context, OSCMessage &message, uint8_t offset) {
     reinterpret_cast<Voice *>(context)->_steps.muteAt(position, status);
 }
 
-void Voice::deleteStep(void * context, OSCMessage &message, uint8_t offset) {
+void Voice::deleteStep(void * context, OscMsgChild &message, uint8_t offset) {
     char * address;
     message.getAddress(address);
     int position = atoi(address);

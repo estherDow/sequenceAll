@@ -1,10 +1,10 @@
 #include "OscService.h"
 #include "../../../.pio/libdeps/esp32dev/OSC/OSCMessage.h"
-//TODO: queryHost returns an IPAddress with noargs Constructor. error:  undefined reference to `OscService::remoteIP'git
+//TODO: queryHost returns an IPAddress with noargs Constructor. better error check
 void OscService::begin(WiFiUDP *udp) {
     Udp = udp;
     *remoteIP = _getIpAddressFromHostname();
-    if (*remoteIP = testIP) {
+    if (*remoteIP == testIP) {
         remoteIP = new IPAddress(192,168,1,4);
     }
 }

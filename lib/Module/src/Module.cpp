@@ -12,7 +12,7 @@ void Module::detach(Module *module) {
 }
 
 //Send one to many
-void Module::notify(OSCMessage & message) {
+void Module::notify(OscMsgChild & message) {
     auto iterator = list_observer_.begin();
     while (iterator != list_observer_.end()) {
         (*iterator)->update(message);
@@ -20,26 +20,6 @@ void Module::notify(OSCMessage & message) {
     }
 }
 
-//Send one to one
-
-bool Module::dispatch(void *context, const char * pattern, void (*callback)( void *context, OSCMessage &), int addr_offset){
-    if (fullMatch(pattern, addr_offset)){
-        callback(context,*this);
-        return true;
-    } else {
-        return false;
-    }
-}
-
-bool Module::route(void *context, const char * pattern, void (*callback)( void *context, OSCMessage &, uint8_t), int initial_offset){
-    int match_offset = match(pattern, initial_offset);
-    if (match_offset>0){
-        callback(context, *this, match_offset + initial_offset);
-        return true;
-    } else {
-        return false;
-    }
-}
 
 
 

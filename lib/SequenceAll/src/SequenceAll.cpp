@@ -18,8 +18,8 @@ void SequenceAll::begin() {
     _wifiService = new WiFiService();
     _udp = new WiFiUDP();
     _udp->begin(LOCAL_UDP_PORT);
-    _oscService = new OscService();
-    _oscService->begin(_udp);
+    //_oscService = new OscService();
+    //_oscService->begin(_udp);
 }
 
 void SequenceAll::run() {

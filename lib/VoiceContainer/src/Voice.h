@@ -13,15 +13,15 @@ class Voice : public Module {
 public:
     explicit Voice(uint8_t length);
 
-    void update(OSCMessage &message) override;
+    void update(OscMsgChild &message) override;
 
     void initSequence(uint8_t length);
 
-    static void setStep(void *context, OSCMessage &message, uint8_t offset = 0);
+    static void setStep(void *context, OscMsgChild &message, uint8_t offset = 0);
 
-    static void muteStep(void *context, OSCMessage &message,uint8_t offset = 0);
+    static void muteStep(void *context, OscMsgChild &message,uint8_t offset = 0);
 
-    static void deleteStep(void *context, OSCMessage &message,uint8_t offset = 0);
+    static void deleteStep(void *context, OscMsgChild &message,uint8_t offset = 0);
 
     uint8_t getCurrentStepNumber() const;
 
@@ -43,7 +43,7 @@ public:
     //TODO: Implement save to nvs
     //   void save();
     //TODO: Implement destructor
-//    ~Voice();
+   ~Voice()= default;;
 private:
     //Always initialize values with some default or else you WILL run into undefined behavior.
     VoicePatternData _steps;

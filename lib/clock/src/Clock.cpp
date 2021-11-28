@@ -29,7 +29,8 @@ void Clock::timer() {
     //TODO: Implement notify
     //At the beginning of the program, pastState is always smaller than currentstate
     if (currentState >= _pastState + _deltaTime) {
-       // notify();
+        OscMsgChild message("/tick");
+        notify(message);
         //gets larger than next measurement or triggers an immediate rerun of above code.
         _pastState += _deltaTime;
     }

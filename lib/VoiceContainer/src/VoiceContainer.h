@@ -23,9 +23,9 @@ public:
 
     void remove(int Handle);
 
-    static void receive(void *context, OSCMessage &message);
+    static void receive(void *context, OscMsgChild &message);
 
-    void update(OSCMessage &message) override;
+    void update(OscMsgChild &message) override;
 
     ~VoiceContainer() = default;;
 

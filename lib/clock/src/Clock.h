@@ -19,7 +19,7 @@ public:
     void setBeatsPerMinute();
     static void setBeatsPerMinute(void * context, OSCMessage & message);
     void timer();
-    void update(OSCMessage & message) override{};
+    void update(OscMsgChild & message) override{};
 private:
     //Clock setting in BPM
     uint16_t _beats = 120;
