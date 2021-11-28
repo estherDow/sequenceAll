@@ -26,9 +26,7 @@ void SequenceAll::run() {
     OscMsgChild msg;
     if (_oscService->receive(msg)) {
         if (msg.isInt(0)) {
-            Serial.print("osc message: ");
-            Serial.println(msg.getInt(0));
-            Serial.println(msg.getInt(0));
+            Serial.printf("osc message: %i", msg.getInt(0));
         }
         if (msg.isString(0)) {
             int length = msg.getDataLength(0);

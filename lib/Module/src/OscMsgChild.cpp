@@ -31,13 +31,14 @@ uint8_t OscMsgChild::getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset) {
     uint8_t DefaultOffset = 1; //offset to account for "/"
     uint8_t NewOffset = DefaultOffset + offset;
     getAddress(addr, NewOffset);
-    Serial.print("Address received at voiceContainer: ");
-    Serial.println(addr);
+    Serial.printf("Address received at voiceContainer: %s", addr);
+
     Handle = atoi(addr);
-    Serial.print("Voice Handle received: ");
-    Serial.println(Handle);
+    Serial.print("Voice Handle received:  %i", Handle);
+
     NewOffset ++;
     if (Handle > 9) { NewOffset ++;} //number of digits
     if (Handle > 99) {NewOffset ++;}
+
     return NewOffset;
 }
