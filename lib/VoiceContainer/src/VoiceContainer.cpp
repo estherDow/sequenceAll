@@ -18,14 +18,11 @@ void VoiceContainer::remove(int Handle) {
 
 }
 
-void VoiceContainer::receive(void * context, OscMsgChild & message) {
-    char addr[32];
-    message.getAddress(addr, 1);
-    uint8_t Handle = atoi(addr);
-    uint8_t offset = 1;
-    if (Handle > 9) { offset = 2;}
+void VoiceContainer::receive(void * context, OscMsgChild & message, uint8_t initialOffset) {
+    uint8_t Handle=0;
+    uint8_t NewOffset = message.getAddressAsUint8_t(Handle, initialOffset);
     Voice * target = &reinterpret_cast<VoiceContainer *>(context)->voiceMap->at(Handle);
-    message.route(target, "/set", Voice::setStep,offset);
+    message.route(target, "/set", Voice::setStep,NewOffset);
 }
 
 Voice * VoiceContainer::_select(int Handle) {

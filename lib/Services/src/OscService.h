@@ -18,7 +18,7 @@ public:
 
 
     static void send(void * context, const char * uri, uint8_t argument);
-    OscMsgChild receive();
+    bool receive(OscMsgChild & message);
     void update(OscMsgChild & message) override{};
 private:
     WiFiUDP *udp;

@@ -28,12 +28,12 @@ void Voice::initSequence(uint8_t length) {
 }
 
 void Voice::setStep(void * context, OscMsgChild &message, uint8_t offset) {
-    char * address;
-    message.getAddress(address);
-    int position = atoi(address);
-    int value = message.getInt(0);
-    reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
-    reinterpret_cast<Voice *>(context)->_steps.muteAt(position, false);
+    uint8_t position = 0;
+    uint8_t NewOffset = message.getAddressAsUint8_t(position, offset);
+    uint8_t value = message.getInt(0);
+    Serial.printf("Set Step at %i with value %i", position, value);
+    //reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
+    //reinterpret_cast<Voice *>(context)->_steps.muteAt(position, false);
 }
 
 void Voice::muteStep(void * context, OscMsgChild &message, uint8_t offset) {

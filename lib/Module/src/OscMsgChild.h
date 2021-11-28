@@ -26,6 +26,8 @@ public:
             void (*callback)(void *context, OscMsgChild &, uint8_t),
             int initial_offset
     );
+
+    uint8_t getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset); //returns new offset and overwrites handle
 };
 
 

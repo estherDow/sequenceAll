@@ -17,19 +17,18 @@ void OscService::send(void *context, const char *uri, uint8_t argument) {
 }
 
 //TODO: find better error handling here.
-OscMsgChild OscService::receive() {
+bool OscService::receive(OscMsgChild &msg) {
     int size = udp->parsePacket();
-    OscMsgChild msg;
     if (size > 0) {
         Serial.println("caught message");
         while (size--) {
             msg.fill(udp->read());
         }
         if (!msg.hasError()) {
-            return msg;
+            return true;
         }
     }
-    return msg;
+    return false;
 }
 
 

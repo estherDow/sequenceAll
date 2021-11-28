@@ -18,18 +18,26 @@ void SequenceAll::begin() {
     _wifiService = new WiFiService();
 
     _oscService = new OscService(&_wifiService->UDP);
-    //_oscService->begin();
 }
 
 void SequenceAll::run() {
     _clock->timer();
     _wifiService->handleWifiMode();
-    OscMsgChild msg = _oscService->receive();
-    if(msg.isString(0)) {
-        int length = msg.getDataLength(0);
-        char str[length];
-        msg.getString(0, str, length);
-        Serial.println(str);
+    OscMsgChild msg;
+    if (_oscService->receive(msg)) {
+        if (msg.isInt(0)) {
+            Serial.print("osc message: ");
+            Serial.println(msg.getInt(0));
+            Serial.println(msg.getInt(0));
+        }
+        if (msg.isString(0)) {
+            int length = msg.getDataLength(0);
+            char str[length];
+            msg.getString(0, str, length);
+            Serial.println(str);
+        }
+
+        msg.route(_voiceContainer, "/voice", VoiceContainer::receive, 0);
     }
 }
 

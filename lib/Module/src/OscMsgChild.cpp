@@ -25,3 +25,19 @@ bool OscMsgChild::route(void *context, const char * pattern, void (*callback)( v
         return false;
     }
 }
+
+uint8_t OscMsgChild::getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset) {
+    char addr[32];
+    uint8_t DefaultOffset = 1; //offset to account for "/"
+    uint8_t NewOffset = DefaultOffset + offset;
+    getAddress(addr, NewOffset);
+    Serial.print("Address received at voiceContainer: ");
+    Serial.println(addr);
+    Handle = atoi(addr);
+    Serial.print("Voice Handle received: ");
+    Serial.println(Handle);
+    NewOffset ++;
+    if (Handle > 9) { NewOffset ++;} //number of digits
+    if (Handle > 99) {NewOffset ++;}
+    return NewOffset;
+}

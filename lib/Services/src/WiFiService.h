@@ -22,11 +22,11 @@ public:
     explicit WiFiService() {
 
 //TODO:PROPER ERROR HANDLING MY G
-        //if(!initSTA()) {
+        if(!initSTA()) {
         initAP();
-        //}
+        }
         IPAddress ipAddress = getIpAddressFromHostname();
-        UDP.begin(ipAddress, LOCAL_UDP_PORT);
+        UDP.begin(LOCAL_UDP_PORT);
         server = new AsyncWebServer(80);
         if (!MDNS.begin("sequenceall")) {
             Serial.println("Error starting mDNS");

@@ -23,7 +23,7 @@ public:
 
     void remove(int Handle);
 
-    static void receive(void *context, OscMsgChild &message);
+    static void receive(void *context, OscMsgChild &message, uint8_t initialOffset);
 
     void update(OscMsgChild &message) override;
 
