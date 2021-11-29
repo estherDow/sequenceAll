@@ -17,9 +17,10 @@ public:
     explicit OscService(WiFiUDP *udp);
 
 
-    static void send(void * context, const char * uri, uint8_t argument);
+    void send(void * context, const char * uri, uint8_t argument);
     bool receive(OscMsgChild & message);
     void update(OscMsgChild & message) override{};
+    static IPAddress ipAddress(192, 168, 122, 252);
 private:
     WiFiUDP *udp;
 };

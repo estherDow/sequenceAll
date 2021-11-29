@@ -42,6 +42,7 @@ void Voice::setStep(void * context, OscMsgChild &message, uint8_t offset) {
         reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
         reinterpret_cast<Voice *>(context)->_steps.muteAt(position, false);
     }
+    message.empty();
 }
 
 void Voice::muteStep(void * context, OscMsgChild &message, uint8_t offset) {
@@ -57,6 +58,7 @@ void Voice::muteStep(void * context, OscMsgChild &message, uint8_t offset) {
         Serial.printf("Toggle Mute Step at %i to status %i \n", position, status);
         reinterpret_cast<Voice *>(context)->_steps.muteAt(position, status);
     }
+    message.empty();
 }
 
 void Voice::deleteStep(void * context, OscMsgChild &message, uint8_t offset) {
@@ -70,6 +72,7 @@ void Voice::deleteStep(void * context, OscMsgChild &message, uint8_t offset) {
         reinterpret_cast<Voice *>(context)->_steps.setAt(position, 0);
         reinterpret_cast<Voice *>(context)->_steps.muteAt(position, true);
     }
+    message.empty();
 }
 
 
