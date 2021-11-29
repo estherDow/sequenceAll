@@ -11,16 +11,15 @@
 #include <macros.h>
 
 
-
 class OscService : public Module {
 public:
     explicit OscService(WiFiUDP *udp);
 
 
-    void send(void * context, const char * uri, uint8_t argument);
+    void send(void * context, OscMsgChild & message);
     bool receive(OscMsgChild & message);
     void update(OscMsgChild & message) override{};
-    static IPAddress ipAddress(192, 168, 122, 252);
+    const char * hostName;
 private:
     WiFiUDP *udp;
 };

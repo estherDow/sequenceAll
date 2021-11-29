@@ -109,18 +109,29 @@ void WiFiService::handleWifiMode() {
     }
 }
 
-IPAddress WiFiService::getIpAddressFromHostname() {
+bool WiFiService::getHostname(const char * hostname) {
+    String nvsHostnameResponse = NVS.getString("remoteHostname");
+    if (nvsHostnameResponse.length() == 0) {
+        hostname = DEFAULT_REMOTE_HOSTNAME;
+    }
+    else {
+        hostname = nvsHostnameResponse.c_str();
+    }
+    return true;
+}
+
+
+void WiFiService::getIpAddressFromHostname(IPAddress ip) {
     String hostname = NVS.getString("remoteHostname");
     if (hostname.length() == 0) {
         hostname = DEFAULT_REMOTE_HOSTNAME;
     }
-    IPAddress ip = MDNS.queryHost((char *) hostname.c_str(), 2000);
+    ip = MDNS.queryHost((char *) hostname.c_str(), 2000);
 
     uint8_t firstOctet = ip.operator[](1);
     if (firstOctet == 0) {
         ip.operator=(defaultIpAddress);
     }
-    return ip;
 }
 
 bool WiFiService::_doSetSTA(String newSSID, String newPassword) {

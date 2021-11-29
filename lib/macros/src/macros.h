@@ -38,7 +38,7 @@
 
 #define LOCAL_UDP_PORT                   8000
 #define DEFAULT_REMOTE_UDP_PORT          9000
-#define DEFAULT_REMOTE_HOSTNAME          "remoteHost"
+#define DEFAULT_REMOTE_HOSTNAME          "Kenneths-MacBook-Pro.local"
 
 
 
