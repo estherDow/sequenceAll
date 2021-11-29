@@ -44,6 +44,12 @@ Currently following messages are implemented:
 
 ### needed:
 
+Short term goals:
+
+- implement sendOsc method
+- implement switch internal and external clock
+- implement hardware keyboard class
+- extend rest(?) api
 
 - and implementation of various I/Os, such as keypad, midi, etc.
 
