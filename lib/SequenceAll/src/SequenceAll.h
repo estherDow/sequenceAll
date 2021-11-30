@@ -27,13 +27,14 @@ public:
 
     static void reset();
 
+
+    Clock *cClock;
+    WiFiService *wiFiService;
+    OscService *oscService;
+    VoiceContainer *voiceContainer;
+
 private:
     void _setVoices();
-
-    Clock *_clock;
-    WiFiService *_wifiService;
-    OscService *_oscService;
-    VoiceContainer *_voiceContainer;
 };
 
 extern SequenceAll sequenceAll;
