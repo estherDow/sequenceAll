@@ -17,7 +17,7 @@ void Voice::update(OscMsgChild &message) {
             sprintf(sender, "/voice/%d", Handle);
             OscMsgChild newMessage(sender);
             newMessage.add(getCurrentStepValue());
-            //message.route()
+            PatchBay::routeOutputs(message);
             incrementStep();
             _pulseCounter = 0;
         }

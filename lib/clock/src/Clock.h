@@ -13,7 +13,7 @@
 class Clock : public Module {
 
 public:
-    Clock() {};
+    Clock(PatchBay *patchBay): Module(patchBay) {};
 
     //Setter functions
     void setBeatsPerMinute();

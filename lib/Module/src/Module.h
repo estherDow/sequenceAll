@@ -5,6 +5,7 @@
 
 #include "../../../.pio/libdeps/esp32dev/OSC/OSCMessage.h"
 #include "OscMsgChild.h"
+#include "../../PatchBay/src/PatchBay.h"
 
 
 //TODO: This should not inherit rom osc message.

@@ -20,9 +20,9 @@ public:
     bool receive(OscMsgChild &message);
 
     void update(OscMsgChild &message) override {};
-    const char * hostName;
+    const char * hostName{};
 private:
-    WiFiUDP *udp;
+    WiFiUDP *udp{};
 };
 
 #endif
