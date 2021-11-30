@@ -1,6 +1,7 @@
 #include "Voice.h"
 
-Voice::Voice(uint8_t length) { //trigger t gate g clock c
+Voice::Voice(uint8_t length, uint8_t handle) {
+    Handle = handle;
     _sequenceLength = length;
     setSize(length);
     initSequence(length);
@@ -12,7 +13,11 @@ void Voice::update(OscMsgChild &message) {
     //TODO: This does not work accoring to stack trace:reinterpret_cast<const char *>(CLOCK_SIGNAL_HANDLE)
     if (message.fullMatch("/tick", 0)) {
         if (_pulseCounter == _clockPulsesPerStep) {
-            //notify();
+            char sender[12];
+            sprintf(sender, "/voice/%d", Handle);
+            OscMsgChild newMessage(sender);
+            newMessage.add(getCurrentStepValue());
+            //message.route()
             incrementStep();
             _pulseCounter = 0;
         }
@@ -86,17 +91,11 @@ uint8_t Voice::getCurrentStepNumber() const {
 
 
 int Voice::getCurrentStepValue() {
-    if (_currentStep < _sequenceLength) {
         return _steps.returnAt(_currentStep);
-    } else {
-        return -1;
-    }
 }
 
 
-//set & get human-readable divisor but store PPQN/divisor for easier counting
-//Whatever you type it will be rounded to the nearest integer divisor.
-//20 will be 24 10 will be 12 etc. this could be improved.
+
 void Voice::setQuarterNoteDivisions(uint8_t subDivisions) {
     if (subDivisions > PULSES_PER_QUARTER_NOTE) {
         subDivisions = PULSES_PER_QUARTER_NOTE;

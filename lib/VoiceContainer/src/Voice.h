@@ -4,14 +4,15 @@
 #include <Arduino.h>
 #include "SignalTypes.h"
 #include "VoicePatternData.h"
-#include "../../../.pio/libdeps/esp32dev/OSC/OSCMessage.h"
 #include <cstdlib>     /* srand, rand */
 #include <Module.h>
 #include "macros.h"
+#include <cstdio>
 
 class Voice : public Module {
 public:
-    explicit Voice(uint8_t length);
+    uint8_t Handle;
+    explicit Voice(uint8_t length, uint8_t handle);
 
     void update(OscMsgChild &message) override;
 
@@ -52,6 +53,7 @@ private:
     uint8_t _clockPulsesPerStep = 12;
     uint16_t _pulseCounter = 0;
     int8_t _motion = 1;
+
 
     bool _isMessageWithinBounds(uint8_t position) const;
 };

@@ -9,12 +9,12 @@ VoiceContainer::VoiceContainer() {
     voiceMap = new VoiceMap();
 }
 
-void VoiceContainer::add(int Handle) {
-    Voice voice(DEFAULT_SEQUENCE_LENGTH);
+void VoiceContainer::add(uint8_t Handle) {
+    Voice voice(DEFAULT_SEQUENCE_LENGTH, Handle);
     voiceMap->insert ({Handle, voice});
 }
 
-void VoiceContainer::remove(int Handle) {
+void VoiceContainer::remove(uint8_t Handle) {
 
 }
 

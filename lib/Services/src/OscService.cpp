@@ -5,15 +5,11 @@ OscService::OscService(WiFiUDP *Udp) {
     this->udp = Udp;
 
     WiFiService::getHostname(hostName);
-    //WiFiService::getIpAddressFromHostname(ip);
 }
 
 
 void OscService::send(void *context, OscMsgChild & message) {
-    reinterpret_cast<OscService *>(context)->udp->beginPacket(hostName, DEFAULT_REMOTE_UDP_PORT);
-    message.send(*reinterpret_cast<OscService *>(context)->udp);
-    reinterpret_cast<OscService *>(context)->udp->endPacket();
-    message.empty();
+    reinterpret_cast<OscService *>(context)->doSend(message);
 }
 
 bool OscService::receive(OscMsgChild &msg) {
@@ -30,6 +26,13 @@ bool OscService::receive(OscMsgChild &msg) {
     return false;
 }
 
+void OscService::doSend(OscMsgChild &message) {
+
+    udp->beginPacket(hostName, DEFAULT_REMOTE_UDP_PORT);
+    message.send(* udp);
+    udp->endPacket();
+    message.empty();
+}
 
 
 
