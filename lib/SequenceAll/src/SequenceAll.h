@@ -13,6 +13,7 @@
 #include <macros.h>
 #include "../../Services/src/WiFiService.h"
 #include "../../Services/src/OscService.h"
+#include "OscMsgChild.h"
 #include "../../VoiceContainer/src/VoiceContainer.h"
 
 class SequenceAll {
@@ -27,6 +28,8 @@ public:
 
     static void reset();
 
+    void routeInputs(void * context, OscMsgChild & message, uint8_t initialOffset=0);
+    void routeOutputs(void * context, OscMsgChild & message, uint8_t initialOffset=0);
 
     Clock *cClock;
     WiFiService *wiFiService;

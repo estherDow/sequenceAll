@@ -6,12 +6,10 @@
 #define SEQUENCEALL_OSCMSGCHILD_H
 
 #include "../../../.pio/libdeps/esp32dev/OSC/OSCMessage.h"
-
 class OscMsgChild : public OSCMessage {
 public:
-    char * sender;
 
-    explicit OscMsgChild(const char * address,  char * sender) : OSCMessage (address){ this->sender = sender;};
+    explicit OscMsgChild(const char * address) : OSCMessage (address){};
     OscMsgChild() : OSCMessage(){};
 
     bool dispatch(

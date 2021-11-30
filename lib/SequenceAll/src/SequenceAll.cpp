@@ -16,9 +16,9 @@ void SequenceAll::begin() {
     cClock->attach(voiceContainer);
 
 
-    _wifiService = new WiFiService();
+    wiFiService = new WiFiService();
     //TODO: Add error handling in case WiFi could not be started.
-    _oscService = new OscService(&_wifiService->UDP);
+    oscService = new OscService(&wiFiService->UDP);
 }
 
 void SequenceAll::run() {

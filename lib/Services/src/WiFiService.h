@@ -32,8 +32,7 @@ public:
     void handleWifiMode();
 
     static bool getHostname(const char * hostname);
-    static const uint32_t defaultIpAddress = 19216814;
-    static void getIpAddressFromHostname(IPAddress ip);
+
 
 private:
 

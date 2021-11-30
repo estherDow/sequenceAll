@@ -121,18 +121,6 @@ bool WiFiService::getHostname(const char * hostname) {
 }
 
 
-void WiFiService::getIpAddressFromHostname(IPAddress ip) {
-    String hostname = NVS.getString("remoteHostname");
-    if (hostname.length() == 0) {
-        hostname = DEFAULT_REMOTE_HOSTNAME;
-    }
-    ip = MDNS.queryHost((char *) hostname.c_str(), 2000);
-
-    uint8_t firstOctet = ip.operator[](1);
-    if (firstOctet == 0) {
-        ip.operator=(defaultIpAddress);
-    }
-}
 
 bool WiFiService::_doSetSTA(String newSSID, String newPassword) {
     WiFi.begin((char *) newSSID.c_str(), (char *) newPassword.c_str());
