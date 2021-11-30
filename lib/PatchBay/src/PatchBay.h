@@ -4,12 +4,13 @@
 
 #ifndef SEQUENCEALL_PATCHBAY_H
 #define SEQUENCEALL_PATCHBAY_H
+#include "SequenceAll.h"
 
 
-class PatchBay {
+class PatchBay : public SequenceAll {
 PatchBay();
-void patchInputs(void * context, OscMsgChild & message, uint8_t initialOffset);
-void patchOutputs(void * context, OscMsgChild & message, uint8_t initialOffset);
+void patchInputs(void * context, OscMsgChild & message, uint8_t initialOffset=0);
+void patchOutputs(void * context, OscMsgChild & message, uint8_t initialOffset=0);
 };
 
 

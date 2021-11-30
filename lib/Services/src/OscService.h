@@ -16,7 +16,8 @@ public:
     explicit OscService(WiFiUDP *udp);
 
 
-    void send(void * context, OscMsgChild & message);
+
+    static void send(void * context, OscMsgChild & message);
     bool receive(OscMsgChild & message);
     void update(OscMsgChild & message) override{};
     const char * hostName;

@@ -9,8 +9,9 @@
 
 class OscMsgChild : public OSCMessage {
 public:
+    char * sender;
 
-    explicit OscMsgChild(const char * address) : OSCMessage (address){};
+    explicit OscMsgChild(const char * address,  char * sender) : OSCMessage (address){ this->sender = sender;};
     OscMsgChild() : OSCMessage(){};
 
     bool dispatch(

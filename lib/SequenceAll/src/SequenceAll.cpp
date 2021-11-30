@@ -35,8 +35,6 @@ void SequenceAll::run() {
             msg.getString(0, str, length);
             Serial.println(str);
         }
-
-        msg.route(voiceContainer, "/voice", VoiceContainer::receive, 0);
     }
 }
 
