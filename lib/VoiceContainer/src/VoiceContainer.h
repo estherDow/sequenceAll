@@ -23,6 +23,8 @@ public:
 
     void remove(uint8_t Handle);
 
+    uint8_t getVoiceCount();
+
     static void receive(void *context, OscMsgChild &message, uint8_t initialOffset);
 
     void update(OscMsgChild &message) override;
@@ -32,7 +34,7 @@ public:
 private:
     VoiceMap *voiceMap;
 
-    Voice *_select(int Handle);
+    Voice *select(int Handle);
 
 };
 

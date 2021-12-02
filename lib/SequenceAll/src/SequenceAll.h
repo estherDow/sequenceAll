@@ -15,7 +15,6 @@
 #include "../../Services/src/OscService.h"
 #include "OscMsgChild.h"
 #include "../../VoiceContainer/src/VoiceContainer.h"
-#include "PatchBay.h"
 
 
 class SequenceAll {

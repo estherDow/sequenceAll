@@ -30,14 +30,18 @@ void VoiceContainer::receive(void * context, OscMsgChild & message, uint8_t init
     }
 }
 
-Voice * VoiceContainer::_select(int Handle) {
+Voice * VoiceContainer::select(int Handle) {
     return &voiceMap->at(Handle);
 }
 
 void VoiceContainer::update(OscMsgChild & message) {
     for(uint8_t i = 0; i < TOTAL_NUMBER_OF_VOICES; i++){
-        auto voice = _select(i);
+        auto voice = select(i);
         voice->update(message);
     }
+}
+
+uint8_t VoiceContainer::getVoiceCount() {
+    voiceMap->count()
 }
 
