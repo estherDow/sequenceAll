@@ -42,6 +42,6 @@ void VoiceContainer::update(OscMsgChild & message) {
 }
 
 uint8_t VoiceContainer::getVoiceCount() {
-    voiceMap->count()
+    return voiceMap->size();
 }
 

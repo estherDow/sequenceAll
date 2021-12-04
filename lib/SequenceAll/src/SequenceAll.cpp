@@ -15,10 +15,12 @@ void SequenceAll::begin() {
     cClock->setBeatsPerMinute();
     cClock->attach(voiceContainer);
 
-
     wiFiService = new WiFiService();
     //TODO: Add error handling in case WiFi could not be started.
-    oscService = new OscService(&wiFiService->UDP);
+    oscService = new OscService(wiFiService);
+
+    voiceContainer->select(0)->attach(oscService); //TODO: Test if handle is out of bounds
+
 }
 
 void SequenceAll::run() {
@@ -35,6 +37,8 @@ void SequenceAll::run() {
             msg.getString(0, str, length);
             Serial.println(str);
         }
+
+        msg.route(voiceContainer, "/voice", VoiceContainer::receive, 0);
     }
 }
 

@@ -25,6 +25,8 @@ public:
 
     uint8_t getVoiceCount();
 
+    Voice *select(int Handle);
+
     static void receive(void *context, OscMsgChild &message, uint8_t initialOffset);
 
     void update(OscMsgChild &message) override;
@@ -34,7 +36,6 @@ public:
 private:
     VoiceMap *voiceMap;
 
-    Voice *select(int Handle);
 
 };
 

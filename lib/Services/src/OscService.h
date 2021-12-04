@@ -13,16 +13,17 @@
 
 class OscService : public Module {
 public:
-    explicit OscService(WiFiUDP *udp);
+    explicit OscService(WiFiService *wifi);
 
     static void send(void *context, OscMsgChild &message);
     void doSend(OscMsgChild &message);
     bool receive(OscMsgChild &message);
 
-    void update(OscMsgChild &message) override {};
+    void update(OscMsgChild &message) override;
     const char * hostName{};
 private:
     WiFiUDP *udp{};
+    WiFiService *wiFi;
 };
 
 #endif

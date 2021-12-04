@@ -30,12 +30,11 @@ public:
     int oldState = 0;
     uint16_t interval = 2000;
     void handleWifiMode();
+    String getHostname();
 
-    static bool getHostname(const char * hostname);
-
-
+    IPAddress Ip;
+    String hostName;
 private:
-
     AsyncWebServer *server{};
 
     bool _doSetSTA(String newSSID, String newPassword);

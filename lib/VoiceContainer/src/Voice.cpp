@@ -9,18 +9,22 @@ Voice::Voice(uint8_t length, uint8_t handle) {
 
 void Voice::update(OscMsgChild &message) {
     _pulseCounter++;
-    //Serial.printf("Voice Update was called %i times\n", _pulseCounter);
-    //TODO: This does not work accoring to stack trace:reinterpret_cast<const char *>(CLOCK_SIGNAL_HANDLE)
-    if (message.fullMatch("/tick", 0)) {
-        if (_pulseCounter == _clockPulsesPerStep) {
-            char sender[12];
-            sprintf(sender, "/voice/%d", Handle);
-            OscMsgChild newMessage(sender);
-            newMessage.add(getCurrentStepValue());
-            PatchBay::routeOutputs(message);
-            incrementStep();
-            _pulseCounter = 0;
-        }
+    uint8_t currentStepValue = getCurrentStepValue();
+    if (message.fullMatch("/tick", 0) &&
+        (_pulseCounter == _clockPulsesPerStep)
+        ) {
+        char sender[12];
+        sprintf(sender, "/voice/%d", Handle);
+
+        OscMsgChild newMessage(sender);
+        newMessage.add(currentStepValue);
+        notify(newMessage);
+        Serial.printf("Voice current step is %i\n", getCurrentStepNumber() );
+        Serial.printf("Value is %i\n", currentStepValue);
+        //(currentStepValue > 0) &&
+        incrementStep();
+        _pulseCounter = 0;
+
     }
 }
 

@@ -4,7 +4,7 @@
 #include "WiFiService.h"
 
 WiFiService::WiFiService() {
-    if(!initSTA()) {
+    if (!initSTA()) {
         initAP();
     }
 
@@ -17,7 +17,11 @@ WiFiService::WiFiService() {
         return;
     }
     MDNS.addService("http", "tcp", 80);
-
+    MDNS.addService("osc", "udp", LOCAL_UDP_PORT );
+    hostName = getHostname();
+    IPAddress ip(192,168,4,2);
+    //Ip = MDNS.queryHost(hostName,2000);
+    Ip = ip;
     auto *handleSTARequest = new AsyncCallbackJsonWebHandler(
             "/set_sta",
             [](AsyncWebServerRequest *request,
@@ -66,9 +70,28 @@ WiFiService::WiFiService() {
                         {}
                 );
             });
+    auto *handleHostNameRequest = new AsyncCallbackJsonWebHandler(
+            "/set_remote_hostname",
+            [](AsyncWebServerRequest *request,
+               JsonVariant &json) {
+                const JsonObject &jsonObject = json.as<JsonObject>();
+
+                if (!jsonObject.isNull() && jsonObject["remoteHostname"]) {
+                    NVS.setString(
+                            "remoteHostname",
+                            jsonObject["remoteHostname"]);
+
+                    request->send(
+                            200,
+                            "application/json",
+                            {}
+                    );
+                }
+            });
 
     server->addHandler(handleSTARequest);
     server->addHandler(handleAPRequest);
+    server->addHandler(handleHostNameRequest);
     server->begin();
 
 }
@@ -102,6 +125,11 @@ bool WiFiService::initSTA() {
 }
 
 void WiFiService::handleWifiMode() {
+    if(Ip.toString().length() < 8) {
+        Serial.printf("REMOTE IP %s\n", Ip.toString());
+        Serial.println(hostName);
+        Ip = MDNS.queryHost(hostName, 200);
+    }
     int currentstate = millis();
     if (currentstate > oldState + interval) {
         _doHandleWifiMode();
@@ -109,17 +137,15 @@ void WiFiService::handleWifiMode() {
     }
 }
 
-bool WiFiService::getHostname(const char * hostname) {
+String WiFiService::getHostname() {
     String nvsHostnameResponse = NVS.getString("remoteHostname");
-    if (nvsHostnameResponse.length() == 0) {
-        hostname = DEFAULT_REMOTE_HOSTNAME;
-    }
-    else {
-        hostname = nvsHostnameResponse.c_str();
-    }
-    return true;
-}
 
+//    if (nvsHostnameResponse.length() < 6) {
+//        return nvsHostnameResponse;
+//    } else {
+        return DEFAULT_REMOTE_HOSTNAME;
+//    }
+}
 
 
 bool WiFiService::_doSetSTA(String newSSID, String newPassword) {
