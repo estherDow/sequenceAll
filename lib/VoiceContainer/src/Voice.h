@@ -2,7 +2,6 @@
 #define VOICE_H
 
 #include <Arduino.h>
-#include "SignalTypes.h"
 #include "VoicePatternData.h"
 #include <cstdlib>     /* srand, rand */
 #include <Module.h>
