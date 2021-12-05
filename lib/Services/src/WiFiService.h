@@ -30,7 +30,7 @@ public:
     int oldState = 0;
     uint16_t interval = 2000;
     void handleWifiMode();
-    String getHostname();
+    String getRemoteIP();
 
     IPAddress Ip;
     String hostName;
