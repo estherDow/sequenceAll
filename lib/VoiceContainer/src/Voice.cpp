@@ -31,7 +31,7 @@ void Voice::update(OscMsgChild &message) {
 void Voice::initSequence(uint8_t length) {
     for (uint8_t i = 0; i < length; i++) {
         _steps.setAt(0, i);
-        _steps.muteAt(i, true);
+        _steps.muteAt(i);
     }
 
 }
@@ -44,12 +44,9 @@ void Voice::setStep(void * context, OscMsgChild &message, uint8_t offset) {
     if (position > 0) { position--;}
 
     if (
-    reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position) &&
-    reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(value)
-    ) {
+    reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)) {
         Serial.printf("Set Step at %i with value %i \n", position, value);
         reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
-        reinterpret_cast<Voice *>(context)->_steps.muteAt(position, false);
     }
     message.empty();
 }
@@ -57,15 +54,14 @@ void Voice::setStep(void * context, OscMsgChild &message, uint8_t offset) {
 void Voice::muteStep(void * context, OscMsgChild &message, uint8_t offset) {
     uint8_t position = 0;
     message.getAddressAsUint8_t(position, offset);
-    bool status = message.getInt(0);
 
     if (position > 0) { position--;}
 
     if (
     reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)
     ) {
-        Serial.printf("Toggle Mute Step at %i to status %i \n", position, status);
-        reinterpret_cast<Voice *>(context)->_steps.muteAt(position, status);
+        Serial.printf("Toggle Mute Step at %i to status %i \n", position);
+        reinterpret_cast<Voice *>(context)->_steps.muteAt(position);
     }
     message.empty();
 }
@@ -78,8 +74,7 @@ void Voice::deleteStep(void * context, OscMsgChild &message, uint8_t offset) {
     reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)
     ) {
         Serial.printf("Delete Step at %i \n", position);
-        reinterpret_cast<Voice *>(context)->_steps.setAt(position, 0);
-        reinterpret_cast<Voice *>(context)->_steps.muteAt(position, true);
+        reinterpret_cast<Voice *>(context)->_steps.deleteAt(position);
     }
     message.empty();
 }

@@ -48,6 +48,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/kenneth/gitPrivate/sequenceAll/lib/SequenceAll/src/SequenceAll.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.obj"
   "/Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/ArduinoNvs.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.obj"
   "/Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/OscService.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.obj"
+  "/Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/WifiService.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.obj"
   "/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/Voice.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.obj"
   "/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoiceContainer.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj"
   "/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoicePatternData.cpp" "/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj"

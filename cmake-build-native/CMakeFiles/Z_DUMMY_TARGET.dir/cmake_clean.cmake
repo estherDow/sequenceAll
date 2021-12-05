@@ -19,6 +19,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.obj"
   "CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.obj"
   "CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.obj"
+  "CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.obj"
   "CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.obj"
   "CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj"
   "CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj"

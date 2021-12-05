@@ -3,7 +3,10 @@
 
 void VoicePatternData::setAt(uint8_t value, uint8_t position) {
     _voicePattern.at(position) = value;
-    _triggerPattern.at(position) = true;
+    Serial.printf("VoicePattern received step at: %i, with value %i", position, _voicePattern.at(position));
+    if (!_triggerPattern.at(position)) {
+        _triggerPattern.flip();
+    }
 }
 
 uint8_t VoicePatternData::returnAt(uint8_t position) {
@@ -22,8 +25,15 @@ uint8_t VoicePatternData::getSize() {
     return _voicePattern.size();
 }
 
-void VoicePatternData::muteAt(uint8_t position, bool status) {
-    _triggerPattern.at(position) = false;
+void VoicePatternData::muteAt(uint8_t position) {
+    _triggerPattern.flip();
+}
+
+void VoicePatternData::deleteAt(uint8_t position) {
+    if (_triggerPattern.at(position)) {
+        _triggerPattern.flip();
+    }
+    _voicePattern.at(position) = 0;
 }
 
 

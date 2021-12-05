@@ -635,6 +635,30 @@ lib/Services/src/OscService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.s
 .PHONY : lib/Services/src/OscService.cpp.s
 
+lib/Services/src/WifiService.obj: lib/Services/src/WifiService.cpp.obj
+.PHONY : lib/Services/src/WifiService.obj
+
+# target to build an object file
+lib/Services/src/WifiService.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.obj
+.PHONY : lib/Services/src/WifiService.cpp.obj
+
+lib/Services/src/WifiService.i: lib/Services/src/WifiService.cpp.i
+.PHONY : lib/Services/src/WifiService.i
+
+# target to preprocess a source file
+lib/Services/src/WifiService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.i
+.PHONY : lib/Services/src/WifiService.cpp.i
+
+lib/Services/src/WifiService.s: lib/Services/src/WifiService.cpp.s
+.PHONY : lib/Services/src/WifiService.s
+
+# target to generate assembly for a file
+lib/Services/src/WifiService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.s
+.PHONY : lib/Services/src/WifiService.cpp.s
+
 lib/VoiceContainer/src/Voice.obj: lib/VoiceContainer/src/Voice.cpp.obj
 .PHONY : lib/VoiceContainer/src/Voice.obj
 
@@ -802,6 +826,9 @@ help:
 	@echo "... lib/Services/src/OscService.obj"
 	@echo "... lib/Services/src/OscService.i"
 	@echo "... lib/Services/src/OscService.s"
+	@echo "... lib/Services/src/WifiService.obj"
+	@echo "... lib/Services/src/WifiService.i"
+	@echo "... lib/Services/src/WifiService.s"
 	@echo "... lib/VoiceContainer/src/Voice.obj"
 	@echo "... lib/VoiceContainer/src/Voice.i"
 	@echo "... lib/VoiceContainer/src/Voice.s"
