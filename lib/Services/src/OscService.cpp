@@ -1,19 +1,15 @@
 #include "OscService.h"
 
 //TODO: queryHost returns an IPAddress with noargs Constructor. better error check
-OscService::OscService(WiFiUDP *Udp) {
-    this->udp = Udp;
+OscService::OscService(WiFiService *wifi) {
+    this->udp = &wifi->UDP;
+    this->wiFi = wifi;
 }
 
 
-void OscService::send(void *context, const char *uri, uint8_t argument) {
-    //TODO: Find method prototype
-    OscMsgChild msg(uri);
-    msg.add(argument);
-    reinterpret_cast<OscService *>(context)->udp->beginPacket();
-    msg.send(*reinterpret_cast<OscService *>(context)->udp);
-    reinterpret_cast<OscService *>(context)->udp->endPacket();
-    msg.empty();
+void OscService::send(void *context, OscMsgChild & message) {
+    Serial.println("osc.send was called");
+    reinterpret_cast<OscService *>(context)->doSend(message);
 }
 
 bool OscService::receive(OscMsgChild &msg) {
@@ -30,6 +26,18 @@ bool OscService::receive(OscMsgChild &msg) {
     return false;
 }
 
+void OscService::doSend(OscMsgChild &message) {
+    Serial.println("DoSend was called this is hostname:");
+    Serial.println(hostName);
+    udp->beginPacket(wiFi->Ip,DEFAULT_REMOTE_UDP_PORT);
+    message.send(* udp);
+    udp->endPacket();
+    message.empty();
+}
+
+void OscService::update(OscMsgChild &message) {
+    doSend(message);
+}
 
 
 

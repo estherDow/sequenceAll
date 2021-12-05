@@ -13,7 +13,9 @@
 #include <macros.h>
 #include "../../Services/src/WiFiService.h"
 #include "../../Services/src/OscService.h"
+#include "OscMsgChild.h"
 #include "../../VoiceContainer/src/VoiceContainer.h"
+
 
 class SequenceAll {
 public:
@@ -27,13 +29,14 @@ public:
 
     static void reset();
 
+
+    Clock *cClock;
+    WiFiService *wiFiService;
+    OscService *oscService;
+    VoiceContainer *voiceContainer;
+
 private:
     void _setVoices();
-
-    Clock *_clock;
-    WiFiService *_wifiService;
-    OscService *_oscService;
-    VoiceContainer *_voiceContainer;
 };
 
 extern SequenceAll sequenceAll;

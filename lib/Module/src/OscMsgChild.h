@@ -6,7 +6,6 @@
 #define SEQUENCEALL_OSCMSGCHILD_H
 
 #include "../../../.pio/libdeps/esp32dev/OSC/OSCMessage.h"
-
 class OscMsgChild : public OSCMessage {
 public:
 

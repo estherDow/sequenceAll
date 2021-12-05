@@ -8,23 +8,26 @@ void SequenceAll::begin() {
     Serial.begin(115200);
     NVS.begin();
 
-    _voiceContainer = new VoiceContainer();
+    voiceContainer = new VoiceContainer();
     _setVoices();
 
-    _clock = new Clock();
-    _clock->setBeatsPerMinute();
-    _clock->attach(_voiceContainer);
+    cClock = new Clock();
+    cClock->setBeatsPerMinute();
+    cClock->attach(voiceContainer);
 
-    _wifiService = new WiFiService();
+    wiFiService = new WiFiService();
+    //TODO: Add error handling in case WiFi could not be started.
+    oscService = new OscService(wiFiService);
 
-    _oscService = new OscService(&_wifiService->UDP);
+    voiceContainer->select(0)->attach(oscService); //TODO: Test if handle is out of bounds
+
 }
 
 void SequenceAll::run() {
-    _clock->timer();
-    _wifiService->handleWifiMode();
+    cClock->timer();
+    wiFiService->handleWifiMode();
     OscMsgChild msg;
-    if (_oscService->receive(msg)) {
+    if (oscService->receive(msg)) {
         if (msg.isInt(0)) {
             Serial.printf("osc message: %i \n", msg.getInt(0));
         }
@@ -35,7 +38,7 @@ void SequenceAll::run() {
             Serial.println(str);
         }
 
-        msg.route(_voiceContainer, "/voice", VoiceContainer::receive, 0);
+        msg.route(voiceContainer, "/voice", VoiceContainer::receive, 0);
     }
 }
 
@@ -51,7 +54,7 @@ void SequenceAll::reset() {
 
 void SequenceAll::_setVoices() {
     for (int i = 0; i < TOTAL_NUMBER_OF_VOICES; i++) {
-        _voiceContainer->add(i);
+        voiceContainer->add(i);
     }
 }
 

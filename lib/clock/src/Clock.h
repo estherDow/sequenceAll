@@ -13,7 +13,6 @@
 class Clock : public Module {
 
 public:
-    Clock() {};
 
     //Setter functions
     void setBeatsPerMinute();

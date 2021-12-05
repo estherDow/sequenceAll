@@ -6,7 +6,7 @@
 //CLOCK
 //
 
-#define DEFAULT_BEATS_PER_MINUTE 160
+#define DEFAULT_BEATS_PER_MINUTE 25
 #define DEFAULT_SEQUENCE_LENGTH 16
 #define CLOCK_SIGNAL_HANDLE '/tic'
 //
@@ -14,7 +14,7 @@
 //
 
 #define PULSES_PER_QUARTER_NOTE 48
-#define TOTAL_NUMBER_OF_VOICES  4
+#define TOTAL_NUMBER_OF_VOICES  1
 
 //ALIASES FOR VOICES
 
@@ -38,7 +38,7 @@
 
 #define LOCAL_UDP_PORT                   8000
 #define DEFAULT_REMOTE_UDP_PORT          9000
-#define DEFAULT_REMOTE_HOSTNAME          "remoteHost"
+#define DEFAULT_REMOTE_HOSTNAME          "Kenneths-MacBook-Pro.local"
 
 
 

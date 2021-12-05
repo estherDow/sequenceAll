@@ -1,6 +1,7 @@
 #include "Voice.h"
 
-Voice::Voice(uint8_t length) { //trigger t gate g clock c
+Voice::Voice(uint8_t length, uint8_t handle) {
+    Handle = handle;
     _sequenceLength = length;
     setSize(length);
     initSequence(length);
@@ -8,14 +9,22 @@ Voice::Voice(uint8_t length) { //trigger t gate g clock c
 
 void Voice::update(OscMsgChild &message) {
     _pulseCounter++;
-    //Serial.printf("Voice Update was called %i times\n", _pulseCounter);
-    //TODO: This does not work accoring to stack trace:reinterpret_cast<const char *>(CLOCK_SIGNAL_HANDLE)
-    if (message.fullMatch("/tick", 0)) {
-        if (_pulseCounter == _clockPulsesPerStep) {
-            //notify();
-            incrementStep();
-            _pulseCounter = 0;
-        }
+    uint8_t currentStepValue = getCurrentStepValue();
+    if (message.fullMatch("/tick", 0) &&
+        (_pulseCounter == _clockPulsesPerStep)
+        ) {
+        char sender[12];
+        sprintf(sender, "/voice/%d", Handle);
+
+        OscMsgChild newMessage(sender);
+        newMessage.add(currentStepValue);
+        notify(newMessage);
+        Serial.printf("Voice current step is %i\n", getCurrentStepNumber() );
+        Serial.printf("Value is %i\n", currentStepValue);
+        //(currentStepValue > 0) &&
+        incrementStep();
+        _pulseCounter = 0;
+
     }
 }
 
@@ -42,6 +51,7 @@ void Voice::setStep(void * context, OscMsgChild &message, uint8_t offset) {
         reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
         reinterpret_cast<Voice *>(context)->_steps.muteAt(position, false);
     }
+    message.empty();
 }
 
 void Voice::muteStep(void * context, OscMsgChild &message, uint8_t offset) {
@@ -57,6 +67,7 @@ void Voice::muteStep(void * context, OscMsgChild &message, uint8_t offset) {
         Serial.printf("Toggle Mute Step at %i to status %i \n", position, status);
         reinterpret_cast<Voice *>(context)->_steps.muteAt(position, status);
     }
+    message.empty();
 }
 
 void Voice::deleteStep(void * context, OscMsgChild &message, uint8_t offset) {
@@ -70,6 +81,7 @@ void Voice::deleteStep(void * context, OscMsgChild &message, uint8_t offset) {
         reinterpret_cast<Voice *>(context)->_steps.setAt(position, 0);
         reinterpret_cast<Voice *>(context)->_steps.muteAt(position, true);
     }
+    message.empty();
 }
 
 
@@ -83,17 +95,11 @@ uint8_t Voice::getCurrentStepNumber() const {
 
 
 int Voice::getCurrentStepValue() {
-    if (_currentStep < _sequenceLength) {
         return _steps.returnAt(_currentStep);
-    } else {
-        return -1;
-    }
 }
 
 
-//set & get human-readable divisor but store PPQN/divisor for easier counting
-//Whatever you type it will be rounded to the nearest integer divisor.
-//20 will be 24 10 will be 12 etc. this could be improved.
+
 void Voice::setQuarterNoteDivisions(uint8_t subDivisions) {
     if (subDivisions > PULSES_PER_QUARTER_NOTE) {
         subDivisions = PULSES_PER_QUARTER_NOTE;

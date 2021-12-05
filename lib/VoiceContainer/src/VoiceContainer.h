@@ -19,9 +19,13 @@ class VoiceContainer : public Module {
 public:
     VoiceContainer();
 
-    void add(int Handle);
+    void add(uint8_t Handle);
 
-    void remove(int Handle);
+    void remove(uint8_t Handle);
+
+    uint8_t getVoiceCount();
+
+    Voice *select(int Handle);
 
     static void receive(void *context, OscMsgChild &message, uint8_t initialOffset);
 
@@ -32,7 +36,6 @@ public:
 private:
     VoiceMap *voiceMap;
 
-    Voice *_select(int Handle);
 
 };
 
