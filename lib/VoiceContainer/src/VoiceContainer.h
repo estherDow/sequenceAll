@@ -27,9 +27,9 @@ public:
 
     Voice *select(int Handle);
 
-    static void receive(void *context, OSCClientInterface &message, uint8_t initialOffset);
+    static void receive(void *context, OSCMessageInterface &message, uint8_t initialOffset);
 
-    void update(OSCClientInterface &message) override;
+    void update(OSCMessageInterface &message) override;
 
     ~VoiceContainer() = default;;
 

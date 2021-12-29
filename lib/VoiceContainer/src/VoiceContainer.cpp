@@ -18,7 +18,7 @@ void VoiceContainer::remove(uint8_t Handle) {
 
 }
 
-void VoiceContainer::receive(void * context, OSCClientInterface & message, uint8_t initialOffset) {
+void VoiceContainer::receive(void * context, OSCMessageInterface & message, uint8_t initialOffset) {
     uint8_t Handle=0;
     uint8_t NewOffset = message.getAddressAsUint8_t(Handle, initialOffset);
     if (Handle > 0) { Handle--; }
@@ -56,7 +56,7 @@ Voice * VoiceContainer::select(int Handle) {
     return &voiceMap->at(Handle);
 }
 
-void VoiceContainer::update(OSCClientInterface & message) {
+void VoiceContainer::update(OSCMessageInterface & message) {
     for(uint8_t i = 0; i < TOTAL_NUMBER_OF_VOICES; i++){
         auto voice = select(i);
         voice->update(message);

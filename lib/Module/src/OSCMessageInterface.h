@@ -2,14 +2,14 @@
 // Created by Kenneth Dow on 28/12/21.
 //
 
-#ifndef SEQUENCEALL_OSCCLIENTINTERFACE_H
-#define SEQUENCEALL_OSCCLIENTINTERFACE_H
+#ifndef SEQUENCEALL_OSCMESSAGEINTERFACE_H
+#define SEQUENCEALL_OSCMESSAGEINTERFACE_H
 #include "RecipientAddress.h"
 #include "WiFiService.h"
 
-class OSCClientInterface {
+class OSCMessageInterface {
 public:
-    virtual ~OSCClientInterface() = default;
+    virtual ~OSCMessageInterface() = default;
     virtual bool dispatch(
             RecipientAddress &address
             ) = 0;
@@ -32,4 +32,4 @@ public:
 };
 
 
-#endif //SEQUENCEALL_OSCCLIENTINTERFACE_H
+#endif //SEQUENCEALL_OSCMESSAGEINTERFACE_H

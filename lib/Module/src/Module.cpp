@@ -12,7 +12,7 @@ void Module::detach(ModuleInterface *module) {
 }
 
 //Send one to many
-void Module::notify(OSCClientInterface & message) {
+void Module::notify(OSCMessageInterface & message) {
     auto iterator = list_observer_.begin();
     while (iterator != list_observer_.end()) {
         (*iterator)->update(message);

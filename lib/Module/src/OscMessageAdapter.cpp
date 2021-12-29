@@ -2,13 +2,13 @@
 // Created by Kenneth Dow on 28/11/21.
 //
 
-#include "OscMsgChild.h"
+#include "OscMessageAdapter.h"
 
-OscMsgChild::OscMsgChild(OSCMessage &message) : _message(message) {
+OscMessageAdapter::OscMessageAdapter(OSCMessage &message) : _message(message) {
 
 }
 
-bool OscMsgChild::dispatch(RecipientAddress &address) {
+bool OscMessageAdapter::dispatch(RecipientAddress &address) {
     if (_message.fullMatch(address.pattern, address.offset)) {
         address.callback(address.context, *this, address.offset);
         return true;
@@ -17,7 +17,7 @@ bool OscMsgChild::dispatch(RecipientAddress &address) {
     }
 }
 
-bool OscMsgChild::route(RecipientAddress &address) {
+bool OscMessageAdapter::route(RecipientAddress &address) {
     int match_offset = _message.match(address.pattern, address.offset);
     if (match_offset > 0) {
         address.callback(address.context, *this, match_offset + address.offset);
@@ -27,7 +27,7 @@ bool OscMsgChild::route(RecipientAddress &address) {
     }
 }
 
-uint8_t OscMsgChild::getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset) {
+uint8_t OscMessageAdapter::getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset) {
     char addr[32];
     uint8_t DefaultOffset = 1; //offset to account for "/"
     uint8_t NewOffset = DefaultOffset + offset;
@@ -44,43 +44,43 @@ uint8_t OscMsgChild::getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset) {
     return NewOffset;
 }
 
-void OscMsgChild::empty() {
+void OscMessageAdapter::empty() {
     _message.empty();
 }
 
-void OscMsgChild::fill(uint8_t byteStream) {
+void OscMessageAdapter::fill(uint8_t byteStream) {
     _message.fill(byteStream);
 }
 
-bool OscMsgChild::fullMatch(const char *pattern, int offset) {
+bool OscMessageAdapter::fullMatch(const char *pattern, int offset) {
     return _message.fullMatch(pattern, offset);
 }
 
-bool OscMsgChild::hasError() {
+bool OscMessageAdapter::hasError() {
     return _message.hasError();
 }
 
-int OscMsgChild::getDataLength(int position) {
+int OscMessageAdapter::getDataLength(int position) {
     return _message.getDataLength(position);
 }
 
-int32_t OscMsgChild::getInt(int position) {
+int32_t OscMessageAdapter::getInt(int position) {
     return _message.getInt(position);
 }
 
-int OscMsgChild::getString(int position, char *buffer, int length) {
+int OscMessageAdapter::getString(int position, char *buffer, int length) {
     return _message.getString(position, buffer, length);
 }
 
-bool OscMsgChild::isInt(int sample) {
+bool OscMessageAdapter::isInt(int sample) {
     return _message.isInt(sample);
 }
 
-bool OscMsgChild::isString(int position) {
+bool OscMessageAdapter::isString(int position) {
     return _message.isString(position);
 }
 
-void OscMsgChild::send(WiFiUDP &udp) {
+void OscMessageAdapter::send(WiFiUDP &udp) {
     _message.send(udp);
 }
 

@@ -13,7 +13,7 @@
 #include <macros.h>
 #include "../../Services/src/WiFiService.h"
 #include "../../Services/src/OscService.h"
-#include "OscMsgChild.h"
+#include "OscMessageAdapter.h"
 #include "../../VoiceContainer/src/VoiceContainer.h"
 
 

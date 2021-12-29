@@ -27,7 +27,7 @@ void SequenceAll::run() {
     cClock->timer();
     wiFiService->handleWifiMode();
     OSCMessage message;
-    OscMsgChild msg(message);
+    OscMessageAdapter msg(message);
     if (oscService->receive(msg)) {
         if (msg.isInt(0)) {
             Serial.printf("osc message: %i \n", msg.getInt(0));

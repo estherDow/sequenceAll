@@ -79,18 +79,18 @@ CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.s"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/Module.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.s
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj: ../lib/Module/src/OscMsgChild.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/OscMsgChild.cpp
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.obj: ../lib/Module/src/OscMessageAdapter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/OscMessageAdapter.cpp
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.i"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/OscMsgChild.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.i
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/OscMessageAdapter.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.i
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.s"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/OscMsgChild.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.s
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/OscMessageAdapter.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.s
 
 CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.obj: ../lib/OutPutFactory/src/OutputFactory.cpp
@@ -745,7 +745,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtes
 # Object files for target Z_DUMMY_TARGET
 Z_DUMMY_TARGET_OBJECTS = \
 "CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.obj" \
-"CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.obj" \
@@ -801,7 +801,7 @@ Z_DUMMY_TARGET_OBJECTS = \
 Z_DUMMY_TARGET_EXTERNAL_OBJECTS =
 
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.obj
-Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMessageAdapter.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.obj

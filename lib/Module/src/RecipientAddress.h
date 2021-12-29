@@ -6,16 +6,16 @@
 #define SEQUENCEALL_RECIPIENTADDRESS_H
 #include <cstdint>
 
-class OSCClientInterface;
+class OSCMessageInterface;
 
 typedef struct RecipientAddress {
     void *context;
     const char *pattern;
-    void (*callback)(void *context,OSCClientInterface &instance, uint8_t offset);
+    void (*callback)(void *context, OSCMessageInterface &instance, uint8_t offset);
     int offset;
     RecipientAddress(void *classContext,
     const char *AddressPattern,
-    void (*staticCallback)(void *context,OSCClientInterface &instance, uint8_t offset),
+    void (*staticCallback)(void *context, OSCMessageInterface &instance, uint8_t offset),
     int matchOffset
     ) : context(classContext), pattern(AddressPattern), callback(staticCallback), offset(matchOffset){}
 } RecipientAddress;

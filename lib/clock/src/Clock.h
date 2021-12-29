@@ -7,7 +7,7 @@
 #include <Module.h>
 #include <SignalTypes.h>
 #include <macros.h>
-#include "OscMsgChild.h"
+#include "OscMessageAdapter.h"
 
 
 //class Clock : public ISubject{
@@ -19,7 +19,7 @@ public:
     void setBeatsPerMinute();
     static void setBeatsPerMinute(void * context, OSCMessage & message);
     void timer();
-    void update(OSCClientInterface & message) override{};
+    void update(OSCMessageInterface & message) override{};
 private:
     //Clock setting in BPM
     uint16_t _beats = 120;

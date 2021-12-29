@@ -2,19 +2,19 @@
 // Created by Kenneth Dow on 28/11/21.
 //
 
-#ifndef SEQUENCEALL_OSCMSGCHILD_H
-#define SEQUENCEALL_OSCMSGCHILD_H
+#ifndef SEQUENCEALL_OSCMESSAGEADAPTER_H
+#define SEQUENCEALL_OSCMESSAGEADAPTER_H
 
 #include "../../../.pio/libdeps/esp32dev/OSC/OSCMessage.h"
-#include "OSCClientInterface.h"
+#include "OSCMessageInterface.h"
 
-class OscMsgChild : public OSCClientInterface {
+class OscMessageAdapter : public OSCMessageInterface {
 public:
 
 
-    explicit OscMsgChild(OSCMessage &message);
+    explicit OscMessageAdapter(OSCMessage &message);
 
-    ~OscMsgChild() override = default;
+    ~OscMessageAdapter() override = default;
 
     bool dispatch(RecipientAddress &address) override;
 
@@ -37,4 +37,4 @@ private:
 };
 
 
-#endif //SEQUENCEALL_OSCMSGCHILD_H
+#endif //SEQUENCEALL_OSCMESSAGEADAPTER_H

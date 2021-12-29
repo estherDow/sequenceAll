@@ -4,7 +4,7 @@ A Software Project for the esp32 microcontroller, that aims to provide a low cod
 Internal Communication and signal routing is done making heavy use of the [CNMAT/OSC](https://github.com/CNMAT/OSC) library.
 Particularly, their OSCMessage class, from which I inherit to make it more suitable to operate in an OOP environment.
 
-Future implementations will create OscMsgChild objects to pass them around the system.
+Future implementations will create OscMessageAdapter objects to pass them around the system.
 This way, a translation layer between `cv/midi/osc` can be run concurrently to sequencing messages to either of the protocols.
 
 This application currently runs on only one core, so the second core is entirely unused and may be leveraged for other duties with few changes to the software.

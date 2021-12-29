@@ -7,7 +7,7 @@ Voice::Voice(uint8_t length, uint8_t handle) {
     initSequence(length);
 }
 
-void Voice::update(OSCClientInterface &message) {
+void Voice::update(OSCMessageInterface &message) {
     _pulseCounter++;
     uint8_t currentStepValue = getCurrentStepValue();
     if (message.fullMatch("/tick", 0) &&
@@ -17,7 +17,7 @@ void Voice::update(OSCClientInterface &message) {
         sprintf(sender, "/voice/%d", Handle);
         OSCMessage msg(sender);
         msg.add(currentStepValue);
-        OscMsgChild newMessage(msg);
+        OscMessageAdapter newMessage(msg);
         notify(newMessage);
         Serial.printf("Voice current step is %i\n", getCurrentStepNumber() );
         Serial.printf("Value is %i\n", currentStepValue);
@@ -36,7 +36,7 @@ void Voice::initSequence(uint8_t length) {
 
 }
 
-void Voice::setStep(void * context, OSCClientInterface &message, uint8_t offset) {
+void Voice::setStep(void * context, OSCMessageInterface &message, uint8_t offset) {
     uint8_t position = 0;
     message.getAddressAsUint8_t(position, offset);
     uint8_t value = message.getInt(0);
@@ -51,7 +51,7 @@ void Voice::setStep(void * context, OSCClientInterface &message, uint8_t offset)
     message.empty();
 }
 
-void Voice::muteStep(void * context, OSCClientInterface &message, uint8_t offset) {
+void Voice::muteStep(void * context, OSCMessageInterface &message, uint8_t offset) {
     uint8_t position = 0;
     message.getAddressAsUint8_t(position, offset);
 
@@ -66,7 +66,7 @@ void Voice::muteStep(void * context, OSCClientInterface &message, uint8_t offset
     message.empty();
 }
 
-void Voice::deleteStep(void * context, OSCClientInterface &message, uint8_t offset) {
+void Voice::deleteStep(void * context, OSCMessageInterface &message, uint8_t offset) {
     uint8_t position = 0;
     message.getAddressAsUint8_t(position, offset);
     if (position > 0) { position--;}
