@@ -3,6 +3,7 @@
 #include <ModuleMock.h>
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
+#include <cstdint>
 
 using ::testing::AtLeast;                         // #1
 

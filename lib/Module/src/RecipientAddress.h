@@ -4,6 +4,7 @@
 
 #ifndef SEQUENCEALL_RECIPIENTADDRESS_H
 #define SEQUENCEALL_RECIPIENTADDRESS_H
+#include <cstdint>
 
 class OSCClientInterface;
 
