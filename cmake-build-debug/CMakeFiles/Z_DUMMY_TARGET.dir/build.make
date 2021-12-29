@@ -66,22 +66,9 @@ include CMakeFiles/Z_DUMMY_TARGET.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.obj: ../lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.obj"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp
-
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.i"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.i
-
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.s"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.s
-
 CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.obj: ../lib/Module/src/Module.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/Module.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.i: cmake_force
@@ -92,61 +79,113 @@ CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.s"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/Module.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.s
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.obj: ../lib/ObserverPatternBaseClasses/src/Subject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.obj"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src/Subject.cpp
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj: ../lib/Module/src/OscMsgChild.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/OscMsgChild.cpp
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.i"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src/Subject.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.i
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/OscMsgChild.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.i
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.s"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/ObserverPatternBaseClasses/src/Subject.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.s
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/OscMsgChild.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.s
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.obj: ../lib/OscService/src/OscService.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.obj"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src/OscService.cpp
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.obj: ../lib/SequenceAll/src/SequenceAll.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/SequenceAll/src/SequenceAll.cpp
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.i"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src/OscService.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.i
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/SequenceAll/src/SequenceAll.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.i
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.s"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/OscService/src/OscService.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.s
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/SequenceAll/src/SequenceAll.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.s
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.obj: ../lib/OutPutFactory/src/OutputFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.obj"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src/OutputFactory.cpp
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.obj: ../lib/Services/src/ArduinoNvs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/ArduinoNvs.cpp
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.i"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src/OutputFactory.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.i
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/ArduinoNvs.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.i
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.s"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src/OutputFactory.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.s
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/ArduinoNvs.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.s
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.obj: ../lib/VoicePatternData/src/VoicePatternData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.obj"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src/VoicePatternData.cpp
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.obj: ../lib/Services/src/OscService.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/OscService.cpp
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.i"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src/VoicePatternData.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.i
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/OscService.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.i
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.s"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/VoicePatternData/src/VoicePatternData.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.s
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/OscService.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.obj: ../lib/Services/src/WifiService.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/WifiService.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/WifiService.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/WifiService.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.obj: ../lib/VoiceContainer/src/Voice.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/Voice.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/Voice.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/Voice.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj: ../lib/VoiceContainer/src/VoiceContainer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoiceContainer.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoiceContainer.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoiceContainer.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj: ../lib/VoiceContainer/src/VoicePatternData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoicePatternData.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoicePatternData.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src/VoicePatternData.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.s
 
 CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.obj: ../lib/clock/src/Clock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/clock/src/Clock.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.i: cmake_force
@@ -157,44 +196,65 @@ CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.s"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/clock/src/Clock.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.s
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.obj: ../lib/voiceBaseClass/src/Voice.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.obj"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src/Voice.cpp
+CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj: ../test/genericTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/test/genericTest.cpp
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.i"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src/Voice.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.i
+CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/test/genericTest.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.i
 
-CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.s"
-	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/voiceBaseClass/src/Voice.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.s
+CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/test/genericTest.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj: ../test/voice_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/test/voice_test.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/test/voice_test.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/test/voice_test.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.s
 
 # Object files for target Z_DUMMY_TARGET
 Z_DUMMY_TARGET_OBJECTS = \
-"CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.obj" \
-"CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.obj" \
-"CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.obj" \
-"CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.obj" \
-"CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.obj" \
-"CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.obj"
+"CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj"
 
 # External object files for target Z_DUMMY_TARGET
 Z_DUMMY_TARGET_EXTERNAL_OBJECTS =
 
-Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/HardwareSpecificLibraries/WiFiFactory/src/WiFiFactory.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/Module.cpp.obj
-Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/ObserverPatternBaseClasses/src/Subject.cpp.obj
-Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/OscService/src/OscService.cpp.obj
-Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/OutPutFactory/src/OutputFactory.cpp.obj
-Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoicePatternData/src/VoicePatternData.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/Module/src/OscMsgChild.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/SequenceAll/src/SequenceAll.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/ArduinoNvs.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/OscService.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/Services/src/WifiService.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.obj
-Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/voiceBaseClass/src/Voice.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/build.make
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Z_DUMMY_TARGET"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Z_DUMMY_TARGET"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Z_DUMMY_TARGET.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

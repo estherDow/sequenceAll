@@ -44,17 +44,18 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DPLATFORMIO=50204"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/include"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Services/src"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/macros/src"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src"/>
-					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/IOInterface/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/DataLogger"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Error"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/SequenceAll/src"/>
-					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Services/src"/>
-					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/clock/src"/>
-					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/macros/src"/>
 					<Add directory="/Users/kenneth/.platformio/packages/tool-unity"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -77,17 +78,18 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DPLATFORMIO=50204"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/include"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Services/src"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/macros/src"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ArduinoJson/src"/>
-					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/IOInterface/src"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/DataLogger"/>
+					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Error"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/OutPutFactory/src"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/SequenceAll/src"/>
-					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/Services/src"/>
-					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/VoiceContainer/src"/>
 					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/clock/src"/>
-					<Add directory="/Users/kenneth/gitPrivate/sequenceAll/lib/macros/src"/>
 					<Add directory="/Users/kenneth/.platformio/packages/tool-unity"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -919,7 +921,439 @@
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/ssl/server.key">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/.gitignore">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/API.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/OSCEsplora.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/SerialCallResponse.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/SerialEcho.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/SerialOscuino.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/SerialReceive.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/SerialReceivewithServo.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/SerialSend.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/UDPCallResponse.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/UDPEcho.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/UDPOscuino.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/UDPReceive.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/MaxMSP/examples/UDPSend.maxpat">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/PD/SerialOscuino.pd">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/PD/o.io.slipserial.pd">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/Processing/SLIPSerialToUDP/SLIPSerialToUDP.pde">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/Processing/UDPReceiveBundle/UDPReceiveBundle.pde">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/Processing/UDPReceiveMessage/UDPReceiveMessage.pde">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/Processing/serialSend/serialSend.pde">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/Applications/Processing/serialSend/sketch.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCBoards.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCBoards.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCBundle.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCBundle.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCData.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCData.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCMatch.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCMatch.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCMessage.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCMessage.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCTiming.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCTiming.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/SLIPEncodedSerial.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/ESP8266ReceiveBundle/ESP8266ReceiveBundle.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/ESP8266ReceiveMessage/ESP8266ReceiveMessage.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/ESP8266sendMessage/ESP8266sendMessage.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/OSCEsplora/OSCEsplora.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/PatternMatching/PatternMatching.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialCallResponse/SerialCallResponse.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialEcho/SerialEcho.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialOscuinoAdaFruitPlayGroundExpresswithBundles/SerialOscuinoAdaFruitPlayGroundExpresswithBundles.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialOscuinoForFubarino/SerialOscuinoForFubarino.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialOscuinoGemmaM0/SerialOscuinoGemmaM0.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialOscuinowithBundles/SerialOscuinowithBundles.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialOscuinowithMessages/SerialOscuinowithMessages.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialReceive/SerialReceive.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialReceiveInfiniteLoop/SerialReceiveInfiniteLoop.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialReceivewithServo/SerialReceivewithServo.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialSendBundle/SerialSendBundle.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialSendBundleWithTimeTag/SerialSendBundleWithTimeTag.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialSendMessage/SerialSendMessage.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/SerialSendMessageInfiniteLoop/SerialSendMessageInfiniteLoop.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/UDPCallResponse/UDPCallResponse.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/UDPEcho/UDPEcho.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/UDPOscuino/UDPOscuino.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/UDPReceive/UDPReceive.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/UDPSendBundle/UDPSendBundle.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/UDPSendBundlewithTimeTag/UDPSendBundlewithTimeTag.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/examples/UDPSendMessage/UDPSendMessage.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/test/OSCBundle_test/OSCBundle_test.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/test/OSCBundle_test/TestPrint.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/test/OSCData_test/OSCData_test.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/test/OSCMessage_encode_decode_test/OSCMessage_encode_decode_test.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/test/OSCMessage_encode_decode_test/TestPrint.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/test/OSCMessage_match_test/OSCMessage_match_test.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/test/OSCMessage_test/OSCMessage_test.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/.piopm">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-actions.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-cardinalities.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-function-mocker.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-generated-actions.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-generated-actions.h.pump">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-generated-function-mockers.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-generated-function-mockers.h.pump">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-generated-matchers.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-generated-matchers.h.pump">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-matchers.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-more-actions.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-more-matchers.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-nice-strict.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock-spec-builders.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/gmock.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/internal/custom/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/internal/custom/gmock-generated-actions.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/internal/custom/gmock-generated-actions.h.pump">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/internal/custom/gmock-matchers.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/internal/custom/gmock-port.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/internal/gmock-port.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/include/gmock/internal/gmock-pp.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/gtest-death-test.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/gtest-matchers.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/gtest-message.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/gtest-param-test.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/gtest-printers.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/gtest-spi.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/gtest-test-part.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/gtest-typed-test.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/gtest.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/gtest_pred_impl.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/gtest_prod.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/custom/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/custom/gtest-port.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/custom/gtest-printers.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/custom/gtest.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/gtest-filepath.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/gtest-internal.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/gtest-param-util.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/gtest-port-arch.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/gtest-port.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/gtest-string.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/include/gtest/internal/gtest-type-util.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-internal-inl.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/.DS_Store">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/interface/ModuleInterface.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/interface/OSCClientInterface.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/mock/ModuleMock.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/Module.cpp">
@@ -932,6 +1366,9 @@
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/OscMsgChild.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/RecipientAddress.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Module/src/SignalTypes.h">
@@ -950,6 +1387,9 @@
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Services/.DS_Store">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Services/interface/UDPInterface.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/lib/Services/src/ArduinoNvs.cpp">
@@ -1001,6 +1441,15 @@
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/src/main.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/test/genericTest.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/test/genericTest.cpp.template">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/test/voice_test.cpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
 		<Unit filename="/Users/kenneth/gitPrivate/sequenceAll/CMakeLists.txt">

@@ -26,7 +26,8 @@ void SequenceAll::begin() {
 void SequenceAll::run() {
     cClock->timer();
     wiFiService->handleWifiMode();
-    OscMsgChild msg;
+    OSCMessage message;
+    OscMsgChild msg(message);
     if (oscService->receive(msg)) {
         if (msg.isInt(0)) {
             Serial.printf("osc message: %i \n", msg.getInt(0));
@@ -37,8 +38,13 @@ void SequenceAll::run() {
             msg.getString(0, str, length);
             Serial.println(str);
         }
-
-        msg.route(voiceContainer, "/voice", VoiceContainer::receive, 0);
+        RecipientAddress destinationAddress(
+                voiceContainer,
+                "/voice",
+                VoiceContainer::receive,
+                0
+                );
+        msg.route(destinationAddress);
     }
 }
 

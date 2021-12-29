@@ -7,6 +7,7 @@
 #include <Module.h>
 #include <SignalTypes.h>
 #include <macros.h>
+#include "OscMsgChild.h"
 
 
 //class Clock : public ISubject{
@@ -18,16 +19,16 @@ public:
     void setBeatsPerMinute();
     static void setBeatsPerMinute(void * context, OSCMessage & message);
     void timer();
-    void update(OscMsgChild & message) override{};
+    void update(OSCClientInterface & message) override{};
 private:
     //Clock setting in BPM
     uint16_t _beats = 120;
 
     //deltaT in Microseconds = 6e7/(time * steps) uint16_t was too small to hold large value
-    int _deltaTime;
+    int _deltaTime{};
 
     //Timer Variable in microseconds
-    unsigned long _pastState;
+    unsigned long _pastState{};
 
 };
 

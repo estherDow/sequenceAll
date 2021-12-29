@@ -6,6 +6,7 @@
 #include <cstdlib>     /* srand, rand */
 #include <Module.h>
 #include "macros.h"
+#include "OscMsgChild.h"
 #include <cstdio>
 
 class Voice : public Module {
@@ -13,15 +14,15 @@ public:
     uint8_t Handle;
     explicit Voice(uint8_t length, uint8_t handle);
 
-    void update(OscMsgChild &message) override;
+    void update(OSCClientInterface &message) override;
 
     void initSequence(uint8_t length);
 
-    static void setStep(void *context, OscMsgChild &message, uint8_t offset = 0);
+    static void setStep(void *context, OSCClientInterface &message, uint8_t offset = 0);
 
-    static void muteStep(void *context, OscMsgChild &message,uint8_t offset = 0);
+    static void muteStep(void *context, OSCClientInterface &message,uint8_t offset = 0);
 
-    static void deleteStep(void *context, OscMsgChild &message,uint8_t offset = 0);
+    static void deleteStep(void *context, OSCClientInterface &message,uint8_t offset = 0);
 
     uint8_t getCurrentStepNumber() const;
 

@@ -491,6 +491,606 @@ Production/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebServer.cpp.s
 .PHONY : .pio/libdeps/native/ESP_Async_WebServer/src/WebServer.cpp.s
 
+.pio/libdeps/native/OSC/OSCBoards.obj: .pio/libdeps/native/OSC/OSCBoards.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/OSCBoards.obj
+
+# target to build an object file
+.pio/libdeps/native/OSC/OSCBoards.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/OSCBoards.cpp.obj
+
+.pio/libdeps/native/OSC/OSCBoards.i: .pio/libdeps/native/OSC/OSCBoards.cpp.i
+.PHONY : .pio/libdeps/native/OSC/OSCBoards.i
+
+# target to preprocess a source file
+.pio/libdeps/native/OSC/OSCBoards.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.i
+.PHONY : .pio/libdeps/native/OSC/OSCBoards.cpp.i
+
+.pio/libdeps/native/OSC/OSCBoards.s: .pio/libdeps/native/OSC/OSCBoards.cpp.s
+.PHONY : .pio/libdeps/native/OSC/OSCBoards.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/OSC/OSCBoards.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.s
+.PHONY : .pio/libdeps/native/OSC/OSCBoards.cpp.s
+
+.pio/libdeps/native/OSC/OSCBundle.obj: .pio/libdeps/native/OSC/OSCBundle.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/OSCBundle.obj
+
+# target to build an object file
+.pio/libdeps/native/OSC/OSCBundle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/OSCBundle.cpp.obj
+
+.pio/libdeps/native/OSC/OSCBundle.i: .pio/libdeps/native/OSC/OSCBundle.cpp.i
+.PHONY : .pio/libdeps/native/OSC/OSCBundle.i
+
+# target to preprocess a source file
+.pio/libdeps/native/OSC/OSCBundle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.i
+.PHONY : .pio/libdeps/native/OSC/OSCBundle.cpp.i
+
+.pio/libdeps/native/OSC/OSCBundle.s: .pio/libdeps/native/OSC/OSCBundle.cpp.s
+.PHONY : .pio/libdeps/native/OSC/OSCBundle.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/OSC/OSCBundle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.s
+.PHONY : .pio/libdeps/native/OSC/OSCBundle.cpp.s
+
+.pio/libdeps/native/OSC/OSCData.obj: .pio/libdeps/native/OSC/OSCData.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/OSCData.obj
+
+# target to build an object file
+.pio/libdeps/native/OSC/OSCData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/OSCData.cpp.obj
+
+.pio/libdeps/native/OSC/OSCData.i: .pio/libdeps/native/OSC/OSCData.cpp.i
+.PHONY : .pio/libdeps/native/OSC/OSCData.i
+
+# target to preprocess a source file
+.pio/libdeps/native/OSC/OSCData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.i
+.PHONY : .pio/libdeps/native/OSC/OSCData.cpp.i
+
+.pio/libdeps/native/OSC/OSCData.s: .pio/libdeps/native/OSC/OSCData.cpp.s
+.PHONY : .pio/libdeps/native/OSC/OSCData.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/OSC/OSCData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.s
+.PHONY : .pio/libdeps/native/OSC/OSCData.cpp.s
+
+.pio/libdeps/native/OSC/OSCMatch.obj: .pio/libdeps/native/OSC/OSCMatch.c.obj
+.PHONY : .pio/libdeps/native/OSC/OSCMatch.obj
+
+# target to build an object file
+.pio/libdeps/native/OSC/OSCMatch.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.obj
+.PHONY : .pio/libdeps/native/OSC/OSCMatch.c.obj
+
+.pio/libdeps/native/OSC/OSCMatch.i: .pio/libdeps/native/OSC/OSCMatch.c.i
+.PHONY : .pio/libdeps/native/OSC/OSCMatch.i
+
+# target to preprocess a source file
+.pio/libdeps/native/OSC/OSCMatch.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.i
+.PHONY : .pio/libdeps/native/OSC/OSCMatch.c.i
+
+.pio/libdeps/native/OSC/OSCMatch.s: .pio/libdeps/native/OSC/OSCMatch.c.s
+.PHONY : .pio/libdeps/native/OSC/OSCMatch.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/OSC/OSCMatch.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.s
+.PHONY : .pio/libdeps/native/OSC/OSCMatch.c.s
+
+.pio/libdeps/native/OSC/OSCMessage.obj: .pio/libdeps/native/OSC/OSCMessage.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/OSCMessage.obj
+
+# target to build an object file
+.pio/libdeps/native/OSC/OSCMessage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/OSCMessage.cpp.obj
+
+.pio/libdeps/native/OSC/OSCMessage.i: .pio/libdeps/native/OSC/OSCMessage.cpp.i
+.PHONY : .pio/libdeps/native/OSC/OSCMessage.i
+
+# target to preprocess a source file
+.pio/libdeps/native/OSC/OSCMessage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.i
+.PHONY : .pio/libdeps/native/OSC/OSCMessage.cpp.i
+
+.pio/libdeps/native/OSC/OSCMessage.s: .pio/libdeps/native/OSC/OSCMessage.cpp.s
+.PHONY : .pio/libdeps/native/OSC/OSCMessage.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/OSC/OSCMessage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.s
+.PHONY : .pio/libdeps/native/OSC/OSCMessage.cpp.s
+
+.pio/libdeps/native/OSC/OSCTiming.obj: .pio/libdeps/native/OSC/OSCTiming.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/OSCTiming.obj
+
+# target to build an object file
+.pio/libdeps/native/OSC/OSCTiming.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/OSCTiming.cpp.obj
+
+.pio/libdeps/native/OSC/OSCTiming.i: .pio/libdeps/native/OSC/OSCTiming.cpp.i
+.PHONY : .pio/libdeps/native/OSC/OSCTiming.i
+
+# target to preprocess a source file
+.pio/libdeps/native/OSC/OSCTiming.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.i
+.PHONY : .pio/libdeps/native/OSC/OSCTiming.cpp.i
+
+.pio/libdeps/native/OSC/OSCTiming.s: .pio/libdeps/native/OSC/OSCTiming.cpp.s
+.PHONY : .pio/libdeps/native/OSC/OSCTiming.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/OSC/OSCTiming.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.s
+.PHONY : .pio/libdeps/native/OSC/OSCTiming.cpp.s
+
+.pio/libdeps/native/OSC/SLIPEncodedSerial.obj: .pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedSerial.obj
+
+# target to build an object file
+.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.obj
+
+.pio/libdeps/native/OSC/SLIPEncodedSerial.i: .pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.i
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedSerial.i
+
+# target to preprocess a source file
+.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.i
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.i
+
+.pio/libdeps/native/OSC/SLIPEncodedSerial.s: .pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.s
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedSerial.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.s
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.s
+
+.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.obj: .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.obj
+
+# target to build an object file
+.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.obj
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.obj
+
+.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.i: .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.i
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.i
+
+# target to preprocess a source file
+.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.i
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.i
+
+.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.s: .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.s
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.s
+.PHONY : .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.s
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-all.obj: .pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-all.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.obj
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-all.i: .pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-all.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.i
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-all.s: .pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-all.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.s
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.obj: .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.obj
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.i: .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.i
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.s: .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.s
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.obj: .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.obj
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.i: .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.i
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.s: .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.s
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.obj: .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.obj
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.i: .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.i
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.s: .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.s
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.obj: .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.obj
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.i: .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.i
+
+.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.s: .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.s
+
+.pio/libdeps/native/googletest/googlemock/src/gmock.obj: .pio/libdeps/native/googletest/googlemock/src/gmock.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googlemock/src/gmock.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock.cc.obj
+
+.pio/libdeps/native/googletest/googlemock/src/gmock.i: .pio/libdeps/native/googletest/googlemock/src/gmock.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googlemock/src/gmock.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock.cc.i
+
+.pio/libdeps/native/googletest/googlemock/src/gmock.s: .pio/libdeps/native/googletest/googlemock/src/gmock.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googlemock/src/gmock.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock.cc.s
+
+.pio/libdeps/native/googletest/googlemock/src/gmock_main.obj: .pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock_main.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.obj
+
+.pio/libdeps/native/googletest/googlemock/src/gmock_main.i: .pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock_main.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.i
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.i
+
+.pio/libdeps/native/googletest/googlemock/src/gmock_main.s: .pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock_main.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.s
+.PHONY : .pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.s
+
+.pio/libdeps/native/googletest/googletest/src/gtest-all.obj: .pio/libdeps/native/googletest/googletest/src/gtest-all.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-all.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-all.cc.obj
+
+.pio/libdeps/native/googletest/googletest/src/gtest-all.i: .pio/libdeps/native/googletest/googletest/src/gtest-all.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-all.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-all.cc.i
+
+.pio/libdeps/native/googletest/googletest/src/gtest-all.s: .pio/libdeps/native/googletest/googletest/src/gtest-all.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-all.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-all.cc.s
+
+.pio/libdeps/native/googletest/googletest/src/gtest-death-test.obj: .pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-death-test.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.obj
+
+.pio/libdeps/native/googletest/googletest/src/gtest-death-test.i: .pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-death-test.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.i
+
+.pio/libdeps/native/googletest/googletest/src/gtest-death-test.s: .pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-death-test.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.s
+
+.pio/libdeps/native/googletest/googletest/src/gtest-filepath.obj: .pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-filepath.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.obj
+
+.pio/libdeps/native/googletest/googletest/src/gtest-filepath.i: .pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-filepath.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.i
+
+.pio/libdeps/native/googletest/googletest/src/gtest-filepath.s: .pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-filepath.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.s
+
+.pio/libdeps/native/googletest/googletest/src/gtest-matchers.obj: .pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-matchers.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.obj
+
+.pio/libdeps/native/googletest/googletest/src/gtest-matchers.i: .pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-matchers.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.i
+
+.pio/libdeps/native/googletest/googletest/src/gtest-matchers.s: .pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-matchers.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.s
+
+.pio/libdeps/native/googletest/googletest/src/gtest-port.obj: .pio/libdeps/native/googletest/googletest/src/gtest-port.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-port.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-port.cc.obj
+
+.pio/libdeps/native/googletest/googletest/src/gtest-port.i: .pio/libdeps/native/googletest/googletest/src/gtest-port.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-port.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-port.cc.i
+
+.pio/libdeps/native/googletest/googletest/src/gtest-port.s: .pio/libdeps/native/googletest/googletest/src/gtest-port.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-port.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-port.cc.s
+
+.pio/libdeps/native/googletest/googletest/src/gtest-printers.obj: .pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-printers.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.obj
+
+.pio/libdeps/native/googletest/googletest/src/gtest-printers.i: .pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-printers.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.i
+
+.pio/libdeps/native/googletest/googletest/src/gtest-printers.s: .pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-printers.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.s
+
+.pio/libdeps/native/googletest/googletest/src/gtest-test-part.obj: .pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-test-part.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.obj
+
+.pio/libdeps/native/googletest/googletest/src/gtest-test-part.i: .pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-test-part.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.i
+
+.pio/libdeps/native/googletest/googletest/src/gtest-test-part.s: .pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-test-part.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.s
+
+.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.obj: .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.obj
+
+.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.i: .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.i
+
+.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.s: .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.s
+
+.pio/libdeps/native/googletest/googletest/src/gtest.obj: .pio/libdeps/native/googletest/googletest/src/gtest.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googletest/src/gtest.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest.cc.obj
+
+.pio/libdeps/native/googletest/googletest/src/gtest.i: .pio/libdeps/native/googletest/googletest/src/gtest.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googletest/src/gtest.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest.cc.i
+
+.pio/libdeps/native/googletest/googletest/src/gtest.s: .pio/libdeps/native/googletest/googletest/src/gtest.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googletest/src/gtest.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest.cc.s
+
+.pio/libdeps/native/googletest/googletest/src/gtest_main.obj: .pio/libdeps/native/googletest/googletest/src/gtest_main.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest_main.obj
+
+# target to build an object file
+.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.obj
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest_main.cc.obj
+
+.pio/libdeps/native/googletest/googletest/src/gtest_main.i: .pio/libdeps/native/googletest/googletest/src/gtest_main.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest_main.i
+
+# target to preprocess a source file
+.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.i
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest_main.cc.i
+
+.pio/libdeps/native/googletest/googletest/src/gtest_main.s: .pio/libdeps/native/googletest/googletest/src/gtest_main.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest_main.s
+
+# target to generate assembly for a file
+.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.s
+.PHONY : .pio/libdeps/native/googletest/googletest/src/gtest_main.cc.s
+
 lib/Module/src/Module.obj: lib/Module/src/Module.cpp.obj
 .PHONY : lib/Module/src/Module.obj
 
@@ -755,6 +1355,54 @@ lib/clock/src/Clock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.s
 .PHONY : lib/clock/src/Clock.cpp.s
 
+test/genericTest.obj: test/genericTest.cpp.obj
+.PHONY : test/genericTest.obj
+
+# target to build an object file
+test/genericTest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj
+.PHONY : test/genericTest.cpp.obj
+
+test/genericTest.i: test/genericTest.cpp.i
+.PHONY : test/genericTest.i
+
+# target to preprocess a source file
+test/genericTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.i
+.PHONY : test/genericTest.cpp.i
+
+test/genericTest.s: test/genericTest.cpp.s
+.PHONY : test/genericTest.s
+
+# target to generate assembly for a file
+test/genericTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.s
+.PHONY : test/genericTest.cpp.s
+
+test/voice_test.obj: test/voice_test.cpp.obj
+.PHONY : test/voice_test.obj
+
+# target to build an object file
+test/voice_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj
+.PHONY : test/voice_test.cpp.obj
+
+test/voice_test.i: test/voice_test.cpp.i
+.PHONY : test/voice_test.i
+
+# target to preprocess a source file
+test/voice_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.i
+.PHONY : test/voice_test.cpp.i
+
+test/voice_test.s: test/voice_test.cpp.s
+.PHONY : test/voice_test.s
+
+# target to generate assembly for a file
+test/voice_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.s
+.PHONY : test/voice_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -808,6 +1456,81 @@ help:
 	@echo "... .pio/libdeps/native/ESP_Async_WebServer/src/WebServer.obj"
 	@echo "... .pio/libdeps/native/ESP_Async_WebServer/src/WebServer.i"
 	@echo "... .pio/libdeps/native/ESP_Async_WebServer/src/WebServer.s"
+	@echo "... .pio/libdeps/native/OSC/OSCBoards.obj"
+	@echo "... .pio/libdeps/native/OSC/OSCBoards.i"
+	@echo "... .pio/libdeps/native/OSC/OSCBoards.s"
+	@echo "... .pio/libdeps/native/OSC/OSCBundle.obj"
+	@echo "... .pio/libdeps/native/OSC/OSCBundle.i"
+	@echo "... .pio/libdeps/native/OSC/OSCBundle.s"
+	@echo "... .pio/libdeps/native/OSC/OSCData.obj"
+	@echo "... .pio/libdeps/native/OSC/OSCData.i"
+	@echo "... .pio/libdeps/native/OSC/OSCData.s"
+	@echo "... .pio/libdeps/native/OSC/OSCMatch.obj"
+	@echo "... .pio/libdeps/native/OSC/OSCMatch.i"
+	@echo "... .pio/libdeps/native/OSC/OSCMatch.s"
+	@echo "... .pio/libdeps/native/OSC/OSCMessage.obj"
+	@echo "... .pio/libdeps/native/OSC/OSCMessage.i"
+	@echo "... .pio/libdeps/native/OSC/OSCMessage.s"
+	@echo "... .pio/libdeps/native/OSC/OSCTiming.obj"
+	@echo "... .pio/libdeps/native/OSC/OSCTiming.i"
+	@echo "... .pio/libdeps/native/OSC/OSCTiming.s"
+	@echo "... .pio/libdeps/native/OSC/SLIPEncodedSerial.obj"
+	@echo "... .pio/libdeps/native/OSC/SLIPEncodedSerial.i"
+	@echo "... .pio/libdeps/native/OSC/SLIPEncodedSerial.s"
+	@echo "... .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.obj"
+	@echo "... .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.i"
+	@echo "... .pio/libdeps/native/OSC/SLIPEncodedUSBSerial.s"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-all.obj"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-all.i"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-all.s"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.obj"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.i"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.s"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.obj"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.i"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.s"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.obj"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.i"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-matchers.s"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.obj"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.i"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.s"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock.obj"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock.i"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock.s"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock_main.obj"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock_main.i"
+	@echo "... .pio/libdeps/native/googletest/googlemock/src/gmock_main.s"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-all.obj"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-all.i"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-all.s"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-death-test.obj"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-death-test.i"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-death-test.s"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-filepath.obj"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-filepath.i"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-filepath.s"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-matchers.obj"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-matchers.i"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-matchers.s"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-port.obj"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-port.i"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-port.s"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-printers.obj"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-printers.i"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-printers.s"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-test-part.obj"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-test-part.i"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-test-part.s"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.obj"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.i"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest-typed-test.s"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest.obj"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest.i"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest.s"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest_main.obj"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest_main.i"
+	@echo "... .pio/libdeps/native/googletest/googletest/src/gtest_main.s"
 	@echo "... lib/Module/src/Module.obj"
 	@echo "... lib/Module/src/Module.i"
 	@echo "... lib/Module/src/Module.s"
@@ -841,6 +1564,12 @@ help:
 	@echo "... lib/clock/src/Clock.obj"
 	@echo "... lib/clock/src/Clock.i"
 	@echo "... lib/clock/src/Clock.s"
+	@echo "... test/genericTest.obj"
+	@echo "... test/genericTest.i"
+	@echo "... test/genericTest.s"
+	@echo "... test/voice_test.obj"
+	@echo "... test/voice_test.i"
+	@echo "... test/voice_test.s"
 .PHONY : help
 
 

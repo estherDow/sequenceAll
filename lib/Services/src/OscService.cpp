@@ -7,12 +7,12 @@ OscService::OscService(WiFiService *wifi) {
 }
 
 
-void OscService::send(void *context, OscMsgChild & message) {
+void OscService::send(void *context, OSCClientInterface & message) {
     Serial.println("osc.send was called");
     reinterpret_cast<OscService *>(context)->doSend(message);
 }
 
-bool OscService::receive(OscMsgChild &msg) {
+bool OscService::receive(OSCClientInterface &msg) {
     int size = udp->parsePacket();
     if (size > 0) {
         Serial.println("caught message in OscReceive");
@@ -26,7 +26,7 @@ bool OscService::receive(OscMsgChild &msg) {
     return false;
 }
 
-void OscService::doSend(OscMsgChild &message) {
+void OscService::doSend(OSCClientInterface &message) {
     Serial.println("DoSend was called this is hostname:");
     Serial.println(hostName);
     udp->beginPacket(wiFi->Ip,DEFAULT_REMOTE_UDP_PORT);
@@ -35,7 +35,7 @@ void OscService::doSend(OscMsgChild &message) {
     message.empty();
 }
 
-void OscService::update(OscMsgChild &message) {
+void OscService::update(OSCClientInterface &message) {
     doSend(message);
 }
 

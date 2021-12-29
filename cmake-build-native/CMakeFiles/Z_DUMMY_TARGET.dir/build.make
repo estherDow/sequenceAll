@@ -209,9 +209,35 @@ CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.s"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/lib/clock/src/Clock.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.s
 
+CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj: ../test/genericTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/test/genericTest.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/test/genericTest.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/test/genericTest.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj: ../test/voice_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/test/voice_test.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/test/voice_test.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/test/voice_test.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.s
+
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp.obj: ../.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp.i: cmake_force
@@ -224,7 +250,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp.s: c
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj: ../.pio/libdeps/native/ESP\ Async\ WebServer/src/AsyncEventSource.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj -c "/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/AsyncEventSource.cpp"
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncEventSource.cpp.i: cmake_force
@@ -237,7 +263,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncE
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj: ../.pio/libdeps/native/ESP\ Async\ WebServer/src/AsyncWebSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj -c "/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/AsyncWebSocket.cpp"
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncWebSocket.cpp.i: cmake_force
@@ -250,7 +276,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncW
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj: ../.pio/libdeps/native/ESP\ Async\ WebServer/src/SPIFFSEditor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj -c "/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/SPIFFSEditor.cpp"
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/SPIFFSEditor.cpp.i: cmake_force
@@ -263,7 +289,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/SPIFFS
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebAuthentication.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebAuthentication.cpp.obj: ../.pio/libdeps/native/ESP\ Async\ WebServer/src/WebAuthentication.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebAuthentication.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebAuthentication.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebAuthentication.cpp.obj -c "/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebAuthentication.cpp"
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebAuthentication.cpp.i: cmake_force
@@ -276,7 +302,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebAut
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebHandlers.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebHandlers.cpp.obj: ../.pio/libdeps/native/ESP\ Async\ WebServer/src/WebHandlers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebHandlers.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebHandlers.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebHandlers.cpp.obj -c "/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebHandlers.cpp"
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebHandlers.cpp.i: cmake_force
@@ -289,7 +315,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebHan
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebRequest.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebRequest.cpp.obj: ../.pio/libdeps/native/ESP\ Async\ WebServer/src/WebRequest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebRequest.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebRequest.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebRequest.cpp.obj -c "/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebRequest.cpp"
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebRequest.cpp.i: cmake_force
@@ -302,7 +328,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebReq
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebResponses.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebResponses.cpp.obj: ../.pio/libdeps/native/ESP\ Async\ WebServer/src/WebResponses.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebResponses.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebResponses.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebResponses.cpp.obj -c "/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebResponses.cpp"
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebResponses.cpp.i: cmake_force
@@ -315,7 +341,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebRes
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebServer.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebServer.cpp.obj: ../.pio/libdeps/native/ESP\ Async\ WebServer/src/WebServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebServer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebServer.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebServer.cpp.obj -c "/Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESP Async WebServer/src/WebServer.cpp"
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebServer.cpp.i: cmake_force
@@ -328,7 +354,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/WebSer
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/AsyncPrinter.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/AsyncPrinter.cpp.obj: ../.pio/libdeps/native/ESPAsyncTCP/src/AsyncPrinter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/AsyncPrinter.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/AsyncPrinter.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/AsyncPrinter.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/AsyncPrinter.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/AsyncPrinter.cpp.i: cmake_force
@@ -341,7 +367,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/AsyncPrinter.c
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj: ../.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.cpp.i: cmake_force
@@ -354,7 +380,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.cp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj: ../.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.i: cmake_force
@@ -367,7 +393,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuf
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp.obj: ../.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp.i: cmake_force
@@ -380,7 +406,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.obj: ../.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.obj"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c
 
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.i: cmake_force
@@ -390,6 +416,331 @@ CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.i:
 CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.s"
 	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.obj: ../.pio/libdeps/native/OSC/OSCBoards.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCBoards.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCBoards.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCBoards.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.obj: ../.pio/libdeps/native/OSC/OSCBundle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCBundle.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCBundle.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCBundle.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.obj: ../.pio/libdeps/native/OSC/OSCData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCData.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCData.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCData.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.obj: ../.pio/libdeps/native/OSC/OSCMatch.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCMatch.c
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCMatch.c > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCMatch.c -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.obj: ../.pio/libdeps/native/OSC/OSCMessage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCMessage.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCMessage.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCMessage.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.obj: ../.pio/libdeps/native/OSC/OSCTiming.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCTiming.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCTiming.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/OSCTiming.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.obj: ../.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.obj: ../.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.obj: ../.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.obj: ../.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.obj: ../.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.obj: ../.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.obj: ../.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.obj: ../.pio/libdeps/native/googletest/googlemock/src/gmock.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.obj: ../.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.obj: ../.pio/libdeps/native/googletest/googletest/src/gtest-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.obj: ../.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.obj: ../.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.obj: ../.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.obj: ../.pio/libdeps/native/googletest/googletest/src/gtest-port.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.obj: ../.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.obj: ../.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.obj: ../.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.obj: ../.pio/libdeps/native/googletest/googletest/src/gtest.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.obj: ../.pio/libdeps/native/googletest/googletest/src/gtest_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.obj"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.obj -c /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.i"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.s"
+	/Users/kenneth/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kenneth/gitPrivate/sequenceAll/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.s
 
 # Object files for target Z_DUMMY_TARGET
 Z_DUMMY_TARGET_OBJECTS = \
@@ -404,6 +755,8 @@ Z_DUMMY_TARGET_OBJECTS = \
 "CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj" \
@@ -417,7 +770,32 @@ Z_DUMMY_TARGET_OBJECTS = \
 "CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp.obj" \
-"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.obj"
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.obj"
 
 # External object files for target Z_DUMMY_TARGET
 Z_DUMMY_TARGET_EXTERNAL_OBJECTS =
@@ -433,6 +811,8 @@ Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/Voice.cpp.o
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoiceContainer.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/VoiceContainer/src/VoicePatternData.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/clock/src/Clock.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/test/genericTest.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/test/voice_test.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/AsyncTCP/src/AsyncTCP.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj
@@ -447,9 +827,34 @@ Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/sr
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/SyncClient.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/ESPAsyncTCP/src/tcp_axtls.c.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBoards.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCBundle.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCData.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMatch.c.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCMessage.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/OSCTiming.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedSerial.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/OSC/SLIPEncodedUSBSerial.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-all.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-cardinalities.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-internal-utils.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-matchers.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock-spec-builders.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googlemock/src/gmock_main.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-all.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-death-test.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-filepath.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-matchers.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-port.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-printers.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-test-part.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest-typed-test.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest.cc.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/native/googletest/googletest/src/gtest_main.cc.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/build.make
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable Z_DUMMY_TARGET"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kenneth/gitPrivate/sequenceAll/cmake-build-native/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Linking CXX executable Z_DUMMY_TARGET"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Z_DUMMY_TARGET.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -3,26 +3,25 @@
 
 #include <list>
 
+#include <ModuleInterface.h>
 #include "../../../.pio/libdeps/esp32dev/OSC/OSCMessage.h"
-#include "OscMsgChild.h"
+#include "OSCClientInterface.h"
 
 
-//TODO: This should not inherit rom osc message.
-
-class Module {
+class Module : public ModuleInterface{
 public:
 
-    virtual void update(OscMsgChild & message) = 0;
+    virtual void update(OSCClientInterface & message) = 0;
 
-    void attach(Module *module);
+    void attach(ModuleInterface *module);
 
-    void detach(Module *module);
+    void detach(ModuleInterface *module);
 
-    void notify(OscMsgChild & message); //One to many
+    void notify(OSCClientInterface & message); //One to many
 
 
 private:
-    std::list<Module *> list_observer_;
+    std::list<ModuleInterface *> list_observer_;
 
 
 };

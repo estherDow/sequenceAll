@@ -67,7 +67,7 @@ include CMakeFiles/Debug.dir/compiler_depend.make
 include CMakeFiles/Debug.dir/progress.make
 
 CMakeFiles/Debug:
-	cd /Users/kenneth/gitPrivate/sequenceAll && platformio -c clion run --target debug -enative
+	cd /Users/kenneth/gitPrivate/sequenceAll && platformio -c clion debug -enative
 
 Debug: CMakeFiles/Debug
 Debug: CMakeFiles/Debug.dir/build.make

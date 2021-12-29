@@ -6,27 +6,34 @@
 #define SEQUENCEALL_OSCMSGCHILD_H
 
 #include "../../../.pio/libdeps/esp32dev/OSC/OSCMessage.h"
-class OscMsgChild : public OSCMessage {
+#include "OSCClientInterface.h"
+
+class OscMsgChild : public OSCClientInterface {
 public:
 
-    explicit OscMsgChild(const char * address) : OSCMessage (address){};
-    OscMsgChild() : OSCMessage(){};
 
-    bool dispatch(
-            void *context,
-            const char *pattern,
-            void (*callback)(void *context,OscMsgChild &),
-            int addr_offset
-    );
+    explicit OscMsgChild(OSCMessage &message);
 
-    bool route(
-            void * context,
-            const char *pattern,
-            void (*callback)(void *context, OscMsgChild &, uint8_t),
-            int initial_offset
-    );
+    ~OscMsgChild() override = default;
 
-    uint8_t getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset); //returns new offset and overwrites handle
+    bool dispatch(RecipientAddress &address) override;
+
+    bool route(RecipientAddress &address) override;
+
+    void empty() override;
+    void fill(uint8_t byteStream) override;
+    bool fullMatch(const char *pattern, int offset) override;
+    int getDataLength(int position) override;
+    int getString(int position, char * buffer, int length) override;
+    bool hasError() override;
+    int32_t getInt(int position) override;
+    bool isInt(int sample) override;
+    bool isString(int position) override;
+    void send(WiFiUDP &udp) override;
+
+    uint8_t getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset) override; //returns new offset and overwrites handle
+private:
+    OSCMessage &_message;
 };
 
 
