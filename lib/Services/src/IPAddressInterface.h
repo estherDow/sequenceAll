@@ -6,7 +6,7 @@
 #define SEQUENCEALL_IPADDRESSINTERFACE_H
 class IPAddressInterface {
 public:
-    virtual ~IPAddress() {}
+    virtual ~IPAddressInterface() {}
 
 
 };
