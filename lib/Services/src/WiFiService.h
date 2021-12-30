@@ -5,7 +5,7 @@
 #include <ArduinoNvs.h>
 #include <WiFi.h>
 #include <WiFiUdp.h>
-#include <ESPmDNS.h>
+#include <ESPmDNSInterface.h>
 #include <WebServer.h>
 #include "AsyncJson.h"
 #include "ArduinoJson.h"
@@ -21,7 +21,7 @@ class WiFiService {
 public:
     WiFiUDP UDP;
 
-    explicit WiFiService();
+    explicit WiFiService(ESPmDNSInterface &mdns);
 
     void initAP();
 

@@ -14,8 +14,8 @@ void SequenceAll::begin() {
     cClock = new Clock();
     cClock->setBeatsPerMinute();
     cClock->attach(voiceContainer);
-
-    wiFiService = new WiFiService();
+    auto *mdns = new ESPmDNSAdapter();
+    wiFiService = new WiFiService(*mdns);
     //TODO: Add error handling in case WiFi could not be started.
     oscService = new OscService(wiFiService);
 

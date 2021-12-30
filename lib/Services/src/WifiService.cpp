@@ -3,7 +3,7 @@
 //
 #include "WiFiService.h"
 
-WiFiService::WiFiService() {
+WiFiService::WiFiService(ESPmDNSInterface &mdns) {
     if (!initSTA()) {
         initAP();
     }
@@ -12,15 +12,15 @@ WiFiService::WiFiService() {
 
     server = new AsyncWebServer(80);
 
-    if (!MDNS.begin("sequenceall")) {
+    if (!mdns.begin("sequenceall")) {
         Serial.println("Error starting mDNS");
         return;
     }
-    MDNS.addService("http", "tcp", 80);
-    MDNS.addService("osc", "udp", LOCAL_UDP_PORT );
+    mdns.addService("http", "tcp", 80);
+    mdns.addService("osc", "udp", LOCAL_UDP_PORT );
 //    hostName = getHostname();
     IPAddress ip(0,0,0,0);
-    //Ip = MDNS.queryHost(hostName,2000);
+    //Ip = mdns.queryHost(hostName,2000);
     Ip = ip;
     auto *handleSTARequest = new AsyncCallbackJsonWebHandler(
             "/set_sta",

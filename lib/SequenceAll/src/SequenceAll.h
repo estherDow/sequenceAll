@@ -14,6 +14,7 @@
 #include "../../Services/src/WiFiService.h"
 #include "../../Services/src/OscService.h"
 #include "OscMessageAdapter.h"
+#include "ESPmDNSAdapter.h"
 #include "../../VoiceContainer/src/VoiceContainer.h"
 
 
