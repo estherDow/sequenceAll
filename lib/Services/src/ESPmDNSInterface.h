@@ -5,6 +5,7 @@
 #ifndef SEQUENCEALL_ESPMDNSINTERFACE_H
 #define SEQUENCEALL_ESPMDNSINTERFACE_H
 #include <cstdint>
+#include "IPAddressInterface.h"
 class ESPmDNSInterface {
 public:
     virtual ~ESPmDNSInterface() = default;
@@ -20,8 +21,8 @@ public:
     virtual bool addServiceTxt(char *name, char *protocol, char * key, char * value) = 0;
     virtual void addServiceTxt(const char *name, const char *protocol, const char *key,const char * value) = 0;
 
-    virtual IPAddress queryHost(char *host, uint32_t timeout) = 0;
-    virtual IPAddress queryHost(const char *host, uint32_t timeout)  = 0;
+    virtual IPAddressInterface queryHost(char *host, uint32_t timeout) = 0;
+    virtual IPAddressInterface queryHost(const char *host, uint32_t timeout)  = 0;
 
     virtual int queryService(char *service, char *protocol) = 0;
     virtual int queryService(const char *service, const char *protocol) = 0;

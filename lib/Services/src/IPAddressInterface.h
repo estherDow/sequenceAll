@@ -4,5 +4,10 @@
 
 #ifndef SEQUENCEALL_IPADDRESSINTERFACE_H
 #define SEQUENCEALL_IPADDRESSINTERFACE_H
+class IPAddressInterface {
+public:
+    virtual ~IPAddress() {}
 
+
+};
 #endif //SEQUENCEALL_IPADDRESSINTERFACE_H
