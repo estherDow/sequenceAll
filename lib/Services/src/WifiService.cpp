@@ -134,11 +134,11 @@ void WiFiService::handleWifiMode() {
     }
 }
 
-String WiFiService::getRemoteIP() {
+char* WiFiService::getRemoteIP() {
     String nvsRemoteIPResponse = NVS.getString("remoteIP");
 
     if (nvsRemoteIPResponse.length() > 6) {
-      return nvsRemoteIPResponse;
+      return nvsRemoteIPResponse.c_str();
    } else {
         return DEFAULT_REMOTE_IP;
     }

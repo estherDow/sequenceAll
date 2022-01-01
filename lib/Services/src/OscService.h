@@ -2,18 +2,15 @@
 #define OSCSERVICE_H
 
 #include <Arduino.h>
-#include "WiFi.h"
-#include <WiFiUdp.h>
-#include <ESPmDNS.h>
 #include <ArduinoNvs.h>
-#include "WiFiService.h"
+#include "WiFiServiceInterface.h"
 #include <Module.h>
 #include <macros.h>
 
 
 class OscService : public Module {
 public:
-    explicit OscService(WiFiService *wifi);
+    explicit OscService(WiFiServiceInterface *wifi);
 
     static void send(void *context, OSCMessageInterface &message);
     void doSend(OSCMessageInterface &message);
@@ -23,7 +20,7 @@ public:
     const char * hostName{};
 private:
     WiFiUDP *udp{};
-    WiFiService *wiFi;
+    WiFiServiceInterface *wiFi;
 };
 
 #endif

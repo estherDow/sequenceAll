@@ -1,7 +1,7 @@
 #include "OscService.h"
 
 //TODO: queryHost returns an IPAddress with noargs Constructor. better error check
-OscService::OscService(WiFiService *wifi) {
+OscService::OscService(WiFiServiceInterface *wifi) {
     this->udp = &wifi->UDP;
     this->wiFi = wifi;
 }

@@ -11,13 +11,13 @@
 class Module : public ModuleInterface{
 public:
 
-    virtual void update(OSCMessageInterface & message) = 0;
+    void update(OSCMessageInterface & message) override {}
 
-    void attach(ModuleInterface *module);
+    void attach(ModuleInterface *module) override;
 
-    void detach(ModuleInterface *module);
+    void detach(ModuleInterface *module) override;
 
-    void notify(OSCMessageInterface & message); //One to many
+    void notify(OSCMessageInterface & message) override; //One to many
 
 
 private:

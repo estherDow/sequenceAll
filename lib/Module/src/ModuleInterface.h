@@ -5,7 +5,7 @@
 #ifndef SEQUENCEALL_MODULEINTERFACE_H
 #define SEQUENCEALL_MODULEINTERFACE_H
 
-#include "OSCMessageInterface.h"
+class OSCMessageInterface;
 
 class ModuleInterface {
 public:

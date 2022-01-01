@@ -13,24 +13,26 @@
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 
+#include "WiFiServiceInterface.h"
 #include <macros.h>
 
 
 
-class WiFiService {
+class WiFiService : public WiFiServiceInterface{
 public:
     WiFiUDP UDP;
 
+    ~WiFiService() override = default;
     explicit WiFiService(ESPmDNSInterface &mdns);
 
-    void initAP();
+    void initAP() override;
 
-    bool initSTA();
+    bool initSTA() override;
 
     int oldState = 0;
     uint16_t interval = 2000;
-    void handleWifiMode();
-    String getRemoteIP();
+    void handleWifiMode() override;
+    char* getRemoteIP() override;
 
     IPAddress Ip;
     String hostName;
