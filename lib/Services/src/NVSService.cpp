@@ -199,9 +199,9 @@ bool NVSService::setString(const char *key, const char *value, bool forceCommit)
     return _shouldForceCommit(forceCommit);
 }
 
-bool NVSService::setBool(const char *key, bool *value, bool forceCommit) {
-    esp_err_t err = nvs_set_u8(_nvs_handle, key, uint8_t(value));
-    if (err != ESP_OK)
+bool NVSService::setBool(const char *key, bool value, bool forceCommit) {
+    esp_err_t error = nvs_set_u8(_nvs_handle, key, uint8_t(value));
+    if (error != ESP_OK)
         return false;
 
     return _shouldForceCommit(forceCommit);
@@ -209,7 +209,7 @@ bool NVSService::setBool(const char *key, bool *value, bool forceCommit) {
 
 bool NVSService::setIPAddress(const char *key, IPAddress &value, bool forceCommit) {
     uint8_t ipAddress[4];
-    for (uint8_t n = 0; n < sizeof ipAddress; n++) {
+    for (int n = 0; n < sizeof(ipAddress); n++) {
         ipAddress[n] = value[n];
     }
     esp_err_t error = nvs_set_blob(_nvs_handle, key, ipAddress, sizeof(ipAddress));
@@ -241,17 +241,24 @@ bool NVSService::setBlob(const char *key, std::vector<uint8_t> *blob, bool force
 
 
 bool NVSService::getBool(const char *key, bool *value) {
-    return false;
-}
-
-bool NVSService::getIPAddress(const char *key, IPAddress &value_out) {
-    uint * requiredSize = 0;
-    esp_err_t error = nvs_get_blob(_nvs_handle, key, NULL, requiredSize);
+    uint8_t valueFromNVS = 0;
+    esp_err_t error = nvs_get_u8(_nvs_handle, key, &valueFromNVS);
     if (error != ESP_OK) {
         return false;
     }
-    uint8_t ipAddress[*requiredSize];
-    error = nvs_get_blob(_nvs_handle, key, ipAddress, requiredSize);
+    *value = valueFromNVS;
+
+    return true;
+}
+
+bool NVSService::getIPAddress(const char *key, IPAddress &value_out) {
+    uint requiredSize = 0;
+    esp_err_t error = nvs_get_blob(_nvs_handle, key, NULL, &requiredSize);
+    if (error != ESP_OK) {
+        return false;
+    }
+    uint8_t ipAddress[requiredSize];
+    error = nvs_get_blob(_nvs_handle, key, ipAddress, &requiredSize);
     value_out = ipAddress;
 
     return true;

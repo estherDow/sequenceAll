@@ -2,7 +2,6 @@
 #define OSCSERVICE_H
 
 #include <Arduino.h>
-#include <ArduinoNvs.h>
 #include "WiFiServiceInterface.h"
 #include <Module.h>
 #include <macros.h>

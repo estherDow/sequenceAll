@@ -103,9 +103,9 @@ WiFiService::WiFiService(
                             true
                             );
 
-                    nvs->setInt(
+                    nvs->setBool(
                             "SetIP",
-                            1,
+                            true,
                             true
                             );
                     request->send(
@@ -204,9 +204,9 @@ bool WiFiService::_doSetAP(char *ssid, char *password) {
 }
 
 void WiFiService::_doHandleWifiMode() {
-    int isSetIp = 0;
-    nvs->getInt("SetIP", isSetIp);
-    if (isSetIp != 0) {
+    bool isSetIp = false;
+    nvs->getBool("SetIP", &isSetIp);
+    if (isSetIp) {
         *Ip = getRemoteIP();
         nvs->setInt(
                 "SetIP",
@@ -214,9 +214,9 @@ void WiFiService::_doHandleWifiMode() {
                 true
                 );
     }
-    int isSetAp = 0;
-    nvs->getInt("SetAP", isSetAp);
-    if (isSetAp != 0) {
+    bool isSetAp = false;
+    nvs->getBool("SetAP", &isSetAp);
+    if (isSetAp) {
         initAP();
         nvs->setInt(
                 "SetAP",
@@ -224,9 +224,9 @@ void WiFiService::_doHandleWifiMode() {
                 true
                 );
     }
-    int isSetSTA = 0;
-    nvs->getInt("SetSTA", isSetSTA);
-    if (isSetSTA != 0) {
+    bool isSetSTA = false;
+    nvs->getBool("SetSTA", &isSetSTA);
+    if (isSetSTA) {
         if (!initSTA()) {
             initAP();
         }

@@ -46,7 +46,7 @@ public:
 
     bool setString(const char * key, const char* value, bool forceCommit) override;
 
-    bool setBool(const char * key, bool * value, bool forceCommit) override;
+    bool setBool(const char * key, bool  value, bool forceCommit) override;
 
     bool setIPAddress(const char * key, IPAddress &value, bool forceCommit) override;
 
@@ -62,7 +62,7 @@ public:
 
     bool getString(const char * key, char* out_value, size_t *length) override;
 
-    bool getBool(const char *key, bool* value) override;
+    bool getBool(const char *key, bool *value) override;
 
     bool getIPAddress(const char * key, IPAddress &value_out) override;
 

@@ -40,7 +40,7 @@ public:
 
     virtual bool setString(const char * key, const char* value, bool forceCommit) = 0;
 
-    virtual bool setBool(const char * key, bool * value, bool forceCommit) = 0;
+    virtual bool setBool(const char * key, bool value, bool forceCommit) = 0;
 
     virtual bool setIPAddress(const char * key, IPAddress &value, bool forceCommit) = 0;
 

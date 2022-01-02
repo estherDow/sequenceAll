@@ -6,7 +6,6 @@
 
 void SequenceAll::begin() {
     Serial.begin(115200);
-    NVS.begin();
 
     voiceContainer = new VoiceContainer();
     _setVoices();
@@ -56,7 +55,7 @@ void SequenceAll::save() {
 }
 
 void SequenceAll::reset() {
-    NVS.eraseAll();
+    //TODO: HardReset
 }
 
 
