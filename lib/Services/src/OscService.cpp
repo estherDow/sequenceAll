@@ -2,7 +2,7 @@
 
 //TODO: queryHost returns an IPAddress with noargs Constructor. better error check
 OscService::OscService(WiFiServiceInterface *wifi) {
-    this->udp = &wifi->UDP;
+    this->udp = wifi->udp;
     this->wiFi = wifi;
 }
 
@@ -29,7 +29,7 @@ bool OscService::receive(OSCMessageInterface &msg) {
 void OscService::doSend(OSCMessageInterface &message) {
     Serial.println("DoSend was called this is hostname:");
     Serial.println(hostName);
-    udp->beginPacket(wiFi->Ip,DEFAULT_REMOTE_UDP_PORT);
+    udp->beginPacket(*wiFi->Ip,DEFAULT_REMOTE_UDP_PORT);
     message.send(* udp);
     udp->endPacket();
     message.empty();

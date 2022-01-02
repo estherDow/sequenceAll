@@ -3,42 +3,53 @@
 //
 #include "WiFiService.h"
 
-WiFiService::WiFiService(ESPmDNSInterface &mdns) {
+WiFiService::WiFiService(
+        WiFiUDP * udp,
+        ESPmDNSInterface * mdns,
+        NVSServiceInterface * nvs
+        ) {
     if (!initSTA()) {
         initAP();
     }
-
-    UDP.begin(LOCAL_UDP_PORT);
+    this->udp = udp;
+    this->mdns = mdns;
+    this->nvs = nvs;
+    udp->begin(LOCAL_UDP_PORT);
 
     server = new AsyncWebServer(80);
 
-    if (!mdns.begin("sequenceall")) {
-        Serial.println("Error starting mDNS");
+    if (!mdns->begin("sequenceall")) {
         return;
     }
-    mdns.addService("http", "tcp", 80);
-    mdns.addService("osc", "udp", LOCAL_UDP_PORT );
-//    hostName = getHostname();
+    mdns->addService("http", "tcp", 80);
+    mdns->addService("osc", "udp", LOCAL_UDP_PORT );
+    hostName = getHostname();
     IPAddress ip(0,0,0,0);
-    //Ip = mdns.queryHost(hostName,2000);
-    Ip = ip;
+    ip = mdns->queryHost(hostName,2000);
+    *Ip = ip;
     auto *handleSTARequest = new AsyncCallbackJsonWebHandler(
             "/set_sta",
-            [](AsyncWebServerRequest *request,
+            [&nvs](AsyncWebServerRequest *request,
                JsonVariant &json) {
                 const JsonObject &jsonObject = json.as<JsonObject>();
                 if (!jsonObject.isNull() && jsonObject["ssid"]) {
-                    NVS.setString(
+                    nvs->setString(
                             "STAssid",
-                            jsonObject["ssid"]);
-                    NVS.setString(
+                            jsonObject["ssid"],
+                            true
+                            );
+                    nvs->setString(
                             "STApassword",
-                            jsonObject["password"]);
+                            jsonObject["password"],
+                            true
+                            );
                 }
 
-                NVS.setInt(
+                nvs->setInt(
                         "SetSTA",
-                        1);
+                        1,
+                        true
+                        );
                 request->send(
                         200,
                         "application/json",
@@ -48,22 +59,27 @@ WiFiService::WiFiService(ESPmDNSInterface &mdns) {
 
     auto *handleAPRequest = new AsyncCallbackJsonWebHandler(
             "/set_ap",
-            [](AsyncWebServerRequest *request,
+            [&nvs](AsyncWebServerRequest *request,
                JsonVariant &json) {
                 const JsonObject &jsonObject = json.as<JsonObject>();
 
                 if (!jsonObject.isNull() && jsonObject["ssid"]) {
-                    NVS.setString(
+                    nvs->setString(
                             "APssid",
-                            jsonObject["ssid"]);
-                    NVS.setString(
+                            jsonObject["ssid"],
+                            true
+                            );
+                    nvs->setString(
                             "APpassword",
-                            jsonObject["password"]);
+                            jsonObject["password"],
+                            true);
                 }
 
-                NVS.setInt(
+                nvs->setInt(
                         "SetAP",
-                        1);
+                        1,
+                        true
+                        );
                 request->send(
                         200,
                         "application/json",
@@ -72,16 +88,26 @@ WiFiService::WiFiService(ESPmDNSInterface &mdns) {
             });
     auto *handleRemoteIPRequest = new AsyncCallbackJsonWebHandler(
             "/set_remote_ip",
-            [](AsyncWebServerRequest *request,
+            [&nvs](AsyncWebServerRequest *request,
                JsonVariant &json) {
                 const JsonObject &jsonObject = json.as<JsonObject>();
 
                 if (!jsonObject.isNull() && jsonObject["remoteIP"]) {
-                    NVS.setString(
-                            "remoteIP",
-                            jsonObject["remoteIP"]);
 
-                    NVS.setInt("SetIP", 1);
+                    const char * ipFromJson = jsonObject["remoteIP"];
+                    IPAddress ip;
+                    ip.fromString(reinterpret_cast<const char *>(ipFromJson));
+                    nvs->setIPAddress(
+                            "remoteIP",
+                            ip,
+                            true
+                            );
+
+                    nvs->setInt(
+                            "SetIP",
+                            1,
+                            true
+                            );
                     request->send(
                             200,
                             "application/json",
@@ -99,25 +125,49 @@ WiFiService::WiFiService(ESPmDNSInterface &mdns) {
 
 void WiFiService::initAP() {
     WiFi.mode(WIFI_AP);
-    String ssid = NVS.getString("APssid");
-    String password = NVS.getString("APpassword");
-    if (ssid.length() == 0) {
-        ssid = DEFAULT_AP_SSID;
-        password = DEFAULT_AP_PASSWORD;
+    int length;
+    nvs->getStringLength("APssid", length);
+    const char *ssid;
+    nvs->getString("APssid",&ssid);
+    nvs->getStringLength("APpassword", length);
+    const char * password;
+    nvs->getString("APpassword", &password);
+    if (strlen(ssid) == 0) {
+        _doSetAP( DEFAULT_AP_SSID, DEFAULT_AP_PASSWORD);
     }
-    _doSetAP(ssid, password);
+    else {
+        _doSetAP(ssid, password);
+    }
 }
 
 bool WiFiService::initSTA() {
     WiFi.mode(WIFI_STA);
     uint8_t numberNetworks = WiFi.scanNetworks();
-    String ssid = NVS.getString("STAssid");
-    String password = NVS.getString("STApassword");
-    if (ssid.length() == 0) {
+    int length = 0;
+    if (!nvs->getStringLength("STAssid", length)) {
+        return false;
+    }
+
+    const char * ssid;
+    if (!nvs->getString("STAssid", &ssid)) {
+        return false;
+    }
+
+    length = 0;
+    if (!nvs->getStringLength("STApassword", length)) {
+        return false;
+    }
+
+    const char * password;
+    if (!nvs->getString("STApassword", &password)) {
+        return false;
+    }
+
+    if (strlen(ssid) == 0) {
         return false;
     }
     for (uint8_t i = 0; i < numberNetworks; i++) {
-        if (WiFi.SSID(i) == (char *) ssid.c_str()) {
+        if (WiFi.SSID(i) == ssid) {
             _doSetSTA(ssid, password);
             return true;
         }
@@ -134,53 +184,69 @@ void WiFiService::handleWifiMode() {
     }
 }
 
-char* WiFiService::getRemoteIP() {
-    String nvsRemoteIPResponse = NVS.getString("remoteIP");
+IPAddress WiFiService::getRemoteIP() {
 
-    if (nvsRemoteIPResponse.length() > 6) {
-      return nvsRemoteIPResponse.c_str();
-   } else {
-        return DEFAULT_REMOTE_IP;
-    }
 }
 
 
-bool WiFiService::_doSetSTA(String newSSID, String newPassword) {
-    WiFi.begin((char *) newSSID.c_str(), (char *) newPassword.c_str());
+bool WiFiService::_doSetSTA(const char * newSSID, const char *newPassword) {
+    WiFi.begin( newSSID, newPassword);
     while (WiFi.status() != WL_CONNECTED) {}
     Serial.println("connected to wifi...");
     Serial.println(WiFi.localIP());
     return 1;
 }
 
-bool WiFiService::_doSetAP(String ssid, String password) {
-    WiFi.softAP((char *) ssid.c_str(), (char *) password.c_str());
+bool WiFiService::_doSetAP(const char *ssid, const char *password) {
+    WiFi.softAP(ssid, password);
     return 1;
 }
 
 void WiFiService::_doHandleWifiMode() {
-    if (NVS.getInt("SetIP")) {
-        IPAddress ip;
-        ip.fromString(getRemoteIP());
-        Ip = ip;
-        NVS.setInt(
+    int isSetIp = 0;
+    nvs->getInt("SetIP", isSetIp);
+    if (isSetIp != 0) {
+        *Ip = getRemoteIP();
+        nvs->setInt(
                 "SetIP",
-                0);
+                0,
+                true
+                );
     }
-
-    if (NVS.getInt("SetAP")) {
+    int isSetAp = 0;
+    nvs->getInt("SetAP", isSetAp);
+    if (isSetAp != 0) {
         initAP();
-        NVS.setInt(
+        nvs->setInt(
                 "SetAP",
-                0);
+                0,
+                true
+                );
     }
-    if (NVS.getInt("SetSTA")) {
+    int isSetSTA = 0;
+    nvs->getInt("SetSTA", isSetSTA);
+    if (isSetSTA != 0) {
         if (!initSTA()) {
             initAP();
         }
 
-        NVS.setInt(
+        nvs->setInt(
                 "SetSTA",
-                0);
+                0,
+                true
+                );
     }
+}
+
+const char *WiFiService::getHostname() {
+    int length;
+    if (!nvs->getStringLength("hostname", length)) {
+        return nullptr;
+    }
+    if (length == 0) {
+        return nullptr;
+    }
+    const char * hostname[length];
+    nvs->getString("hostname", hostname);
+    return hostName;
 }

@@ -12,6 +12,8 @@
 #include "nvs_flash.h"
 #include "nvs.h"
 
+#include "IPAddress.h"
+
 #include "NVSServiceInterface.h"
 
 class NVSService : public NVSServiceInterface {
@@ -44,18 +46,32 @@ public:
 
     bool setString(const char * key, const char* value, bool forceCommit) override;
 
+    bool setIPAddress(const char * key, IPAddress &value, bool forceCommit) override;
+
+    bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit) override;
+
+    bool setBlob(const char * key, uint8_t *blob, size_t length, bool forceCommit);
+
+    bool setBlob(const char * key, std::vector <uint8_t> &blob, bool forceCommit);
+
+    bool getStringLength(const char * key, int &length);
+
+    bool getIPAddress(const char * key, IPAddress &value_out) override;
+
     bool commit() override;
 
 private:
     nvs_handle _nvs_handle;
 
-    bool _findFirstPartition();
+    const esp_partition_t* _findFirstPartition();
 
-    esp_err_t _erasePartition(esp_partition_t *partition);
+    esp_err_t _erasePartition(const esp_partition_t *partition);
 
     esp_err_t _openNamespace(const char *newPartitionName);
 
     esp_err_t _initializeDefaultPartition() const;
+
+    bool _shouldForceCommit(bool forceCommit);
 };
 
 

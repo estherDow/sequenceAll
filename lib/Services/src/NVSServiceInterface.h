@@ -8,6 +8,7 @@
 #include <cstdint>
 
 class IPAddress;
+class VoicePatternData;
 
 class NVSServiceInterface {
 public:
@@ -39,15 +40,21 @@ public:
 
     virtual bool setString(const char * key, const char* value, bool forceCommit) = 0;
 
-    virtual bool setIPAddress(const char * key, IPAddress value, bool forceCommit) = 0;
+    virtual bool setIPAddress(const char * key, IPAddress &value, bool forceCommit) = 0;
+
+    virtual bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit) = 0;
 
     virtual bool setBlob(const char * key, uint8_t *blob, size_t length, bool forceCommit) = 0;
 
     virtual bool setBlob(const char * key, std::vector <uint8_t> &blob, bool forceCommit) = 0;
 
-    virtual int64_t getInt(const char * key, int64_t default_value = 0) = 0;  // In case of error, default_value will be returned
+    virtual int64_t getInt(const char * key, int64_t default_value) = 0;  // In case of error, default_value will be returned
 
-    virtual bool getString(const char * key, char* &res) = 0;
+    virtual bool getStringLength(const char * key, int &length) = 0;
+
+    virtual bool getString(const char * key, const char* res[]) = 0;
+
+    virtual bool getIPAddress(const char * key, IPAddress &value_out) = 0;
 
     virtual size_t getBlobSize(const char * key) = 0;
 

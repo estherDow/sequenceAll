@@ -15,6 +15,7 @@
 #include "../../Services/src/OscService.h"
 #include "OscMessageAdapter.h"
 #include "ESPmDNSAdapter.h"
+#include "NVSService.h"
 #include "../../VoiceContainer/src/VoiceContainer.h"
 
 

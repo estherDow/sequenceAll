@@ -5,8 +5,19 @@
 #ifndef SEQUENCEALL_WIFISERVICEINTERFACE_H
 #define SEQUENCEALL_WIFISERVICEINTERFACE_H
 
+
+class WiFiUDP;
+class IPAddress;
+class NVSServiceInterface;
+class ESPmDNSInterface;
+
 class WiFiServiceInterface {
 public:
+    WiFiUDP * udp{};
+    ESPmDNSInterface * mdns{};
+    NVSServiceInterface * nvs{};
+
+    IPAddress * Ip{};
 
     virtual ~WiFiServiceInterface() = default;
 
@@ -16,7 +27,7 @@ public:
 
 
     virtual void handleWifiMode() = 0;
-    virtual char* getRemoteIP() = 0;
+    virtual IPAddress getRemoteIP() = 0;
 
 };
 #endif //SEQUENCEALL_WIFISERVICEINTERFACE_H

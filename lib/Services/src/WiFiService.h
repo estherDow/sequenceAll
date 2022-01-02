@@ -2,10 +2,8 @@
 #define WIFISERVICE_H
 
 #include <Arduino.h>
-#include <ArduinoNvs.h>
 #include <WiFi.h>
 #include <WiFiUdp.h>
-#include <ESPmDNSInterface.h>
 #include <WebServer.h>
 #include "AsyncJson.h"
 #include "ArduinoJson.h"
@@ -13,17 +11,22 @@
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 
+#include <ESPmDNSInterface.h>
 #include "WiFiServiceInterface.h"
+#include "NVSServiceInterface.h"
 #include <macros.h>
 
 
 
 class WiFiService : public WiFiServiceInterface{
 public:
-    WiFiUDP UDP;
 
     ~WiFiService() override = default;
-    explicit WiFiService(ESPmDNSInterface &mdns);
+    explicit WiFiService(
+            WiFiUDP * UDP,
+            ESPmDNSInterface * mdns,
+            NVSServiceInterface * nvs
+            );
 
     void initAP() override;
 
@@ -32,16 +35,17 @@ public:
     int oldState = 0;
     uint16_t interval = 2000;
     void handleWifiMode() override;
-    char* getRemoteIP() override;
+    IPAddress getRemoteIP() override;
 
-    IPAddress Ip;
-    String hostName;
+    const char* hostName;
 private:
     AsyncWebServer *server{};
 
-    bool _doSetSTA(String newSSID, String newPassword);
-    bool _doSetAP(String ssid, String password);
+    bool _doSetSTA(const char * newSSID, const char * newPassword);
+    bool _doSetAP(const char * ssid, const char * password);
     void _doHandleWifiMode();
+
+    const char *getHostname();
 };
 
 
