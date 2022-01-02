@@ -46,17 +46,31 @@ public:
 
     bool setString(const char * key, const char* value, bool forceCommit) override;
 
+    bool setBool(const char * key, bool * value, bool forceCommit) override;
+
     bool setIPAddress(const char * key, IPAddress &value, bool forceCommit) override;
 
-    bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit) override;
+    //bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit) override;
 
-    bool setBlob(const char * key, uint8_t *blob, size_t length, bool forceCommit);
+    bool setBlob(const char * key, uint8_t *blob, size_t length, bool forceCommit) override;
 
-    bool setBlob(const char * key, std::vector <uint8_t> &blob, bool forceCommit);
+    bool setBlob(const char * key, std::vector <uint8_t> *blob, bool forceCommit) override;
 
-    bool getStringLength(const char * key, int &length);
+    bool getInt(const char * key, int64_t *out_value) override;
+
+    bool getStringLength(const char * key, size_t *length) override;
+
+    bool getString(const char * key, char* out_value, size_t *length) override;
+
+    bool getBool(const char *key, bool* value) override;
 
     bool getIPAddress(const char * key, IPAddress &value_out) override;
+
+    bool getBlobSize(const char * key, size_t *size) override;
+
+    bool getBlob(const char * key, uint8_t *blob, size_t *length) override;
+
+    bool getBlob(const char * key, std::vector <uint8_t> *blob,  size_t *length) override;
 
     bool commit() override;
 

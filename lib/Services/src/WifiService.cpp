@@ -125,50 +125,51 @@ WiFiService::WiFiService(
 
 void WiFiService::initAP() {
     WiFi.mode(WIFI_AP);
-    int length;
+    size_t* length;
     nvs->getStringLength("APssid", length);
-    const char *ssid;
-    nvs->getString("APssid",&ssid);
+    char *ssid[*length];
+    nvs->getString("APssid",*ssid, length);
+    *length = 0;
     nvs->getStringLength("APpassword", length);
-    const char * password;
-    nvs->getString("APpassword", &password);
-    if (strlen(ssid) == 0) {
+    char * password[*length];
+    nvs->getString("APpassword", *password, length);
+    if (*length == 0) {
         _doSetAP( DEFAULT_AP_SSID, DEFAULT_AP_PASSWORD);
     }
     else {
-        _doSetAP(ssid, password);
+        _doSetAP(*ssid, *password);
     }
 }
 
 bool WiFiService::initSTA() {
     WiFi.mode(WIFI_STA);
     uint8_t numberNetworks = WiFi.scanNetworks();
-    int length = 0;
+    size_t* length;
     if (!nvs->getStringLength("STAssid", length)) {
         return false;
     }
 
-    const char * ssid;
-    if (!nvs->getString("STAssid", &ssid)) {
+    char * ssid[*length];
+    if (!nvs->getString("STAssid", *ssid, length)) {
         return false;
     }
 
-    length = 0;
+    *length = 0;
     if (!nvs->getStringLength("STApassword", length)) {
         return false;
     }
 
-    const char * password;
-    if (!nvs->getString("STApassword", &password)) {
+    char * password[*length];
+    if (!nvs->getString("STApassword", *password, length)) {
         return false;
     }
 
-    if (strlen(ssid) == 0) {
+    if (*length == 0) {
         return false;
     }
     for (uint8_t i = 0; i < numberNetworks; i++) {
-        if (WiFi.SSID(i) == ssid) {
-            _doSetSTA(ssid, password);
+        if ((char*)WiFi.SSID(i).c_str() == *ssid) {
+            _doSetSTA(*ssid, *password);
             return true;
         }
     }
@@ -189,7 +190,7 @@ IPAddress WiFiService::getRemoteIP() {
 }
 
 
-bool WiFiService::_doSetSTA(const char * newSSID, const char *newPassword) {
+bool WiFiService::_doSetSTA(char * newSSID, char *newPassword) {
     WiFi.begin( newSSID, newPassword);
     while (WiFi.status() != WL_CONNECTED) {}
     Serial.println("connected to wifi...");
@@ -197,7 +198,7 @@ bool WiFiService::_doSetSTA(const char * newSSID, const char *newPassword) {
     return 1;
 }
 
-bool WiFiService::_doSetAP(const char *ssid, const char *password) {
+bool WiFiService::_doSetAP(char *ssid, char *password) {
     WiFi.softAP(ssid, password);
     return 1;
 }
@@ -239,14 +240,14 @@ void WiFiService::_doHandleWifiMode() {
 }
 
 const char *WiFiService::getHostname() {
-    int length;
+    size_t * length;
     if (!nvs->getStringLength("hostname", length)) {
         return nullptr;
     }
     if (length == 0) {
         return nullptr;
     }
-    const char * hostname[length];
-    nvs->getString("hostname", hostname);
+    char * hostname[*length];
+    nvs->getString("hostname", *hostname, length);
     return hostName;
 }

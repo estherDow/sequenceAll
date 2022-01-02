@@ -40,27 +40,31 @@ public:
 
     virtual bool setString(const char * key, const char* value, bool forceCommit) = 0;
 
+    virtual bool setBool(const char * key, bool * value, bool forceCommit) = 0;
+
     virtual bool setIPAddress(const char * key, IPAddress &value, bool forceCommit) = 0;
 
-    virtual bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit) = 0;
+    //virtual bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit) = 0;
 
     virtual bool setBlob(const char * key, uint8_t *blob, size_t length, bool forceCommit) = 0;
 
-    virtual bool setBlob(const char * key, std::vector <uint8_t> &blob, bool forceCommit) = 0;
+    virtual bool setBlob(const char * key, std::vector <uint8_t> *blob, bool forceCommit) = 0;
 
-    virtual int64_t getInt(const char * key, int64_t default_value) = 0;  // In case of error, default_value will be returned
+    virtual bool getInt(const char * key, int64_t *out_value) = 0;  // In case of error, default_value will be returned
 
-    virtual bool getStringLength(const char * key, int &length) = 0;
+    virtual bool getStringLength(const char * key, size_t *length) = 0;
 
-    virtual bool getString(const char * key, const char* res[]) = 0;
+    virtual bool getString(const char * key, char* out_value, size_t *length) = 0;
+
+    virtual bool getBool(const char *key, bool* value) = 0;
 
     virtual bool getIPAddress(const char * key, IPAddress &value_out) = 0;
 
-    virtual size_t getBlobSize(const char * key) = 0;
+    virtual bool getBlobSize(const char * key, size_t *size) = 0;
 
-    virtual bool getBlob(const char * key, uint8_t *blob, size_t length) = 0;
+    virtual bool getBlob(const char * key, uint8_t *blob, size_t *length) = 0;
 
-    virtual bool getBlob(const char * key, std::vector <uint8_t> &blob) = 0;
+    virtual bool getBlob(const char * key, std::vector <uint8_t> *blob,  size_t *length) = 0;
 
     virtual bool commit() = 0;
 };

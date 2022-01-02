@@ -41,8 +41,8 @@ public:
 private:
     AsyncWebServer *server{};
 
-    bool _doSetSTA(const char * newSSID, const char * newPassword);
-    bool _doSetAP(const char * ssid, const char * password);
+    bool _doSetSTA(char * newSSID, char * newPassword);
+    bool _doSetAP(char * ssid, char * password);
     void _doHandleWifiMode();
 
     const char *getHostname();
