@@ -7,19 +7,23 @@
 #include "ESPAsyncWebServer.h"
 #include "NVSServiceInterface.h"
 class AsyncJsonHandler : public AsyncWebHandler {
-    explicit AsyncJsonHandler(const char * restPath,NVSServiceInterface &NVS) : nvs(NVS), uri(restPath){};
+    explicit AsyncJsonHandler(NVSServiceInterface &NVS) : nvs(NVS){};
 
     ~AsyncJsonHandler() override = default;
 
-    bool canHandle(AsyncWebServerRequest *request) override {
-        return true;
-    }
+    bool canHandle(AsyncWebServerRequest *request) override;
 
     void handleRequest(AsyncWebServerRequest *request) override;
 
 private:
     NVSServiceInterface &nvs;
-    const char * uri;
+
+    const char * setAccessPoint = "/set_ap";
+    const char * setSTA = "/set_sta";
+    const char * setRemoteIP = "set_remote_ip";
+
+    bool _handlePostRequestByUrl(AsyncWebServerRequest *request);
+    bool _storeAccessPointCredentials(AsyncWebServerRequest *request);
 };
 
 #endif //SEQUENCEALL_ASYNCJSONHANDLER_H
