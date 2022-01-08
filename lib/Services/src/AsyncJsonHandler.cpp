@@ -3,3 +3,14 @@
 //
 
 #include "AsyncJsonHandler.h"
+
+
+void AsyncJsonHandler::handleRequest(AsyncWebServerRequest *request) {
+
+}
+
+void AsyncJsonHandler::onRequest() {
+
+}
+
+
