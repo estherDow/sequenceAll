@@ -20,6 +20,7 @@ public:
 
     virtual ~WiFiServiceInterface() = default;
 
+    virtual bool begin() = 0;
 
     virtual void handleWifiMode() = 0;
 

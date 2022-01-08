@@ -24,6 +24,7 @@ public:
 
     ~WiFiService() override = default;
 
+    bool begin() override;
     int oldState = 0;
     uint16_t interval = 2000;
 
@@ -41,6 +42,8 @@ private:
 
     IPAddress remoteIp;
     AsyncWebServer &server;
+
+    bool _initWebServer();
 
     bool _initAP();
 

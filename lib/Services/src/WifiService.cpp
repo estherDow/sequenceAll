@@ -9,12 +9,20 @@ WiFiService::WiFiService(WiFiUDP &udp, AsyncWebServer &server, ESPmDNSInterface 
 //    this->udp = udp;
 //    this->mdns = mdns;
 //    this->server = server;
-    nvs.openNameSpace("credentials");
+
+
+}
+
+
+bool WiFiService::begin() {
+    if(!nvs.openNameSpace("credentials")) {
+        return false;
+    }
 
     if (!this->_initSTA()) {
         if (!_initAP()) {
             Serial.println("WiFi init failed");
-            return;
+            return false;
         }
     }
     udp.begin(WiFi.localIP(), 8000);
@@ -22,108 +30,23 @@ WiFiService::WiFiService(WiFiUDP &udp, AsyncWebServer &server, ESPmDNSInterface 
 
     if (!mdns.begin("sequenceall")) {
         Serial.println("Error, could not set hostname");
-        return;
+        return false;
     }
-    mdns.addService("http", "tcp", 80);
-    mdns.addService("osc", "udp", LOCAL_UDP_PORT);
+    if (!mdns.addService("http", "tcp", 80)) {
+        return false;
+    }
+    if (!mdns.addService("osc", "udp", LOCAL_UDP_PORT)) {
+        return false;
+    }
     hostName = getHostname();
-    IPAddress ip(0, 0, 0, 0);
-    ip = mdns.queryHost(hostName, 2000);
-    remoteIp = ip;
-    auto *handleSTARequest = new AsyncCallbackJsonWebHandler(
-            "/set_sta",
-            [&nvs](AsyncWebServerRequest *request,
-                   JsonVariant &json) {
-                const JsonObject &jsonObject = json.as<JsonObject>();
-                if (!jsonObject.isNull() && jsonObject["ssid"]) {
-                    nvs.setString(
-                            "STAssid",
-                            jsonObject["ssid"],
-                            true
-                    );
-                    nvs.setString(
-                            "STApassword",
-                            jsonObject["password"],
-                            true
-                    );
-                }
-
-                nvs.setInt(
-                        "SetSTA",
-                        1,
-                        true
-                );
-                request->send(
-                        200,
-                        "application/json",
-                        {}
-                );
-            });
-
-    auto *handleAPRequest = new AsyncCallbackJsonWebHandler(
-            "/set_ap",
-            [&nvs](AsyncWebServerRequest *request,
-                   JsonVariant &json) {
-                const JsonObject &jsonObject = json.as<JsonObject>();
-
-                if (!jsonObject.isNull() && jsonObject["ssid"]) {
-                    nvs.setString(
-                            "APssid",
-                            jsonObject["ssid"],
-                            true
-                    );
-                    nvs.setString(
-                            "APpassword",
-                            jsonObject["password"],
-                            true);
-                }
-
-                nvs.setInt(
-                        "SetAP",
-                        1,
-                        true
-                );
-                request->send(
-                        200,
-                        "application/json",
-                        {}
-                );
-            });
-    auto *handleRemoteIPRequest = new AsyncCallbackJsonWebHandler(
-            "/set_remote_ip",
-            [&nvs](AsyncWebServerRequest *request,
-                   JsonVariant &json) {
-                const JsonObject &jsonObject = json.as<JsonObject>();
-
-                if (!jsonObject.isNull() && jsonObject["remoteIP"]) {
-
-                    const char *ipFromJson = jsonObject["remoteIP"];
-                    IPAddress ip;
-                    ip.fromString(reinterpret_cast<const char *>(ipFromJson));
-                    nvs.setIPAddress(
-                            "remoteIP",
-                            ip,
-                            true
-                    );
-
-                    nvs.setBool(
-                            "SetIP",
-                            true,
-                            true
-                    );
-                    request->send(
-                            200,
-                            "application/json",
-                            {}
-                    );
-                }
-            });
-
-    server.addHandler(handleSTARequest);
-    server.addHandler(handleAPRequest);
-    server.addHandler(handleRemoteIPRequest);
-    server.begin();
-
+    if (hostName == nullptr) {
+        return false;
+    }
+    remoteIp = mdns.queryHost(hostName, 2000);
+    if (!_initWebServer()) {
+        return false;
+    }
+    return true;
 }
 
 bool WiFiService::_initAP() {
@@ -273,3 +196,102 @@ const char *WiFiService::getHostname() {
 WiFiUDP &WiFiService::getUDP() {
     return udp;
 }
+
+bool WiFiService::_initWebServer() {
+    auto *handleSTARequest = new AsyncCallbackJsonWebHandler(
+            "/set_sta",
+            [&nvs](AsyncWebServerRequest *request,
+                   JsonVariant &json) {
+                const JsonObject &jsonObject = json.as<JsonObject>();
+                if (!jsonObject.isNull() && jsonObject["ssid"]) {
+                    nvs.setString(
+                            "STAssid",
+                            jsonObject["ssid"],
+                            true
+                    );
+                    nvs.setString(
+                            "STApassword",
+                            jsonObject["password"],
+                            true
+                    );
+                }
+
+                nvs.setInt(
+                        "SetSTA",
+                        1,
+                        true
+                );
+                request->send(
+                        200,
+                        "application/json",
+                        {}
+                );
+            });
+
+    auto *handleAPRequest = new AsyncCallbackJsonWebHandler(
+            "/set_ap",
+            [&nvs](AsyncWebServerRequest *request,
+                   JsonVariant &json) {
+                const JsonObject &jsonObject = json.as<JsonObject>();
+
+                if (!jsonObject.isNull() && jsonObject["ssid"]) {
+                    nvs.setString(
+                            "APssid",
+                            jsonObject["ssid"],
+                            true
+                    );
+                    nvs.setString(
+                            "APpassword",
+                            jsonObject["password"],
+                            true);
+                }
+
+                nvs.setInt(
+                        "SetAP",
+                        1,
+                        true
+                );
+                request->send(
+                        200,
+                        "application/json",
+                        {}
+                );
+            });
+    auto *handleRemoteIPRequest = new AsyncCallbackJsonWebHandler(
+            "/set_remote_ip",
+            [&nvs](AsyncWebServerRequest *request,
+                   JsonVariant &json) {
+                const JsonObject &jsonObject = json.as<JsonObject>();
+
+                if (!jsonObject.isNull() && jsonObject["remoteIP"]) {
+
+                    const char *ipFromJson = jsonObject["remoteIP"];
+                    IPAddress ip;
+                    ip.fromString(reinterpret_cast<const char *>(ipFromJson));
+                    nvs.setIPAddress(
+                            "remoteIP",
+                            ip,
+                            true
+                    );
+
+                    nvs.setBool(
+                            "SetIP",
+                            true,
+                            true
+                    );
+                    request->send(
+                            200,
+                            "application/json",
+                            {}
+                    );
+                }
+            });
+
+    server.addHandler(handleSTARequest);
+    server.addHandler(handleAPRequest);
+    server.addHandler(handleRemoteIPRequest);
+    server.begin();
+
+    return true;
+}
+
