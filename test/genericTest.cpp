@@ -6,28 +6,28 @@
 #include <cstdint>
 
 using ::testing::AtLeast;                         // #1
-
+using ::testing::NiceMock;
 
 
 class Module_Test_Fixture : public ::testing::Test {
 protected:
-    virtual void SetUp() {
-        mockedModule = new ModuleMock();
-        module = new Module();
+    void SetUp() override {
+        auto pModuleMock = new ModuleMock();
+        auto pModule = new Module();
     }
 
-    virtual void TearDown() {
+    void TearDown() override {
         delete mockedModule;
         delete module;
     }
-    NiceMock<ModuleMock> mockedModule{};
+    ModuleInterface *mockedModule{};
     Module* module{};
 };
 
 
 TEST_F(Module_Test_Fixture, NotifyAttachedObjects) {
-    module.attach(mockedModule);
-    module.notify();
+    module->attach(mockedModule);
+    module->notify();
 
     EXPECT_CALL(mockedModule, update())
         .Times(1);
