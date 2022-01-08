@@ -17,32 +17,39 @@
 #include <macros.h>
 
 
-
-class WiFiService : public WiFiServiceInterface{
+class WiFiService : public WiFiServiceInterface {
 public:
 
+    WiFiService(WiFiUDP &udp, AsyncWebServer &server, ESPmDNSInterface &mdns, NVSServiceInterface &nvs);
+
     ~WiFiService() override = default;
-    explicit WiFiService(
-            WiFiUDP * UDP,
-            ESPmDNSInterface * mdns,
-            NVSServiceInterface * nvs
-            );
-
-    void initAP() override;
-
-    bool initSTA() override;
 
     int oldState = 0;
     uint16_t interval = 2000;
+
     void handleWifiMode() override;
+
     IPAddress getRemoteIP() override;
 
-    const char* hostName;
-private:
-    AsyncWebServer *server{};
+    WiFiUDP &getUDP() override;
 
-    bool _doSetSTA(char * newSSID, char * newPassword);
-    bool _doSetAP(char * ssid, char * password);
+    const char *hostName;
+private:
+    WiFiUDP &udp;
+    ESPmDNSInterface &mdns;
+    NVSServiceInterface &nvs;
+
+    IPAddress remoteIp;
+    AsyncWebServer &server;
+
+    bool _initAP();
+
+    bool _initSTA();
+
+    bool _doSetSTA(char *newSSID, char *newPassword);
+
+    bool _doSetAP(char *ssid, char *password);
+
     void _doHandleWifiMode();
 
     const char *getHostname();

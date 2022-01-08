@@ -24,7 +24,7 @@ public:
 
     void begin();
 
-    void run();
+    void run() const;
 
     void save();
 
@@ -37,7 +37,7 @@ public:
     VoiceContainer *voiceContainer;
 
 private:
-    void _setVoices();
+    void _setVoices() const;
 };
 
 extern SequenceAll sequenceAll;

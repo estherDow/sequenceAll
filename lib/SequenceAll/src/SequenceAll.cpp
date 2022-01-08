@@ -16,15 +16,16 @@ void SequenceAll::begin() {
     auto *mdns = new ESPmDNSAdapter();
     auto *udp = new WiFiUDP();
     auto *nvs = new NVSService();
-    wiFiService = new WiFiService(udp, mdns, nvs);
+    auto *server = new AsyncWebServer(80);
+    wiFiService = new WiFiService( *udp, *server, *mdns, *nvs);
     //TODO: Add error handling in case WiFi could not be started.
-    oscService = new OscService(wiFiService);
+    oscService = new OscService(wiFiService->getUDP(), (WiFiServiceInterface &) *wiFiService);
 
     voiceContainer->select(0)->attach(oscService); //TODO: Test if handle is out of bounds
 
 }
 
-void SequenceAll::run() {
+void SequenceAll::run() const {
     cClock->timer();
     wiFiService->handleWifiMode();
     OSCMessage message;
@@ -59,7 +60,7 @@ void SequenceAll::reset() {
 }
 
 
-void SequenceAll::_setVoices() {
+void SequenceAll::_setVoices() const {
     for (int i = 0; i < TOTAL_NUMBER_OF_VOICES; i++) {
         voiceContainer->add(i);
     }
