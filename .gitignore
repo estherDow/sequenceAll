@@ -2,3 +2,5 @@
 .idea/
 /cmake-build-esp32dev/
 /cmake-build-native/
+/cmake-build-defult/
+/cmake-build-debug/

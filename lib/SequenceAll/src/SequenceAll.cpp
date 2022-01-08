@@ -17,7 +17,7 @@ void SequenceAll::begin() {
     auto *udp = new WiFiUDP();
     auto *nvs = new NVSService();
     auto *server = new AsyncWebServer(80);
-    wiFiService = new WiFiService( *udp, *server, *mdns, *nvs);
+    wiFiService = new WiFiService(*udp, *server, *mdns, *nvs);
     //TODO: Add error handling in case WiFi could not be started.
     oscService = new OscService(wiFiService->getUDP(), (WiFiServiceInterface &) *wiFiService);
 
@@ -45,7 +45,7 @@ void SequenceAll::run() const {
                 "/voice",
                 VoiceContainer::receive,
                 0
-                );
+        );
         msg.route(destinationAddress);
     }
 }

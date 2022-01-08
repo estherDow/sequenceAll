@@ -21,6 +21,7 @@ WiFiService::WiFiService(WiFiUDP &udp, AsyncWebServer &server, ESPmDNSInterface 
     server = AsyncWebServer(80);
 
     if (!mdns.begin("sequenceall")) {
+        Serial.println("Error, could not set hostname");
         return;
     }
     mdns.addService("http", "tcp", 80);

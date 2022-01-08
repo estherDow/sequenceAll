@@ -1,5 +1,6 @@
 #include "ModuleInterface.h"
 #include <Module.h>
+#include "OscMessageAdapter.h"
 #include <ModuleMock.h>
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
@@ -26,17 +27,19 @@ protected:
 
 
 TEST_F(Module_Test_Fixture, NotifyAttachedObjects) {
+    OSCMessage msg("/test");
+    OscMessageAdapter message(msg);
     module->attach(mockedModule);
-    module->notify();
+    module->notify(message);
 
-    EXPECT_CALL(mockedModule, update())
+    EXPECT_CALL(*mockedModule, update())
         .Times(1);
 }
 
 TEST_F(Module_Test_Fixture, DoNotNotifyDetachedObjects) {
-module.attach(mockedModule);
-module.detach(mockedModule);
+module->attach(mockedModule);
+module->detach(mockedModule);
 
-EXPECT_CALL(mockedModule, update())
+EXPECT_CALL(*mockedModule, update())
 .Times(0);
 }
