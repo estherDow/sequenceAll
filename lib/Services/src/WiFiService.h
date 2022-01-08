@@ -6,11 +6,9 @@
 #include <WiFiUdp.h>
 #include <WebServer.h>
 #include "AsyncJson.h"
-#include "ArduinoJson.h"
-#include "../../../.pio/libdeps/esp32dev/ESP Async WebServer/src/ESPAsyncWebServer.h"
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
-
+#include "AsyncJsonHandler.h"
 #include <ESPmDNSInterface.h>
 #include "WiFiServiceInterface.h"
 #include "NVSServiceInterface.h"
