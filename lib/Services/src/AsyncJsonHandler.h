@@ -4,26 +4,25 @@
 
 #ifndef SEQUENCEALL_ASYNCJSONHANDLER_H
 #define SEQUENCEALL_ASYNCJSONHANDLER_H
+#include <cstdint>
 #include "ESPAsyncWebServer.h"
+#include "ArduinoJson.h"
 #include "NVSServiceInterface.h"
+#include "RestEndpoint.h"
+
 class AsyncJsonHandler : public AsyncWebHandler {
-    explicit AsyncJsonHandler(NVSServiceInterface &NVS) : nvs(NVS){};
+    explicit AsyncJsonHandler(RestEndpoint restEndpoint, NVSServiceInterface &nvs) : nvs(nvs), endpoint(restEndpoint) {};
 
     ~AsyncJsonHandler() override = default;
 
     bool canHandle(AsyncWebServerRequest *request) override;
-
     void handleRequest(AsyncWebServerRequest *request) override;
 
 private:
     NVSServiceInterface &nvs;
+    RestEndpoint endpoint;
+    uint16_t maxJsonBufferSize = 1024;
 
-    const char * setAccessPoint = "/set_ap";
-    const char * setSTA = "/set_sta";
-    const char * setRemoteIP = "set_remote_ip";
-
-    bool _handlePostRequestByUrl(AsyncWebServerRequest *request);
-    bool _storeAccessPointCredentials(AsyncWebServerRequest *request);
 };
 
 #endif //SEQUENCEALL_ASYNCJSONHANDLER_H

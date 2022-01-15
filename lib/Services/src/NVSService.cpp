@@ -220,6 +220,26 @@ bool NVSService::setIPAddress(const char *key, IPAddress &value, bool forceCommi
     return _shouldForceCommit(forceCommit);
 }
 
+bool NVSService::setCredentials(RestEndpoint dataFromRequest) {
+
+    const JsonObject &jsonFromRequest = dataFromRequest.requestBody.as<JsonObject>();
+    if (!jsonFromRequest.isNull() && jsonFromRequest["ssid"]) {
+        std::string ssidKey = dataFromRequest.uri;
+        ssidKey += "ssid";
+        const char * ssidValue = jsonFromRequest["ssid"];
+
+        reinterpret_cast<NVSService*>(dataFromRequest.class_context)->setString(ssidKey.c_str(), ssidValue, 1   );
+    }
+    if (!jsonFromRequest.isNull() && jsonFromRequest["password"]) {
+        std::string passwordKey = dataFromRequest.uri;
+        passwordKey += "password";
+        const char * ssidValue = jsonFromRequest["password"];
+
+        reinterpret_cast<NVSService*>(dataFromRequest.class_context)->setString(passwordKey.c_str(), ssidValue, 1   );
+    }
+
+    return false;
+}
 
 bool NVSService::setBlob(const char *key, uint8_t *blob, size_t length, bool forceCommit) {
     esp_err_t error = nvs_set_blob(_nvs_handle, key, blob, length);

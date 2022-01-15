@@ -6,6 +6,7 @@
 #define SEQUENCEALL_NVSSERVICEINTERFACE_H
 #include <vector>
 #include <cstdint>
+#include "RestEndpoint.h"
 
 class IPAddress;
 class VoicePatternData;

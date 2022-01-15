@@ -199,36 +199,8 @@ WiFiUDP &WiFiService::getUDP() {
 
 bool WiFiService::_initWebServer() {
 
-
-    auto *handleSTARequest = new AsyncCallbackJsonWebHandler(
-            "/set_sta",
-            [&nvs](AsyncWebServerRequest *request,
-                   JsonVariant &json) {
-                const JsonObject &jsonObject = json.as<JsonObject>();
-                if (!jsonObject.isNull() && jsonObject["ssid"]) {
-                    nvs.setString(
-                            "STAssid",
-                            jsonObject["ssid"],
-                            true
-                    );
-                    nvs.setString(
-                            "STApassword",
-                            jsonObject["password"],
-                            true
-                    );
-                }
-
-                nvs.setInt(
-                        "SetSTA",
-                        1,
-                        true
-                );
-                request->send(
-                        200,
-                        "application/json",
-                        {}
-                );
-            });
+    RestEndpoint restEndpoint(nvs, NVSServiceInterface::setCredentials, );
+    auto *handleSTARequest = new AsyncJsonHandler(restEndpoint, nvs);
 
     auto *handleAPRequest = new AsyncCallbackJsonWebHandler(
             "/set_ap",

@@ -6,16 +6,17 @@
 #define SEQUENCEALL_NVSSERVICE_H
 
 #include <cstdint>
-
+#include <cstring>
 #include "esp_partition.h"
 #include "esp_err.h"
 #include "nvs_flash.h"
 #include "nvs.h"
-
+#include "ArduinoJson.h"
 #include "IPAddress.h"
 
 #include "NVSServiceInterface.h"
-
+//TODO: Make all methods static and kick the interface.
+//TODO: Check how to mock static methods in GMock
 class NVSService : public NVSServiceInterface {
 public:
     ~NVSService() override = default;
@@ -50,7 +51,11 @@ public:
 
     bool setIPAddress(const char * key, IPAddress &value, bool forceCommit) override;
 
-    //bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit) override;
+    //TODO: static credentials
+
+    static bool setCredentials(RestEndpoint dataFromRequest) static;
+
+    // bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit) override;
 
     bool setBlob(const char * key, uint8_t *blob, size_t length, bool forceCommit) override;
 
