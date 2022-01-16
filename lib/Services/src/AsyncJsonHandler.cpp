@@ -6,14 +6,15 @@
 
 
 void AsyncJsonHandler::handleRequest(AsyncWebServerRequest *request) {
-    if (endpoint.callback) {
+
         DynamicJsonDocument jsonBuffer(maxJsonBufferSize);
         DeserializationError error = deserializeJson(jsonBuffer, (uint8_t *) (request->_tempObject));
         if (!error) {
-            JsonVariant json = jsonBuffer.as<JsonVariant>();
+            endpoint.requestBody = jsonBuffer.as<JsonVariant>();
             endpoint.callback(endpoint.class_context, nvs, json);
         }
-    }
+
+
 }
 
 bool AsyncJsonHandler::canHandle(AsyncWebServerRequest *request) {

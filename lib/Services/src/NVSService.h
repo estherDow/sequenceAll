@@ -4,7 +4,7 @@
 
 #ifndef SEQUENCEALL_NVSSERVICE_H
 #define SEQUENCEALL_NVSSERVICE_H
-
+#include <vector>
 #include <cstdint>
 #include <cstring>
 #include "esp_partition.h"
@@ -13,84 +13,78 @@
 #include "nvs.h"
 #include "ArduinoJson.h"
 #include "IPAddress.h"
-
-#include "NVSServiceInterface.h"
-//TODO: Make all methods static and kick the interface.
+#include "RestEndpoint.h"
+#include "WifiCredentials.h"
 //TODO: Check how to mock static methods in GMock
-class NVSService : public NVSServiceInterface {
+class NVSService {
 public:
-    ~NVSService() override = default;
+    ~NVSService() = default;
 
-    bool openNameSpace(const char *nameSpace) override;
+    static bool openNameSpace(const char *nameSpace, nvs_handle *nvsHandle);
 
-    void closeNameSpace() override;
+    static void closeNameSpace(const nvs_handle *nvsHandle);
 
-    bool deleteAllKeysInPartition(bool forceCommit) override;
+    static bool deleteAllKeysInPartition(const char *NameSpace, bool forceCommit = true);
 
-    bool eraseByKey(const char * key, bool forceCommit) override;
+    static bool eraseByKey(const char* NameSpace, const char * key, bool forceCommit = true);
 
-    bool setInt(const char * key, int8_t value, bool forceCommit) override;
+    static bool setInt(const char* NameSpace, const char * key, int8_t value, bool forceCommit = true);
 
-    bool setInt(const char * key, uint8_t value, bool forceCommit) override;
+    static bool setInt(const char* NameSpace, const char * key, uint8_t value, bool forceCommit = true);
 
-    bool setInt(const char * key, int16_t value, bool forceCommit) override;
+    static bool setInt(const char* NameSpace, const char * key, int16_t value, bool forceCommit = true);
 
-    bool setInt(const char * key, uint16_t value, bool forceCommit) override;
+    static bool setInt(const char* NameSpace, const char * key, uint16_t value, bool forceCommit = true);
 
-    bool setInt(const char * key, int32_t value, bool forceCommit) override;
+    static bool setInt(const char* NameSpace, const char * key, int32_t value, bool forceCommit = true);
 
-    bool setInt(const char * key, uint32_t value, bool forceCommit) override;
+    static bool setInt(const char* NameSpace, const char * key, uint32_t value, bool forceCommit = true);
 
-    bool setInt(const char * key, int64_t value, bool forceCommit) override;
+    static bool setInt(const char* NameSpace, const char * key, int64_t value, bool forceCommit = true);
 
-    bool setInt(const char * key, uint64_t value, bool forceCommit) override;
+    static bool setInt(const char* NameSpace, const char * key, uint64_t value, bool forceCommit = true);
 
-    bool setString(const char * key, const char* value, bool forceCommit) override;
+    static bool setString(const char* NameSpace, const char * key, const char* value, bool forceCommit = true);
 
-    bool setBool(const char * key, bool  value, bool forceCommit) override;
+    static bool setBool(const char* NameSpace, const char * key, bool  value, bool forceCommit = true);
 
-    bool setIPAddress(const char * key, IPAddress &value, bool forceCommit) override;
+    static bool setIPAddress(const char* NameSpace, const char * key, IPAddress &value, bool forceCommit = true);
 
-    //TODO: static credentials
+    static bool setCredentials(const char* NameSpace, RestEndpoint *dataFromRequest, bool forceCommit = true);
 
-    static bool setCredentials(RestEndpoint dataFromRequest) static;
+    // bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit = true);
 
-    // bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit) override;
+    static bool setBlob(const char* NameSpace, const char * key, uint8_t *blob, size_t length, bool forceCommit = true);
 
-    bool setBlob(const char * key, uint8_t *blob, size_t length, bool forceCommit) override;
+    static bool setBlob(const char* NameSpace, const char * key, std::vector <uint8_t> *blob, bool forceCommit = true);
 
-    bool setBlob(const char * key, std::vector <uint8_t> *blob, bool forceCommit) override;
+    static bool getInt(const char* NameSpace, const char * key, int64_t *out_value);
 
-    bool getInt(const char * key, int64_t *out_value) override;
+    static bool getStringLength(const char* NameSpace, const char * key, size_t *length);
 
-    bool getStringLength(const char * key, size_t *length) override;
+    static bool getString(const char* NameSpace, const char * key, char* out_value, size_t *length);
 
-    bool getString(const char * key, char* out_value, size_t *length) override;
+    static bool getBool(const char* NameSpace, const char *key, bool *value);
 
-    bool getBool(const char *key, bool *value) override;
+    static bool getIPAddress(const char* NameSpace, const char * key, IPAddress &value_out);
 
-    bool getIPAddress(const char * key, IPAddress &value_out) override;
+    static bool getCredentials(const char* NameSpace, WiFiCredentials *credentials, bool forceCommit = true);
 
-    bool getBlobSize(const char * key, size_t *size) override;
+    static bool getBlobSize(const char* NameSpace, const char * key, size_t *size);
 
-    bool getBlob(const char * key, uint8_t *blob, size_t *length) override;
+    static bool getBlob(const char* NameSpace, const char * key, uint8_t *blob, size_t *length);
 
-    bool getBlob(const char * key, std::vector <uint8_t> *blob,  size_t *length) override;
+    static bool getBlob(const char* NameSpace, const char * key, std::vector <uint8_t> *blob,  size_t *length);
 
-    bool commit() override;
+    static const esp_partition_t* _findFirstPartition();
 
-private:
-    nvs_handle _nvs_handle;
+    static esp_err_t _erasePartition(const esp_partition_t *partition);
 
-    const esp_partition_t* _findFirstPartition();
+    static esp_err_t _openNamespace(const char *newPartitionName, nvs_handle *_nvs_handle);
 
-    esp_err_t _erasePartition(const esp_partition_t *partition);
+    static esp_err_t _initializeDefaultPartition();
 
-    esp_err_t _openNamespace(const char *newPartitionName);
-
-    esp_err_t _initializeDefaultPartition() const;
-
-    bool _shouldForceCommit(bool forceCommit);
+    static bool _shouldForceCommit(const nvs_handle *nvsHandle, bool forceCommit);
 };
 
 

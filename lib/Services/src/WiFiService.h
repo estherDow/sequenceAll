@@ -11,14 +11,15 @@
 #include "AsyncJsonHandler.h"
 #include <ESPmDNSInterface.h>
 #include "WiFiServiceInterface.h"
-#include "NVSServiceInterface.h"
+#include "NVSService.h"
+#include "WifiCredentials.h"
 #include <macros.h>
 
 
 class WiFiService : public WiFiServiceInterface {
 public:
 
-    WiFiService(WiFiUDP &udp, AsyncWebServer &server, ESPmDNSInterface &mdns, NVSServiceInterface &nvs);
+    WiFiService(WiFiUDP &udp, AsyncWebServer &server, ESPmDNSInterface &mdns);
 
     ~WiFiService() override = default;
 
@@ -36,20 +37,19 @@ public:
 private:
     WiFiUDP &udp;
     ESPmDNSInterface &mdns;
-    NVSServiceInterface &nvs;
 
     IPAddress remoteIp;
     AsyncWebServer &server;
-
+    const char * nvsNameSpace = "Wifi";
     bool _initWebServer();
 
     bool _initAP();
 
     bool _initSTA();
 
-    bool _doSetSTA(char *newSSID, char *newPassword);
+    bool _doSetSTA(const char *newSSID, const char *newPassword);
 
-    bool _doSetAP(char *ssid, char *password);
+    bool _doSetAP(const char *ssid, const char *password);
 
     void _doHandleWifiMode();
 
