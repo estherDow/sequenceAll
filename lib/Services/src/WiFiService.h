@@ -1,6 +1,6 @@
 #ifndef WIFISERVICE_H
 #define WIFISERVICE_H
-
+#include <new>
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WiFiUdp.h>
@@ -8,7 +8,6 @@
 #include "AsyncJson.h"
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
-#include "AsyncJsonHandler.h"
 #include <ESPmDNSInterface.h>
 #include "WiFiServiceInterface.h"
 #include "NVSService.h"

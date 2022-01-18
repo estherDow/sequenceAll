@@ -158,7 +158,7 @@ const char *WiFiService::getHostname() {
         return nullptr;
     }
     char hostname[length];
-    if (!NVSService::getString(nvsNameSpace, "hostname", hostname, &length) {
+    if (!NVSService::getString(nvsNameSpace, "hostname", hostname, &length)) {
         return nullptr;
     }
 
@@ -170,19 +170,6 @@ WiFiUDP &WiFiService::getUDP() {
 }
 
 bool WiFiService::_initWebServer() {
-    JsonVariant body;
-    RestEndpoint restEndpoint("/set_ap", HTTP_POST, body);
-
-    auto *handleApRequest = new AsyncJsonHandler(restEndpoint);
-
-    handleApRequest->onRequest(NVSService::setCredentials)
-
-
-
-
-
-
-
 
     auto *handleAPRequest = new AsyncCallbackJsonWebHandler(
             "/set_ap",
@@ -190,41 +177,28 @@ bool WiFiService::_initWebServer() {
                    JsonVariant &json) {
                 const JsonObject &jsonObject = json.as<JsonObject>();
 
-
-            });
-    auto *handleRemoteIPRequest = new AsyncCallbackJsonWebHandler(
-            "/set_remote_ip",
-            [&nvs](AsyncWebServerRequest *request,
-                   JsonVariant &json) {
-                const JsonObject &jsonObject = json.as<JsonObject>();
-
-                if (!jsonObject.isNull() && jsonObject["remoteIP"]) {
-
-                    const char *ipFromJson = jsonObject["remoteIP"];
-                    IPAddress ip;
-                    ip.fromString(reinterpret_cast<const char *>(ipFromJson));
-                    nvs.setIPAddress(
-                            "remoteIP",
-                            ip,
-                            true
+                if (!jsonObject.isNull() && jsonObject["ssid"]) {
+                    JsonVariant apRequestBody;
+                    RestEndpoint restEndpoint(
+                            "/set_ap",
+                            HTTP_POST,
+                            apRequestBody
                     );
-
-                    nvs.setBool(
-                            "SetIP",
-                            true,
-                            true
-                    );
-                    request->send(
-                            200,
-                            "application/json",
-                            {}
-                    );
+                    if (!NVSService::setCredentials("Wifi", &restEndpoint )) {
+                        return false;
+                    }
+                    if (!NVSService::setBool("Wifi", "setAP",true)){
+                        return false;
+                    }
                 }
+                request->send(
+                        200,
+                        "application/json",
+                        {}
+                );
             });
 
-    server.addHandler(handleSTARequest);
     server.addHandler(handleAPRequest);
-    server.addHandler(handleRemoteIPRequest);
     server.begin();
 
     return true;

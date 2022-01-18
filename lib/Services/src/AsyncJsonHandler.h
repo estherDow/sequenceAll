@@ -10,21 +10,24 @@
 #include "ArduinoJson.h"
 #include "NVSServiceInterface.h"
 #include "RestEndpoint.h"
+typedef std::function<bool(const char * nameSpace, RestEndpoint *dataFromRequest)> JsonRequestHandlerFunction;
 
 class AsyncJsonHandler : public AsyncWebHandler {
 public:
-    explicit AsyncJsonHandler(RestEndpoint restEndpoint) :  endpoint(restEndpoint) {};
+    explicit AsyncJsonHandler(RestEndpoint restEndpoint, JsonRequestHandlerFunction &onRequest)
+            : endpoint(restEndpoint), _onRequest(onRequest) {};
 
     ~AsyncJsonHandler() override = default;
 
-    bool canHandle(AsyncWebServerRequest *request) override;
-    void onRequest(ArJsonRequestHandlerFunction fn){ _onRequest = std::move(fn); }
-    void handleRequest(AsyncWebServerRequest *request) override;
+ //   bool canHandle(AsyncWebServerRequest *request) override;
+ //   void onRequest(const JsonRequestHandlerFunction& fn){ _onRequest = fn; }
+ //   void handleRequest(AsyncWebServerRequest *request) override;
 
 private:
     RestEndpoint endpoint;
-    ArJsonRequestHandlerFunction _onRequest;
+    JsonRequestHandlerFunction& _onRequest;
     uint16_t maxJsonBufferSize = 1024;
+    const char * nvsNameSpace = "Wifi";
 
 };
 

@@ -4,17 +4,16 @@
 
 #include "AsyncJsonHandler.h"
 
+/*
 
 void AsyncJsonHandler::handleRequest(AsyncWebServerRequest *request) {
 
-        DynamicJsonDocument jsonBuffer(maxJsonBufferSize);
-        DeserializationError error = deserializeJson(jsonBuffer, (uint8_t *) (request->_tempObject));
-        if (!error) {
-            endpoint.requestBody = jsonBuffer.as<JsonVariant>();
-            endpoint.callback(endpoint.class_context, nvs, json);
-        }
-
-
+    DynamicJsonDocument jsonBuffer(maxJsonBufferSize);
+    DeserializationError error = deserializeJson(jsonBuffer, (uint8_t *) (request->_tempObject));
+    if (!error) {
+        endpoint.requestBody = jsonBuffer.as<JsonVariant>();
+        _onRequest(nvsNameSpace, &endpoint);
+    }
 }
 
 bool AsyncJsonHandler::canHandle(AsyncWebServerRequest *request) {
@@ -23,15 +22,17 @@ bool AsyncJsonHandler::canHandle(AsyncWebServerRequest *request) {
         return false;
     }
 
-
-    if (endpoint.uri.length() &&
-        !(endpoint.uri = request->url() && request->url().startsWith(endpoint.uri + "/"))
-        ){
+    size_t uriLength = strlen(endpoint.uri);
+    std::string endPointUri str(endpoint.uri) ;
+    endPointUri += "/";
+    if (uriLength &&
+        !(endpoint.uri = request->url() && request->url().startsWith(endPointUri))
+            ) {
         return false;
     }
 
 
-    if ( !request->contentType().equalsIgnoreCase(JSON_MIMETYPE) )
+    if (!request->contentType().equalsIgnoreCase(JSON_MIMETYPE))
         return false;
 
     request->addInterestingHeader("ANY");
@@ -39,4 +40,4 @@ bool AsyncJsonHandler::canHandle(AsyncWebServerRequest *request) {
 
 }
 
-
+*/

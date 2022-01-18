@@ -15,9 +15,8 @@ void SequenceAll::begin() {
     cClock->attach(voiceContainer);
     auto *mdns = new ESPmDNSAdapter();
     auto *udp = new WiFiUDP();
-    auto *nvs = new NVSService();
     auto *server = new AsyncWebServer(80);
-    wiFiService = new WiFiService(*udp, *server, *mdns, *nvs);
+    wiFiService = new WiFiService(*udp, *server, *mdns);
     //TODO: Add error handling in case WiFi could not be started.
     oscService = new OscService(wiFiService->getUDP(), (WiFiServiceInterface &) *wiFiService);
 
