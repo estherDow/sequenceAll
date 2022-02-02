@@ -7,80 +7,79 @@ WiFiService::WiFiService(WiFiUDP &udp, AsyncWebServer &server, ESPmDNSInterface 
 ) : udp(udp), mdns(mdns), server(server) {}
 
 
-bool WiFiService::begin() {
+WifiErrorCode WiFiService::begin() {
+    WifiErrorCode STAError;
 
-    if (!this->_initSTA()) {
-        if (!_initAP()) {
-            Serial.println("WiFi init failed");
-            return false;
+    STAError = _initSTA();
+    if (STAError != INIT_STA_SUCESS) {
+        if (STAError == INIT_STA_NO_CREDENTIALS_STORED) {
+            //TODO: create a Object in Heap Memory to store stuff for frontend.
+            Serial.println("no Wifi Credentials Stored, ");
         }
     }
-    udp.begin(WiFi.localIP(), 8000);
+    Serial.println(localIp);
+    udp.begin(localIp, 8000);
     server = AsyncWebServer(80);
 
     if (!mdns.begin("sequenceall")) {
         Serial.println("Error, could not set hostname");
-        return false;
+        return COULD_NOT_SET_LOCAL_HOSTNAME;
     }
     if (!mdns.addService("http", "tcp", 80)) {
-        return false;
+        Serial.println("Error, could not set mdns tcp");
+        return MDNS_COULD_NOT_ADD_SERVICE;
     }
     if (!mdns.addService("osc", "udp", LOCAL_UDP_PORT)) {
-        return false;
+        Serial.println("Error, could not set mdns udp");
+        return MDNS_COULD_NOT_ADD_SERVICE;
     }
-    hostName = getHostname();
-    if (hostName == nullptr) {
-        return false;
+
+    WifiErrorCode RemoteHostError = getRemoteHostInfo();
+    if (RemoteHostError == COULD_NOT_QUERY_REMOTE_IP || RemoteHostError == NO_REMOTE_HOSTNAME) {
+        Serial.println("Error, could not find information about remote host.");
+        return RemoteHostError;
     }
-    remoteIp = mdns.queryHost(hostName, 2000);
-    if (!_initWebServer()) {
-        return false;
-    }
-    return true;
+    return INIT_WIFI_SERVICE_SUCCESS;
 }
 
-bool WiFiService::_initAP() {
-    WiFi.mode(WIFI_AP);
+WifiErrorCode WiFiService::_initAP() {
     char ssid[32];
     char pwd[32];
     WiFiCredentials credentials("/set_ap", ssid, pwd);
 
     if (!NVSService::getCredentials("WifiCredentials", &credentials)) {
         if (_doSetAP((char *) "sequenceX", (char *) "transLiberationNow")) {
-            return true;
+            return INIT_AP_NO_CREDENTIALS_STORED;
         }
-        return false;
+        return INIT_AP_ERROR;
     } else if (_doSetAP(ssid, pwd)) {
-        return true;
+        return INIT_AP_SUCCESS;
     }
 
-    return false;
+    return INIT_AP_ERROR;
 }
 
-bool WiFiService::_initSTA() {
-    WiFi.mode(WIFI_STA);
+WifiErrorCode WiFiService::_initSTA() {
     uint8_t numberNetworks = WiFi.scanNetworks();
     char ssid[32];
     char pwd[32];
-    WiFiCredentials credentials("/set_ap", ssid, pwd);
+    WiFiCredentials credentials("/set_sta", ssid, pwd);
 
     if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
         if (_doSetAP((char *) "sequenceX", (char *) "transLiberationNow")) {
-            return true;
+            return INIT_STA_NO_CREDENTIALS_STORED;
         }
-        return false;
-    } else if (_doSetAP(ssid, pwd)) {
-        return true;
+        Serial.println("unable to initiate wifi sta or ap - dying :/");
+        return INIT_WIFI_GENERIC_ERROR;
     }
 
     for (uint8_t i = 0; i < numberNetworks; i++) {
         if ((char *) WiFi.SSID(i).c_str() == ssid) {
             _doSetSTA(ssid, pwd);
-            return true;
+            return INIT_STA_SUCESS;
         }
     }
-
-    return false;
+    return INIT_WIFI_GENERIC_ERROR;
 }
 
 void WiFiService::handleWifiMode() {
@@ -92,21 +91,29 @@ void WiFiService::handleWifiMode() {
     }
 }
 
-IPAddress WiFiService::getRemoteIP() {
-    return remoteIp;
+bool WiFiService::getRemoteIP(IPAddress ip) {
+    if (remoteIp[0] == 0) {
+        return false;
+    }
+    ip = remoteIp;
+    return true;
 }
 
 
 bool WiFiService::_doSetSTA(const char *newSSID, const char *newPassword) {
+    WiFi.mode(WIFI_STA);
     WiFi.begin(newSSID, newPassword);
     while (WiFi.status() != WL_CONNECTED) {}
     Serial.println("connected to wifi...");
+    localIp = WiFi.localIP();
     Serial.println(WiFi.localIP());
     return true;
 }
 
 bool WiFiService::_doSetAP(const char *ssid, const char *password) {
+    WiFi.mode(WIFI_AP);
     if (WiFi.softAP(ssid, password)) {
+        localIp = WiFi.softAPIP();
         return true;
     }
     return false;
@@ -116,31 +123,33 @@ void WiFiService::_doHandleWifiMode() {
     bool isSetIp = false;
 
     if (!NVSService::getBool(nvsNameSpace, "SetIP", &isSetIp)) {
-        return;
+        Serial.println("unable to get setIP Flag from NVS");
     }
 
     if (isSetIp) {
-        remoteIp = getRemoteIP();
+        IPAddress ip;
+        getRemoteIP(ip);
         if (!NVSService::setBool(nvsNameSpace,"SetIP", false)) {
-            return;
+            Serial.println("unable to set setIP Flag in NVS");
+
         }
     }
 
     bool isSetAp = false;
     if (!NVSService::getBool(nvsNameSpace, "SetAP", &isSetAp)) {
-        return;
+        Serial.println("unable to get setAP Flag from NVS");
     }
 
     if (isSetAp) {
         _initAP();
         if (!NVSService::setBool(nvsNameSpace,"SetAP", false)) {
-            return;
+            Serial.println("unable to set setAP Flag in NVS");
         }
     }
 
     bool isSetSTA = false;
-    if (!NVSService::getBool(nvsNameSpace, "SetAP", &isSetSTA)) {
-        return;
+    if (!NVSService::getBool(nvsNameSpace, "SetSTA", &isSetSTA)) {
+        Serial.println("unable to get setSTA Flag from NVS");
     }
 
     if (isSetSTA) {
@@ -149,20 +158,14 @@ void WiFiService::_doHandleWifiMode() {
     }
 }
 
-const char *WiFiService::getHostname() {
+bool WiFiService::getRemoteHostname() {
     size_t length = 0;
-    if (!NVSService::getStringLength(nvsNameSpace,"hostname", &length)) {
-        return nullptr;
-    }
-    if (length == 0) {
-        return nullptr;
-    }
-    char hostname[length];
-    if (!NVSService::getString(nvsNameSpace, "hostname", hostname, &length)) {
-        return nullptr;
+
+    if (!NVSService::getString(nvsNameSpace, "hostname", remoteHostName, &length)) {
+        return false;
     }
 
-    return hostName;
+    return true;
 }
 
 WiFiUDP &WiFiService::getUDP() {
@@ -202,5 +205,18 @@ bool WiFiService::_initWebServer() {
     server.begin();
 
     return true;
+}
+
+WifiErrorCode WiFiService::getRemoteHostInfo() {
+
+    if (!getRemoteHostname()) {
+        Serial.println("Error, could not get hostname");
+        return NO_REMOTE_HOSTNAME;
+    }
+    remoteIp = mdns.queryHost(remoteHostName, 2000);
+    if (!_initWebServer()) {
+        return COULD_NOT_QUERY_REMOTE_IP;
+    }
+    return REMOTE_HOST_QUERY_SUCCESSFUL;
 }
 

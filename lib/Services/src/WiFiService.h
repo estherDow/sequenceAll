@@ -12,6 +12,7 @@
 #include "WiFiServiceInterface.h"
 #include "NVSService.h"
 #include "WifiCredentials.h"
+#include "WifiErrorCodes.h"
 #include <macros.h>
 
 
@@ -22,29 +23,32 @@ public:
 
     ~WiFiService() override = default;
 
-    bool begin() override;
+    WifiErrorCode begin() override;
     int oldState = 0;
     uint16_t interval = 2000;
 
     void handleWifiMode() override;
 
-    IPAddress getRemoteIP() override;
+    WifiErrorCode getRemoteHostInfo() override;
+
+    bool getRemoteIP(IPAddress ip) override;
 
     WiFiUDP &getUDP() override;
 
-    const char *hostName;
+    char remoteHostName[32];
 private:
     WiFiUDP &udp;
     ESPmDNSInterface &mdns;
 
-    IPAddress remoteIp;
+    IPAddress remoteIp = {0,0,0,0};
+    IPAddress localIp = {0,0,0,0};
     AsyncWebServer &server;
     const char * nvsNameSpace = "Wifi";
     bool _initWebServer();
 
-    bool _initAP();
+    WifiErrorCode _initAP();
 
-    bool _initSTA();
+    WifiErrorCode _initSTA();
 
     bool _doSetSTA(const char *newSSID, const char *newPassword);
 
@@ -52,7 +56,8 @@ private:
 
     void _doHandleWifiMode();
 
-    const char *getHostname();
+    bool getRemoteHostname();
+
 };
 
 

@@ -26,9 +26,13 @@ bool OscService::receive(OSCMessageInterface &msg) {
 }
 
 void OscService::doSend(OSCMessageInterface &message) {
-    Serial.println("DoSend was called this is hostname:");
-    Serial.println(hostName);
-    udp.beginPacket(wiFi.getRemoteIP(),DEFAULT_REMOTE_UDP_PORT);
+
+    IPAddress ip;
+    if (!wiFi.getRemoteIP(ip)) {
+        return;
+    }
+
+    udp.beginPacket(ip,DEFAULT_REMOTE_UDP_PORT);
     message.send(udp);
     udp.endPacket();
     message.empty();

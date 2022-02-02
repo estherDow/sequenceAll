@@ -3,7 +3,7 @@
 
 void VoicePatternData::setAt(uint8_t value, uint8_t position) {
     _voicePattern.at(position) = value;
-    Serial.printf("VoicePattern received step at: %i, with value %i", position, _voicePattern.at(position));
+    Serial.printf("VoicePattern received step at: %i, with value %i\n", position, _voicePattern.at(position));
     if (!_triggerPattern.at(position)) {
         _triggerPattern.flip();
     }

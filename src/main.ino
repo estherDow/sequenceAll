@@ -29,11 +29,18 @@
 //SequenceAll sequenceAll;
 
 void setup() {
-    sequenceAll.begin();
-
+    main();
 }
 
 
 void loop() {
-    sequenceAll.run();
+}
+
+int main() {
+    sequenceAll.begin();
+
+    for (;;) {
+        sequenceAll.run();
+    }
+    return 0;
 }

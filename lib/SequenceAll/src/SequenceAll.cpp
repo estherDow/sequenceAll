@@ -9,7 +9,7 @@ void SequenceAll::begin() {
 
     voiceContainer = new VoiceContainer();
     _setVoices();
-
+    Serial.println("Voice Setup Complete");
     cClock = new Clock();
     cClock->setBeatsPerMinute();
     cClock->attach(voiceContainer);
@@ -17,7 +17,14 @@ void SequenceAll::begin() {
     auto *udp = new WiFiUDP();
     auto *server = new AsyncWebServer(80);
     wiFiService = new WiFiService(*udp, *server, *mdns);
-    //TODO: Add error handling in case WiFi could not be started.
+    WifiErrorCode wifiError = wiFiService->begin();
+    if (wifiError != INIT_WIFI_SERVICE_SUCCESS) {
+        Serial.println("Could not initiate Wifi Services");
+        Serial.println(wifiError);
+    }
+
+    //TODO: Inform user, Parameters of WiFi are not set.
+
     oscService = new OscService(wiFiService->getUDP(), (WiFiServiceInterface &) *wiFiService);
 
     voiceContainer->select(0)->attach(oscService); //TODO: Test if handle is out of bounds
