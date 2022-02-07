@@ -45,6 +45,9 @@ private:
     AsyncWebServer &server;
     const char * nvsNameSpace = "Wifi";
     bool _initWebServer();
+    AsyncCallbackJsonWebHandler* _setAPCredentialsEndpoint();
+    AsyncCallbackJsonWebHandler* _setSTACredentialsEndpoint();
+    AsyncCallbackJsonWebHandler* _setRemoteHostNameEndpoint();
 
     WifiErrorCode _initAP();
 

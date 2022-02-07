@@ -122,19 +122,6 @@ bool WiFiService::_doSetAP(const char *ssid, const char *password) {
 void WiFiService::_doHandleWifiMode() {
     bool isSetIp = false;
 
-    if (!NVSService::getBool(nvsNameSpace, "SetIP", &isSetIp)) {
-        Serial.println("unable to get setIP Flag from NVS");
-    }
-
-    if (isSetIp) {
-        IPAddress ip;
-        getRemoteIP(ip);
-        if (!NVSService::setBool(nvsNameSpace,"SetIP", false)) {
-            Serial.println("unable to set setIP Flag in NVS");
-
-        }
-    }
-
     bool isSetAp = false;
     if (!NVSService::getBool(nvsNameSpace, "SetAP", &isSetAp)) {
         Serial.println("unable to get setAP Flag from NVS");
@@ -172,40 +159,7 @@ WiFiUDP &WiFiService::getUDP() {
     return udp;
 }
 
-bool WiFiService::_initWebServer() {
 
-    auto *handleAPRequest = new AsyncCallbackJsonWebHandler(
-            "/set_ap",
-            [](AsyncWebServerRequest *request,
-                   JsonVariant &json) {
-                const JsonObject &jsonObject = json.as<JsonObject>();
-
-                if (!jsonObject.isNull() && jsonObject["ssid"]) {
-                    JsonVariant apRequestBody;
-                    RestEndpoint restEndpoint(
-                            "/set_ap",
-                            HTTP_POST,
-                            apRequestBody
-                    );
-                    if (!NVSService::setCredentials("Wifi", &restEndpoint )) {
-                        return false;
-                    }
-                    if (!NVSService::setBool("Wifi", "setAP",true)){
-                        return false;
-                    }
-                }
-                request->send(
-                        200,
-                        "application/json",
-                        {}
-                );
-            });
-
-    server.addHandler(handleAPRequest);
-    server.begin();
-
-    return true;
-}
 
 WifiErrorCode WiFiService::getRemoteHostInfo() {
 
