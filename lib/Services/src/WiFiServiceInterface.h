@@ -28,7 +28,7 @@ public:
 
     virtual bool getRemoteIP(IPAddress ip) = 0;
 
-    virtual WiFiUDP &getUDP() = 0;
+    virtual WiFiUDP *getUDP() = 0;
 };
 
 #endif //SEQUENCEALL_WIFISERVICEINTERFACE_H

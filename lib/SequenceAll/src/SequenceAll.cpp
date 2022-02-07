@@ -16,7 +16,7 @@ void SequenceAll::begin() {
     auto *mdns = new ESPmDNSAdapter();
     auto *udp = new WiFiUDP();
     auto *server = new AsyncWebServer(80);
-    wiFiService = new WiFiService(*udp, *server, *mdns);
+    wiFiService = new WiFiService(udp, server, mdns);
     WifiErrorCode wifiError = wiFiService->begin();
     if (wifiError != INIT_WIFI_SERVICE_SUCCESS) {
         Serial.println("Could not initiate Wifi Services");
@@ -25,7 +25,7 @@ void SequenceAll::begin() {
 
     //TODO: Inform user, Parameters of WiFi are not set.
 
-    oscService = new OscService(wiFiService->getUDP(), (WiFiServiceInterface &) *wiFiService);
+    oscService = new OscService( (WiFiServiceInterface &) *wiFiService);
 
     voiceContainer->select(0)->attach(oscService); //TODO: Test if handle is out of bounds
 
@@ -46,13 +46,16 @@ void SequenceAll::run() const {
             msg.getString(0, str, length);
             Serial.println(str);
         }
-        RecipientAddress destinationAddress(
+
+        RecipientAddress voiceContainerAddress(
                 voiceContainer,
                 "/voice",
                 VoiceContainer::receive,
                 0
         );
-        msg.route(destinationAddress);
+        msg.route(voiceContainerAddress);
+
+
     }
 }
 

@@ -1,7 +1,7 @@
 #include "OscService.h"
 
 //TODO: queryHost returns an IPAddress with noargs Constructor. better error check
-OscService::OscService(WiFiUDP &udp, WiFiServiceInterface &wiFi) : udp(udp), wiFi(wiFi) {
+OscService::OscService( WiFiServiceInterface &wiFi) : udp(wiFi.getUDP()), wiFi(wiFi) {
 
 }
 
@@ -12,11 +12,11 @@ void OscService::send(void *context, OSCMessageInterface & message) {
 }
 
 bool OscService::receive(OSCMessageInterface &msg) {
-    int size = udp.parsePacket();
+    int size = udp->parsePacket();
     if (size > 0) {
         Serial.println("caught message in OscReceive");
         while (size--) {
-            msg.fill(udp.read());
+            msg.fill(udp->read());
         }
         if (!msg.hasError()) {
             return true;
@@ -29,12 +29,13 @@ void OscService::doSend(OSCMessageInterface &message) {
 
     IPAddress ip;
     if (!wiFi.getRemoteIP(ip)) {
+        message.empty();
         return;
     }
 
-    udp.beginPacket(ip,DEFAULT_REMOTE_UDP_PORT);
-    message.send(udp);
-    udp.endPacket();
+    udp->beginPacket(ip,DEFAULT_REMOTE_UDP_PORT);
+    message.send(*udp);
+    udp->endPacket();
     message.empty();
 }
 

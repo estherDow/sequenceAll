@@ -7,7 +7,7 @@
 
 
 #include <Clock.h>
-#include <../../VoiceContainer/src/Voice.h>
+#include "Voice.h"
 #include <SignalTypes.h>
 #include <macros.h>
 #include "../../Services/src/WiFiService.h"
@@ -15,7 +15,7 @@
 #include "OscMessageAdapter.h"
 #include "ESPmDNSAdapter.h"
 #include "NVSService.h"
-#include "../../VoiceContainer/src/VoiceContainer.h"
+#include "VoiceContainer.h"
 
 
 class SequenceAll {

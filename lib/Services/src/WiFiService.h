@@ -4,7 +4,6 @@
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WiFiUdp.h>
-#include <WebServer.h>
 #include "AsyncJson.h"
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
@@ -19,7 +18,7 @@
 class WiFiService : public WiFiServiceInterface {
 public:
 
-    WiFiService(WiFiUDP &udp, AsyncWebServer &server, ESPmDNSInterface &mdns);
+    WiFiService(WiFiUDP *udp, AsyncWebServer *server, ESPmDNSInterface *mdns);
 
     ~WiFiService() override = default;
 
@@ -33,21 +32,22 @@ public:
 
     bool getRemoteIP(IPAddress ip) override;
 
-    WiFiUDP &getUDP() override;
+    WiFiUDP *getUDP() override;
 
     char remoteHostName[32];
 private:
-    WiFiUDP &udp;
-    ESPmDNSInterface &mdns;
+    WiFiUDP *udp;
+    ESPmDNSInterface *mdns;
+    AsyncWebServer *server;
 
     IPAddress remoteIp = {0,0,0,0};
     IPAddress localIp = {0,0,0,0};
-    AsyncWebServer &server;
     const char * nvsNameSpace = "Wifi";
     bool _initWebServer();
     AsyncCallbackJsonWebHandler* _setAPCredentialsEndpoint();
     AsyncCallbackJsonWebHandler* _setSTACredentialsEndpoint();
     AsyncCallbackJsonWebHandler* _setRemoteHostNameEndpoint();
+    AsyncCallbackJsonWebHandler* _setPrintDebugEndpoint();
 
     WifiErrorCode _initAP();
 

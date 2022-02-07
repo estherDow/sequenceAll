@@ -9,7 +9,7 @@
 
 class OscService : public Module {
 public:
-    explicit OscService(WiFiUDP &udp, WiFiServiceInterface &wiFi);
+    explicit OscService(WiFiServiceInterface &wiFi);
 
     static void send(void *context, OSCMessageInterface &message);
     void doSend(OSCMessageInterface &message);
@@ -18,7 +18,7 @@ public:
     void update(OSCMessageInterface &message) override;
     const char * hostName{};
 private:
-    WiFiUDP &udp;
+    WiFiUDP *udp;
     WiFiServiceInterface &wiFi;
 };
 

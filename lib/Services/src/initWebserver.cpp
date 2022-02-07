@@ -8,11 +8,13 @@ bool WiFiService::_initWebServer() {
     AsyncCallbackJsonWebHandler *handleAPRequest = _setAPCredentialsEndpoint();
     AsyncCallbackJsonWebHandler *handleSTARequest = _setSTACredentialsEndpoint();
     AsyncCallbackJsonWebHandler *handleRemoteHostRequest = _setRemoteHostNameEndpoint();
+    AsyncCallbackJsonWebHandler *handlePrintDebugRequest = _setPrintDebugEndpoint();
 
-    server.addHandler(handleAPRequest);
-    server.addHandler(handleSTARequest);
-    server.addHandler(handleRemoteHostRequest);
-    server.begin();
+    server->addHandler(handleAPRequest);
+    server->addHandler(handleSTARequest);
+    server->addHandler(handleRemoteHostRequest);
+    server->addHandler(handlePrintDebugRequest);
+    server->begin();
 
     return true;
 }
@@ -130,6 +132,24 @@ AsyncCallbackJsonWebHandler *WiFiService::_setRemoteHostNameEndpoint() {
                         );
                     }
                 }
+                request->send(
+                        200,
+                        "application/json",
+                        {}
+                );
+            });
+    return handleSTARequest;
+}
+
+AsyncCallbackJsonWebHandler *WiFiService::_setPrintDebugEndpoint() {
+
+    auto *handleSTARequest = new AsyncCallbackJsonWebHandler(
+            "/print_debug",
+            [](AsyncWebServerRequest *request,
+               JsonVariant &json) {
+                const JsonObject &jsonObject = json.as<JsonObject>();
+                Serial.print("\n\n\n\n\n\n\n\n\n\n\n");
+                Serial.println("endpoint worked");
                 request->send(
                         200,
                         "application/json",

@@ -3,7 +3,7 @@
 //
 #include "WiFiService.h"
 
-WiFiService::WiFiService(WiFiUDP &udp, AsyncWebServer &server, ESPmDNSInterface &mdns
+WiFiService::WiFiService(WiFiUDP *udp, AsyncWebServer *server, ESPmDNSInterface *mdns
 ) : udp(udp), mdns(mdns), server(server) {}
 
 
@@ -18,18 +18,20 @@ WifiErrorCode WiFiService::begin() {
         }
     }
     Serial.println(localIp);
-    udp.begin(localIp, 8000);
-    server = AsyncWebServer(80);
+    udp->begin(localIp, 8000);
+    if (!_initWebServer()) {
+        return INIT_WEBSERVER_ERROR;
+    }
 
-    if (!mdns.begin("sequenceall")) {
+    if (!mdns->begin("sequenceall")) {
         Serial.println("Error, could not set hostname");
         return COULD_NOT_SET_LOCAL_HOSTNAME;
     }
-    if (!mdns.addService("http", "tcp", 80)) {
+    if (!mdns->addService("http", "tcp", 80)) {
         Serial.println("Error, could not set mdns tcp");
         return MDNS_COULD_NOT_ADD_SERVICE;
     }
-    if (!mdns.addService("osc", "udp", LOCAL_UDP_PORT)) {
+    if (!mdns->addService("osc", "udp", LOCAL_UDP_PORT)) {
         Serial.println("Error, could not set mdns udp");
         return MDNS_COULD_NOT_ADD_SERVICE;
     }
@@ -47,7 +49,7 @@ WifiErrorCode WiFiService::_initAP() {
     char pwd[32];
     WiFiCredentials credentials("/set_ap", ssid, pwd);
 
-    if (!NVSService::getCredentials("WifiCredentials", &credentials)) {
+    if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
         if (_doSetAP((char *) "sequenceX", (char *) "transLiberationNow")) {
             return INIT_AP_NO_CREDENTIALS_STORED;
         }
@@ -120,7 +122,6 @@ bool WiFiService::_doSetAP(const char *ssid, const char *password) {
 }
 
 void WiFiService::_doHandleWifiMode() {
-    bool isSetIp = false;
 
     bool isSetAp = false;
     if (!NVSService::getBool(nvsNameSpace, "SetAP", &isSetAp)) {
@@ -155,7 +156,7 @@ bool WiFiService::getRemoteHostname() {
     return true;
 }
 
-WiFiUDP &WiFiService::getUDP() {
+WiFiUDP* WiFiService::getUDP() {
     return udp;
 }
 
@@ -167,8 +168,8 @@ WifiErrorCode WiFiService::getRemoteHostInfo() {
         Serial.println("Error, could not get hostname");
         return NO_REMOTE_HOSTNAME;
     }
-    remoteIp = mdns.queryHost(remoteHostName, 2000);
-    if (!_initWebServer()) {
+    remoteIp = mdns->queryHost(remoteHostName, 2000);
+    if (remoteIp[0] == 0) {
         return COULD_NOT_QUERY_REMOTE_IP;
     }
     return REMOTE_HOST_QUERY_SUCCESSFUL;
