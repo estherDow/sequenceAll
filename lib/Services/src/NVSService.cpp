@@ -294,19 +294,21 @@ bool NVSService::setCredentials(const char* NameSpace, WiFiCredentials *dataFrom
     openNameSpace(NameSpace, &nvsHandle);
 ;
     if (!dataFromRequest->ssid.empty()) {
-        dataFromRequest->uri+="ssid";
+        std::string ssidKey = dataFromRequest->uri;
+        ssidKey += "ssid";
 
 
-        if (!setString(NameSpace, dataFromRequest->uri.c_str(), dataFromRequest->ssid.c_str())) {
+        if (!setString(NameSpace, ssidKey.c_str(), dataFromRequest->ssid.c_str())) {
             closeNameSpace(&nvsHandle);
             return false;
         }
     }
 
     if (!dataFromRequest->pwd.empty()) {
-        dataFromRequest->uri+= "pwd";
+        std::string pwdKey = dataFromRequest->uri;
+        pwdKey+="pwd";
 
-        if (!setString(NameSpace, dataFromRequest->uri.c_str(), dataFromRequest->pwd.c_str())) {
+        if (!setString(NameSpace, pwdKey.c_str(), dataFromRequest->pwd.c_str())) {
             closeNameSpace(&nvsHandle);
             return false;
         }}

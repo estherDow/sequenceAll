@@ -30,11 +30,11 @@ AsyncCallbackJsonWebHandler *WiFiService::_setAPCredentialsEndpoint() {
                 if (!jsonObject.isNull() && jsonObject["ssid"]) {
                     JsonVariant apRequestBody;
 
-                    WiFiCredentials apCredentials (
+                    WiFiCredentials apCredentials(
                             "/set_ap",
                             jsonObject["ssid"],
                             jsonObject["password"]
-                            );
+                    );
 
                     if (!NVSService::setCredentials("Wifi", &apCredentials)) {
                         request->send(
@@ -50,8 +50,7 @@ AsyncCallbackJsonWebHandler *WiFiService::_setAPCredentialsEndpoint() {
                                 {}
                         );
                     }
-                }
-                else {
+                } else {
                     request->send(
                             401,
                             "application/json",
@@ -78,9 +77,9 @@ AsyncCallbackJsonWebHandler *WiFiService::_setSTACredentialsEndpoint() {
 
                 if (!jsonObject.isNull() && jsonObject["ssid"]) {
 
-                    WiFiCredentials STACredentials (
+                    WiFiCredentials STACredentials(
                             "/set_sta",
-                    jsonObject["ssid"],
+                            jsonObject["ssid"],
                             jsonObject["password"]
                     );
                     if (!NVSService::setCredentials("Wifi", &STACredentials)) {
@@ -90,15 +89,14 @@ AsyncCallbackJsonWebHandler *WiFiService::_setSTACredentialsEndpoint() {
                                 {}
                         );
                     }
-                    if (!NVSService::setBool("Wifi", "setSTA", true)) {
+                    if (!NVSService::setBool("Wifi", "SetSTA", true)) {
                         request->send(
                                 500,
                                 "application/json",
                                 {}
                         );
                     }
-                }
-                else {
+                } else {
                     request->send(
                             401,
                             "application/json",

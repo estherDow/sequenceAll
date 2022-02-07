@@ -45,17 +45,15 @@ WifiErrorCode WiFiService::begin() {
 }
 
 WifiErrorCode WiFiService::_initAP() {
-    char uri[8] = "/set_ap";
-    char ssid[32];
-    char pwd[32];
-    WiFiCredentials credentials(uri, ssid, pwd);
 
+    WiFiCredentials credentials;
+    credentials.uri = "/set_ap";
     if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
         if (_doSetAP((char *) "sequenceX", (char *) "transLiberationNow")) {
             return INIT_AP_NO_CREDENTIALS_STORED;
         }
         return INIT_AP_ERROR;
-    } else if (_doSetAP(ssid, pwd)) {
+    } else if (_doSetAP(credentials.ssid.c_str(), credentials.pwd.c_str())) {
         return INIT_AP_SUCCESS;
     }
 
@@ -64,10 +62,9 @@ WifiErrorCode WiFiService::_initAP() {
 
 WifiErrorCode WiFiService::_initSTA() {
     uint8_t numberNetworks = WiFi.scanNetworks();
-    char uri[9] = "/set_sta";
-    char ssid[32];
-    char pwd[32];
-    WiFiCredentials credentials(uri, ssid, pwd);
+
+    WiFiCredentials credentials;
+    credentials.uri = "/set_sta";
 
     if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
         if (_doSetAP((char *) "sequenceX", (char *) "transLiberationNow")) {
@@ -78,8 +75,8 @@ WifiErrorCode WiFiService::_initSTA() {
     }
 
     for (uint8_t i = 0; i < numberNetworks; i++) {
-        if ((char *) WiFi.SSID(i).c_str() == ssid) {
-            _doSetSTA(ssid, pwd);
+        if (WiFi.SSID(i).c_str() == credentials.ssid.c_str()) {
+            _doSetSTA(credentials.ssid.c_str(), credentials.pwd.c_str());
             return INIT_STA_SUCESS;
         }
     }
