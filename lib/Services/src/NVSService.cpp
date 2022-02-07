@@ -288,28 +288,25 @@ bool NVSService::setIPAddress(const char* NameSpace, const char *key, IPAddress 
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setCredentials(const char* NameSpace, RestEndpoint *dataFromRequest, bool forceCommit) {
+bool NVSService::setCredentials(const char* NameSpace, WiFiCredentials *dataFromRequest, bool forceCommit) {
     nvs_handle nvsHandle;
-    if (dataFromRequest->method != HTTP_POST) {
-        return false;
-    }
-    openNameSpace(NameSpace, &nvsHandle);
-    const JsonObject &jsonFromRequest = dataFromRequest->requestBody.as<JsonObject>();
-    if (!jsonFromRequest.isNull() && jsonFromRequest["ssid"]) {
-        std::string ssidKey = dataFromRequest->uri;
-        ssidKey += "ssid";
 
-        if (!setString(NameSpace, ssidKey.c_str(), jsonFromRequest["ssid"])) {
+    openNameSpace(NameSpace, &nvsHandle);
+;
+    if (!dataFromRequest->ssid.empty()) {
+        dataFromRequest->uri+="ssid";
+
+
+        if (!setString(NameSpace, dataFromRequest->uri.c_str(), dataFromRequest->ssid.c_str())) {
             closeNameSpace(&nvsHandle);
             return false;
         }
     }
 
-    if (!jsonFromRequest.isNull() && jsonFromRequest["password"]) {
-        std::string pwdKey = dataFromRequest->uri;
-        pwdKey += "pwd";
+    if (!dataFromRequest->pwd.empty()) {
+        dataFromRequest->uri+= "pwd";
 
-        if (!setString(NameSpace, pwdKey.c_str(), jsonFromRequest["password"])) {
+        if (!setString(NameSpace, dataFromRequest->uri.c_str(), dataFromRequest->pwd.c_str())) {
             closeNameSpace(&nvsHandle);
             return false;
         }}
@@ -391,32 +388,41 @@ bool NVSService::getCredentials(const char *NameSpace,  WiFiCredentials *credent
     size_t ssidLength;
     std::string ssidKey = credentials->uri;
     ssidKey += "ssid";
+
     if (!getStringLength(NameSpace,ssidKey.c_str(), &ssidLength)) {
         closeNameSpace(&nvsHandle);
+        Serial.print("could not get stringlength ssid ");
+
         return false;
     }
 
     char ssid[ssidLength];
     if (!getString(NameSpace, ssidKey.c_str(), ssid, &ssidLength)) {
         closeNameSpace(&nvsHandle);
+        Serial.print("could not get string ssid ");
+
         return false;
     }
+    credentials->ssid = ssid;
 
     size_t pwdLength;
     std::string pwdKey = credentials->uri;
-    ssidKey += "pwd";
+    pwdKey += "pwd";
     if (!getStringLength(NameSpace,pwdKey.c_str(), &pwdLength)) {
         closeNameSpace(&nvsHandle);
+        Serial.println("could not get stringlength pwd ");
+
         return false;
     }
 
     char pwd[pwdLength];
-    if (!getString(NameSpace, ssidKey.c_str(), pwd, &pwdLength)) {
+    if (!getString(NameSpace, pwdKey.c_str(), pwd, &pwdLength)) {
         closeNameSpace(&nvsHandle);
+        Serial.print("could not get string pwd ");
+
         return false;
     }
-
-    credentials->ssid = ssid;
+    Serial.printf("this is ssid: %s and this is pwd: %s \n", ssid, pwd);
     credentials->pwd = pwd;
 
 

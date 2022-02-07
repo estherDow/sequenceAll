@@ -45,9 +45,10 @@ WifiErrorCode WiFiService::begin() {
 }
 
 WifiErrorCode WiFiService::_initAP() {
+    char uri[8] = "/set_ap";
     char ssid[32];
     char pwd[32];
-    WiFiCredentials credentials("/set_ap", ssid, pwd);
+    WiFiCredentials credentials(uri, ssid, pwd);
 
     if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
         if (_doSetAP((char *) "sequenceX", (char *) "transLiberationNow")) {
@@ -63,9 +64,10 @@ WifiErrorCode WiFiService::_initAP() {
 
 WifiErrorCode WiFiService::_initSTA() {
     uint8_t numberNetworks = WiFi.scanNetworks();
+    char uri[9] = "/set_sta";
     char ssid[32];
     char pwd[32];
-    WiFiCredentials credentials("/set_sta", ssid, pwd);
+    WiFiCredentials credentials(uri, ssid, pwd);
 
     if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
         if (_doSetAP((char *) "sequenceX", (char *) "transLiberationNow")) {

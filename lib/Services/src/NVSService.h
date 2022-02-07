@@ -50,7 +50,7 @@ public:
 
     static bool setIPAddress(const char* NameSpace, const char * key, IPAddress &value, bool forceCommit = true);
 
-    static bool setCredentials(const char* NameSpace, RestEndpoint *dataFromRequest, bool forceCommit = true);
+    static bool setCredentials(const char* NameSpace, WiFiCredentials *dataFromRequest, bool forceCommit = true);
 
     // bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit = true);
 

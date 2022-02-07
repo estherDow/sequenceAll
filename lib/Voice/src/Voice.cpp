@@ -19,8 +19,8 @@ void Voice::update(OSCMessageInterface &message) {
         msg.add(currentStepValue);
         OscMessageAdapter newMessage(msg);
         notify(newMessage);
-        Serial.printf("Voice current step is %i\n", getCurrentStepNumber() );
-        Serial.printf("Value is %i\n", currentStepValue);
+        //Serial.printf("Voice current step is %i\n", getCurrentStepNumber() );
+        //Serial.printf("Value is %i\n", currentStepValue);
         //(currentStepValue > 0) &&
         incrementStep();
         _pulseCounter = 0;
@@ -45,7 +45,7 @@ void Voice::setStep(void * context, OSCMessageInterface &message, uint8_t offset
 
     if (
     reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)) {
-        Serial.printf("Set Step at %i with value %i \n", position, value);
+        //Serial.printf("Set Step at %i with value %i \n", position, value);
         reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
     }
     message.empty();
@@ -60,7 +60,7 @@ void Voice::muteStep(void * context, OSCMessageInterface &message, uint8_t offse
     if (
     reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)
     ) {
-        Serial.printf("Toggle Mute Step at %i \n", position);
+        //Serial.printf("Toggle Mute Step at %i \n", position);
         reinterpret_cast<Voice *>(context)->_steps.muteAt(position);
     }
     message.empty();

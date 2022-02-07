@@ -29,19 +29,21 @@ AsyncCallbackJsonWebHandler *WiFiService::_setAPCredentialsEndpoint() {
 
                 if (!jsonObject.isNull() && jsonObject["ssid"]) {
                     JsonVariant apRequestBody;
-                    RestEndpoint restEndpoint(
+
+                    WiFiCredentials apCredentials (
                             "/set_ap",
-                            HTTP_POST,
-                            apRequestBody
-                    );
-                    if (!NVSService::setCredentials("Wifi", &restEndpoint)) {
+                            jsonObject["ssid"],
+                            jsonObject["password"]
+                            );
+
+                    if (!NVSService::setCredentials("Wifi", &apCredentials)) {
                         request->send(
                                 500,
                                 "application/json",
                                 {}
                         );
                     }
-                    if (!NVSService::setBool("Wifi", "setAP", true)) {
+                    if (!NVSService::setBool("Wifi", "SetAP", true)) {
                         request->send(
                                 500,
                                 "application/json",
@@ -75,13 +77,13 @@ AsyncCallbackJsonWebHandler *WiFiService::_setSTACredentialsEndpoint() {
                 const JsonObject &jsonObject = json.as<JsonObject>();
 
                 if (!jsonObject.isNull() && jsonObject["ssid"]) {
-                    JsonVariant apRequestBody;
-                    RestEndpoint restEndpoint(
+
+                    WiFiCredentials STACredentials (
                             "/set_sta",
-                            HTTP_POST,
-                            apRequestBody
+                    jsonObject["ssid"],
+                            jsonObject["password"]
                     );
-                    if (!NVSService::setCredentials("Wifi", &restEndpoint)) {
+                    if (!NVSService::setCredentials("Wifi", &STACredentials)) {
                         request->send(
                                 500,
                                 "application/json",
