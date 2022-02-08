@@ -49,11 +49,16 @@ WifiErrorCode WiFiService::_initAP() {
     WiFiCredentials credentials;
     credentials.uri = "/set_ap";
     if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
-        if (_doSetAP((char *) "sequenceX", (char *) "transLiberationNow")) {
+        if (_doSetAP( "sequenceX", "transLiberationNow")) {
             return INIT_AP_NO_CREDENTIALS_STORED;
         }
         return INIT_AP_ERROR;
-    } else if (_doSetAP(credentials.ssid.c_str(), credentials.pwd.c_str())) {
+    }
+    const char *ssid = credentials.ssid.c_str();
+    const char *pwd = credentials.pwd.c_str();
+
+    if (_doSetAP(ssid, pwd)) {
+        Serial.println("ap started with stored credentials");
         return INIT_AP_SUCCESS;
     }
 
@@ -67,11 +72,12 @@ WifiErrorCode WiFiService::_initSTA() {
     credentials.uri = "/set_sta";
 
     if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
-        if (_doSetAP((char *) "sequenceX", (char *) "transLiberationNow")) {
-            return INIT_STA_NO_CREDENTIALS_STORED;
+        WifiErrorCode error = _initAP();
+        if (error != INIT_AP_SUCCESS) {
+            Serial.println("wifi and ap mode unsuccessful -dying");
         }
-        Serial.println("unable to initiate wifi sta or ap - dying :/");
-        return INIT_WIFI_GENERIC_ERROR;
+        return INIT_STA_NO_CREDENTIALS_STORED;
+
     }
 
     for (uint8_t i = 0; i < numberNetworks; i++) {
@@ -115,6 +121,7 @@ bool WiFiService::_doSetAP(const char *ssid, const char *password) {
     WiFi.mode(WIFI_AP);
     if (WiFi.softAP(ssid, password)) {
         localIp = WiFi.softAPIP();
+        Serial.println("wifiAP started");
         return true;
     }
     return false;
@@ -128,6 +135,7 @@ void WiFiService::_doHandleWifiMode() {
     }
 
     if (isSetAp) {
+        Serial.println("setAP Flag is true");
         _initAP();
         if (!NVSService::setBool(nvsNameSpace,"SetAP", false)) {
             Serial.println("unable to set setAP Flag in NVS");

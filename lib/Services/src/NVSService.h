@@ -13,7 +13,6 @@
 #include "nvs.h"
 #include "ArduinoJson.h"
 #include "IPAddress.h"
-#include "RestEndpoint.h"
 #include "WifiCredentials.h"
 //TODO: Check how to mock static methods in GMock
 class NVSService {
