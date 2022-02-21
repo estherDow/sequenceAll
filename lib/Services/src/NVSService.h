@@ -6,7 +6,7 @@
 #define SEQUENCEALL_NVSSERVICE_H
 #include <vector>
 #include <cstdint>
-#include <cstring>
+
 #include "esp_partition.h"
 #include "esp_err.h"
 #include "nvs_flash.h"

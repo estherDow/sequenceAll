@@ -293,21 +293,19 @@ bool NVSService::setCredentials(const char *NameSpace, WiFiCredentialsChar *data
 
     openNameSpace(NameSpace, &nvsHandle);;
     if (strlen(dataFromRequest->ssid) != 0) {
-        std::string ssidKey = dataFromRequest->uri;
-        ssidKey += "ssid";
+        strcat(dataFromRequest->uri,"ssid");
 
 
-        if (!setString(NameSpace, ssidKey.c_str(), dataFromRequest->ssid)) {
+        if (!setString(NameSpace, dataFromRequest->uri, dataFromRequest->ssid)) {
             closeNameSpace(&nvsHandle);
             return false;
         }
     }
 
     if (strlen(dataFromRequest->pwd) != 0) {
-        std::string pwdKey = dataFromRequest->uri;
-        pwdKey += "pwd";
+        strcat(dataFromRequest->uri,"pwd");
 
-        if (!setString(NameSpace, pwdKey.c_str(), dataFromRequest->pwd)) {
+        if (!setString(NameSpace, dataFromRequest->uri, dataFromRequest->pwd)) {
             closeNameSpace(&nvsHandle);
             return false;
         }
@@ -388,10 +386,9 @@ bool NVSService::getCredentials(const char *NameSpace, WiFiCredentialsChar *cred
 
     openNameSpace(NameSpace, &nvsHandle);
     size_t ssidLength;
-    std::string ssidKey = credentials->uri;
-    ssidKey += "ssid";
+    strcat(credentials->uri, "ssid");
 
-    if (!getStringLength(NameSpace, ssidKey.c_str(), &ssidLength)) {
+    if (!getStringLength(NameSpace, credentials->uri, &ssidLength)) {
         closeNameSpace(&nvsHandle);
         Serial.print("could not get stringlength ssid ");
 
@@ -399,7 +396,7 @@ bool NVSService::getCredentials(const char *NameSpace, WiFiCredentialsChar *cred
     }
 
     char ssid[ssidLength];
-    if (!getString(NameSpace, ssidKey.c_str(), ssid, &ssidLength)) {
+    if (!getString(NameSpace, credentials->uri, ssid, &ssidLength)) {
         closeNameSpace(&nvsHandle);
         Serial.print("could not get string ssid ");
 
@@ -408,9 +405,8 @@ bool NVSService::getCredentials(const char *NameSpace, WiFiCredentialsChar *cred
     strcpy(credentials->ssid, ssid);
 
     size_t pwdLength;
-    std::string pwdKey = credentials->uri;
-    pwdKey += "pwd";
-    if (!getStringLength(NameSpace, pwdKey.c_str(), &pwdLength)) {
+    strcat(credentials->uri, "pwd");
+    if (!getStringLength(NameSpace, credentials->uri, &pwdLength)) {
         closeNameSpace(&nvsHandle);
         Serial.println("could not get stringlength pwd ");
 
@@ -418,7 +414,7 @@ bool NVSService::getCredentials(const char *NameSpace, WiFiCredentialsChar *cred
     }
 
     char pwd[pwdLength];
-    if (!getString(NameSpace, pwdKey.c_str(), pwd, &pwdLength)) {
+    if (!getString(NameSpace, credentials->uri, pwd, &pwdLength)) {
         closeNameSpace(&nvsHandle);
         Serial.print("could not get string pwd ");
 
