@@ -55,3 +55,13 @@ Short term goals:
 
 - save state of all voices to nvm, so that info is available after you shut down :) to be done by implementing setGlob(), i guess.
 
+
+
+# Ignore all previous, clean slate on last time
+
+- only ap mode is supported
+- clients connected receive all messages
+- Only port 8000 is supported
+- clients can send messages to host name
+- ap name and password may be changed via post request.
+- Changes will take effect after restart
