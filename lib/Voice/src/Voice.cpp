@@ -45,7 +45,7 @@ void Voice::setStep(void * context, OSCMessageInterface &message, uint8_t offset
 
     if (
     reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)) {
-        //Serial.printf("Set Step at %i with value %i \n", position, value);
+        Serial.printf("Set Step at %i with value %i \n", position, value);
         reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
     }
     message.empty();
@@ -60,7 +60,7 @@ void Voice::muteStep(void * context, OSCMessageInterface &message, uint8_t offse
     if (
     reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)
     ) {
-        //Serial.printf("Toggle Mute Step at %i \n", position);
+        Serial.printf("Toggle Mute Step at %i \n", position);
         reinterpret_cast<Voice *>(context)->_steps.muteAt(position);
     }
     message.empty();
@@ -130,25 +130,3 @@ bool Voice::_isMessageWithinBounds(uint8_t position) const {
 }
 
 
-//void Voice::setMotion(char direction) {
-//    switch (direction) {
-//        case 'f':
-//            _motion = 1;
-//        case 'b':
-//            _motion = -1;
-//        case 'r':
-//            _motion = 0;
-//        default:
-//            _motion = 1;
-//    }
-//}
-
-//uint8_t Voice::getMotion() const {
-//    int8_t motion;
-//    if (_motion != 0) {
-//        motion = _motion;
-//    } else {
-//        motion = rand() % _sequenceLength + 1;
-//    }
-//    return motion;
-//}

@@ -11,17 +11,22 @@ public:
     explicit OscService(WiFiServiceInterface &wiFi);
 
     static void send(void *context, OSCMessageInterface &message);
+
     void doSend(OSCMessageInterface &message);
+
     bool receive(OSCMessageInterface &message);
 
     void update(OSCMessageInterface &message) override;
 
     static void addRemoteIP(void *context, OSCMessageInterface &instance, uint8_t offset);
-    const char * hostName{};
+
+    const char *hostName{};
 private:
     WiFiUDP *udp;
     WiFiServiceInterface &wiFi;
     std::list<IPAddress> remoteIPs;
+
+    void _iterateIPs(OSCMessageInterface &message);
 };
 
 #endif

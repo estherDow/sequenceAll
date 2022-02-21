@@ -20,9 +20,6 @@ The sequencer advertises its services under sequenceall.local.
 
 Use `port 80` for the rest(?) api. following requests may be used to change credentials, as well as the status of accesspoint.
 The credentials are stored in non volatile storage.
-```
-curl -XPOST -H "Content-type: application/json" -d '{"ssid" : "mySSID" , "password" : "myPassword"}' 'sequenceall.local/set_sta'
-```
 
 ```
 curl -XPOST -H "Content-type: application/json" -d '{"ssid" : "myApSSID" , "password" : "myApPassword"}' 'sequenceall.local/set_ap'

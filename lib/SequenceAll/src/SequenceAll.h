@@ -38,6 +38,8 @@ public:
 
 private:
     void _setVoices() const;
+
+    static void _oscMessageReceiveDebug(OSCMessageInterface &msg) ;
 };
 
 extern SequenceAll sequenceAll;

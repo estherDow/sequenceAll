@@ -8,17 +8,16 @@ WiFiService::WiFiService(WiFiUDP *udp, AsyncWebServer *server, ESPmDNSInterface 
 
 
 WifiErrorCode WiFiService::begin() {
-    WifiErrorCode STAError;
+    WifiErrorCode APError;
 
-    STAError = _initAP();
-    if (STAError != INIT_AP_SUCCESS) {
-        if (STAError == INIT_AP_NO_CREDENTIALS_STORED) {
-            //TODO: create a Object in Heap Memory to store stuff for frontend.
+    APError = _initAP();
+    if (APError != INIT_AP_SUCCESS) {
+        if (APError == INIT_AP_NO_CREDENTIALS_STORED) {
             Serial.println("no Wifi Credentials Stored, ");
         }
     }
     Serial.println(localIp);
-    udp->begin(localIp, 8000);
+    udp->begin( 8000);
     if (!_initWebServer()) {
         return INIT_WEBSERVER_ERROR;
     }

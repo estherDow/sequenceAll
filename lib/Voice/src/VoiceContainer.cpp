@@ -29,7 +29,7 @@ void VoiceContainer::receive(void * context, OSCMessageInterface & message, uint
         RecipientAddress AddressForSet(
                 target,
                 "/set",
-                Voice::deleteStep,
+                Voice::setStep,
                 NewOffset
                 );
         message.route(AddressForSet);
@@ -45,7 +45,7 @@ void VoiceContainer::receive(void * context, OSCMessageInterface & message, uint
         RecipientAddress AddressForMute(
                 target,
                 "/mute",
-                Voice::deleteStep,
+                Voice::muteStep,
                 NewOffset
         );
         message.route(AddressForMute);

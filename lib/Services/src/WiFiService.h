@@ -39,21 +39,13 @@ private:
     const char * nvsNameSpace = "Wifi";
     bool _initWebServer();
     AsyncCallbackJsonWebHandler* _setAPCredentialsEndpoint();
-    AsyncCallbackJsonWebHandler* _setSTACredentialsEndpoint();
-    AsyncCallbackJsonWebHandler* _setRemoteHostNameEndpoint();
+
     AsyncCallbackJsonWebHandler* _setPrintDebugEndpoint();
 
     WifiErrorCode _initAP();
 
-    WifiErrorCode _initSTA();
-
-    bool _doSetSTA(const char *newSSID, const char *newPassword);
-
     bool _doSetAP(const char *ssid, const char *password);
 
-    void _doHandleWifiMode();
-
-    bool getRemoteHostname();
 
 };
 

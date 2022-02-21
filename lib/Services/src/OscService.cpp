@@ -13,8 +13,8 @@ void OscService::send(void *context, OSCMessageInterface & message) {
 
 bool OscService::receive(OSCMessageInterface &msg) {
     int size = udp->parsePacket();
-    remoteIPs.push_back(udp->remoteIP());
     if (size > 0) {
+        remoteIPs.push_back(udp->remoteIP());
         Serial.println("caught message in OscReceive");
         while (size--) {
             msg.fill(udp->read());
@@ -28,13 +28,21 @@ bool OscService::receive(OSCMessageInterface &msg) {
 
 void OscService::doSend(OSCMessageInterface &message) {
 
-    for (auto const& ip : remoteIPs) {
-        udp->beginPacket(ip, DEFAULT_REMOTE_UDP_PORT);
-        message.send(*udp);
-        udp->endPacket();
+    if (!remoteIPs.empty() ) {
+        _iterateIPs(message);
     }
 
     message.empty();
+}
+
+void OscService::_iterateIPs(OSCMessageInterface &message) {
+    for (auto const& ip : remoteIPs) {
+        if (ip[0] !=0){
+            udp->beginPacket(ip, DEFAULT_REMOTE_UDP_PORT);
+            message.send(*udp);
+            udp->endPacket();
+        }
+    }
 }
 
 void OscService::update(OSCMessageInterface &message) {
