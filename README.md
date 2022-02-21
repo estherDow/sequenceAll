@@ -65,3 +65,12 @@ Short term goals:
 - clients can send messages to host name
 - ap name and password may be changed via post request.
 - Changes will take effect after restart
+
+
+//TODO:
+- Add Vector of IPAddresses
+- on connect add ip to vector
+- send osc to all ip connected.
+
+- Remove STA functionality
+- remove handle wifi mode method in loop

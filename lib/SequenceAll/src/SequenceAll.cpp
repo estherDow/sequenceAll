@@ -33,7 +33,6 @@ void SequenceAll::begin() {
 
 void SequenceAll::run() const {
     cClock->timer();
-    wiFiService->handleWifiMode();
     OSCMessage message;
     OscMessageAdapter msg(message);
     if (oscService->receive(msg)) {
@@ -53,7 +52,14 @@ void SequenceAll::run() const {
                 VoiceContainer::receive,
                 0
         );
+        RecipientAddress remoteIPAddress(
+                oscService,
+                "/addMe",
+                OscService::addRemoteIP,
+                0
+                );
         msg.route(voiceContainerAddress);
+        msg.route(remoteIPAddress);
 
 
     }

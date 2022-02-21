@@ -22,12 +22,6 @@ public:
 
     virtual WifiErrorCode begin() = 0;
 
-    virtual void handleWifiMode() = 0;
-
-    virtual WifiErrorCode getRemoteHostInfo() = 0;
-
-    virtual bool getRemoteIP(IPAddress ip) = 0;
-
     virtual WiFiUDP *getUDP() = 0;
 };
 

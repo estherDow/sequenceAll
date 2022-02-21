@@ -6,7 +6,6 @@
 #include <Module.h>
 #include <macros.h>
 
-
 class OscService : public Module {
 public:
     explicit OscService(WiFiServiceInterface &wiFi);
@@ -16,10 +15,13 @@ public:
     bool receive(OSCMessageInterface &message);
 
     void update(OSCMessageInterface &message) override;
+
+    static void addRemoteIP(void *context, OSCMessageInterface &instance, uint8_t offset);
     const char * hostName{};
 private:
     WiFiUDP *udp;
     WiFiServiceInterface &wiFi;
+    std::list<IPAddress> remoteIPs;
 };
 
 #endif

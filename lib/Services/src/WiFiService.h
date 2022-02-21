@@ -26,12 +26,6 @@ public:
     int oldState = 0;
     uint16_t interval = 2000;
 
-    void handleWifiMode() override;
-
-    WifiErrorCode getRemoteHostInfo() override;
-
-    bool getRemoteIP(IPAddress ip) override;
-
     WiFiUDP *getUDP() override;
 
     char remoteHostName[32];
