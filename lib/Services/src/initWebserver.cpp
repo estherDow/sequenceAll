@@ -28,7 +28,7 @@ AsyncCallbackJsonWebHandler *WiFiService::_setAPCredentialsEndpoint() {
                 if (!jsonObject.isNull() && jsonObject["ssid"]) {
                     JsonVariant apRequestBody;
 
-                    WiFiCredentials apCredentials(
+                    WiFiCredentialsChar apCredentials(
                             "/set_ap",
                             jsonObject["ssid"],
                             jsonObject["password"]

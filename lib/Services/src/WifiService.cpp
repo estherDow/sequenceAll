@@ -41,18 +41,16 @@ WifiErrorCode WiFiService::begin() {
 
 WifiErrorCode WiFiService::_initAP() {
 
-    WiFiCredentials credentials;
-    credentials.uri = "/set_ap";
+    WiFiCredentialsChar credentials;
+    strcpy(credentials.uri, "/set_ap");
     if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
         if (_doSetAP("sequenceX", "transLiberationNow")) {
             return INIT_AP_NO_CREDENTIALS_STORED;
         }
         return INIT_AP_ERROR;
     }
-    const char *ssid = credentials.ssid.c_str();
-    const char *pwd = credentials.pwd.c_str();
 
-    if (_doSetAP(ssid, pwd)) {
+    if (_doSetAP(credentials.ssid, credentials.pwd)) {
         Serial.println("ap started with stored credentials");
         return INIT_AP_SUCCESS;
     }

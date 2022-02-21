@@ -49,7 +49,7 @@ public:
 
     static bool setIPAddress(const char* NameSpace, const char * key, IPAddress &value, bool forceCommit = true);
 
-    static bool setCredentials(const char* NameSpace, WiFiCredentials *dataFromRequest, bool forceCommit = true);
+    static bool setCredentials(const char* NameSpace, WiFiCredentialsChar *dataFromRequest, bool forceCommit = true);
 
     // bool setVoicePatternData(const char * key, VoicePatternData &value, bool forceCommit = true);
 
@@ -67,7 +67,7 @@ public:
 
     static bool getIPAddress(const char* NameSpace, const char * key, IPAddress &value_out);
 
-    static bool getCredentials(const char* NameSpace, WiFiCredentials *credentials, bool forceCommit = true);
+    static bool getCredentials(const char* NameSpace, WiFiCredentialsChar *credentials, bool forceCommit = true);
 
     static bool getBlobSize(const char* NameSpace, const char * key, size_t *size);
 

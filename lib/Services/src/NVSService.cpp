@@ -103,7 +103,7 @@ bool NVSService::deleteAllKeysInPartition(const char *NameSpace, bool forceCommi
  *
  * @return bool true if successful, false if anything goes wrong on the way.
  */
-bool NVSService::eraseByKey(const char* NameSpace, const char *key, bool forceCommit) {
+bool NVSService::eraseByKey(const char *NameSpace, const char *key, bool forceCommit) {
     nvs_handle nvsHandle;
     openNameSpace(NameSpace, &nvsHandle);
     esp_err_t err = nvs_erase_key(nvsHandle, key);
@@ -127,7 +127,7 @@ bool NVSService::eraseByKey(const char* NameSpace, const char *key, bool forceCo
  *
  * @return bool true if successful, false if anything goes wrong on the way.
  */
-bool NVSService::setInt(const char* NameSpace, const char *key, int8_t value, bool forceCommit) {
+bool NVSService::setInt(const char *NameSpace, const char *key, int8_t value, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -141,12 +141,12 @@ bool NVSService::setInt(const char* NameSpace, const char *key, int8_t value, bo
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setInt(const char* NameSpace, const char *key, uint8_t value, bool forceCommit) {
+bool NVSService::setInt(const char *NameSpace, const char *key, uint8_t value, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
     esp_err_t err = nvs_set_u8(nvsHandle, key, value);
-    if (err != ESP_OK){
+    if (err != ESP_OK) {
         closeNameSpace(&nvsHandle);
         return false;
     }
@@ -155,7 +155,7 @@ bool NVSService::setInt(const char* NameSpace, const char *key, uint8_t value, b
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setInt(const char* NameSpace, const char *key, int16_t value, bool forceCommit) {
+bool NVSService::setInt(const char *NameSpace, const char *key, int16_t value, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -169,7 +169,7 @@ bool NVSService::setInt(const char* NameSpace, const char *key, int16_t value, b
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setInt(const char* NameSpace, const char *key, uint16_t value, bool forceCommit) {
+bool NVSService::setInt(const char *NameSpace, const char *key, uint16_t value, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -183,7 +183,7 @@ bool NVSService::setInt(const char* NameSpace, const char *key, uint16_t value, 
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setInt(const char* NameSpace, const char *key, int32_t value, bool forceCommit) {
+bool NVSService::setInt(const char *NameSpace, const char *key, int32_t value, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -197,12 +197,12 @@ bool NVSService::setInt(const char* NameSpace, const char *key, int32_t value, b
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setInt(const char* NameSpace, const char *key, uint32_t value, bool forceCommit) {
+bool NVSService::setInt(const char *NameSpace, const char *key, uint32_t value, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
     esp_err_t err = nvs_set_u32(nvsHandle, key, value);
-    if (err != ESP_OK){
+    if (err != ESP_OK) {
         closeNameSpace(&nvsHandle);
         return false;
     }
@@ -211,12 +211,12 @@ bool NVSService::setInt(const char* NameSpace, const char *key, uint32_t value, 
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setInt(const char* NameSpace, const char *key, int64_t value, bool forceCommit) {
+bool NVSService::setInt(const char *NameSpace, const char *key, int64_t value, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
     esp_err_t err = nvs_set_i64(nvsHandle, key, value);
-    if (err != ESP_OK){
+    if (err != ESP_OK) {
         closeNameSpace(&nvsHandle);
         return false;
     }
@@ -225,7 +225,7 @@ bool NVSService::setInt(const char* NameSpace, const char *key, int64_t value, b
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setInt(const char* NameSpace, const char *key, uint64_t value, bool forceCommit) {
+bool NVSService::setInt(const char *NameSpace, const char *key, uint64_t value, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -241,7 +241,7 @@ bool NVSService::setInt(const char* NameSpace, const char *key, uint64_t value, 
 
 /**@}*/
 
-bool NVSService::setString(const char* NameSpace, const char *key, const char *value, bool forceCommit) {
+bool NVSService::setString(const char *NameSpace, const char *key, const char *value, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -255,7 +255,7 @@ bool NVSService::setString(const char* NameSpace, const char *key, const char *v
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setBool(const char* NameSpace, const char *key, bool value, bool forceCommit) {
+bool NVSService::setBool(const char *NameSpace, const char *key, bool value, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -269,7 +269,7 @@ bool NVSService::setBool(const char* NameSpace, const char *key, bool value, boo
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setIPAddress(const char* NameSpace, const char *key, IPAddress &value, bool forceCommit) {
+bool NVSService::setIPAddress(const char *NameSpace, const char *key, IPAddress &value, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -288,35 +288,35 @@ bool NVSService::setIPAddress(const char* NameSpace, const char *key, IPAddress 
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setCredentials(const char* NameSpace, WiFiCredentials *dataFromRequest, bool forceCommit) {
+bool NVSService::setCredentials(const char *NameSpace, WiFiCredentialsChar *dataFromRequest, bool forceCommit) {
     nvs_handle nvsHandle;
 
-    openNameSpace(NameSpace, &nvsHandle);
-;
-    if (!dataFromRequest->ssid.empty()) {
+    openNameSpace(NameSpace, &nvsHandle);;
+    if (strlen(dataFromRequest->ssid) != 0) {
         std::string ssidKey = dataFromRequest->uri;
         ssidKey += "ssid";
 
 
-        if (!setString(NameSpace, ssidKey.c_str(), dataFromRequest->ssid.c_str())) {
+        if (!setString(NameSpace, ssidKey.c_str(), dataFromRequest->ssid)) {
             closeNameSpace(&nvsHandle);
             return false;
         }
     }
 
-    if (!dataFromRequest->pwd.empty()) {
+    if (strlen(dataFromRequest->pwd) != 0) {
         std::string pwdKey = dataFromRequest->uri;
-        pwdKey+="pwd";
+        pwdKey += "pwd";
 
-        if (!setString(NameSpace, pwdKey.c_str(), dataFromRequest->pwd.c_str())) {
+        if (!setString(NameSpace, pwdKey.c_str(), dataFromRequest->pwd)) {
             closeNameSpace(&nvsHandle);
             return false;
-        }}
+        }
+    }
     closeNameSpace(&nvsHandle);
     return true;
 }
 
-bool NVSService::setBlob(const char* NameSpace, const char *key, uint8_t *blob, size_t length, bool forceCommit) {
+bool NVSService::setBlob(const char *NameSpace, const char *key, uint8_t *blob, size_t length, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -331,7 +331,7 @@ bool NVSService::setBlob(const char* NameSpace, const char *key, uint8_t *blob, 
     return _shouldForceCommit(&nvsHandle, forceCommit);
 }
 
-bool NVSService::setBlob(const char* NameSpace, const char *key, std::vector<uint8_t> *blob, bool forceCommit) {
+bool NVSService::setBlob(const char *NameSpace, const char *key, std::vector<uint8_t> *blob, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -347,7 +347,7 @@ bool NVSService::setBlob(const char* NameSpace, const char *key, std::vector<uin
 }
 
 
-bool NVSService::getBool(const char* NameSpace, const char *key, bool *value) {
+bool NVSService::getBool(const char *NameSpace, const char *key, bool *value) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -364,7 +364,7 @@ bool NVSService::getBool(const char* NameSpace, const char *key, bool *value) {
     return true;
 }
 
-bool NVSService::getIPAddress(const char* NameSpace, const char *key, IPAddress &value_out) {
+bool NVSService::getIPAddress(const char *NameSpace, const char *key, IPAddress &value_out) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -383,7 +383,7 @@ bool NVSService::getIPAddress(const char* NameSpace, const char *key, IPAddress 
     return true;
 }
 
-bool NVSService::getCredentials(const char *NameSpace,  WiFiCredentials *credentials, bool forceCommit) {
+bool NVSService::getCredentials(const char *NameSpace, WiFiCredentialsChar *credentials, bool forceCommit) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -391,7 +391,7 @@ bool NVSService::getCredentials(const char *NameSpace,  WiFiCredentials *credent
     std::string ssidKey = credentials->uri;
     ssidKey += "ssid";
 
-    if (!getStringLength(NameSpace,ssidKey.c_str(), &ssidLength)) {
+    if (!getStringLength(NameSpace, ssidKey.c_str(), &ssidLength)) {
         closeNameSpace(&nvsHandle);
         Serial.print("could not get stringlength ssid ");
 
@@ -405,12 +405,12 @@ bool NVSService::getCredentials(const char *NameSpace,  WiFiCredentials *credent
 
         return false;
     }
-    credentials->ssid = ssid;
+    strcpy(credentials->ssid, ssid);
 
     size_t pwdLength;
     std::string pwdKey = credentials->uri;
     pwdKey += "pwd";
-    if (!getStringLength(NameSpace,pwdKey.c_str(), &pwdLength)) {
+    if (!getStringLength(NameSpace, pwdKey.c_str(), &pwdLength)) {
         closeNameSpace(&nvsHandle);
         Serial.println("could not get stringlength pwd ");
 
@@ -425,13 +425,13 @@ bool NVSService::getCredentials(const char *NameSpace,  WiFiCredentials *credent
         return false;
     }
     Serial.printf("this is ssid: %s and this is pwd: %s \n", ssid, pwd);
-    credentials->pwd = pwd;
+    strcpy(credentials->pwd, pwd);
 
 
     return true;
 }
 
-bool NVSService::getStringLength(const char* NameSpace, const char *key, size_t *length) {
+bool NVSService::getStringLength(const char *NameSpace, const char *key, size_t *length) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -446,7 +446,7 @@ bool NVSService::getStringLength(const char* NameSpace, const char *key, size_t 
     return true;
 }
 
-bool NVSService::getString(const char* NameSpace, const char *key, char *out_value, size_t *length) {
+bool NVSService::getString(const char *NameSpace, const char *key, char *out_value, size_t *length) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -461,7 +461,7 @@ bool NVSService::getString(const char* NameSpace, const char *key, char *out_val
     return true;
 }
 
-bool NVSService::getInt(const char* NameSpace, const char *key, int64_t *out_value) {
+bool NVSService::getInt(const char *NameSpace, const char *key, int64_t *out_value) {
     int8_t v_i8;
     uint8_t v_u8;
     int16_t v_i16;
@@ -543,7 +543,7 @@ bool NVSService::getInt(const char* NameSpace, const char *key, int64_t *out_val
     return false;
 }
 
-bool NVSService::getBlobSize(const char* NameSpace, const char *key, size_t *size) {
+bool NVSService::getBlobSize(const char *NameSpace, const char *key, size_t *size) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -558,7 +558,7 @@ bool NVSService::getBlobSize(const char* NameSpace, const char *key, size_t *siz
     return true;
 }
 
-bool NVSService::getBlob(const char* NameSpace, const char *key, uint8_t *blob, size_t *length) {
+bool NVSService::getBlob(const char *NameSpace, const char *key, uint8_t *blob, size_t *length) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
@@ -573,7 +573,7 @@ bool NVSService::getBlob(const char* NameSpace, const char *key, uint8_t *blob, 
     return true;
 }
 
-bool NVSService::getBlob(const char* NameSpace, const char *key, std::vector<uint8_t> *blob, size_t *length) {
+bool NVSService::getBlob(const char *NameSpace, const char *key, std::vector<uint8_t> *blob, size_t *length) {
     nvs_handle nvsHandle;
 
     openNameSpace(NameSpace, &nvsHandle);
