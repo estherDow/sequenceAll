@@ -53,6 +53,9 @@ void VoiceContainer::receive(void * context, OSCMessageInterface & message, uint
 }
 
 Voice * VoiceContainer::select(int Handle) {
+    if (handle >= voiceMap->size()) {
+        handle = voiceMap->size() -1;
+    }
     return &voiceMap->at(Handle);
 }
 

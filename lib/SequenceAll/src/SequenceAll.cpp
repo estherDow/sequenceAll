@@ -10,12 +10,15 @@ void SequenceAll::begin() {
     voiceContainer = new VoiceContainer();
     _setVoices();
     Serial.println("Voice Setup Complete");
+
     cClock = new Clock();
     cClock->setBeatsPerMinute();
     cClock->attach(voiceContainer);
+
     auto *mdns = new ESPmDNSAdapter();
     auto *udp = new WiFiUDP();
     auto *server = new AsyncWebServer(80);
+
     wiFiService = new WiFiService(udp, server, mdns);
     WifiErrorCode wifiError = wiFiService->begin();
     if (wifiError != INIT_WIFI_SERVICE_SUCCESS) {
@@ -27,7 +30,7 @@ void SequenceAll::begin() {
 
     oscService = new OscService((WiFiServiceInterface &) *wiFiService);
 
-    voiceContainer->select(0)->attach(oscService); //TODO: Test if handle is out of bounds
+    voiceContainer->select(0)->attach(oscService);
 
 }
 
