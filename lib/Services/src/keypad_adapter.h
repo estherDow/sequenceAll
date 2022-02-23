@@ -6,15 +6,17 @@
 #define SEQUENCEALL_KEYPAD_ADAPTER_H
 #include "KeyboardInterface.h"
 #include <Module.h>
-#include <../Keypad_Matrix/Keypad_Matrix.h>
+#include <../Keypad/src/Keypad.h>
 #include "KeyboardHardwareInfo.h"
 
 #include <cstdint>
 class keypad_adapter : public KeyboardInterface, public Module {
 public:
-    explicit keypad_adapter(KeyboardHardware hardware);
+    explicit keypad_adapter();
     ~keypad_adapter() override= default;;
-
+private:
+    static KeyboardHardware _createKeyboardDefinition();
+    Keypad* keyPad = nullptr;
 
 
 };
