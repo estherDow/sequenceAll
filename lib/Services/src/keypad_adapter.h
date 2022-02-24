@@ -8,15 +8,18 @@
 #include <Module.h>
 #include <../Keypad/src/Keypad.h>
 #include "KeyboardHardwareInfo.h"
-
+#include "OscMessageAdapter.h"
+#include "OSCMessage.h"
+#include "VoiceContainer.h"
 #include <cstdint>
 class keypad_adapter : public KeyboardInterface, public Module {
 public:
     explicit keypad_adapter();
     ~keypad_adapter() override= default;;
-private:
-    static KeyboardHardware _createKeyboardDefinition();
-    Keypad* keyPad = nullptr;
+
+    static KeyboardHardware createKeyboardDefinition();
+
+    static void defineEventListeners(char key);
 
 
 };

@@ -15,6 +15,7 @@ void SequenceAll::begin() {
     cClock->setBeatsPerMinute();
     cClock->attach(voiceContainer);
 
+    //TODO: Move this into constructor of WifiService.
     auto *mdns = new ESPmDNSAdapter();
     auto *udp = new WiFiUDP();
     auto *server = new AsyncWebServer(80);
@@ -29,7 +30,6 @@ void SequenceAll::begin() {
     //TODO: Inform user, Parameters of WiFi are not set.
 
     oscService = new OscService((WiFiServiceInterface &) *wiFiService);
-
     voiceContainer->select(0)->attach(oscService);
 
 }

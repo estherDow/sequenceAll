@@ -6,7 +6,18 @@
 
 
 keypad_adapter::keypad_adapter() {
-    KeyboardHardware keyboard = _createKeyboardDefinition();
+    KeyboardHardware keyboard = createKeyboardDefinition();
 
-    keyPad = new Keypad(keyboard.keyMap, keyboard.rowPins,keyboard.columnPins, keyboard.numberRows, keyboard.numberColumns);
+}
+
+void keypad_adapter::defineEventListeners(char key) {
+
+    const char *address = "/voice/1" ;
+
+    OSCMessage message;
+    OscMessageAdapter msg(message);
+
+
+
+
 }
