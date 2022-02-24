@@ -10,6 +10,7 @@
 #include "keypad_adapter.h"
 #include "OfoStepMenu.h"
 #include <Key.h>
+#include <cstdint>
 
 typedef char KeypadEvent;
 
@@ -19,19 +20,30 @@ public:
 
     static void eventListener(char, KeyState);
 
-    void setDebounceTime(uint8_t) override;
+    void setDebounceTime(unsigned int debounce_time) override;
 
-    void setHoldTime(uint8_t) override;
+    void setHoldTime(unsigned int hold_time) override;
 
     bool getKeys() override;
 
-    KeyState getState();
-
 private:
     Keypad *keyPad;
-    OfoStepMenu *menu;
-    void scanKeys();
+    static OfoStepMenu *menu;
 
+    KeypadSize sizeKeypad;
+
+
+    unsigned long startTime;
+    unsigned int debounceTime;
+    unsigned int holdTime;
+    unsigned long holdTimer;
+
+    bool single_key;
+
+    void scanKeys();
+    void _initRows();
+    void _storePressedKeyToBitMap();
+    void _readRows(byte c);
     bool updateList();
 
 
