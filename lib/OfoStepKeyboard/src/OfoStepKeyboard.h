@@ -31,7 +31,11 @@ private:
     static OfoStepMenu *menu;
 
     KeypadSize sizeKeypad;
+    char *keymap;
 
+    byte *rowPins;
+    byte *columnPins;
+    uint bitMap[MAPSIZE];	// 10 row x 16 column array of bits. Except Due which has 32 columns.
 
     unsigned long startTime;
     unsigned int debounceTime;
@@ -44,8 +48,14 @@ private:
     void _initRows();
     void _storePressedKeyToBitMap();
     void _readRows(byte c);
-    bool updateList();
 
+    bool updateList();
+    void _deleteIdleKeys();
+    void _addNewKeysToList();
+    void _addKeyIfNotInList(int idx, bool button);
+    bool _hadRecentActivity();
+
+    void transitionTo(byte idx, KeyState nextState);
 
 
 };
