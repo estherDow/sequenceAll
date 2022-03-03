@@ -7,7 +7,7 @@
 #include "KeyboardInterface.h"
 #include <Module.h>
 #include <../Keypad/src/Keypad.h>
-#include "KeyboardHardwareInfo.h"
+#include "../../OfoStepKeyboard/src/KeyboardHardwareInfo.h"
 #include "OscMessageAdapter.h"
 #include "OSCMessage.h"
 #include "VoiceContainer.h"
