@@ -62,7 +62,7 @@ void OfoStepMenu::toggleMenuLevel() {
 
 void OfoStepMenu::setCurrentStep(uint8_t step) {
     uint8_t menuOffset = menuPosition - 1;
-
+    Serial.printf("Voice: %d, Step: %d", currentVoice, step);
     currentStep = step + menuOffset;
 }
 

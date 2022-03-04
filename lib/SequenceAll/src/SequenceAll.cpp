@@ -15,6 +15,13 @@ void SequenceAll::begin() {
     cClock->setBeatsPerMinute();
     cClock->attach(voiceContainer);
 
+    menu = new OfoStepMenu();
+    menu->begin(TOTAL_NUMBER_OF_VOICES,DEFAULT_SEQUENCE_LENGTH);
+
+    KeyboardHardware keyboardHardware = initKeyboard::createKeyboardDefinition();
+    keyBoard = new Keypad(keyboardHardware.keyMap,keyboardHardware.rowPins, keyboardHardware.columnPins, keyboardHardware.numberRows, keyboardHardware.numberColumns);
+    keyBoard->addOOPEventListener(OfoStepMenu::stateEventListener, menu);
+
     //TODO: Move this into constructor of WifiService.
     auto *mdns = new ESPmDNSAdapter();
     auto *udp = new WiFiUDP();

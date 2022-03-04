@@ -16,6 +16,11 @@
 #include "ESPmDNSAdapter.h"
 #include "NVSService.h"
 #include "../../Voice/src/VoiceContainer.h"
+#include "../../OfoStepKeyboard/src/OfoStepMenu.h"
+#include "../../OfoStepKeyboard/src/initKeyboard.h"
+#include "../Keypad/src/Keypad.h"
+
+
 
 
 class SequenceAll {
@@ -35,7 +40,8 @@ public:
     WiFiService *wiFiService;
     OscService *oscService;
     VoiceContainer *voiceContainer;
-
+    OfoStepMenu *menu;
+    Keypad *keyBoard;
 private:
     void _setVoices() const;
 

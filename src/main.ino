@@ -1,7 +1,6 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <SequenceAll.h>
-#include <keypad_adapter.h>
 #include <cstdint>
 
 

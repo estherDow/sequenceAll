@@ -19,11 +19,11 @@ public:
     uint8_t menuPosition = 1;
     uint8_t currentVoice = 1;
     uint8_t currentStep = 1;
-    uint8_t numberVoices;
-    uint8_t stepsPerVoice;
+    uint8_t numberVoices{};
+    uint8_t stepsPerVoice{};
 
-    OfoStepMenu(uint8_t numberVoices, uint8_t stepsPerVoice): numberVoices(numberVoices), stepsPerVoice(stepsPerVoice)  {};
-
+    OfoStepMenu()= default;;
+    void begin(uint8_t numberOfVoices, uint8_t stepsVoice){numberVoices = numberOfVoices; stepsPerVoice = stepsVoice;};
     static void stateEventListener(void *context, char key, KeyState state);
     void toggleMenuLevel();
     void switchMenuPosition();
