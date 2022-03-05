@@ -8,14 +8,15 @@
 #include <Module.h>
 #include "../../../.pio/libdeps/esp32dev/Keypad/src/Keypad.h"
 #include "KeyboardHardwareInfo.h"
-#include "OscMessageAdapter.h"
-#include "OSCMessage.h"
-#include "VoiceContainer.h"
+
 #include <cstdint>
 class initKeyboard {
 public:
-    static KeyboardHardware createKeyboardDefinition();
+    static const byte numberKeys =5;
 
+    byte rowPins[numberKeys] {13, 12, 14, 27, 26};
+
+    const char keyCharacterMap[numberKeys] = { '1', '2', '3', '4', 'A' };
 };
 
 

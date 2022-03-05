@@ -7,6 +7,7 @@
 void OfoStepMenu::stateEventListener(void *context, char key, KeyState state) {
     switch (state){
         case PRESSED:
+            Serial.printf("Key %c \n", key);
             if (key == 'A') {
                 reinterpret_cast<OfoStepMenu *>(context)->switchMenuPosition();
             }

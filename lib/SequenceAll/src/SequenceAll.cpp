@@ -17,9 +17,8 @@ void SequenceAll::begin() {
 
     menu = new OfoStepMenu();
     menu->begin(TOTAL_NUMBER_OF_VOICES,DEFAULT_SEQUENCE_LENGTH);
-
-    KeyboardHardware keyboardHardware = initKeyboard::createKeyboardDefinition();
-    keyBoard = new Keypad(keyboardHardware.keyMap,keyboardHardware.rowPins, keyboardHardware.columnPins, keyboardHardware.numberRows, keyboardHardware.numberColumns);
+    OfoStepKeyboardDefinition = new initKeyboard();
+    keyBoard = new OnedimensionalKeyboard((char*)OfoStepKeyboardDefinition->keyCharacterMap,OfoStepKeyboardDefinition->rowPins, OfoStepKeyboardDefinition->numberKeys);
     keyBoard->addOOPEventListener(OfoStepMenu::stateEventListener, menu);
 
     //TODO: Move this into constructor of WifiService.
@@ -43,6 +42,8 @@ void SequenceAll::begin() {
 
 void SequenceAll::run() const {
     cClock->timer();
+    //bool key = keyBoard->getKeys();
+    //if (key) Serial.println(key);
     OSCMessage message;
     OscMessageAdapter msg(message);
     if (oscService->receive(msg)) {

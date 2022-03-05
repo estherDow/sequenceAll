@@ -18,7 +18,7 @@
 #include "../../Voice/src/VoiceContainer.h"
 #include "../../OfoStepKeyboard/src/OfoStepMenu.h"
 #include "../../OfoStepKeyboard/src/initKeyboard.h"
-#include "../Keypad/src/Keypad.h"
+#include "../../OfoStepKeyboard/src/OnedimensionalKeyboard.h"
 
 
 
@@ -41,7 +41,8 @@ public:
     OscService *oscService;
     VoiceContainer *voiceContainer;
     OfoStepMenu *menu;
-    Keypad *keyBoard;
+    initKeyboard *OfoStepKeyboardDefinition;
+    OnedimensionalKeyboard *keyBoard;
 private:
     void _setVoices() const;
 

@@ -7,12 +7,12 @@
 #include <cstdint>
 typedef struct KeyboardHardware {
     char * keyMap;
-    uint8_t *rowPins;
-    uint8_t * columnPins;
-    uint8_t numberRows;
-    uint8_t numberColumns;
+    byte *rowPins;
+    byte * columnPins;
+    byte  numberRows;
+    byte numberColumns;
     bool enablePullups;
-    KeyboardHardware(char * keyMap, uint8_t *rowPins, uint8_t *columnPins, uint8_t numberRows, uint8_t numberColumns, bool enablePullups = true
+    KeyboardHardware(char * keyMap, byte *rowPins, byte *columnPins, byte numberRows, byte numberColumns, bool enablePullups = true
                 ) : keyMap(keyMap), rowPins(rowPins), columnPins(columnPins), numberRows(numberRows), numberColumns(numberColumns), enablePullups(enablePullups) {}
     } KeyboardHardware;
 
