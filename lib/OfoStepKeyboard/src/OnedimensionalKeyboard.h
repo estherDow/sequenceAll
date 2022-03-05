@@ -31,12 +31,11 @@ public:
     int findInList(int keyCode);
     void transitionTo(byte idx, KeyState nextState);
 
-    void addEventListener(void (*listener)(char));
-    void addStatedEventListener(void (*listener)(char, KeyState));
+
     void addOOPEventListener(void (*listener)(void *ObjectContext, char, KeyState), void * ObjectContext);
 
 private:
-    uint16_t bitMap;
+    uint16_t bitMap{};
     uint8_t numKeys;
     unsigned long startTime;
     char *keymap;
@@ -45,11 +44,9 @@ private:
     uint holdTime;
     unsigned long holdTimer = 0;
 
-    void (*keypadEventListener)(char);
-    void (*keypadStatedEventListener)(char, KeyState);
-    void (*keypadOOPEventListener)(void *, char, KeyState);
+    void (*keypadOOPEventListener)(void *, char, KeyState){};
 
-    void *CallbackTargetObjectContext;
+    void *CallbackTargetObjectContext{};
 };
 
 

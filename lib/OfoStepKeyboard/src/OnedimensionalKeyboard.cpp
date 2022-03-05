@@ -31,7 +31,6 @@ OnedimensionalKeyboard::OnedimensionalKeyboard(char *userKeymap, uint8_t *row, u
 {
     setDebounceTime(10);
     setHoldTime(500);
-    keypadEventListener = 0;
 
     startTime = 0;
 }
@@ -128,25 +127,10 @@ void OnedimensionalKeyboard::transitionTo(byte idx, KeyState nextState) {
     key[idx].kstate = nextState;
     key[idx].stateChanged = true;
 
-    if (keypadEventListener!=nullptr)  {
-        keypadEventListener(key[idx].kchar);
-    }
-    //call the event listener that contains the key state, if available
-    if (keypadStatedEventListener!=nullptr){
-        keypadStatedEventListener(key[idx].kchar, nextState);
-    }
     if (keypadOOPEventListener!=nullptr){
         keypadOOPEventListener(CallbackTargetObjectContext,key[idx].kchar, nextState);
     }
 
-}
-
-void OnedimensionalKeyboard::addEventListener(void (*listener)(char)) {
-    keypadEventListener = listener;
-}
-
-void OnedimensionalKeyboard::addStatedEventListener(void (*listener)(char, KeyState)) {
-    keypadStatedEventListener = listener;
 }
 
 void OnedimensionalKeyboard::addOOPEventListener(void (*listener)(void *context, char, KeyState), void *ObjectContext) {

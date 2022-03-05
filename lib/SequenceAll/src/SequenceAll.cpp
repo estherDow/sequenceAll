@@ -42,8 +42,8 @@ void SequenceAll::begin() {
 
 void SequenceAll::run() const {
     cClock->timer();
-    //bool key = keyBoard->getKeys();
-    //if (key) Serial.println(key);
+    bool key = keyBoard->getKeys();
+    if (key) Serial.println(key);
     OSCMessage message;
     OscMessageAdapter msg(message);
     if (oscService->receive(msg)) {
