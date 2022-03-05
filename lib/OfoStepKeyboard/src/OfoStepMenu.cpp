@@ -4,24 +4,24 @@
 
 #include "OfoStepMenu.h"
 
-void OfoStepMenu::stateEventListener(void *context, char key, KeyState state) {
+void OfoStepMenu::stateEventListener(void *context, uint8_t key, KeyState state) {
     switch (state){
         case PRESSED:
-            Serial.printf("Key %c \n", key);
-            if (key == 'A') {
+            Serial.printf("Key %d \n", key);
+            if (key == 4 ) {
                 reinterpret_cast<OfoStepMenu *>(context)->switchMenuPosition();
             }
             else {
                 if(reinterpret_cast<OfoStepMenu *>(context)->menuLevel == VOICE) {
-                    reinterpret_cast<OfoStepMenu *>(context)->setCurrentVoice((uint8_t)atoi(&key));
+                    reinterpret_cast<OfoStepMenu *>(context)->setCurrentVoice(key);
                 }
                 else if (reinterpret_cast<OfoStepMenu *>(context)->menuLevel == STEP) {
-                    reinterpret_cast<OfoStepMenu *>(context)->setCurrentStep((uint8_t)atoi(&key));                }
+                    reinterpret_cast<OfoStepMenu *>(context)->setCurrentStep(key);                }
             }
         case IDLE:
             break;
         case HOLD:
-            if (key == 'A') {
+            if (key == 4 ) {
                 reinterpret_cast<OfoStepMenu *>(context)->toggleMenuLevel();
             }
             else {
@@ -63,8 +63,6 @@ void OfoStepMenu::toggleMenuLevel() {
 
 void OfoStepMenu::setCurrentStep(uint8_t step) {
     uint8_t menuOffset = menuPosition - 1;
-    Serial.printf("Voice: %d, Step: %d", currentVoice, step);
+    Serial.printf("Voice: %d, Step: %d \n", currentVoice, step);
     currentStep = step + menuOffset;
 }
-
-

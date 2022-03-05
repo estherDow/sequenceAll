@@ -24,7 +24,7 @@ public:
 
     OfoStepMenu()= default;;
     void begin(uint8_t numberOfVoices, uint8_t stepsVoice){numberVoices = numberOfVoices; stepsPerVoice = stepsVoice;};
-    static void stateEventListener(void *context, char key, KeyState state);
+    static void stateEventListener(void *context, uint8_t key, KeyState state);
     void toggleMenuLevel();
     void switchMenuPosition();
     void setCurrentVoice(uint8_t voice);

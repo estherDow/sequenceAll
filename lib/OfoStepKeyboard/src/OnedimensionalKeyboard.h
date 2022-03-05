@@ -20,8 +20,8 @@ public:
 
     OnedimensionalKeyboard(char *userKeymap, byte *row, uint8_t numKeys);
     bool getKeys() override;
-    void setDebounceTime(unsigned int debounce_time) override {debounceTime = debounce_time;};
-    void setHoldTime(unsigned int hold_time) override {holdTime = hold_time;};
+    void setDebounceTime(unsigned int debounce_time) override {debounceTime = debounce_time;}
+    void setHoldTime(unsigned int hold_time) override {holdTime = hold_time;}
 
     void scanKeys();
     bool updateList();
@@ -32,7 +32,7 @@ public:
     void transitionTo(byte idx, KeyState nextState);
 
 
-    void addOOPEventListener(void (*listener)(void *ObjectContext, char, KeyState), void * ObjectContext);
+    void addOOPEventListener(void (*listener)(void *ObjectContext, uint8_t , KeyState), void * ObjectContext);
 
 private:
     uint16_t bitMap{};
@@ -44,7 +44,7 @@ private:
     uint holdTime;
     unsigned long holdTimer = 0;
 
-    void (*keypadOOPEventListener)(void *, char, KeyState){};
+    void (*keypadOOPEventListener)(void *, uint8_t , KeyState){};
 
     void *CallbackTargetObjectContext{};
 };
