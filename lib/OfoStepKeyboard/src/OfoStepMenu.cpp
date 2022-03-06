@@ -10,23 +10,24 @@ void OfoStepMenu::stateEventListener(void *context, uint8_t key, KeyState state)
             Serial.printf("Key %d \n", key);
             if (key == 4) {
                 reinterpret_cast<OfoStepMenu *>(context)->switchMenuPosition();
+                break;
             } else {
                 if (reinterpret_cast<OfoStepMenu *>(context)->menuLevel == VOICE) {
-                    reinterpret_cast
-                            <OfoStepMenu *>(context)->setCurrentVoice(key);
-                    reinterpret_cast
-                            <OfoStepMenu *>(context)->toggleMenuLevel();
+
+                    reinterpret_cast<OfoStepMenu *>(context)->setCurrentVoice(key);
+                    reinterpret_cast<OfoStepMenu *>(context)->toggleMenuLevel();
+                    break;
+
                 } else if (reinterpret_cast<OfoStepMenu *>(context)->menuLevel == STEP) {
-                    reinterpret_cast
-                            <OfoStepMenu *>(context)->setCurrentStep(key);
+                    reinterpret_cast<OfoStepMenu *>(context)->setCurrentStep(key);
+                    break;
                 }
             }
         case IDLE:
             break;
         case HOLD:
             if (key == 4) {
-                reinterpret_cast<
-                        OfoStepMenu *>(context)->toggleMenuLevel();
+                reinterpret_cast<OfoStepMenu *>(context)->toggleMenuLevel();
             } else {
                 break;
             }
@@ -65,8 +66,7 @@ void OfoStepMenu::setCurrentStep(uint8_t step) {
     currentStep = step + menuOffset;
 }
 
-void OfoStepMenu::getMessage(OscMessageAdapter &message) const {
-    char path[MAX_OSC_PATH_LENGTH+ sizeof(char)];
-    sprintf(path, "/voice/%d/step/%d", currentVoice, currentStep);
+ void OfoStepMenu::getMessage(OSCMessageInterface & message) {
+    sprintf(path, "/voice/%d/mute/%d", currentVoice, currentStep);
     message.setAddress(path);
 }

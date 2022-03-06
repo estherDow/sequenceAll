@@ -30,7 +30,7 @@ public:
     virtual void send(WiFiUDP &udp) = 0;
     virtual  uint8_t getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset) = 0;
 
-    virtual OSCMessage setAddress(const char * _address) = 0;
+    virtual bool setAddress(const char * _address) = 0;
 };
 
 

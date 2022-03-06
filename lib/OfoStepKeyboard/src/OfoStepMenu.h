@@ -8,7 +8,7 @@
 #include "../../../.pio/libdeps/esp32dev/Keypad/src/Key.h"
 #include "OscMessageAdapter.h"
 
-#define MAX_OSC_PATH_LENGTH 18
+#define MAX_OSC_PATH_LENGTH 32
 
 typedef enum {
     VOICE,
@@ -21,17 +21,18 @@ public:
     uint8_t menuPosition = 1;
     uint8_t currentVoice = 1;
     uint8_t currentStep = 1;
+    char path[MAX_OSC_PATH_LENGTH];
     uint8_t numberVoices{};
     uint8_t stepsPerVoice{};
 
-    OfoStepMenu()= default;;
+    OfoStepMenu(){};
     void begin(uint8_t numberOfVoices, uint8_t stepsVoice){numberVoices = numberOfVoices; stepsPerVoice = stepsVoice;};
     static void stateEventListener(void *context, uint8_t key, KeyState state);
     void toggleMenuLevel();
     void switchMenuPosition();
     void setCurrentVoice(uint8_t voice);
     void setCurrentStep(uint8_t step);
-    void getMessage(OscMessageAdapter &message) const;
+    void getMessage(OSCMessageInterface & message);
 };
 
 

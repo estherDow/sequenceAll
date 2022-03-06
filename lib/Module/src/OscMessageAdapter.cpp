@@ -84,8 +84,17 @@ void OscMessageAdapter::send(WiFiUDP &udp) {
     _message.send(udp);
 }
 
-OSCMessage OscMessageAdapter::setAddress(const char *_address) {
-    return _message.setAddress(_address);
+bool OscMessageAdapter::setAddress(const char *_address) {
+    char * addressMemory = (char *) malloc( (strlen(_address) + 1) * sizeof(char) );
+    if (addressMemory == NULL) {
+        Serial.println("malloc in Adapter->setAddress failed");
+    }
+    _message.setAddress(_address);
+    if(_message.hasError()) {
+        Serial.println(_message.getError());
+        return false;
+    }
+    return true;
 }
 
 

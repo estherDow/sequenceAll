@@ -37,6 +37,7 @@ Currently following messages are implemented:
 /voice/{1-voiceCount}/set/{1-sequenceLength}  uint8_t payload
 /voice/{1-voiceCount}/mute/{1-sequenceLength}  uint8_t status //Bool seems not to be well supported by CNMAT/OSC code uses implicit cast
 /voice/{1-voiceCount}/delete/{1-sequenceLength}  -
+
 ```
 
 ### needed:
