@@ -29,6 +29,8 @@ public:
     virtual bool isString(int position) = 0;
     virtual void send(WiFiUDP &udp) = 0;
     virtual  uint8_t getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset) = 0;
+
+    virtual OSCMessage setAddress(const char * _address) = 0;
 };
 
 

@@ -31,6 +31,8 @@ public:
     bool isString(int position) override;
     void send(WiFiUDP &udp) override;
 
+    OSCMessage setAddress(const char * _address) override;
+
     uint8_t getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset) override; //returns new offset and overwrites handle
 private:
     OSCMessage &_message;

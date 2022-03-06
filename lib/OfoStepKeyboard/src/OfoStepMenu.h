@@ -6,12 +6,14 @@
 #define SEQUENCEALL_OFOSTEPMENU_H
 #include "Module.h"
 #include "../../../.pio/libdeps/esp32dev/Keypad/src/Key.h"
+#include "OscMessageAdapter.h"
+
+#define MAX_OSC_PATH_LENGTH 18
 
 typedef enum {
     VOICE,
     STEP
 }MenuLevel;
-
 
 class OfoStepMenu : public Module {
 public:
@@ -29,6 +31,7 @@ public:
     void switchMenuPosition();
     void setCurrentVoice(uint8_t voice);
     void setCurrentStep(uint8_t step);
+    void getMessage(OscMessageAdapter &message) const;
 };
 
 

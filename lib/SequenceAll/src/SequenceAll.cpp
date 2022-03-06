@@ -42,11 +42,13 @@ void SequenceAll::begin() {
 
 void SequenceAll::run() const {
     cClock->timer();
-    bool key = keyBoard->getKeys();
 
     OSCMessage message;
     OscMessageAdapter msg(message);
-    if (oscService->receive(msg)) {
+
+    if (oscService->receive(msg) || keyBoard->getKeys()) {
+
+        menu->getMessage(msg);
 
         _oscMessageReceiveDebug(msg);
 

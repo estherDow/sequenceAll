@@ -84,6 +84,10 @@ void OscMessageAdapter::send(WiFiUDP &udp) {
     _message.send(udp);
 }
 
+OSCMessage OscMessageAdapter::setAddress(const char *_address) {
+    return _message.setAddress(_address);
+}
+
 
 
 
