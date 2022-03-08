@@ -51,7 +51,7 @@ private:
     VoicePatternData _steps;
     uint8_t _sequenceLength;
     uint8_t _currentStep = 1;
-    uint8_t _clockPulsesPerStep = 12;
+    uint8_t _clockPulsesPerStep = 1;
     uint16_t _pulseCounter = 0;
     int8_t _motion = 1;
 

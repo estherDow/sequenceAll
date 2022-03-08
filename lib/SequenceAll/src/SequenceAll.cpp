@@ -45,12 +45,10 @@ void SequenceAll::run() const {
     //TODO: Have this in a separate, more accessible Place
     cClock->timer();
 
-
     if (keyBoard->getKeys()) {
         menu->getMessage();
     }
-    if (oscService->receive()) {
-    }
+    oscService->receive();
 }
 
 void SequenceAll::save() {

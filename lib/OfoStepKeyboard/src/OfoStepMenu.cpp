@@ -7,7 +7,7 @@
 void OfoStepMenu::stateEventListener(void *context, uint8_t key, KeyState state) {
     switch (state) {
         case PRESSED:
-            Serial.printf("OFOStepMenu::stateEventListener: Key %d \n", key);
+            Serial.printf("OFOStepMenu::stateEventListener: Key %d was pressed \n", key);
             if (key == 4) {
                 reinterpret_cast<OfoStepMenu *>(context)->switchMenuPosition();
                 break;
@@ -76,14 +76,13 @@ void OfoStepMenu::setCurrentStep(uint8_t step) {
     step++;
     Serial.printf("Voice: %d, Step: %d \n", currentVoice, step);
     currentStep = step + (menuOffset*4);
-    sprintf(path, "/voice/%d/mute/%d", currentVoice, currentStep);
+    sprintf(path, "/v/%d/m/%d", currentVoice, currentStep);
     Serial.println(path);
 }
 
  void OfoStepMenu::getMessage() {
     if (path[0] != '\0') {
-        OSCMessage message("/needed.dont.ask");
-        message.setAddress(path);
+        OSCMessage message(path);
         OscMessageAdapter msg(message);
         notify(msg);
         path[0] = '\0';

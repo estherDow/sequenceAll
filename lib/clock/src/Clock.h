@@ -24,10 +24,10 @@ private:
     uint16_t _beats = 120;
 
     //deltaT in Microseconds = 6e7/(time * steps) uint16_t was too small to hold large value
-    int _deltaTime{};
+    unsigned long _deltaTime{};
 
     //Timer Variable in microseconds
-    unsigned long _pastState{};
+    unsigned long _pastState = 0;
 
 };
 

@@ -16,17 +16,17 @@ void Voice::update(OSCMessageInterface &message) {
 
 void Voice::_callNotify(OSCMessageInterface &message) {
     uint8_t currentStepValue = getCurrentStepValue();
-    if (message.fullMatch("/tick", 0) &&
-        (_pulseCounter == _clockPulsesPerStep)
-            ) {
+    if (message.fullMatch("/t", 0) ) {
         if (currentStepValue > 0) {
-            Serial.printf("Voice::_callNotify: Current Step Value is %d\n", currentStepValue);
-            char sender[32];
-            sprintf(sender, "/voice/%d/step/%d", Handle, _currentStep);
+            char sender[10];
+            sprintf(sender, "/v/%d", Handle);
+            unsigned long micro = micros();
+            Serial.printf("Voice::_callNotify:%d sent Handle %d at step %d\n", micro, Handle, _currentStep);
             OSCMessage msg(sender);
             msg.add(currentStepValue);
             OscMessageAdapter newMessage(msg);
             notify(newMessage);
+            message.empty();
         }
         incrementStep();
         _pulseCounter = 0;
@@ -34,7 +34,7 @@ void Voice::_callNotify(OSCMessageInterface &message) {
 }
 
 void Voice::_updateVoices(OSCMessageInterface &message) {
-    uint8_t initialOffset = message.match("/voice", 0);
+    uint8_t initialOffset = message.match("/v", 0);
     if (initialOffset > 0) {
         uint8_t voiceHandle;
         uint8_t NewOffset = message.getAddressAsUint8_t(voiceHandle, initialOffset);
@@ -42,7 +42,7 @@ void Voice::_updateVoices(OSCMessageInterface &message) {
         if (voiceHandle == Handle) {
             RecipientAddress AddressForSet(
                     this,
-                    "/set",
+                    "/s",
                     Voice::setStep,
                     NewOffset
             );
@@ -50,7 +50,7 @@ void Voice::_updateVoices(OSCMessageInterface &message) {
 
             RecipientAddress AddressForDelete(
                     this,
-                    "/delete",
+                    "/d",
                     Voice::deleteStep,
                     NewOffset
             );
@@ -58,7 +58,7 @@ void Voice::_updateVoices(OSCMessageInterface &message) {
 
             RecipientAddress AddressForMute(
                     this,
-                    "/mute",
+                    "/m",
                     Voice::muteStep,
                     NewOffset
             );

@@ -26,9 +26,8 @@ public:
 private:
     WiFiUDP *udp;
     WiFiServiceInterface &wiFi;
-    std::list<IPAddress> remoteIPs;
+    IPAddress remoteIP;
 
-    void _sendMSGToStoredIPs(OSCMessageInterface &message);
 };
 
 #endif

@@ -1,11 +1,11 @@
-#N canvas 951 174 450 664 10;
+#N canvas -791 157 450 664 10;
 #X obj 107 77 oscparse;
 #X obj 265 82 netsend 9000;
 #X obj 94 393 noteout;
 #X obj 107 108 list trim;
 #X obj 107 192 unpack;
 #X msg 89 270 127;
-#X msg 133 366 1;
+#X msg 141 347 1;
 #X floatatom 51 269 5 0 0 0 - - -;
 #X obj 74 329 *;
 #X obj 107 145 route sequenced;
