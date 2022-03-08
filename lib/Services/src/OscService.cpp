@@ -17,8 +17,14 @@ bool OscService::receive() {
 
     int size = udp->parsePacket();
     if (size > 0) {
-        remoteIP = udp->remoteIP();
+        IPAddress remoteIP = udp->remoteIP();
+        auto remoteIPIterator = std::find(remoteIPs.begin(), remoteIPs.end(), remoteIP );
+        if (remoteIP != *remoteIPIterator) {
+            remoteIPs.push_back(remoteIP);
+            Serial.println("IP Address was added to list");
 
+        }
+        Serial.println("caught message in OscReceive");
         while (size--) {
             msg.fill(udp->read());
         }
