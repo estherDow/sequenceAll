@@ -32,10 +32,10 @@ uint8_t OscMessageAdapter::getAddressAsUint8_t(uint8_t &Handle, uint8_t &offset)
     uint8_t DefaultOffset = 1; //offset to account for "/"
     uint8_t NewOffset = DefaultOffset + offset;
     _message.getAddress(addr, NewOffset);
-    Serial.printf("Address received at getAddressAsUint8_t: %s\n", addr);
+    //Serial.printf("Address received at getAddressAsUint8_t: %s\n", addr);
 
     Handle = atoi(addr);
-    Serial.printf("Handle received:  %i\n", Handle);
+    //Serial.printf("Handle received:  %i\n", Handle);
 
     NewOffset++;
     if (Handle > 9) { NewOffset++; } //number of digits

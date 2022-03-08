@@ -7,11 +7,12 @@
 void OfoStepMenu::stateEventListener(void *context, uint8_t key, KeyState state) {
     switch (state) {
         case PRESSED:
-            Serial.printf("Key %d \n", key);
+            Serial.printf("OFOStepMenu::stateEventListener: Key %d \n", key);
             if (key == 4) {
                 reinterpret_cast<OfoStepMenu *>(context)->switchMenuPosition();
                 break;
-            } else {
+            }
+            else{
                 if (reinterpret_cast<OfoStepMenu *>(context)->menuLevel == VOICE) {
 
                     reinterpret_cast<OfoStepMenu *>(context)->setCurrentVoice(key);
@@ -38,19 +39,21 @@ void OfoStepMenu::stateEventListener(void *context, uint8_t key, KeyState state)
 }
 
 void OfoStepMenu::switchMenuPosition() {
+    if (menuLevel == VOICE) { menuLevel = STEP; }
     if(currentMenuPosition < numberVoices) {
         currentMenuPosition++;
     }
     else {
         currentMenuPosition = 1;
     }
-    Serial.printf("newPosition: %d, numver of voices: %d \n", currentMenuPosition, numberVoices);
+    Serial.printf("OfoStepMenu::switchMenuPosition: newPosition: %d, number of voices: %d \n", currentMenuPosition, numberVoices);
 }
 
 void OfoStepMenu::setCurrentVoice(uint8_t voice) {
-    uint8_t menuOffset = currentMenuPosition - 1;
-
-    currentVoice = voice + menuOffset;
+    voice++;
+    if (voice > numberVoices)
+        voice = numberVoices;
+    currentVoice = voice;
 }
 
 
@@ -80,6 +83,7 @@ void OfoStepMenu::setCurrentStep(uint8_t step) {
         OscMessageAdapter msg(message);
         notify(msg);
         path[0] = '\0';
+        message.empty();
     }
 
 }

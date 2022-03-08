@@ -20,7 +20,7 @@ void Voice::_callNotify(OSCMessageInterface &message) {
         (_pulseCounter == _clockPulsesPerStep)
             ) {
         if (currentStepValue > 0) {
-            Serial.printf("_callNotify: Current Step Value is %d\n", currentStepValue);
+            Serial.printf("Voice::_callNotify: Current Step Value is %d\n", currentStepValue);
             char sender[32];
             sprintf(sender, "/voice/%d/step/%d", Handle, _currentStep);
             OSCMessage msg(sender);
@@ -38,6 +38,7 @@ void Voice::_updateVoices(OSCMessageInterface &message) {
     if (initialOffset > 0) {
         uint8_t voiceHandle;
         uint8_t NewOffset = message.getAddressAsUint8_t(voiceHandle, initialOffset);
+        if (voiceHandle > 0) {voiceHandle--;}
         if (voiceHandle == Handle) {
             RecipientAddress AddressForSet(
                     this,

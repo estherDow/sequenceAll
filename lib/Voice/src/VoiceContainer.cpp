@@ -20,7 +20,7 @@ void VoiceContainer::remove(uint8_t Handle) {
 
 Voice * VoiceContainer::select(int Handle) {
     if (Handle >= voiceMap->size()) {
-        Handle = voiceMap->size() -1;
+        Handle = TOTAL_NUMBER_OF_VOICES - 1;
     }
     return &voiceMap->at(Handle);
 }
