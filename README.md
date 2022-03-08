@@ -66,9 +66,8 @@ Short term goals:
 
 
 //TODO:
-- Add Vector of IPAddresses
-- on connect add ip to vector
-- send osc to all ip connected.
 
-- Remove STA functionality
-- remove handle wifi mode method in loop
+- add STA functionality
+
+-Mute is toggled on all steps. fix.
+-Deal with sudden disconnects of client.

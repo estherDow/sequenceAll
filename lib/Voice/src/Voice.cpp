@@ -13,15 +13,12 @@ void Voice::update(OSCMessageInterface &message) {
     if (message.fullMatch("/tick", 0) &&
         (_pulseCounter == _clockPulsesPerStep)
         ) {
-        char sender[12];
-        sprintf(sender, "/voice/%d", Handle);
+        char sender[32];
+        sprintf(sender, "/voice/%d/step/%d", Handle, _currentStep);
         OSCMessage msg(sender);
         msg.add(currentStepValue);
         OscMessageAdapter newMessage(msg);
         notify(newMessage);
-        //Serial.printf("Voice current step is %i\n", getCurrentStepNumber() );
-        //Serial.printf("Value is %i\n", currentStepValue);
-        //(currentStepValue > 0) &&
         incrementStep();
         _pulseCounter = 0;
 

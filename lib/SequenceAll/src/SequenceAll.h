@@ -46,7 +46,10 @@ public:
 private:
     void _setVoices() const;
 
+    void _attachVoices() const;
+
     static void _oscMessageReceiveDebug(OSCMessageInterface &msg) ;
+
 };
 
 extern SequenceAll sequenceAll;

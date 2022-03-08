@@ -18,7 +18,7 @@ typedef enum {
 class OfoStepMenu : public Module {
 public:
     MenuLevel menuLevel = STEP;
-    uint8_t menuPosition = 1;
+    uint8_t currentMenuPosition = 1;
     uint8_t currentVoice = 1;
     uint8_t currentStep = 1;
     char path[MAX_OSC_PATH_LENGTH];

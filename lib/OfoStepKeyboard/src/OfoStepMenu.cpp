@@ -38,16 +38,17 @@ void OfoStepMenu::stateEventListener(void *context, uint8_t key, KeyState state)
 }
 
 void OfoStepMenu::switchMenuPosition() {
-    if( menuPosition < numberVoices) {
-        menuPosition++;
+    if(currentMenuPosition < numberVoices) {
+        currentMenuPosition++;
     }
     else {
-        menuPosition = 1;
+        currentMenuPosition = 1;
     }
+    Serial.printf("newPosition: %d, numver of voices: %d \n", currentMenuPosition, numberVoices);
 }
 
 void OfoStepMenu::setCurrentVoice(uint8_t voice) {
-    uint8_t menuOffset = menuPosition - 1;
+    uint8_t menuOffset = currentMenuPosition - 1;
 
     currentVoice = voice + menuOffset;
 }
@@ -56,17 +57,20 @@ void OfoStepMenu::setCurrentVoice(uint8_t voice) {
 void OfoStepMenu::toggleMenuLevel() {
     if (menuLevel == VOICE) {
         menuLevel = STEP;
+        currentStep = 1;
+        currentMenuPosition = 1;
     } else {
         menuLevel = VOICE;
     }
 }
 
 void OfoStepMenu::setCurrentStep(uint8_t step) {
-    uint8_t menuOffset = menuPosition - 1;
+    uint8_t menuOffset = currentMenuPosition - 1;
+    step++;
     Serial.printf("Voice: %d, Step: %d \n", currentVoice, step);
-    currentStep = step + menuOffset;
+    currentStep = step + (menuOffset*4);
     sprintf(path, "/voice/%d/mute/%d", currentVoice, currentStep);
-
+    Serial.println(path);
 }
 
  void OfoStepMenu::getMessage(OSCMessageInterface & message) {

@@ -36,11 +36,12 @@ void SequenceAll::begin() {
     //TODO: Inform user, Parameters of WiFi are not set.
 
     oscService = new OscService((WiFiServiceInterface &) *wiFiService);
-    voiceContainer->select(0)->attach(oscService);
 
+    _attachVoices();
 }
 
 void SequenceAll::run() const {
+    //TODO: Have this in a separate, more accessible Place
     cClock->timer();
 
     RecipientAddress voiceContainerAddress(
@@ -83,6 +84,22 @@ void SequenceAll::reset() {
 void SequenceAll::_setVoices() const {
     for (int i = 0; i < TOTAL_NUMBER_OF_VOICES; i++) {
         voiceContainer->add(i);
+    }
+}
+
+void SequenceAll::_attachVoices() const {
+    for (int i = 0; i < TOTAL_NUMBER_OF_VOICES; i++) {
+        voiceContainer->select(i)->attach(oscService);
+        for (int s = 0;s < DEFAULT_SEQUENCE_LENGTH; s++) {
+            char stepNumber[3];
+            uint8_t stepValue = 255;
+            sprintf(stepNumber, "/%d", s + 1);
+            OSCMessage message(stepNumber);
+            message.add(stepValue);
+            OscMessageAdapter msg(message);
+            voiceContainer->select(i)->setStep(voiceContainer->select(i),msg, 0);
+            voiceContainer->select(i)->muteStep(voiceContainer->select(i),msg, 0);
+        }
     }
 }
 

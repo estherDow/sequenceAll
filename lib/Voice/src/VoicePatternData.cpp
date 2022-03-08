@@ -19,6 +19,7 @@ uint8_t VoicePatternData::returnAt(uint8_t position) {
 void VoicePatternData::setSize(uint8_t newLength) {
     _voicePattern.resize(newLength);
     _triggerPattern.resize(newLength);
+    std::fill(_triggerPattern.begin(), _triggerPattern.end(), false);
 }
 
 uint8_t VoicePatternData::getSize() {
