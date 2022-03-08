@@ -97,6 +97,11 @@ bool OscMessageAdapter::setAddress(const char *_address) {
     return true;
 }
 
+int OscMessageAdapter::match(const char *pattern, int offset) {
+    return _message.match(pattern, offset);
+
+}
+
 
 
 

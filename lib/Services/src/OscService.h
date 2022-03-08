@@ -5,6 +5,8 @@
 #include "WiFiServiceInterface.h"
 #include <Module.h>
 #include <macros.h>
+#include <algorithm>
+#include "OscMessageAdapter.h"
 
 class OscService : public Module {
 public:
@@ -14,7 +16,7 @@ public:
 
     void doSend(OSCMessageInterface &message);
 
-    bool receive(OSCMessageInterface &message);
+    bool receive();
 
     void update(OSCMessageInterface &message) override;
 
@@ -26,7 +28,7 @@ private:
     WiFiServiceInterface &wiFi;
     std::list<IPAddress> remoteIPs;
 
-    void _iterateIPs(OSCMessageInterface &message);
+    void _sendMSGToStoredIPs(OSCMessageInterface &message);
 };
 
 #endif

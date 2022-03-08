@@ -54,7 +54,7 @@ private:
     uint16_t _pulseCounter = 0;
     int8_t _motion = 1;
 
-
+    void _callNotify(OSCMessageInterface &message);
     bool _isMessageWithinBounds(uint8_t position) const;
 };
 

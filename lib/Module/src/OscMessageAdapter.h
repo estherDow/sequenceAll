@@ -23,6 +23,7 @@ public:
     void empty() override;
     void fill(uint8_t byteStream) override;
     bool fullMatch(const char *pattern, int offset) override;
+    int match( const char * pattern, int offset) override;
     int getDataLength(int position) override;
     int getString(int position, char * buffer, int length) override;
     bool hasError() override;

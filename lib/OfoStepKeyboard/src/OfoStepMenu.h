@@ -32,7 +32,7 @@ public:
     void switchMenuPosition();
     void setCurrentVoice(uint8_t voice);
     void setCurrentStep(uint8_t step);
-    void getMessage(OSCMessageInterface & message);
+    void getMessage();
 };
 
 

@@ -9,21 +9,60 @@ Voice::Voice(uint8_t length, uint8_t handle) {
 
 void Voice::update(OSCMessageInterface &message) {
     _pulseCounter++;
+
+    _callNotify(message);
+
+    uint8_t initialOffset = message.match("/voice", 0);
+    if (initialOffset > 0) {
+        uint8_t voiceHandle;
+        uint8_t NewOffset = message.getAddressAsUint8_t(voiceHandle, initialOffset);
+        if (voiceHandle == Handle) {
+            RecipientAddress AddressForSet(
+                    this,
+                    "/set",
+                    Voice::setStep,
+                    NewOffset
+            );
+            message.route(AddressForSet);
+
+            RecipientAddress AddressForDelete(
+                    this,
+                    "/delete",
+                    Voice::deleteStep,
+                    NewOffset
+            );
+            message.route(AddressForDelete);
+
+            RecipientAddress AddressForMute(
+                    this,
+                    "/mute",
+                    Voice::muteStep,
+                    NewOffset
+            );
+            message.route(AddressForMute);
+        }
+    }
+}
+
+void Voice::_callNotify(OSCMessageInterface &message) {
     uint8_t currentStepValue = getCurrentStepValue();
     if (message.fullMatch("/tick", 0) &&
         (_pulseCounter == _clockPulsesPerStep)
-        ) {
-        char sender[32];
-        sprintf(sender, "/voice/%d/step/%d", Handle, _currentStep);
-        OSCMessage msg(sender);
-        msg.add(currentStepValue);
-        OscMessageAdapter newMessage(msg);
-        notify(newMessage);
+            ) {
+        if (currentStepValue > 0) {
+            Serial.printf("_callNotify: Current Step Value is %d\n", currentStepValue);
+            char sender[32];
+            sprintf(sender, "/voice/%d/step/%d", Handle, _currentStep);
+            OSCMessage msg(sender);
+            msg.add(currentStepValue);
+            OscMessageAdapter newMessage(msg);
+            notify(newMessage);
+        }
         incrementStep();
         _pulseCounter = 0;
-
     }
 }
+
 
 void Voice::initSequence(uint8_t length) {
     for (uint8_t i = 0; i < length; i++) {
@@ -42,7 +81,7 @@ void Voice::setStep(void * context, OSCMessageInterface &message, uint8_t offset
 
     if (
     reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)) {
-        Serial.printf("Set Step at %i with value %i \n", position, value);
+        Serial.printf("setStep: Set Step at %i with value %i \n", position, value);
         reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
     }
     message.empty();
@@ -57,7 +96,7 @@ void Voice::muteStep(void * context, OSCMessageInterface &message, uint8_t offse
     if (
     reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)
     ) {
-        Serial.printf("Toggle Mute Step at %i \n", position);
+        Serial.printf("MuteStep: Toggle Mute Step at %i \n", position);
         reinterpret_cast<Voice *>(context)->_steps.muteAt(position);
     }
     message.empty();
@@ -70,7 +109,7 @@ void Voice::deleteStep(void * context, OSCMessageInterface &message, uint8_t off
     if (
     reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)
     ) {
-        Serial.printf("Delete Step at %i \n", position);
+        Serial.printf("DeleteStep: Delete Step at %i \n", position);
         reinterpret_cast<Voice *>(context)->_steps.deleteAt(position);
     }
     message.empty();
@@ -89,8 +128,6 @@ uint8_t Voice::getCurrentStepNumber() const {
 int Voice::getCurrentStepValue() {
         return _steps.returnAt(_currentStep);
 }
-
-
 
 void Voice::setQuarterNoteDivisions(uint8_t subDivisions) {
     if (subDivisions > PULSES_PER_QUARTER_NOTE) {

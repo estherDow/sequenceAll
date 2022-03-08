@@ -46,7 +46,7 @@ public:
 private:
     void _setVoices() const;
 
-    void _attachVoices() const;
+    void _attachOSCToVoices() const;
 
     static void _oscMessageReceiveDebug(OSCMessageInterface &msg) ;
 

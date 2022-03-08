@@ -71,3 +71,4 @@ Short term goals:
 
 -Mute is toggled on all steps. fix.
 -Deal with sudden disconnects of client.
+-Remote IP not stored but retrieved from connected clients.

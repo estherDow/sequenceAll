@@ -73,7 +73,13 @@ void OfoStepMenu::setCurrentStep(uint8_t step) {
     Serial.println(path);
 }
 
- void OfoStepMenu::getMessage(OSCMessageInterface & message) {
-    message.setAddress(path);
-    path[0] = '\0';
+ void OfoStepMenu::getMessage() {
+    if (path[0] != '\0') {
+        OSCMessage message("/needed.dont.ask");
+        message.setAddress(path);
+        OscMessageAdapter msg(message);
+        notify(msg);
+        path[0] = '\0';
+    }
+
 }

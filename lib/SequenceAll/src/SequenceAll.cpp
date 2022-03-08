@@ -13,7 +13,6 @@ void SequenceAll::begin() {
 
     cClock = new Clock();
     cClock->setBeatsPerMinute();
-    cClock->attach(voiceContainer);
 
     menu = new OfoStepMenu();
     menu->begin(TOTAL_NUMBER_OF_VOICES,DEFAULT_SEQUENCE_LENGTH);
@@ -36,39 +35,22 @@ void SequenceAll::begin() {
     //TODO: Inform user, Parameters of WiFi are not set.
 
     oscService = new OscService((WiFiServiceInterface &) *wiFiService);
-
-    _attachVoices();
+    cClock->attach(voiceContainer);
+    menu->attach(voiceContainer);
+    oscService->attach(voiceContainer);
+    _attachOSCToVoices();
 }
 
 void SequenceAll::run() const {
     //TODO: Have this in a separate, more accessible Place
     cClock->timer();
 
-    RecipientAddress voiceContainerAddress(
-            voiceContainer,
-            "/voice",
-            VoiceContainer::receive,
-            0
-    );
-
-    RecipientAddress remoteIPAddress(
-            oscService,
-            "/addMe",
-            OscService::addRemoteIP,
-            0
-    );
-
-    OSCMessage message("/needed.dont.ask");
-    OscMessageAdapter msg(message);
 
     if (keyBoard->getKeys()) {
-        menu->getMessage(msg);
+        menu->getMessage();
     }
-    else if (oscService->receive(msg)) {
-        _oscMessageReceiveDebug(msg);
+    if (oscService->receive()) {
     }
-    msg.route(voiceContainerAddress);
-    msg.route(remoteIPAddress);
 }
 
 void SequenceAll::save() {
@@ -87,7 +69,7 @@ void SequenceAll::_setVoices() const {
     }
 }
 
-void SequenceAll::_attachVoices() const {
+void SequenceAll::_attachOSCToVoices() const {
     for (int i = 0; i < TOTAL_NUMBER_OF_VOICES; i++) {
         voiceContainer->select(i)->attach(oscService);
         for (int s = 0;s < DEFAULT_SEQUENCE_LENGTH; s++) {

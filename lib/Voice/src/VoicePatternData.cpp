@@ -27,12 +27,12 @@ uint8_t VoicePatternData::getSize() {
 }
 
 void VoicePatternData::muteAt(uint8_t position) {
-    _triggerPattern.flip();
+    _triggerPattern.at(position) = !_triggerPattern.at(position);
 }
 
 void VoicePatternData::deleteAt(uint8_t position) {
     if (_triggerPattern.at(position)) {
-        _triggerPattern.flip();
+        _triggerPattern.at(position) = false;
     }
     _voicePattern.at(position) = 0;
 }

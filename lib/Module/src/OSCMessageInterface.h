@@ -21,6 +21,7 @@ public:
     virtual void empty() = 0;
     virtual void fill(uint8_t) = 0;
     virtual bool fullMatch( const char * pattern, int) = 0;
+    virtual int match( const char * pattern, int) = 0;
     virtual int getDataLength(int position) =0;
     virtual int32_t getInt(int position) = 0;
     virtual int getString(int position, char * buffer, int length) = 0;
