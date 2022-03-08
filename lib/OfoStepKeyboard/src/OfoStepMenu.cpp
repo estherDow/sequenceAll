@@ -30,7 +30,11 @@ void OfoStepMenu::stateEventListener(void *context, uint8_t key, KeyState state)
             if (key == 4) {
                 reinterpret_cast<OfoStepMenu *>(context)->toggleMenuLevel();
                 break;
-            } else {
+            }
+            else if (key == 1) {
+                ESP.restart();
+            }
+            else {
                 break;
             }
         case RELEASED:
