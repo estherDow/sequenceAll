@@ -32,14 +32,23 @@ bool OscService::receive() {
 
 void OscService::doSend(OSCMessageInterface &message) {
 
-    if (remoteIP[0] !=0){
-        udp->beginPacket(remoteIP, DEFAULT_REMOTE_UDP_PORT);
-        message.send(*udp);
-        udp->endPacket();
+    if (!remoteIPs.empty() ) {
+        _sendMSGToStoredIPs(message);
     }
+
+    message.empty();
 }
 
-
+void OscService::_sendMSGToStoredIPs(OSCMessageInterface &message) {
+    for (auto const& ip : remoteIPs) {
+        if (ip[0] !=0){
+            udp->beginPacket(ip, DEFAULT_REMOTE_UDP_PORT);
+            Serial.println("message was sent");
+            message.send(*udp);
+            udp->endPacket();
+        }
+    }
+}
 
 void OscService::update(OSCMessageInterface &message) {
     doSend(message);

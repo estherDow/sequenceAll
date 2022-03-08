@@ -28,6 +28,7 @@ private:
 
     //Timer Variable in microseconds
     unsigned long _pastState = 0;
+    unsigned long stateAfterNotify = 0;
 
 };
 
