@@ -12,6 +12,7 @@
 class Voice : public Module {
 public:
     uint8_t Handle;
+
     explicit Voice(uint8_t length, uint8_t handle);
 
     void update(OSCMessageInterface &message) override;
@@ -44,7 +45,7 @@ public:
     //TODO: Implement save to nvs
     //   void save();
     //TODO: Implement destructor
-   ~Voice()= default;;
+    ~Voice() = default;;
 private:
     //Always initialize values with some default or else you WILL run into undefined behavior.
     VoicePatternData _steps;
@@ -55,6 +56,9 @@ private:
     int8_t _motion = 1;
 
     void _callNotify(OSCMessageInterface &message);
+
+    void _updateVoices(OSCMessageInterface &message);
+
     bool _isMessageWithinBounds(uint8_t position) const;
 };
 

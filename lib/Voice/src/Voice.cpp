@@ -11,7 +11,29 @@ void Voice::update(OSCMessageInterface &message) {
     _pulseCounter++;
 
     _callNotify(message);
+    _updateVoices(message);
+}
 
+void Voice::_callNotify(OSCMessageInterface &message) {
+    uint8_t currentStepValue = getCurrentStepValue();
+    if (message.fullMatch("/tick", 0) &&
+        (_pulseCounter == _clockPulsesPerStep)
+            ) {
+        if (currentStepValue > 0) {
+            Serial.printf("_callNotify: Current Step Value is %d\n", currentStepValue);
+            char sender[32];
+            sprintf(sender, "/voice/%d/step/%d", Handle, _currentStep);
+            OSCMessage msg(sender);
+            msg.add(currentStepValue);
+            OscMessageAdapter newMessage(msg);
+            notify(newMessage);
+        }
+        incrementStep();
+        _pulseCounter = 0;
+    }
+}
+
+void Voice::_updateVoices(OSCMessageInterface &message) {
     uint8_t initialOffset = message.match("/voice", 0);
     if (initialOffset > 0) {
         uint8_t voiceHandle;
@@ -43,26 +65,6 @@ void Voice::update(OSCMessageInterface &message) {
         }
     }
 }
-
-void Voice::_callNotify(OSCMessageInterface &message) {
-    uint8_t currentStepValue = getCurrentStepValue();
-    if (message.fullMatch("/tick", 0) &&
-        (_pulseCounter == _clockPulsesPerStep)
-            ) {
-        if (currentStepValue > 0) {
-            Serial.printf("_callNotify: Current Step Value is %d\n", currentStepValue);
-            char sender[32];
-            sprintf(sender, "/voice/%d/step/%d", Handle, _currentStep);
-            OSCMessage msg(sender);
-            msg.add(currentStepValue);
-            OscMessageAdapter newMessage(msg);
-            notify(newMessage);
-        }
-        incrementStep();
-        _pulseCounter = 0;
-    }
-}
-
 
 void Voice::initSequence(uint8_t length) {
     for (uint8_t i = 0; i < length; i++) {
@@ -162,5 +164,8 @@ bool Voice::_isMessageWithinBounds(uint8_t position) const {
     }
     return false;
 }
+
+
+
 
 
