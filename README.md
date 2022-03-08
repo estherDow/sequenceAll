@@ -1,11 +1,9 @@
 ## sequence all.
 
-A Software Project for the esp32 microcontroller, that aims to provide a low code entrypoint to build a sequencer out of anything imaginable.
-Internal Communication and signal routing is done making heavy use of the [CNMAT/OSC](https://github.com/CNMAT/OSC) library.
-Particularly, their OSCMessage class, from which I inherit to make it more suitable to operate in an OOP environment.
+A low code Sequencer firmware for the esp32.
+Internal Communication, pattern matching and signal routing, is done making heavy use of the [CNMAT/OSC](https://github.com/CNMAT/OSC) library.
 
-Future implementations will create OscMessageAdapter objects to pass them around the system.
-This way, a translation layer between `cv/midi/osc` can be run concurrently to sequencing messages to either of the protocols.
+Changes of routes at Runtime is possible and will be implemented in the upcoming releases.
 
 This application currently runs on only one core, so the second core is entirely unused and may be leveraged for other duties with few changes to the software.
 
@@ -18,14 +16,12 @@ Change your values there if you want to.
 
 The sequencer advertises its services under sequenceall.local.
 
-Use `port 80` for the rest(?) api. following requests may be used to change credentials, as well as the status of accesspoint.
+Following requests may be used to change credentials of the access point. STA Mode will be reimplemented in upcoming versions.
 The credentials are stored in non volatile storage.
 
 ```
 curl -XPOST -H "Content-type: application/json" -d '{"ssid" : "myApSSID" , "password" : "myApPassword"}' 'sequenceall.local/set_ap'
 ```
-If you send either request with an empty payload, the sequencer simply changes to the desired mode.
-If it cannot join a wifi network, it will return to AP mode automatically.
 
 Once the connection is established, the sequencer listens on `port 8000` for incoming OSC message of the syntax:
 
@@ -39,23 +35,29 @@ Currently following messages are implemented:
 /voice/{1-voiceCount}/delete/{1-sequenceLength}  -
 
 ```
+To subscribe to the OSCService of sequenceAll, send an OSC message of any content. The sender's IP address will be stored and will receive all OSC messages emitted from SequenceAll.
 
 ### needed:
 
 Short term goals:
 
-- implement sendOsc method
 - implement switch internal and external clock
-- implement hardware keyboard class
 - extend rest(?) api
+- and implementation of various I/Os, such as cv, midi, etc.
 
-- and implementation of various I/Os, such as keypad, midi, etc.
+- save state of all voices to nvm.
 
-- save state of all voices to nvm, so that info is available after you shut down :) to be done by implementing setGlob(), i guess.
+- add STA functionality
+
+### Known Bugs:
+
+- Given: A connected client.
+- When: Client disconnects.
+- Expected behavior: Client reconnects and sends a subscription request in case they do not receive any osc message.
+- Observed behavior: Client reconnects, IP is stored, parse package fails (receive UDP Package).
 
 
 
-# Ignore all previous, clean slate on last time
 
 - only ap mode is supported
 - clients connected receive all messages
@@ -63,12 +65,3 @@ Short term goals:
 - clients can send messages to host name
 - ap name and password may be changed via post request.
 - Changes will take effect after restart
-
-
-//TODO:
-
-- add STA functionality
-
--Mute is toggled on all steps. fix.
--Deal with sudden disconnects of client.
--Remote IP not stored but retrieved from connected clients.
