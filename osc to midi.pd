@@ -1,4 +1,4 @@
-#N canvas -791 157 450 664 10;
+#N canvas 375 152 450 664 10;
 #X obj 107 77 oscparse;
 #X obj 265 82 netsend 9000;
 #X obj 94 393 noteout;
@@ -10,7 +10,7 @@
 #X obj 74 329 *;
 #X obj 107 145 route sequenced;
 #X obj 59 175 print;
-#X obj 107 37 netreceive -b -u 9000;
+#X obj 107 37 netreceive -b -u 57120;
 #X connect 0 0 3 0;
 #X connect 0 0 10 0;
 #X connect 3 0 9 0;

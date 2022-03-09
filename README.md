@@ -21,6 +21,8 @@ The credentials are stored in non volatile storage.
 
 ```
 curl -XPOST -H "Content-type: application/json" -d '{"ssid" : "myApSSID" , "password" : "myApPassword"}' 'sequenceall.local/set_ap'
+
+curl -XPOST -H "Content-type: application/json" -d '{"ssid" : "sequenceX" , "password" : "MySTAPassword"}' 'sequenceall.local/set_sta'
 ```
 
 Once the connection is established, the sequencer listens on `port 8000` for incoming OSC message of the syntax:

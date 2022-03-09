@@ -43,12 +43,14 @@ void SequenceAll::begin() {
 
 void SequenceAll::run() const {
     //TODO: Have this in a separate, more accessible Place
-    cClock->timer();
-
-    if (keyBoard->getKeys()) {
-        menu->getMessage();
+    if (cClock->timer()) {
+        cClock->doNotify();
+    } else {
+        if (keyBoard->getKeys()) {
+            menu->getMessage();
+        }
+        oscService->receive();
     }
-    oscService->receive();
 }
 
 void SequenceAll::save() {

@@ -19,27 +19,29 @@ void Clock::setBeatsPerMinute(void * context, OSCMessage &message) {
 }
 
 
-void Clock::timer() {
+bool Clock::timer() {
     //deltaT in Microseconds = 6e7/(time * steps)
     unsigned long currentState = micros();
 
     //reevaluated everytime the function is called to account for updates 60,000,000 us = 60s
-    _deltaTime = 60000000 / (_beats * PULSES_PER_QUARTER_NOTE) - stateAfterNotify;
+    _deltaTime = 60000000 / (_beats * PULSES_PER_QUARTER_NOTE);
 
     //At the beginning of the program, pastState is always smaller than currentstate
     if (currentState - _pastState >=  _deltaTime) {
+        _pastState = currentState;
+        return true;
 
-        _pastState += _deltaTime;
-        OSCMessage msg("/t");
-        OscMessageAdapter message(msg);
-        notify(message);
-        message.empty();
-        stateAfterNotify = micros() - currentState;
-
-        Serial.printf("Delta Time to trigger %lu\n", stateAfterNotify );
-
-        //gets larger than next measurement or triggers an immediate rerun of above code.
     }
+    return false;
+}
+
+void Clock::doNotify() {
+
+    OSCMessage msg("/t");
+    OscMessageAdapter message(msg);
+    notify(message);
+    message.empty();
+    //gets larger than next measurement or triggers an immediate rerun of above code.
 }
 
 

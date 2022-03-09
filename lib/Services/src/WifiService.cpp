@@ -8,13 +8,12 @@ WiFiService::WiFiService(WiFiUDP *udp, AsyncWebServer *server, ESPmDNSInterface 
 
 
 WifiErrorCode WiFiService::begin() {
-    WifiErrorCode APError;
+    WifiErrorCode STAError;
+    STAError = _initSTA();
 
-    APError = _initAP();
-    if (APError != INIT_AP_SUCCESS) {
-        if (APError == INIT_AP_NO_CREDENTIALS_STORED) {
+    if (STAError != INIT_STA_SUCCESS) {
+            _initAP();
             Serial.println("no Wifi Credentials Stored, ");
-        }
     }
     Serial.println(localIp);
     udp->begin( 8000);
@@ -36,6 +35,21 @@ WifiErrorCode WiFiService::begin() {
     }
 
     return INIT_WIFI_SERVICE_SUCCESS;
+}
+
+WifiErrorCode WiFiService::_initSTA() {
+    WiFiCredentialsChar credentials;
+    strcpy(credentials.uri, "/set_sta");
+    if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
+        return INIT_STA_NO_CREDENTIALS_STORED;
+    }
+
+    if (_doSetSTA(credentials.ssid, credentials.pwd)) {
+        Serial.println("sta started with stored credentials");
+        return INIT_STA_SUCCESS;
+    }
+
+    return INIT_STA_ERROR;
 }
 
 WifiErrorCode WiFiService::_initAP() {
@@ -65,6 +79,23 @@ bool WiFiService::_doSetAP(const char *ssid, const char *password) {
         return true;
     }
     return false;
+}
+
+bool WiFiService::_doSetSTA(const char *newSSID, const char *newPassword) {
+    WiFi.mode(WIFI_STA);
+    WiFi.begin(newSSID, newPassword);
+    unsigned long startTime = millis();
+    while (WiFi.status() != WL_CONNECTED) {
+        unsigned long currentTime = millis();
+
+        if (currentTime > startTime + 6000 ) {
+            return false;
+        }
+    }
+    Serial.println("connected to wifi...");
+    localIp = WiFi.localIP();
+    Serial.println(WiFi.localIP());
+    return true;
 }
 
 WiFiUDP *WiFiService::getUDP() {

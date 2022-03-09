@@ -6,12 +6,14 @@
 bool WiFiService::_initWebServer() {
 
     AsyncCallbackJsonWebHandler *handleAPRequest = _setAPCredentialsEndpoint();
+    AsyncCallbackJsonWebHandler *handleSTARequest = _setSTACredentialsEndpoint();
 
     AsyncCallbackJsonWebHandler *handlePrintDebugRequest = _setPrintDebugEndpoint();
 
     server->addHandler(handleAPRequest);
 
     server->addHandler(handlePrintDebugRequest);
+    server->addHandler(handleSTARequest);
     server->begin();
 
     return true;
@@ -63,6 +65,53 @@ AsyncCallbackJsonWebHandler *WiFiService::_setAPCredentialsEndpoint() {
                 return true;
             });
     return handleAPRequest;
+}
+AsyncCallbackJsonWebHandler *WiFiService::_setSTACredentialsEndpoint() {
+
+auto *handleSTARequest = new AsyncCallbackJsonWebHandler(
+        "/set_sta",
+        [](AsyncWebServerRequest *request,
+           JsonVariant &json) {
+            const JsonObject &jsonObject = json.as<JsonObject>();
+
+            if (!jsonObject.isNull() && jsonObject["ssid"]) {
+                JsonVariant apRequestBody;
+
+                WiFiCredentialsChar apCredentials(
+                        "/set_sta",
+                        jsonObject["ssid"],
+                        jsonObject["password"]
+                );
+
+                if (!NVSService::setCredentials("Wifi", &apCredentials)) {
+                    request->send(
+                            500,
+                            "application/json",
+                            {}
+                    );
+                }
+                if (!NVSService::setBool("Wifi", "SetAP", true)) {
+                    request->send(
+                            500,
+                            "application/json",
+                            {}
+                    );
+                }
+            } else {
+                request->send(
+                        401,
+                        "application/json",
+                        {}
+                );
+            }
+            request->send(
+                    200,
+                    "application/json",
+                    {}
+            );
+            return true;
+        });
+return handleSTARequest;
 }
 
 AsyncCallbackJsonWebHandler *WiFiService::_setPrintDebugEndpoint() {

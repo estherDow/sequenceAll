@@ -17,7 +17,8 @@ public:
     //Setter functions
     void setBeatsPerMinute();
     static void setBeatsPerMinute(void * context, OSCMessage & message);
-    void timer();
+    bool timer();
+    void doNotify();
     void update(OSCMessageInterface & message) override{};
 private:
     //Clock setting in BPM
