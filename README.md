@@ -57,15 +57,7 @@ Short term goals:
 
 - add STA functionality
 
-### Known Bugs:
-
-- Given: A connected client.
-- When: Client disconnects.
-- Expected behavior: Client reconnects and sends a subscription request in case they do not receive any osc message.
-- Observed behavior: Client reconnects, IP is stored, parse package fails (receive UDP Package).
-
-
-
+### Current Limitations:
 
 - only ap mode is supported
 - clients connected receive all messages
