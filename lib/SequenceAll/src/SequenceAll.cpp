@@ -60,7 +60,7 @@ void SequenceAll::save() {
 }
 
 void SequenceAll::reset() {
-    //TODO: HardReset
+    ESP.restart();
 }
 
 
