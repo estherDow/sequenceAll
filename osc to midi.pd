@@ -1,7 +1,7 @@
-#N canvas 375 152 450 664 10;
+#N canvas 390 31 450 664 10;
 #X obj 107 77 oscparse;
 #X obj 265 82 netsend 9000;
-#X obj 94 393 noteout;
+#X obj 94 466 noteout;
 #X obj 107 108 list trim;
 #X obj 107 192 unpack;
 #X msg 89 270 127;
@@ -11,8 +11,13 @@
 #X obj 107 145 route sequenced;
 #X obj 59 175 print;
 #X obj 107 37 netreceive -b -u 57120;
+#X obj 59 75 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 31 138 print;
+#X obj 28 110 realtime;
 #X connect 0 0 3 0;
 #X connect 0 0 10 0;
+#X connect 0 0 12 0;
 #X connect 3 0 9 0;
 #X connect 4 0 7 0;
 #X connect 4 0 5 0;
@@ -23,3 +28,5 @@
 #X connect 8 0 2 1;
 #X connect 9 0 4 0;
 #X connect 11 0 0 0;
+#X connect 12 0 14 1;
+#X connect 14 0 13 0;

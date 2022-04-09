@@ -46,24 +46,15 @@ void OscService::parseMessage(void *context, AsyncUDPPacket packet) {
 
 }
 
-
-void OscService::doSend(OSCMessageInterface &message) {
-
-    if (!remoteIPs.empty() ) {
-        _broadcastMSG(message);
-    }
-
-    message.empty();
-}
-
-void OscService::_broadcastMSG(OSCMessageInterface &message) {
-            AsyncUDPMessage asyncUdpMessage;
-            message.send(asyncUdpMessage);
-            udp->broadcast(asyncUdpMessage);
-}
-
 void OscService::update(OSCMessageInterface &message) {
     doSend(message);
+}
+void OscService::doSend(OSCMessageInterface &message) {
+    AsyncUDPMessage asyncUdpMessage;
+    message.send(asyncUdpMessage);
+    udp->broadcastTo(asyncUdpMessage, DEFAULT_REMOTE_UDP_PORT);
+
+    message.empty();
 }
 
 void OscService::addRemoteIP(void *context, OSCMessageInterface &instance, uint8_t offset) {

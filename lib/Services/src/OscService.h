@@ -30,7 +30,6 @@ private:
     AsyncUDP *udp;
     WiFiServiceInterface &wiFi;
     std::list<IPAddress> remoteIPs;
-    void _broadcastMSG(OSCMessageInterface &message);
 };
 
 #endif
