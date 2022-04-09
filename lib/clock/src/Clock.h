@@ -24,8 +24,9 @@ public:
 
     //Setter functions
     void begin();
-    void setBeatsPerMinute();
+    void InitDefaultBeatsPerMinute();
     static void setBeatsPerMinute(void * context, OSCMessage & message);
+    static void setBeatsPerMinute(uint16_t beats);
     bool timer();
     void doNotify();
     void update(OSCMessageInterface & message) override{};

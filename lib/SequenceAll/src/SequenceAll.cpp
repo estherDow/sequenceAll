@@ -13,7 +13,7 @@ void SequenceAll::begin() {
 
     cClock = new Clock();
     cClock->begin();
-    cClock->setBeatsPerMinute();
+    cClock->InitDefaultBeatsPerMinute();
 
     menu = new OfoStepMenu();
     menu->begin(TOTAL_NUMBER_OF_VOICES,DEFAULT_SEQUENCE_LENGTH);

@@ -17,30 +17,32 @@ void Clock::begin() {
     Timer = timerBegin(0, 80, true);
     // Attach onTimer function to our timer.
     timerAttachInterrupt(Timer, &onTimer, true);
-
-    // Set alarm to call onTimer function every second (value in microseconds).
-    // Repeat the alarm (third parameter)
-    timerAlarmWrite(Timer, 1000000, true);
+    InitDefaultBeatsPerMinute();
     // Start an alarm
     timerAlarmEnable(Timer);
 }
 
 //Time in BPM with max 360 bpm
-void Clock::setBeatsPerMinute() {
+void Clock::InitDefaultBeatsPerMinute() {
        //TODO: Set beats per Minute Method
-     _beats = 130;
- //   if (_beats == 0) {
- //       _beats = DEFAULT_BEATS_PER_MINUTE;
- //   }
-
-    if (_beats > 360) {
-        _beats = 360;
-    }
-
+     _beats = DEFAULT_BEATS_PER_MINUTE;
+    setBeatsPerMinute(_beats);
 }
 
 void Clock::setBeatsPerMinute(void * context, OSCMessage &message) {
-    reinterpret_cast<Clock *>(context)->_beats = message.getInt(0);
+
+    // Set alarm to call onTimer function every second (value in microseconds).
+    // Repeat the alarm (third parameter)
+    uint16_t beats = message.getInt(0);
+    reinterpret_cast<Clock *>(context)->_beats = beats;
+    setBeatsPerMinute(beats);
+}
+
+
+void Clock::setBeatsPerMinute(uint16_t beats) {
+    uint64_t minute = SECOND_IN_US * 60;
+    uint64_t timerInterval = minute / beats;
+    timerAlarmWrite(Timer, timerInterval, true);
 }
 
 
@@ -79,5 +81,6 @@ void IRAM_ATTR Clock::onTimer(){
     xSemaphoreGiveFromISR(timerSemaphore, NULL);
     // It is safe to use digitalRead/Write here if you want to toggle an output
 }
+
 
 
