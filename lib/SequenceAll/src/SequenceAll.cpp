@@ -12,13 +12,14 @@ void SequenceAll::begin() {
     Serial.println("Voice Setup Complete");
 
     cClock = new Clock();
+    cClock->begin();
     cClock->setBeatsPerMinute();
 
     menu = new OfoStepMenu();
     menu->begin(TOTAL_NUMBER_OF_VOICES,DEFAULT_SEQUENCE_LENGTH);
-    OfoStepKeyboardDefinition = new initKeyboard();
-    keyBoard = new OnedimensionalKeyboard((char*)OfoStepKeyboardDefinition->keyCharacterMap,OfoStepKeyboardDefinition->rowPins, OfoStepKeyboardDefinition->numberKeys);
-    keyBoard->addOOPEventListener(OfoStepMenu::stateEventListener, menu);
+    //OfoStepKeyboardDefinition = new initKeyboard();
+    //keyBoard = new OnedimensionalKeyboard((char*)OfoStepKeyboardDefinition->keyCharacterMap,OfoStepKeyboardDefinition->rowPins, OfoStepKeyboardDefinition->numberKeys);
+    //keyBoard->addOOPEventListener(OfoStepMenu::stateEventListener, menu);
 
     //TODO: Move this into constructor of WifiService.
     auto *mdns = new ESPmDNSAdapter();
@@ -46,9 +47,9 @@ void SequenceAll::run() const {
     if (cClock->timer()) {
         cClock->doNotify();
     } else {
-        if (keyBoard->getKeys()) {
-            menu->getMessage();
-        }
+       // if (keyBoard->getKeys()) {
+        //    menu->getMessage();
+        //}
         oscService->receive();
     }
 }
