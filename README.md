@@ -10,6 +10,9 @@ This application currently runs on only one core, so the second core is entirely
 
 # current state:
 
+![clockJitter](clockJitter.png)
+Current Clock Jitter measured in Pure Data, logging timestamp of received osc message.
+Log shows time elapsed between received messages, sent every 1000ms
 All important values, such as Pulses per quarterNote, Number of voices and sequence length are stored in `macros.h`.
 
 Change your values there if you want to.
