@@ -1,4 +1,4 @@
-#N canvas 390 31 450 664 10;
+#N canvas 583 32 450 664 10;
 #X obj 107 77 oscparse;
 #X obj 265 82 netsend 9000;
 #X obj 94 466 noteout;
@@ -16,8 +16,8 @@
 #X obj 31 138 print;
 #X obj 28 110 realtime;
 #X connect 0 0 3 0;
-#X connect 0 0 10 0;
 #X connect 0 0 12 0;
+#X connect 0 0 10 0;
 #X connect 3 0 9 0;
 #X connect 4 0 7 0;
 #X connect 4 0 5 0;

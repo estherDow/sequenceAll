@@ -51,8 +51,20 @@ void OscService::update(OSCMessageInterface &message) {
 }
 void OscService::doSend(OSCMessageInterface &message) {
     AsyncUDPMessage asyncUdpMessage;
-    message.send(asyncUdpMessage);
     udp->broadcastTo(asyncUdpMessage, DEFAULT_REMOTE_UDP_PORT);
+
+
+    if (!remoteIPs.empty() ) {
+        message.send(asyncUdpMessage);
+        udp->broadcastTo(asyncUdpMessage, DEFAULT_REMOTE_UDP_PORT);
+
+        for (auto const &ip: remoteIPs) {
+            if (ip[0] != 0) {
+                udp->sendTo(asyncUdpMessage, ip, DEFAULT_REMOTE_UDP_PORT, TCPIP_ADAPTER_IF_AP);
+                Serial.println("message was sent");
+            }
+        }
+    }
 
     message.empty();
 }
