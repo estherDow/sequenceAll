@@ -3,8 +3,13 @@
 //
 #include "WiFiService.h"
 
-WiFiService::WiFiService(WiFiUDP *udp, AsyncWebServer *server, ESPmDNSInterface *mdns
-) : udp(udp), mdns(mdns), server(server) {}
+WiFiService::WiFiService(
+) {
+    //TODO: Move this into constructor of WifiService.
+    mdns = new ESPmDNSAdapter();
+    udp = new AsyncUDP();
+    server = new AsyncWebServer(80);
+}
 
 
 WifiErrorCode WiFiService::begin() {
@@ -16,7 +21,7 @@ WifiErrorCode WiFiService::begin() {
             Serial.println("no Wifi Credentials Stored, ");
     }
     Serial.println(localIp);
-    udp->begin( 8000);
+
     if (!_initWebServer()) {
         return INIT_WEBSERVER_ERROR;
     }
@@ -98,7 +103,7 @@ bool WiFiService::_doSetSTA(const char *newSSID, const char *newPassword) {
     return true;
 }
 
-WiFiUDP *WiFiService::getUDP() {
+AsyncUDP *WiFiService::getUDP() {
     return udp;
 }
 

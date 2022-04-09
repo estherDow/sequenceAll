@@ -30,7 +30,7 @@ public:
     int32_t getInt(int position) override;
     bool isInt(int sample) override;
     bool isString(int position) override;
-    void send(WiFiUDP &udp) override;
+    void send(AsyncUDPMessage &udp) override;
 
     bool setAddress(const char * _address) override;
 

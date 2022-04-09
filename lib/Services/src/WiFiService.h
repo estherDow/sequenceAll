@@ -3,11 +3,12 @@
 #include <new>
 #include <Arduino.h>
 #include <WiFi.h>
-#include <WiFiUdp.h>
+#include <AsyncUDP.h>
 #include "AsyncJson.h"
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 #include <ESPmDNSInterface.h>
+#include "ESPmDNSAdapter.h"
 #include "WiFiServiceInterface.h"
 #include "NVSService.h"
 #include "WifiCredentials.h"
@@ -18,7 +19,7 @@
 class WiFiService : public WiFiServiceInterface {
 public:
 
-    WiFiService(WiFiUDP *udp, AsyncWebServer *server, ESPmDNSInterface *mdns);
+    WiFiService();
 
     ~WiFiService() override = default;
 
@@ -26,11 +27,11 @@ public:
     int oldState = 0;
     uint16_t interval = 2000;
 
-    WiFiUDP *getUDP() override;
+    AsyncUDP *getUDP() override;
 
     char remoteHostName[32];
 private:
-    WiFiUDP *udp;
+    AsyncUDP *udp;
     ESPmDNSInterface *mdns;
     AsyncWebServer *server;
 

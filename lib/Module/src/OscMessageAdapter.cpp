@@ -80,7 +80,8 @@ bool OscMessageAdapter::isString(int position) {
     return _message.isString(position);
 }
 
-void OscMessageAdapter::send(WiFiUDP &udp) {
+void OscMessageAdapter::send(AsyncUDPMessage &udp) {
+    OSCData datum = _message.getOSCData(0);
     _message.send(udp);
 }
 

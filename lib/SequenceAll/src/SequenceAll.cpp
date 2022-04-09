@@ -21,12 +21,9 @@ void SequenceAll::begin() {
     //keyBoard = new OnedimensionalKeyboard((char*)OfoStepKeyboardDefinition->keyCharacterMap,OfoStepKeyboardDefinition->rowPins, OfoStepKeyboardDefinition->numberKeys);
     //keyBoard->addOOPEventListener(OfoStepMenu::stateEventListener, menu);
 
-    //TODO: Move this into constructor of WifiService.
-    auto *mdns = new ESPmDNSAdapter();
-    auto *udp = new WiFiUDP();
-    auto *server = new AsyncWebServer(80);
 
-    wiFiService = new WiFiService(udp, server, mdns);
+
+    wiFiService = new WiFiService();
     WifiErrorCode wifiError = wiFiService->begin();
     if (wifiError != INIT_WIFI_SERVICE_SUCCESS) {
         Serial.println("Could not initiate Wifi Services");

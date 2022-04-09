@@ -13,7 +13,6 @@
 #include <WiFiService.h>
 #include "../../Services/src/OscService.h"
 #include "OscMessageAdapter.h"
-#include "ESPmDNSAdapter.h"
 #include "NVSService.h"
 #include "../../Voice/src/VoiceContainer.h"
 #include "../../OfoStepKeyboard/src/OfoStepMenu.h"

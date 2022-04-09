@@ -7,7 +7,7 @@
 #include "WifiErrorCodes.h"
 class ESPAsyncWebServer;
 
-class WiFiUDP;
+class AsyncUDP;
 
 class IPAddress;
 
@@ -22,7 +22,7 @@ public:
 
     virtual WifiErrorCode begin() = 0;
 
-    virtual WiFiUDP *getUDP() = 0;
+    virtual AsyncUDP *getUDP() = 0;
 };
 
 #endif //SEQUENCEALL_WIFISERVICEINTERFACE_H
