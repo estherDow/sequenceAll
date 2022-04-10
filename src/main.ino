@@ -31,7 +31,7 @@ int main() {
             sequenceAll.properties.getClock(),
             sequenceAll.properties.getVoiceContainer()
             );
-
+//TODO: Voices are not attached.
     sequenceAll.connectOutputToInput(
             sequenceAll.properties.getVoiceContainer(),
             sequenceAll.properties.getOSC()
