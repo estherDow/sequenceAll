@@ -22,12 +22,7 @@ bool OscService::receive() {
 
 
 void OscService::parseMessage(void *context, AsyncUDPPacket packet) {
-    IPAddress remoteIP = packet.remoteIP();
-    auto remoteIPIterator = std::find(reinterpret_cast<OscService *>(context)->remoteIPs.begin(), reinterpret_cast<OscService *>(context)->remoteIPs.end(), remoteIP);
-    if (remoteIP != *remoteIPIterator) {
-        reinterpret_cast<OscService *>(context)->remoteIPs.push_back(remoteIP);
-        Serial.println("IP Address was added to list");
-    }
+    reinterpret_cast<OscService *>(context)->addRemoteIP(packet);
     OSCMessage message;
     OscMessageAdapter msg(message);
     size_t packetLength = packet.length();
@@ -67,8 +62,13 @@ void OscService::doSend(OSCMessageInterface &message) {
     message.empty();
 }
 
-void OscService::addRemoteIP(void *context, OSCMessageInterface &instance, uint8_t offset) {
-
+void OscService::addRemoteIP(AsyncUDPPacket packet) {
+    IPAddress remoteIP = packet.remoteIP();
+    auto remoteIPIterator = std::find(remoteIPs.begin(), remoteIPs.end(), remoteIP);
+    if (remoteIP != *remoteIPIterator) {
+        remoteIPs.push_back(remoteIP);
+        Serial.println("IP Address was added to list");
+    }
 }
 
 

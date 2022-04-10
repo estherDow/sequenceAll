@@ -23,7 +23,7 @@ public:
     static void parseMessage(void *context, AsyncUDPPacket packet);
 
 
-    static void addRemoteIP(void *context, OSCMessageInterface &instance, uint8_t offset);
+    void addRemoteIP(AsyncUDPPacket packet);
 
     const char *hostName{};
 private:

@@ -21,9 +21,7 @@
 class SequenceAll {
 public:
     //SequenceAll();
-    explicit SequenceAll(SequenceAllProperties properties) : properties(properties) {
-        Serial.begin(115200);
-    };
+    explicit SequenceAll(SequenceAllProperties properties) : properties(properties) {};
 
     void connectOutputToInput(ModuleInterface *output, ModuleInterface *input);
 
