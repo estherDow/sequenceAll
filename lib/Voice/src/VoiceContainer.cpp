@@ -64,4 +64,3 @@ void VoiceContainer::initSteps(uint8_t voice) const {
         select(voice)->muteStep(select(voice),msg, 0);
     }
 }
-

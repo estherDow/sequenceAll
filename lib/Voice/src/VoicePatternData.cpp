@@ -36,5 +36,3 @@ void VoicePatternData::deleteAt(uint8_t position) {
     }
     _voicePattern.at(position) = 0;
 }
-
-

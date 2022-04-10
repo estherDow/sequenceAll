@@ -16,7 +16,7 @@ void Voice::update(OSCMessageInterface &message) {
 
 void Voice::_callNotify(OSCMessageInterface &message) {
     uint8_t currentStepValue = getCurrentStepValue();
-    if (message.fullMatch("/t", 0) ) {
+    if (message.fullMatch("/t", 0)) {
         if (currentStepValue > 0) {
             char sender[10];
             sprintf(sender, "/v/%d", Handle);
@@ -38,7 +38,7 @@ void Voice::_updateVoices(OSCMessageInterface &message) {
     if (initialOffset > 0) {
         uint8_t voiceHandle;
         uint8_t NewOffset = message.getAddressAsUint8_t(voiceHandle, initialOffset);
-        if (voiceHandle > 0) {voiceHandle--;}
+        if (voiceHandle > 0) { voiceHandle--; }
         if (voiceHandle == Handle) {
             RecipientAddress AddressForSet(
                     this,
@@ -75,26 +75,26 @@ void Voice::initSequence(uint8_t length) {
 
 }
 
-void Voice::setStep(void * context, OSCMessageInterface &message, uint8_t offset) {
+void Voice::setStep(void *context, OSCMessageInterface &message, uint8_t offset) {
     uint8_t position = 0;
     message.getAddressAsUint8_t(position, offset);
     uint8_t value = message.getInt(0);
 
-    if (position > 0) { position--;}
+    if (position > 0) { position--; }
 
     if (
-    reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)) {
+            reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)) {
         Serial.printf("setStep: Set Step at %i with value %i \n", position, value);
         reinterpret_cast<Voice *>(context)->_steps.setAt(value, position);
     }
     message.empty();
 }
 
-void Voice::muteStep(void * context, OSCMessageInterface &message, uint8_t offset) {
+void Voice::muteStep(void *context, OSCMessageInterface &message, uint8_t offset) {
     uint8_t position = 0;
     message.getAddressAsUint8_t(position, offset);
 
-    if (position > 0) { position--;}
+    if (position > 0) { position--; }
 
     if (
     reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)
@@ -105,10 +105,10 @@ void Voice::muteStep(void * context, OSCMessageInterface &message, uint8_t offse
     message.empty();
 }
 
-void Voice::deleteStep(void * context, OSCMessageInterface &message, uint8_t offset) {
+void Voice::deleteStep(void *context, OSCMessageInterface &message, uint8_t offset) {
     uint8_t position = 0;
     message.getAddressAsUint8_t(position, offset);
-    if (position > 0) { position--;}
+    if (position > 0) { position--; }
     if (
     reinterpret_cast<Voice *>(context)->_isMessageWithinBounds(position)
     ) {
@@ -129,7 +129,7 @@ uint8_t Voice::getCurrentStepNumber() const {
 
 
 int Voice::getCurrentStepValue() {
-        return _steps.returnAt(_currentStep);
+    return _steps.returnAt(_currentStep);
 }
 
 void Voice::setQuarterNoteDivisions(uint8_t subDivisions) {
@@ -145,7 +145,7 @@ uint8_t Voice::getQuarterNoteDivisions() const {
 }
 
 void Voice::incrementStep() {
-    _currentStep ++;
+    _currentStep++;
     if (_currentStep < 0) {
         _currentStep = _sequenceLength - _currentStep;
     } else if (_currentStep > _sequenceLength - 1) {
@@ -165,8 +165,3 @@ bool Voice::_isMessageWithinBounds(uint8_t position) const {
     }
     return false;
 }
-
-
-
-
-

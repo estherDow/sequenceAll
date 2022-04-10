@@ -62,5 +62,4 @@ private:
     bool _isMessageWithinBounds(uint8_t position) const;
 };
 
-
 #endif
