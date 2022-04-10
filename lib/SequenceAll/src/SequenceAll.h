@@ -15,9 +15,6 @@
 #include "OscMessageAdapter.h"
 #include "NVSService.h"
 #include "../../Voice/src/VoiceContainer.h"
-#include "../../OfoStepKeyboard/src/OfoStepMenu.h"
-#include "../../OfoStepKeyboard/src/initKeyboard.h"
-#include "../../OfoStepKeyboard/src/OnedimensionalKeyboard.h"
 
 
 
@@ -39,9 +36,7 @@ public:
     WiFiService *wiFiService;
     OscService *oscService;
     VoiceContainer *voiceContainer;
-    OfoStepMenu *menu;
-    initKeyboard *OfoStepKeyboardDefinition;
-    OnedimensionalKeyboard *keyBoard;
+
 private:
     void _setVoices() const;
 

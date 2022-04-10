@@ -15,14 +15,6 @@ void SequenceAll::begin() {
     cClock->begin();
     cClock->InitDefaultBeatsPerMinute();
 
-    menu = new OfoStepMenu();
-    menu->begin(TOTAL_NUMBER_OF_VOICES,DEFAULT_SEQUENCE_LENGTH);
-    //OfoStepKeyboardDefinition = new initKeyboard();
-    //keyBoard = new OnedimensionalKeyboard((char*)OfoStepKeyboardDefinition->keyCharacterMap,OfoStepKeyboardDefinition->rowPins, OfoStepKeyboardDefinition->numberKeys);
-    //keyBoard->addOOPEventListener(OfoStepMenu::stateEventListener, menu);
-
-
-
     wiFiService = new WiFiService();
     WifiErrorCode wifiError = wiFiService->begin();
     if (wifiError != INIT_WIFI_SERVICE_SUCCESS) {
@@ -34,7 +26,7 @@ void SequenceAll::begin() {
 
     oscService = new OscService((WiFiServiceInterface &) *wiFiService);
     cClock->attach(voiceContainer);
-    menu->attach(voiceContainer);
+
     oscService->attach(voiceContainer);
     _attachOSCToVoices();
 }
