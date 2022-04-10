@@ -15,15 +15,17 @@
 #include "OscMessageAdapter.h"
 #include "NVSService.h"
 #include "../../Voice/src/VoiceContainer.h"
-
-
+#include "SequenceAllProperties.h"
 
 
 class SequenceAll {
 public:
     //SequenceAll();
+    explicit SequenceAll(SequenceAllProperties properties) : properties(properties) {
+        Serial.begin(115200);
+    };
 
-    void begin();
+    void connectOutputToInput(ModuleInterface *output, ModuleInterface *input);
 
     void run() const;
 
@@ -31,20 +33,9 @@ public:
 
     static void reset();
 
-
-    Clock *cClock;
-    WiFiService *wiFiService;
-    OscService *oscService;
-    VoiceContainer *voiceContainer;
-
+    SequenceAllProperties properties;
 private:
-    void _setVoices() const;
-
-    void _attachOSCToVoices() const;
-
-    static void _oscMessageReceiveDebug(OSCMessageInterface &msg) ;
-
+    static void _oscMessageReceiveDebug(OSCMessageInterface &msg);
 };
 
-extern SequenceAll sequenceAll;
 #endif //SEQUENCEALL_SEQUENCEALL_H

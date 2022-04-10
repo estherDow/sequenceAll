@@ -10,7 +10,7 @@
 
 class OscService : public Module {
 public:
-    explicit OscService(WiFiServiceInterface &wiFi);
+    explicit OscService(WiFiServiceInterface *wiFi);
 
     static void send(void *context, OSCMessageInterface &message);
 
@@ -28,7 +28,7 @@ public:
     const char *hostName{};
 private:
     AsyncUDP *udp;
-    WiFiServiceInterface &wiFi;
+    WiFiServiceInterface *wiFi;
     std::list<IPAddress> remoteIPs;
 };
 

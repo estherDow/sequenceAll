@@ -63,12 +63,10 @@ bool Clock::timer() {
 }
 
 void Clock::doNotify() {
-
     OSCMessage msg("/t");
     OscMessageAdapter message(msg);
     notify(message);
     message.empty();
-    //gets larger than next measurement or triggers an immediate rerun of above code.
 }
 
 void IRAM_ATTR Clock::onTimer(){

@@ -19,17 +19,23 @@ class VoiceContainer : public Module {
 public:
     VoiceContainer();
 
-    void add(uint8_t Handle);
+    void add(uint8_t Handle) const;
 
     void remove(uint8_t Handle);
 
-    uint8_t getVoiceCount();
+    uint8_t getVoiceCount() const;
 
-    Voice *select(int Handle);
+    Voice *select(int Handle) const;
 
     void update(OSCMessageInterface &message) override;
 
-    ~VoiceContainer() = default;;
+    void setVoices(uint8_t totalNumberOfVoices) const;
+
+    void initSteps (uint8_t voice) const;
+
+    void attachToVoices(ModuleInterface* input) const;
+
+    ~VoiceContainer() override = default;;
 
 private:
     VoiceMap *voiceMap;

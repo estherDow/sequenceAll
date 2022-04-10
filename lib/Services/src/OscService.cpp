@@ -1,7 +1,7 @@
 #include "OscService.h"
 
-//TODO: queryHost returns an IPAddress with noargs Constructor. better error check
-OscService::OscService( WiFiServiceInterface &wiFi) : udp(wiFi.getUDP()), wiFi(wiFi) {
+//TODO Ceck if any of the arguments may be removed
+OscService::OscService( WiFiServiceInterface *wiFi) : udp(wiFi->getUDP()), wiFi(wiFi) {
     udp->onPacket(parseMessage, this);
 }
 
@@ -12,12 +12,10 @@ void OscService::send(void *context, OSCMessageInterface & message) {
 }
 
 bool OscService::receive() {
+    //TODO: DELETE THIS METHOD LOL
     OSCMessage message;
     OscMessageAdapter msg(message);
-    if (udp->listen(8000)) {
-
-
-    }
+    if (udp->listen(8000)) {}
 
     return false;
 }
