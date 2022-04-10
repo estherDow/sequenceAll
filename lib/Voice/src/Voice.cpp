@@ -6,7 +6,7 @@ Voice::Voice(uint8_t length, uint8_t handle) {
     setSize(length);
     initSequence(length);
 }
-
+//TODO: This method assumes, it will only be called by clock, hence pulse counter increments, callNotify is called. this should be handled inside a method, that determines what type of message this is.
 void Voice::update(OSCMessageInterface &message) {
     _pulseCounter++;
 

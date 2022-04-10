@@ -44,7 +44,7 @@ void VoiceContainer::setVoices(uint8_t totalNumberOfVoices) const {
         }
 
 }
-
+//TODO: Outputs attach to voiceContainer's input, inputs get attached directly to voice objects. this causes problems in the way routing method is currently implemented and needs to be unified
 void VoiceContainer::attachToVoices(ModuleInterface *input) const {
     size_t totalNumberOfVoices = getVoiceCount();
     for (int i = 0; i < totalNumberOfVoices; i++) {

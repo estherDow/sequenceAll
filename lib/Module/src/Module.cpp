@@ -1,12 +1,12 @@
 #include "Module.h"
 
 
-//Patch something to the Clock
+//Patch something to the output of the module
 void Module::attach(ModuleInterface *module) {
     this->list_observer_.push_back(module);
 }
 
-//Unpatch something from the Clock
+//Unpatch something from the output of the module
 void Module::detach(ModuleInterface *module) {
     this->list_observer_.remove(module);
 }
