@@ -5,11 +5,8 @@
 #include "SequenceAll.h"
 
 void SequenceAll::run() const {
-    //TODO: Have this in a separate, more accessible Place
     if (properties.cClock->timer()) {
         properties.cClock->doNotify();
-    } else {
-        properties.oscService->receive();
     }
 }
 

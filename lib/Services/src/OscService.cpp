@@ -2,6 +2,7 @@
 
 //TODO Ceck if any of the arguments may be removed
 OscService::OscService( WiFiServiceInterface *wiFi) : udp(wiFi->getUDP()), wiFi(wiFi) {
+    if (udp->listen(8000)) {Serial.println("UDP listening on port 8000");}
     udp->onPacket(parseMessage, this);
 }
 
@@ -11,14 +12,6 @@ void OscService::send(void *context, OSCMessageInterface & message) {
     reinterpret_cast<OscService *>(context)->doSend(message);
 }
 
-bool OscService::receive() {
-    //TODO: DELETE THIS METHOD LOL
-    OSCMessage message;
-    OscMessageAdapter msg(message);
-    if (udp->listen(8000)) {}
-
-    return false;
-}
 
 
 void OscService::parseMessage(void *context, AsyncUDPPacket packet) {

@@ -16,8 +16,6 @@ public:
 
     void doSend(OSCMessageInterface &message);
 
-    bool receive();
-
     void update(OSCMessageInterface &message) override;
 
     static void parseMessage(void *context, AsyncUDPPacket packet);
