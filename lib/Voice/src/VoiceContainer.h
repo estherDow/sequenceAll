@@ -33,7 +33,7 @@ public:
 
     void initSteps (uint8_t voice) const;
 
-    void attachToVoices(ModuleInterface* input) const;
+    void attach(ModuleInterface* input) override;
 
     ~VoiceContainer() override = default;;
 
