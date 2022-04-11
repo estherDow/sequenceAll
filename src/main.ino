@@ -23,7 +23,7 @@ int main() {
     SequenceAll sequenceAll = sequenceAllBuilder
             .setClock()
             .setVoices(4, 16)
-            .setWifi()
+            .setWifi("sequenceX", "transLiberationNow", MODE_AP)
             .setOSCService()
             .build();
 

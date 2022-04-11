@@ -10,6 +10,7 @@
 #include "../../Voice/src/Voice.h"
 #include <SignalTypes.h>
 #include <macros.h>
+#include "WiFiServiceInterface.h"
 #include <WiFiService.h>
 #include "../../Services/src/OscService.h"
 #include "OscMessageAdapter.h"

@@ -16,6 +16,7 @@
 #include <macros.h>
 
 
+
 class WiFiService : public WiFiServiceInterface {
 public:
 
@@ -23,7 +24,7 @@ public:
 
     ~WiFiService() override = default;
 
-    WifiErrorCode begin() override;
+    WifiErrorCode begin(const char *ssid, const char *password, WifiMode mode) override;
     int oldState = 0;
     uint16_t interval = 2000;
 
@@ -44,11 +45,11 @@ private:
 
     AsyncCallbackJsonWebHandler* _setPrintDebugEndpoint();
 
-    WifiErrorCode _initAP();
-    WifiErrorCode _initSTA();
+    WifiErrorCode _initAP(WiFiCredentialsChar defaultCredentials);
+    WifiErrorCode _initSTA(WiFiCredentialsChar &defaultCredentials);
 
-    bool _doSetAP(const char *ssid, const char *password);
-    bool _doSetSTA(const char *newSSID, const char *newPassword);
+    bool _doSetAP(WiFiCredentialsChar &credentials);
+    bool _doSetSTA(WiFiCredentialsChar &credentials);
 
 };
 

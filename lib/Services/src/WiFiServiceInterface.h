@@ -5,6 +5,8 @@
 #ifndef SEQUENCEALL_WIFISERVICEINTERFACE_H
 #define SEQUENCEALL_WIFISERVICEINTERFACE_H
 #include "WifiErrorCodes.h"
+
+
 class ESPAsyncWebServer;
 
 class AsyncUDP;
@@ -15,12 +17,17 @@ class NVSServiceInterface;
 
 class ESPmDNSInterface;
 
+typedef enum {
+    MODE_STA,
+    MODE_AP
+}WifiMode;
+
 class WiFiServiceInterface {
 public:
 
     virtual ~WiFiServiceInterface() = default;
 
-    virtual WifiErrorCode begin() = 0;
+    virtual WifiErrorCode begin(const char *ssid, const char *password, WifiMode mode) = 0;
 
     virtual AsyncUDP *getUDP() = 0;
 };

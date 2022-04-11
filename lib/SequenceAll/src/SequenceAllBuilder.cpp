@@ -19,9 +19,9 @@ SequenceAllBuilder &SequenceAllBuilder::setVoices(uint8_t numberOfVoices = 2, ui
     return *this;
 }
 
-SequenceAllBuilder &SequenceAllBuilder::setWifi() {
+SequenceAllBuilder &SequenceAllBuilder::setWifi(const char *ssid, const char *password, WifiMode mode) {
     sequenceAllProperties.wiFiService = new WiFiService();
-    WifiErrorCode wifiError = sequenceAllProperties.wiFiService->begin();
+    WifiErrorCode wifiError = sequenceAllProperties.wiFiService->begin(ssid, password, mode);
     if (wifiError != INIT_WIFI_SERVICE_SUCCESS) {
         Serial.println("Could not initiate Wifi Services");
         Serial.println(wifiError);

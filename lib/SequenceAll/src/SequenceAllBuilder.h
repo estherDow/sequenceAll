@@ -15,7 +15,7 @@ class SequenceAllBuilder {
 public:
     SequenceAllBuilder& setClock();
     SequenceAllBuilder &setVoices(uint8_t numberOfVoices, uint8_t sequenceLength);
-    SequenceAllBuilder& setWifi();
+    SequenceAllBuilder &setWifi(const char *ssid, const char *password, WifiMode mode);
     SequenceAllBuilder& setOSCService();
     SequenceAll build();
 private:

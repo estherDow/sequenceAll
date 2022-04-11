@@ -12,14 +12,19 @@ WiFiService::WiFiService(
 }
 
 
-WifiErrorCode WiFiService::begin() {
+WifiErrorCode WiFiService::begin(const char *ssid, const char *password, WifiMode mode) {
     WifiErrorCode STAError;
-    STAError = _initSTA();
-
-    if (STAError != INIT_STA_SUCCESS) {
-            _initAP();
-            Serial.println("no Wifi Credentials Stored, ");
+    WiFiCredentialsChar defaultCredentials;
+    strcpy(defaultCredentials.ssid, ssid);
+    strcpy(defaultCredentials.pwd, password);
+    if (mode == MODE_STA) {
+        STAError = _initSTA(defaultCredentials);
     }
+    if (mode == MODE_AP || STAError != INIT_STA_SUCCESS) {
+        _initAP(defaultCredentials);
+        Serial.println("Mode set to AP or no Wifi Credentials Stored");
+    }
+
     Serial.println(localIp);
 
     if (!_initWebServer()) {
@@ -42,43 +47,38 @@ WifiErrorCode WiFiService::begin() {
     return INIT_WIFI_SERVICE_SUCCESS;
 }
 
-WifiErrorCode WiFiService::_initSTA() {
+WifiErrorCode WiFiService::_initSTA(WiFiCredentialsChar &defaultCredentials) {
     WiFiCredentialsChar credentials;
     strcpy(credentials.uri, "/set_sta");
-    if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
-        return INIT_STA_NO_CREDENTIALS_STORED;
-    }
-
-    if (_doSetSTA(credentials.ssid, credentials.pwd)) {
+    if (NVSService::getCredentials(nvsNameSpace, &credentials)) {
+        if (_doSetSTA(credentials)) return INIT_STA_SUCCESS;
         Serial.println("sta started with stored credentials");
-        return INIT_STA_SUCCESS;
+    }
+    else {
+        if (_doSetSTA(defaultCredentials)) return INIT_STA_SUCCESS;
+        Serial.println("sta started with default credentials");
     }
 
     return INIT_STA_ERROR;
 }
 
-WifiErrorCode WiFiService::_initAP() {
+WifiErrorCode WiFiService::_initAP(WiFiCredentialsChar defaultCredentials) {
 
     WiFiCredentialsChar credentials;
     strcpy(credentials.uri, "/set_ap");
-    if (!NVSService::getCredentials(nvsNameSpace, &credentials)) {
-        if (_doSetAP("sequenceX", "transLiberationNow")) {
-            return INIT_AP_NO_CREDENTIALS_STORED;
-        }
-        return INIT_AP_ERROR;
+    if (NVSService::getCredentials(nvsNameSpace, &credentials)) {
+        if (_doSetAP(credentials)) return INIT_AP_NO_CREDENTIALS_STORED;
     }
-
-    if (_doSetAP(credentials.ssid, credentials.pwd)) {
-        Serial.println("ap started with stored credentials");
-        return INIT_AP_SUCCESS;
+    else {
+        if (_doSetAP(defaultCredentials)) return INIT_AP_NO_CREDENTIALS_STORED;
     }
 
     return INIT_AP_ERROR;
 }
 
-bool WiFiService::_doSetAP(const char *ssid, const char *password) {
+bool WiFiService::_doSetAP(WiFiCredentialsChar &credentials) {
     WiFi.mode(WIFI_AP);
-    if (WiFi.softAP(ssid, password)) {
+    if (WiFi.softAP(credentials.ssid, credentials.pwd)) {
         localIp = WiFi.softAPIP();
         Serial.println("wifiAP started");
         return true;
@@ -86,9 +86,9 @@ bool WiFiService::_doSetAP(const char *ssid, const char *password) {
     return false;
 }
 
-bool WiFiService::_doSetSTA(const char *newSSID, const char *newPassword) {
+bool WiFiService::_doSetSTA(WiFiCredentialsChar &credentials) {
     WiFi.mode(WIFI_STA);
-    WiFi.begin(newSSID, newPassword);
+    WiFi.begin(credentials.ssid, credentials.pwd);
     unsigned long startTime = millis();
     while (WiFi.status() != WL_CONNECTED) {
         unsigned long currentTime = millis();
@@ -97,7 +97,7 @@ bool WiFiService::_doSetSTA(const char *newSSID, const char *newPassword) {
             return false;
         }
     }
-    Serial.println("connected to wifi...");
+    Serial.println("connected to wifi.");
     localIp = WiFi.localIP();
     Serial.println(WiFi.localIP());
     return true;
