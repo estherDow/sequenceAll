@@ -12,9 +12,8 @@ SequenceAllBuilder &SequenceAllBuilder::setClock() {
     return *this;
 }
 
-SequenceAllBuilder &SequenceAllBuilder::setVoices(uint8_t totalNumberOfVoices = 1) {
-    sequenceAllProperties.voiceContainer = new VoiceContainer();
-    sequenceAllProperties.voiceContainer->setVoices(totalNumberOfVoices);
+SequenceAllBuilder &SequenceAllBuilder::setVoices(uint8_t numberOfVoices = 2, uint8_t sequenceLength = 16) {
+    sequenceAllProperties.voiceContainer = new VoiceContainer(numberOfVoices, sequenceLength);
     Serial.println("Voice Setup Complete");
 
     return *this;

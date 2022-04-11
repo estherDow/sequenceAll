@@ -6,6 +6,7 @@ Voice::Voice(uint8_t length, uint8_t handle) {
     setSize(length);
     initSequence(length);
 }
+
 //TODO: This method assumes, it will only be called by clock, hence pulse counter increments, callNotify is called. this should be handled inside a method, that determines what type of message this is.
 void Voice::update(OSCMessageInterface &message) {
     _pulseCounter++;
@@ -14,6 +15,7 @@ void Voice::update(OSCMessageInterface &message) {
     _updateVoices(message);
 }
 
+//TODO: Rewrite These methods I have no Clue what they do :)
 void Voice::_callNotify(OSCMessageInterface &message) {
     uint8_t currentStepValue = getCurrentStepValue();
     if (message.fullMatch("/t", 0)) {
@@ -40,6 +42,7 @@ void Voice::_updateVoices(OSCMessageInterface &message) {
         uint8_t NewOffset = message.getAddressAsUint8_t(voiceHandle, initialOffset);
         if (voiceHandle > 0) { voiceHandle--; }
         if (voiceHandle == Handle) {
+            //TODO: Most of this routing is obsolete.
             RecipientAddress AddressForSet(
                     this,
                     "/s",

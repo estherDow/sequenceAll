@@ -22,7 +22,7 @@ int main() {
     SequenceAllBuilder sequenceAllBuilder;
     SequenceAll sequenceAll = sequenceAllBuilder
             .setClock()
-            .setVoices(4)
+            .setVoices(4, 16)
             .setWifi()
             .setOSCService()
             .build();
@@ -31,7 +31,7 @@ int main() {
             sequenceAll.properties.getClock(),
             sequenceAll.properties.getVoiceContainer()
             );
-//TODO: Voices are not attached.
+
     sequenceAll.connectOutputToInput(
             sequenceAll.properties.getVoiceContainer(),
             sequenceAll.properties.getOSC()

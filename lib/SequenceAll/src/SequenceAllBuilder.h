@@ -14,7 +14,7 @@
 class SequenceAllBuilder {
 public:
     SequenceAllBuilder& setClock();
-    SequenceAllBuilder &setVoices(uint8_t totalNumberOfVoices);
+    SequenceAllBuilder &setVoices(uint8_t numberOfVoices, uint8_t sequenceLength);
     SequenceAllBuilder& setWifi();
     SequenceAllBuilder& setOSCService();
     SequenceAll build();

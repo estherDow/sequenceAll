@@ -17,21 +17,17 @@ typedef std::unordered_map<int, Voice> VoiceMap;
 class VoiceContainer : public Module {
 
 public:
-    VoiceContainer();
+    VoiceContainer(uint8_t numberOfVoices, uint8_t sequenceLength);
 
     void add(uint8_t Handle) const;
 
     void remove(uint8_t Handle);
 
-    uint8_t getVoiceCount() const;
-
-    Voice *select(int Handle) const;
+    Voice *select(uint8_t Handle) const;
 
     void update(OSCMessageInterface &message) override;
 
-    void setVoices(uint8_t totalNumberOfVoices) const;
-
-    void initSteps (uint8_t voice) const;
+    void setVoices() const;
 
     void attach(ModuleInterface* input) override;
 
@@ -39,6 +35,8 @@ public:
 
 private:
     VoiceMap *voiceMap;
+    uint8_t  numberVoices = 0;
+    uint8_t sequenceLength = 0;
 
 
 };
