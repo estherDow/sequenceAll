@@ -26,7 +26,6 @@ SequenceAllBuilder &SequenceAllBuilder::setWifi(const char *ssid, const char *pa
         Serial.println(wifiError);
     }
 
-    //TODO: Inform user, Parameters of WiFi are not set.
     return *this;
 }
 
