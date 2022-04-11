@@ -7,8 +7,9 @@ portMUX_TYPE timerMux = portMUX_INITIALIZER_UNLOCKED;
 volatile uint32_t isrCounter = 0;
 volatile uint32_t lastIsrAt = 0;
 
-void Clock::begin() {
+void Clock::begin(uint16_t beatsPerMinute) {
     //Initialize extern vars
+    _beats = beatsPerMinute;
 
     timerSemaphore = xSemaphoreCreateBinary();
     // Use 1st timer of 4 (counted from zero).
@@ -17,16 +18,9 @@ void Clock::begin() {
     Timer = timerBegin(0, 80, true);
     // Attach onTimer function to our timer.
     timerAttachInterrupt(Timer, &onTimer, true);
-    InitDefaultBeatsPerMinute();
+    setBeatsPerMinute(_beats);
     // Start an alarm
     timerAlarmEnable(Timer);
-}
-
-//Time in BPM with max 360 bpm
-void Clock::InitDefaultBeatsPerMinute() {
-       //TODO: Set beats per Minute Method
-     _beats = DEFAULT_BEATS_PER_MINUTE;
-    setBeatsPerMinute(_beats);
 }
 
 void Clock::setBeatsPerMinute(void * context, OSCMessage &message) {

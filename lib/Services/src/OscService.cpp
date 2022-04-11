@@ -29,7 +29,6 @@ void OscService::parseMessage(void *context, AsyncUDPPacket packet) {
     else {
         Serial.println("OSCMessage has error");
     }
-
 }
 
 void OscService::update(OSCMessageInterface &message) {

@@ -4,10 +4,9 @@
 
 #include "SequenceAllBuilder.h"
 
-SequenceAllBuilder &SequenceAllBuilder::setClock() {
+SequenceAllBuilder &SequenceAllBuilder::setClock(uint16_t beatsPerMinute) {
     sequenceAllProperties.cClock = new Clock();
-    sequenceAllProperties.cClock->begin();
-    sequenceAllProperties.cClock->InitDefaultBeatsPerMinute();
+    sequenceAllProperties.cClock->begin(beatsPerMinute);
 
     return *this;
 }

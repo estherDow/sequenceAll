@@ -53,7 +53,7 @@ Any implemented functionality may be added through the sequenceAllBuilder.
 ```c++
     SequenceAllBuilder sequenceAllBuilder;
     SequenceAll sequenceAll = sequenceAllBuilder
-            .setClock()
+            .setClock(beatsPerMinute)
             .setVoices(numberVoices, sequenceLength)
             .setWifi("ssid","password", MODE_AP / MODE_STA)
             .setOSCService()

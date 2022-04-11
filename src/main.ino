@@ -21,7 +21,7 @@ void loop() {
 int main() {
     SequenceAllBuilder sequenceAllBuilder;
     SequenceAll sequenceAll = sequenceAllBuilder
-            .setClock()
+            .setClock(180)
             .setVoices(4, 16)
             .setWifi("sequenceX", "transLiberationNow", MODE_AP)
             .setOSCService()

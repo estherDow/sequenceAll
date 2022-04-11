@@ -23,8 +23,7 @@ public:
 
 
     //Setter functions
-    void begin();
-    void InitDefaultBeatsPerMinute();
+    void begin(uint16_t beatsPerMinute);
     static void setBeatsPerMinute(void * context, OSCMessage & message);
     static void setBeatsPerMinute(uint16_t beats);
     bool timer();
@@ -34,7 +33,7 @@ public:
     static void onTimer();
 private:
     //Clock setting in BPM
-    uint16_t _beats = 120;
+    uint16_t _beats = 0;
 
     //deltaT in Microseconds = 6e7/(time * steps) uint16_t was too small to hold large value
     unsigned long _deltaTime{};

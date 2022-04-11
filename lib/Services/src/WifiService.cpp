@@ -13,7 +13,7 @@ WiFiService::WiFiService(
 
 
 WifiErrorCode WiFiService::begin(const char *ssid, const char *password, WifiMode mode) {
-    WifiErrorCode STAError;
+    WifiErrorCode STAError = INIT_STA_ERROR;
     WiFiCredentialsChar defaultCredentials;
     strcpy(defaultCredentials.ssid, ssid);
     strcpy(defaultCredentials.pwd, password);
