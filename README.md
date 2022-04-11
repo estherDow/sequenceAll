@@ -54,8 +54,8 @@ Any implemented functionality may be added through the sequenceAllBuilder.
     SequenceAllBuilder sequenceAllBuilder;
     SequenceAll sequenceAll = sequenceAllBuilder
             .setClock()
-            .setVoices(4)
-            .setWifi()
+            .setVoices(numberVoices, sequenceLength)
+            .setWifi("ssid","password", MODE_AP / MODE_STA)
             .setOSCService()
             .build();
 ```
@@ -80,13 +80,9 @@ Short term goals:
 
 - save state of all voices to nvm.
 
-- add STA functionality
-
 ### Current Limitations:
 
-- only ap mode is supported
 - clients connected receive all messages
 - Only port 8000 is supported
 - clients can send messages to host name
-- ap name and password may be changed via post request.
 - Changes will take effect after restart
