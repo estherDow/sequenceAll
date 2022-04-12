@@ -1,8 +1,0 @@
-//
-// Created by Kenneth Dow on 28/12/21.
-//
-
-#ifndef SEQUENCEALL_UDPINTERFACE_H
-#define SEQUENCEALL_UDPINTERFACE_H
-
-#endif //SEQUENCEALL_UDPINTERFACE_H

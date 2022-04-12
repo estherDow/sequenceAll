@@ -9,7 +9,6 @@
 #include <Arduino.h>
 #include <Module.h>
 #include "Voice.h"
-#include <SignalTypes.h>
 #include "macros.h"
 
 typedef std::unordered_map<int, Voice> VoiceMap;

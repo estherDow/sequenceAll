@@ -17,7 +17,7 @@ void setup() {
 
 void loop() {
 }
-
+//TODO: Consider a message type that is smaller than OSCMessage, which occupies 40 b with adapter.
 int main() {
     SequenceAllBuilder sequenceAllBuilder;
     SequenceAll sequenceAll = sequenceAllBuilder

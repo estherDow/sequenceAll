@@ -4,7 +4,6 @@
 #include <Arduino.h>
 
 #include <Module.h>
-#include <SignalTypes.h>
 #include <macros.h>
 #include "OscMessageAdapter.h"
 

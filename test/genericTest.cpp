@@ -1,3 +1,5 @@
+#include <Arduino.h>
+#include <unity.h>
 #include "ModuleInterface.h"
 #include <Module.h>
 #include "OscMessageAdapter.h"

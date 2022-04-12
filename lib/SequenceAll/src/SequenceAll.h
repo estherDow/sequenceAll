@@ -8,7 +8,6 @@
 
 #include <Clock.h>
 #include "../../Voice/src/Voice.h"
-#include <SignalTypes.h>
 #include <macros.h>
 #include "WiFiServiceInterface.h"
 #include <WiFiService.h>

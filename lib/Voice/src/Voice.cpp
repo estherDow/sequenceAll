@@ -42,7 +42,7 @@ void Voice::_updateVoices(OSCMessageInterface &message) {
         uint8_t NewOffset = message.getAddressAsUint8_t(voiceHandle, initialOffset);
         if (voiceHandle > 0) { voiceHandle--; }
         if (voiceHandle == Handle) {
-            //TODO: Most of this routing is obsolete.
+
             RecipientAddress AddressForSet(
                     this,
                     "/s",
