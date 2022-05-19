@@ -4,7 +4,7 @@
 #include <SequenceAllBuilder.h>
 #include <cstdint>
 
-
+uint32_t pwmFreq = 5000;
 
 void setup() {
 
@@ -25,6 +25,10 @@ int main() {
             .setVoices(4, 16)
             .setWifi("sequenceX", "transLiberationNow", MODE_AP)
             .setOSCService()
+            .setCVOutPin(pwmFreq, 0, 12)
+            .setCVOutPin(pwmFreq, 1, 13)
+            .setCVOutPin(pwmFreq, 2, 14)
+            .setCVOutPin(pwmFreq, 2, 27)
             .build();
 
     sequenceAll.connectOutputToInput(

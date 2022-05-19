@@ -38,3 +38,10 @@ SequenceAllBuilder &SequenceAllBuilder::setOSCService() {
 SequenceAll SequenceAllBuilder::build() {
     return SequenceAll(sequenceAllProperties);
 }
+
+SequenceAllBuilder &SequenceAllBuilder::setCVOutPin(uint32_t PWMFreq, uint8_t PWMChannel, uint8_t pin) {
+    CVOut cvOut(PWMFreq,PWMChannel);
+    cvOut.setPin(pin);
+    sequenceAllProperties.CVOutPins.insert({PWMChannel, cvOut});
+    return *this;
+}
